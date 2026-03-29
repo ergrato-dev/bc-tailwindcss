@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" font-family="system-ui, sans-serif">
+  <rect width="800" height="400" fill="#0f172a"/>
+  <text x="400" y="30" text-anchor="middle" font-size="15" font-weight="700" fill="#f1f5f9" letter-spacing="1">ESCALA DE ESPACIADO TAILWIND — 1 unidad = 4px</text>
+  <text x="400" y="50" text-anchor="middle" font-size="12" fill="#64748b">p-{n} px-{n} py-{n} m-{n} space-{n} gap-{n}</text>
+
+  <!-- bars -->
+  <!-- n=1 -->
+  <text x="60" y="82" text-anchor="end" font-size="11" fill="#94a3b8">1</text>
+  <rect x="70" y="70" width="4" height="18" rx="2" fill="#38bdf8"/>
+  <text x="80" y="82" font-size="10" fill="#64748b">4px · p-1 / m-1</text>
+  <text x="700" y="82" text-anchor="end" font-size="10" fill="#475569">micro spacing, separadores finos</text>
+
+  <!-- n=2 -->
+  <text x="60" y="112" text-anchor="end" font-size="11" fill="#94a3b8">2</text>
+  <rect x="70" y="100" width="8" height="18" rx="2" fill="#38bdf8"/>
+  <text x="84" y="112" font-size="10" fill="#64748b">8px · p-2 / m-2</text>
+  <text x="700" y="112" text-anchor="end" font-size="10" fill="#475569">padding pequeño en badges</text>
+
+  <!-- n=3 -->
+  <text x="60" y="142" text-anchor="end" font-size="11" fill="#94a3b8">3</text>
+  <rect x="70" y="130" width="12" height="18" rx="2" fill="#38bdf8"/>
+  <text x="88" y="142" font-size="10" fill="#64748b">12px · p-3 / m-3</text>
+  <text x="700" y="142" text-anchor="end" font-size="10" fill="#475569">botones pequeños</text>
+
+  <!-- n=4 -->
+  <text x="60" y="172" text-anchor="end" font-size="11" fill="#94a3b8">4</text>
+  <rect x="70" y="160" width="16" height="18" rx="2" fill="#38bdf8"/>
+  <text x="92" y="172" font-size="10" fill="#64748b">16px · p-4 / m-4</text>
+  <text x="700" y="172" text-anchor="end" font-size="10" fill="#475569">padding base de componentes</text>
+
+  <!-- n=5 -->
+  <text x="60" y="202" text-anchor="end" font-size="11" fill="#94a3b8">5</text>
+  <rect x="70" y="190" width="20" height="18" rx="2" fill="#38bdf8"/>
+  <text x="96" y="202" font-size="10" fill="#64748b">20px · p-5 / m-5</text>
+  <text x="700" y="202" text-anchor="end" font-size="10" fill="#475569">spacing entre íconos y texto</text>
+
+  <!-- n=6 -->
+  <text x="60" y="232" text-anchor="end" font-size="11" fill="#38bdf8" font-weight="700">6</text>
+  <rect x="70" y="220" width="24" height="18" rx="2" fill="#0ea5e9"/>
+  <text x="100" y="232" font-size="10" fill="#e2e8f0" font-weight="600">24px · p-6 / m-6  ← más usado en cards</text>
+  <text x="700" y="232" text-anchor="end" font-size="10" fill="#38bdf8">★ padding de card</text>
+
+  <!-- n=8 -->
+  <text x="60" y="262" text-anchor="end" font-size="11" fill="#38bdf8" font-weight="700">8</text>
+  <rect x="70" y="250" width="32" height="18" rx="2" fill="#0ea5e9"/>
+  <text x="108" y="262" font-size="10" fill="#e2e8f0" font-weight="600">32px · p-8 / m-8  ← secciones y layouts</text>
+  <text x="700" y="262" text-anchor="end" font-size="10" fill="#38bdf8">★ padding de sección</text>
+
+  <!-- n=10 -->
+  <text x="60" y="292" text-anchor="end" font-size="11" fill="#94a3b8">10</text>
+  <rect x="70" y="280" width="40" height="18" rx="2" fill="#38bdf8"/>
+  <text x="116" y="292" font-size="10" fill="#64748b">40px · p-10 / m-10</text>
+  <text x="700" y="292" text-anchor="end" font-size="10" fill="#475569">separación entre secciones</text>
+
+  <!-- n=12 -->
+  <text x="60" y="322" text-anchor="end" font-size="11" fill="#94a3b8">12</text>
+  <rect x="70" y="310" width="48" height="18" rx="2" fill="#38bdf8"/>
+  <text x="124" y="322" font-size="10" fill="#64748b">48px · p-12 / m-12</text>
+  <text x="700" y="322" text-anchor="end" font-size="10" fill="#475569">héros, secciones grandes</text>
+
+  <!-- n=16 -->
+  <text x="60" y="352" text-anchor="end" font-size="11" fill="#94a3b8">16</text>
+  <rect x="70" y="340" width="64" height="18" rx="2" fill="#38bdf8"/>
+  <text x="140" y="352" font-size="10" fill="#64748b">64px · p-16 / m-16</text>
+  <text x="700" y="352" text-anchor="end" font-size="10" fill="#475569">espaciado vertical de página</text>
+
+  <!-- Formula -->
+  <rect x="240" y="368" width="320" height="26" rx="6" fill="#1e293b"/>
+  <text x="400" y="385" text-anchor="middle" font-size="12" font-weight="600" fill="#38bdf8">Fórmula: valor × 4 = px  (p-6 = 24px, p-8 = 32px)</text>
+</svg>

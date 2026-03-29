@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" width="800" height="360" font-family="system-ui, sans-serif">
+  <rect width="800" height="360" fill="#0f172a"/>
+  <text x="400" y="30" text-anchor="middle" font-size="15" font-weight="700" fill="#f1f5f9" letter-spacing="1">CONTROL DE TEXTO: TRUNCATE, LINE-CLAMP, WRAPPING</text>
+
+  <!-- Truncate demo -->
+  <rect x="30" y="48" width="220" height="90" rx="8" fill="#1e293b"/>
+  <text x="140" y="68" text-anchor="middle" font-size="11" fill="#38bdf8" font-weight="700">truncate</text>
+  <rect x="44" y="76" width="192" height="24" rx="4" fill="#0f172a"/>
+  <text x="44" y="92" font-size="11" fill="#e2e8f0" clip-path="url(#c1)">Título de producto muy largo...</text>
+  <clipPath id="c1"><rect x="44" y="76" width="185" height="24"/></clipPath>
+  <text x="140" y="122" text-anchor="middle" font-size="9" fill="#64748b">1 línea + elipsis</text>
+  <text x="140" y="134" text-anchor="middle" font-size="9" fill="#64748b">necesita ancho definido</text>
+
+  <!-- Line clamp 2 demo -->
+  <rect x="270" y="48" width="220" height="90" rx="8" fill="#1e293b"/>
+  <text x="380" y="68" text-anchor="middle" font-size="11" fill="#38bdf8" font-weight="700">line-clamp-2</text>
+  <rect x="284" y="76" width="192" height="44" rx="4" fill="#0f172a"/>
+  <text x="290" y="93" font-size="10" fill="#e2e8f0">Descripción extensa del</text>
+  <text x="290" y="108" font-size="10" fill="#e2e8f0">producto que se corta aquí…</text>
+  <text x="380" y="129" text-anchor="middle" font-size="9" fill="#64748b">2 líneas + elipsis</text>
+
+  <!-- Line clamp 3 demo -->
+  <rect x="510" y="48" width="260" height="90" rx="8" fill="#1e293b"/>
+  <text x="640" y="68" text-anchor="middle" font-size="11" fill="#38bdf8" font-weight="700">line-clamp-3</text>
+  <rect x="524" y="76" width="232" height="56" rx="4" fill="#0f172a"/>
+  <text x="530" y="93" font-size="10" fill="#e2e8f0">Contenido extenso primera línea</text>
+  <text x="530" y="108" font-size="10" fill="#e2e8f0">Segunda línea del texto</text>
+  <text x="530" y="123" font-size="10" fill="#e2e8f0">Tercera línea y corte aquí…</text>
+
+  <!-- Whitespace -->
+  <rect x="30" y="158" width="350" height="90" rx="8" fill="#1e293b"/>
+  <text x="205" y="178" text-anchor="middle" font-size="11" fill="#38bdf8" font-weight="700">whitespace-*</text>
+  <rect x="44" y="186" width="322" height="52" rx="4" fill="#0f172a"/>
+  <text x="52" y="202" font-size="10" fill="#64748b">whitespace-normal</text>
+  <text x="52" y="215" font-size="9" fill="#94a3b8">→ colapsa espacios, hace wrap (default)</text>
+  <text x="52" y="228" font-size="10" fill="#64748b">whitespace-nowrap</text>
+  <text x="52" y="228" font-size="5" fill="#f87171">                         → nunca hace wrap (cuidado con overflow)</text>
+
+  <!-- Word break -->
+  <rect x="400" y="158" width="370" height="90" rx="8" fill="#1e293b"/>
+  <text x="585" y="178" text-anchor="middle" font-size="11" fill="#38bdf8" font-weight="700">break-*</text>
+  <rect x="414" y="186" width="342" height="52" rx="4" fill="#0f172a"/>
+  <text x="422" y="202" font-size="10" fill="#64748b">break-words</text>
+  <text x="422" y="215" font-size="9" fill="#94a3b8">→ corta URLs y palabras largas para evitar overflow</text>
+  <text x="422" y="228" font-size="10" fill="#64748b">break-all</text>
+  <text x="422" y="228" font-size="5" fill="#94a3b8">                   → corte en cualquier carácter (más agresivo)</text>
+
+  <!-- Alignment row -->
+  <rect x="30" y="268" width="740" height="72" rx="8" fill="#1e293b"/>
+  <text x="400" y="288" text-anchor="middle" font-size="11" fill="#38bdf8" font-weight="700">ALINEACIÓN DE TEXTO</text>
+  <rect x="44" y="296" width="160" height="32" rx="4" fill="#0f172a"/>
+  <text x="52" y="316" font-size="12" fill="#e2e8f0">text-left</text>
+  <rect x="220" y="296" width="160" height="32" rx="4" fill="#0f172a"/>
+  <text x="300" y="316" text-anchor="middle" font-size="12" fill="#e2e8f0">text-center</text>
+  <rect x="396" y="296" width="160" height="32" rx="4" fill="#0f172a"/>
+  <text x="548" y="316" text-anchor="end" font-size="12" fill="#e2e8f0">text-right</text>
+  <rect x="572" y="296" width="184" height="32" rx="4" fill="#0f172a"/>
+  <text x="580" y="308" font-size="11" fill="#38bdf8">text-balance</text>
+  <text x="580" y="322" font-size="9" fill="#64748b">balancea líneas en headings</text>
+</svg>

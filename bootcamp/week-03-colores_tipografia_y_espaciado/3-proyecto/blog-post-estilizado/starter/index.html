@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!--
+  Proyecto Semana 3: Blog Post Estilizado
+  Implementa todos los TODO usando SOLO clases TailwindCSS
+-->
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Post — Bootcamp TailwindCSS</title>
+  </head>
+  <body>
+
+    <!-- ============================================ -->
+    <!-- TODO: contenedor de página                   -->
+    <!-- bg-white o bg-gray-50                        -->
+    <!-- font-sans text-gray-900                      -->
+    <!-- ============================================ -->
+    <div class="???">
+
+
+      <!-- NAV -->
+      <!-- TODO: nav con logo + links usando                 -->
+      <!-- flex items-center justify-between                 -->
+      <!-- borde inferior border-b border-gray-100           -->
+      <!-- padding px-6 py-4, max-w-4xl mx-auto             -->
+      <nav class="???">
+        <span class="???">📝 Mi Blog</span>
+        <!-- TODO: links de nav con space-x-6, text-sm text-gray-600 -->
+      </nav>
+
+
+      <!-- HERO DEL ARTÍCULO -->
+      <!-- TODO: sección hero, py-16 px-6, bg-gray-50 -->
+      <section class="???">
+        <div class="mx-auto max-w-2xl">
+
+          <!-- TODO: badge de categoría -->
+          <!-- rounded-full bg-sky-100 px-3 py-1 text-xs font-semibold text-sky-700 -->
+          <span class="???">TailwindCSS</span>
+
+          <!-- TODO: título h1 -->
+          <!-- mt-4 text-4xl font-bold leading-tight tracking-tight text-gray-900 -->
+          <h1 class="???">
+            Cómo el Sistema de Diseño de Tailwind Cambió mi Flujo de Trabajo
+          </h1>
+
+          <!-- TODO: lead paragraph -->
+          <!-- mt-4 text-xl leading-relaxed text-gray-600 -->
+          <p class="???">
+            Después de años usando CSS arbitrario, descubrí que la consistencia
+            no viene de la disciplina, sino del sistema correcto.
+          </p>
+
+          <!-- TODO: meta del artículo (autor, fecha, lectura) -->
+          <!-- mt-6 flex items-center gap-4 text-sm text-gray-500 -->
+          <div class="???">
+            <span>Por <strong class="text-gray-700">Ana García</strong></span>
+            <!-- TODO: time con datetime -->
+            <time datetime="2026-03-29">29 Mar 2026</time>
+            <span>8 min lectura</span>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- CUERPO DEL ARTÍCULO -->
+      <!-- TODO: article max-w-2xl mx-auto px-4 py-12 -->
+      <article class="???">
+
+        <!-- TODO: espacio entre párrafos con space-y-6 -->
+        <div class="???">
+
+          <!-- TODO: primer párrafo -->
+          <!-- text-base leading-relaxed text-gray-700 -->
+          <p class="???">
+            El primer día que instalé Tailwind, quise desinstalarlo. Las clases
+            largas en el HTML me parecían un retroceso. Pero le di una semana...
+          </p>
+
+          <!-- TODO: h2 del artículo -->
+          <!-- text-2xl font-bold text-gray-900 mt-10 -->
+          <h2 class="???">El Problema con el CSS Tradicional</h2>
+
+          <p class="???">
+            Llevaba 5 años nombrando clases CSS. `.card-header__title--featured`.
+            Cada vez que necesitaba un componente nuevo, pasaba 10 minutos solo
+            decidiendo el nombre. Era "naming fatigue" en estado puro.
+          </p>
+
+          <!-- TODO: blockquote -->
+          <!-- border-l-4 border-sky-400 bg-sky-50 pl-4 py-3 -->
+          <!-- texto: text-lg font-medium text-sky-900 italic -->
+          <blockquote class="???">
+            <p class="???">
+              "Nombrar cosas es uno de los dos problemas más difíciles en
+              computer science. Tailwind elimina ese problema."
+            </p>
+          </blockquote>
+
+          <!-- TODO: h3 -->
+          <!-- text-xl font-semibold text-gray-900 mt-8 -->
+          <h3 class="???">La Escala de Espaciado lo Cambia Todo</h3>
+
+          <p class="???">
+            Antes usaba valores arbitrarios: `margin: 13px`, `padding: 7px`.
+            Ahora todo es múltiplo de 4. El resultado es coherencia automática.
+          </p>
+
+          <!-- TODO: lista de items -->
+          <!-- ul con space-y-2, cada li con text-base text-gray-700 -->
+          <!-- agregar un "·" o "→" antes de cada item -->
+          <ul class="???">
+            <li class="???">→ p-4 = 16px siempre, en cualquier proyecto</li>
+            <li class="???">→ Los layouts se "cuadran" solos</li>
+            <li class="???">→ Cero debate sobre valores de spacing</li>
+          </ul>
+
+          <!-- TODO: alerta/nota -->
+          <!-- rounded-xl border border-amber-200 bg-amber-50 p-4 -->
+          <!-- título: font-semibold text-amber-800 -->
+          <!-- texto: mt-1 text-sm text-amber-700 -->
+          <div class="???">
+            <p class="???">⚠ Nota importante</p>
+            <p class="???">
+              Este patrón solo funciona si usas la escala nativa de Tailwind.
+              Agregar valores custom rompe la coherencia.
+            </p>
+          </div>
+
+          <!-- TODO: snippet de código -->
+          <!-- rounded-lg bg-slate-900 p-4 -->
+          <!-- code: font-mono text-sm text-sky-300 -->
+          <pre class="???"><code class="???"><!-- Antes -->
+&lt;div style="margin: 13px; padding: 7px;"&gt;...&lt;/div&gt;
+
+/* Ahora */
+&lt;div class="m-3 p-2"&gt;...&lt;/div&gt;</code></pre>
+
+        </div>
+
+      </article>
+
+
+      <!-- FOOTER -->
+      <!-- TODO: footer border-t border-gray-100 py-8 text-center text-sm text-gray-500 -->
+      <footer class="???">
+        <p>© 2026 Mi Blog · Construido con TailwindCSS</p>
+      </footer>
+
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

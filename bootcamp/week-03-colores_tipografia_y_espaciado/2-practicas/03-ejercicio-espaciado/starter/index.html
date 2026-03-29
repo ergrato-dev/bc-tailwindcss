@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 03 — Espaciado</title>
+  </head>
+  <body class="min-h-screen bg-slate-100 p-8">
+    <h1 class="mb-8 text-2xl font-bold text-gray-900">Sistema de Espaciado</h1>
+
+
+    <!-- ============================================ -->
+    <!-- BLOQUE 1: Escala visual de padding           -->
+    <!-- ============================================ -->
+    <!-- Descomenta las siguientes líneas:            -->
+
+    <!-- <section class="mb-10">                                                                                           -->
+    <!--   <h2 class="mb-4 text-sm font-semibold uppercase tracking-widest text-gray-400">Escala de padding</h2>        -->
+    <!--   <div class="flex flex-wrap items-end gap-3">                                                                   -->
+    <!--     <div class="bg-sky-200 p-1"><span class="block bg-sky-500 text-xs text-white p-0.5">p-1 = 4px</span></div> -->
+    <!--     <div class="bg-sky-200 p-2"><span class="block bg-sky-500 text-xs text-white p-0.5">p-2 = 8px</span></div> -->
+    <!--     <div class="bg-sky-200 p-3"><span class="block bg-sky-500 text-xs text-white p-0.5">p-3 = 12px</span></div> -->
+    <!--     <div class="bg-sky-200 p-4"><span class="block bg-sky-500 text-xs text-white p-0.5">p-4 = 16px</span></div> -->
+    <!--     <div class="bg-sky-200 p-6"><span class="block bg-sky-500 text-xs text-white p-0.5">p-6 = 24px</span></div> -->
+    <!--     <div class="bg-sky-200 p-8"><span class="block bg-sky-500 text-xs text-white p-0.5">p-8 = 32px</span></div> -->
+    <!--     <div class="bg-sky-200 p-12"><span class="block bg-sky-500 text-xs text-white p-0.5">p-12 = 48px</span></div> -->
+    <!--   </div>                                                                                                          -->
+    <!-- </section>                                                                                                        -->
+
+
+    <!-- ============================================ -->
+    <!-- BLOQUE 2: Padding contextual por componente  -->
+    <!-- ============================================ -->
+    <!-- Descomenta:                                  -->
+
+    <!-- <section class="mb-10">                                                                                      -->
+    <!--   <h2 class="mb-4 text-sm font-semibold uppercase tracking-widest text-gray-400">Padding por contexto</h2> -->
+    <!--   <div class="flex flex-wrap items-start gap-4">                                                             -->
+    <!--                                                                                                              -->
+    <!--     Botones: px horizontal, py vertical pequeño                                                              -->
+    <!--     <button class="rounded-md bg-sky-500 px-3 py-1.5 text-sm text-white">px-3 py-1.5 (sm)</button>         -->
+    <!--     <button class="rounded-md bg-sky-500 px-4 py-2 text-sm text-white">px-4 py-2 (md)</button>              -->
+    <!--     <button class="rounded-md bg-sky-500 px-6 py-3 text-sm text-white">px-6 py-3 (lg)</button>              -->
+    <!--                                                                                                              -->
+    <!--     Card: padding generoso                                                                                   -->
+    <!--     <div class="rounded-xl bg-white p-6 shadow-sm">                                                         -->
+    <!--       <p class="text-sm font-semibold text-gray-700">Card — p-6</p>                                         -->
+    <!--       <p class="text-xs text-gray-400">24px en todos los lados</p>                                          -->
+    <!--     </div>                                                                                                    -->
+    <!--                                                                                                              -->
+    <!--     Sección: padding grande                                                                                  -->
+    <!--     <div class="rounded-xl bg-gray-800 px-8 py-12 text-white">                                             -->
+    <!--       <p class="text-sm font-semibold">Sección px-8 py-12</p>                                              -->
+    <!--       <p class="text-xs text-gray-400">32px H / 48px V</p>                                                  -->
+    <!--     </div>                                                                                                    -->
+    <!--   </div>                                                                                                     -->
+    <!-- </section>                                                                                                   -->
+
+
+    <!-- ============================================ -->
+    <!-- BLOQUE 3: space-x y space-y                  -->
+    <!-- ============================================ -->
+    <!-- Descomenta:                                  -->
+
+    <!-- <section class="mb-10">                                                              -->
+    <!--   <h2 class="mb-4 text-sm font-semibold uppercase tracking-widest text-gray-400">space-x y space-y</h2> -->
+    <!--                                                                                      -->
+    <!--   space-x-6 en navbar                                                                -->
+    <!--   <nav class="mb-4 flex items-center space-x-6 rounded-lg bg-white p-4 shadow-sm"> -->
+    <!--     <a href="#" class="text-sm font-medium text-gray-900">Inicio</a>                -->
+    <!--     <a href="#" class="text-sm font-medium text-gray-600 hover:text-gray-900">Blog</a> -->
+    <!--     <a href="#" class="text-sm font-medium text-gray-600 hover:text-gray-900">Proyectos</a> -->
+    <!--     <a href="#" class="text-sm font-medium text-gray-600 hover:text-gray-900">Contacto</a> -->
+    <!--   </nav>                                                                               -->
+    <!--                                                                                      -->
+    <!--   space-y-3 en lista de items                                                        -->
+    <!--   <ul class="space-y-3">                                                             -->
+    <!--     <li class="rounded-lg bg-white p-4 shadow-sm">Item con space-y-3</li>           -->
+    <!--     <li class="rounded-lg bg-white p-4 shadow-sm">Separación automática</li>        -->
+    <!--     <li class="rounded-lg bg-white p-4 shadow-sm">Entre cada elemento</li>          -->
+    <!--   </ul>                                                                              -->
+    <!-- </section>                                                                           -->
+
+
+    <!-- ============================================ -->
+    <!-- BLOQUE 4: Contenedor centrado con max-width  -->
+    <!-- ============================================ -->
+    <!-- Descomenta:                                  -->
+
+    <!-- <section class="mb-10">                                                               -->
+    <!--   <h2 class="mb-4 text-sm font-semibold uppercase tracking-widest text-gray-400">max-width containers</h2> -->
+    <!--                                                                                       -->
+    <!--   max-w-sm (384px) — Para cards y formularios                                        -->
+    <!--   <div class="mx-auto max-w-sm rounded-lg bg-sky-100 p-4 text-center text-sm">      -->
+    <!--     max-w-sm — 384px                                                                  -->
+    <!--   </div>                                                                              -->
+    <!--                                                                                       -->
+    <!--   max-w-2xl (672px) — Para texto de artículo                                        -->
+    <!--   <div class="mx-auto mt-4 max-w-2xl rounded-lg bg-emerald-100 p-4 text-center text-sm"> -->
+    <!--     max-w-2xl — 672px (ideal para texto)                                             -->
+    <!--   </div>                                                                              -->
+    <!--                                                                                       -->
+    <!--   max-w-7xl (1280px) — Para layout de página                                        -->
+    <!--   <div class="mx-auto mt-4 max-w-7xl rounded-lg bg-amber-100 p-4 text-center text-sm"> -->
+    <!--     max-w-7xl — 1280px (layout de página)                                            -->
+    <!--   </div>                                                                              -->
+    <!-- </section>                                                                            -->
+
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420" font-family="system-ui, sans-serif">
+  <rect width="800" height="420" fill="#0f172a"/>
+  <text x="400" y="30" text-anchor="middle" font-size="15" font-weight="700" fill="#f1f5f9" letter-spacing="1">JERARQUÍA TIPOGRÁFICA EN TAILWIND</text>
+
+  <!-- Left col: scale -->
+  <rect x="20" y="44" width="340" height="360" rx="10" fill="#1e293b"/>
+  <text x="190" y="66" text-anchor="middle" font-size="11" fill="#38bdf8" font-weight="700">ESCALA DE TAMAÑOS</text>
+  <text x="30" y="92" font-size="9" fill="#94a3b8">text-xs        12px</text>
+  <text x="30" y="116" font-size="10" fill="#94a3b8">text-sm      14px</text>
+  <text x="30" y="144" font-size="11" fill="#94a3b8">text-base    16px</text>
+  <text x="30" y="175" font-size="13" fill="#94a3b8">text-lg      18px</text>
+  <text x="30" y="208" font-size="14" fill="#cbd5e1">text-xl      20px</text>
+  <text x="30" y="244" font-size="16" fill="#e2e8f0">text-2xl   24px</text>
+  <text x="30" y="282" font-size="18" fill="#f1f5f9" font-weight="600">text-3xl  30px</text>
+  <text x="30" y="323" font-size="22" fill="#f1f5f9" font-weight="700">text-4xl 36px</text>
+  <text x="30" y="368" font-size="27" fill="#38bdf8" font-weight="800">text-5xl 48px</text>
+  <text x="30" y="398" font-size="12" fill="#475569">↑ Hero headline</text>
+
+  <!-- Right col: weights -->
+  <rect x="380" y="44" width="400" height="360" rx="10" fill="#1e293b"/>
+  <text x="580" y="66" text-anchor="middle" font-size="11" fill="#38bdf8" font-weight="700">PESOS (font-weight)</text>
+
+  <text x="390" y="96" font-size="15" font-weight="100" fill="#64748b">font-thin     — 100</text>
+  <text x="390" y="122" font-size="15" font-weight="300" fill="#94a3b8">font-light    — 300</text>
+  <text x="390" y="148" font-size="15" font-weight="400" fill="#cbd5e1">font-normal  — 400 · cuerpo texto</text>
+  <text x="390" y="174" font-size="15" font-weight="500" fill="#e2e8f0">font-medium — 500 · labels, nav</text>
+  <text x="390" y="200" font-size="15" font-weight="600" fill="#f1f5f9">font-semibold — 600 · subtítulos</text>
+  <text x="390" y="228" font-size="15" font-weight="700" fill="#f1f5f9">font-bold — 700 · headings</text>
+  <text x="390" y="256" font-size="15" font-weight="800" fill="#f8fafc">font-extrabold — 800</text>
+  <text x="390" y="284" font-size="15" font-weight="900" fill="#38bdf8">font-black — 900 · impact</text>
+
+  <line x1="390" y1="300" x2="765" y2="300" stroke="#334155" stroke-width="1"/>
+  <text x="580" y="320" text-anchor="middle" font-size="11" fill="#38bdf8" font-weight="700">LINE-HEIGHT (leading)</text>
+  <text x="390" y="340" font-size="13" fill="#94a3b8">leading-tight   1.25 · headings cortos</text>
+  <text x="390" y="360" font-size="13" fill="#94a3b8">leading-normal  1.5 · default</text>
+  <text x="390" y="380" font-size="13" fill="#e2e8f0">leading-relaxed 1.625 · cuerpo de texto</text>
+  <text x="390" y="400" font-size="13" fill="#64748b">leading-loose   2.0 · muy aireado</text>
+</svg>
