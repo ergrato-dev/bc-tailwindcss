@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" width="1200" height="380">
+
+  <!-- ===================== BACKGROUND ===================== -->
+  <rect width="1200" height="380" fill="#030712"/>
+  <!-- Right panel subtle background -->
+  <rect x="600" y="0" width="600" height="380" fill="#060f1e"/>
+  <!-- Vertical divider line -->
+  <rect x="598" y="40" width="2" height="300" rx="1" fill="#1e3a5f" opacity="0.4"/>
+
+  <!-- ===================== LEFT SIDE: BRANDING ===================== -->
+
+  <!-- Tailwind "wind" mark: 3 descending horizontal bars -->
+  <rect x="60" y="64"  width="112" height="14" rx="7" fill="#38BDF8"/>
+  <rect x="60" y="88"  width="84"  height="14" rx="7" fill="#38BDF8" opacity="0.6"/>
+  <rect x="60" y="112" width="56"  height="14" rx="7" fill="#38BDF8" opacity="0.3"/>
+
+  <!-- Main title -->
+  <text x="60" y="190"
+    font-family="system-ui,-apple-system,'Segoe UI',Roboto,sans-serif"
+    font-size="72" font-weight="900"
+    fill="#f8fafc" letter-spacing="-3">TailwindCSS</text>
+
+  <!-- Subtitle -->
+  <text x="62" y="230"
+    font-family="system-ui,-apple-system,'Segoe UI',Roboto,sans-serif"
+    font-size="26" font-weight="600"
+    fill="#38BDF8" letter-spacing="-0.3">Zero to Hero Bootcamp</text>
+
+  <!-- Separator line -->
+  <rect x="60" y="250" width="290" height="1.5" rx="1" fill="#1e3a5f"/>
+
+  <!-- Badge: 12 Semanas -->
+  <rect x="60"  y="267" width="108" height="26" rx="13" fill="#0c2d4a"/>
+  <text x="114" y="285"
+    font-family="system-ui,sans-serif" font-size="12" font-weight="600"
+    fill="#38BDF8" text-anchor="middle">12 Semanas</text>
+
+  <!-- Badge: 96 Horas -->
+  <rect x="178" y="267" width="86" height="26" rx="13" fill="#0c2d4a"/>
+  <text x="221" y="285"
+    font-family="system-ui,sans-serif" font-size="12" font-weight="600"
+    fill="#38BDF8" text-anchor="middle">96 Horas</text>
+
+  <!-- Badge: Tailwind v4+ -->
+  <rect x="274" y="267" width="96" height="26" rx="13" fill="#0c2d4a"/>
+  <text x="322" y="285"
+    font-family="system-ui,sans-serif" font-size="12" font-weight="600"
+    fill="#38BDF8" text-anchor="middle">Tailwind v4+</text>
+
+  <!-- Attribution -->
+  <text x="60" y="340"
+    font-family="system-ui,-apple-system,sans-serif"
+    font-size="12" fill="#1e3a5f">ergrato.dev · bootcamp</text>
+
+  <!-- ===================== RIGHT SIDE: TAILWIND COLOR SYSTEM ===================== -->
+  <!--
+    Grid: 10 columns × 5 rows
+    Square size: 38×38px  |  Gap: 8px  |  Step: 46px
+    Grid x start: 674     |  Grid y start: 79
+    Columns: slate, sky, blue, indigo, violet, purple, pink, rose, orange, amber
+    Shades:  100, 300, 500, 700, 900
+  -->
+
+  <!-- Sky column highlight (col 1 = THE TailwindCSS color) -->
+  <rect x="717" y="76" width="44" height="228" rx="6"
+    fill="none" stroke="#38BDF8" stroke-width="1.5" opacity="0.55"/>
+
+  <!-- COL 0 · SLATE (x=674) -->
+  <rect x="674" y="79"  width="38" height="38" rx="4" fill="#f1f5f9" stroke="#1e293b" stroke-width="0.5"/>
+  <rect x="674" y="125" width="38" height="38" rx="4" fill="#cbd5e1" stroke="#1e293b" stroke-width="0.5"/>
+  <rect x="674" y="171" width="38" height="38" rx="4" fill="#64748b" stroke="#1e293b" stroke-width="0.5"/>
+  <rect x="674" y="217" width="38" height="38" rx="4" fill="#334155" stroke="#1e293b" stroke-width="0.5"/>
+  <rect x="674" y="263" width="38" height="38" rx="4" fill="#0f172a" stroke="#1e293b" stroke-width="0.5"/>
+
+  <!-- COL 1 · SKY (x=720) -->
+  <rect x="720" y="79"  width="38" height="38" rx="4" fill="#e0f2fe" stroke="#38BDF8" stroke-width="0.5"/>
+  <rect x="720" y="125" width="38" height="38" rx="4" fill="#7dd3fc" stroke="#38BDF8" stroke-width="0.5"/>
+  <rect x="720" y="171" width="38" height="38" rx="4" fill="#0ea5e9" stroke="#38BDF8" stroke-width="0.5"/>
+  <rect x="720" y="217" width="38" height="38" rx="4" fill="#0369a1" stroke="#38BDF8" stroke-width="0.5"/>
+  <rect x="720" y="263" width="38" height="38" rx="4" fill="#0c4a6e" stroke="#38BDF8" stroke-width="0.5"/>
+
+  <!-- COL 2 · BLUE (x=766) -->
+  <rect x="766" y="79"  width="38" height="38" rx="4" fill="#dbeafe" stroke="#1e293b" stroke-width="0.5"/>
+  <rect x="766" y="125" width="38" height="38" rx="4" fill="#93c5fd" stroke="#1e293b" stroke-width="0.5"/>
+  <rect x="766" y="171" width="38" height="38" rx="4" fill="#3b82f6" stroke="#1e293b" stroke-width="0.5"/>
+  <rect x="766" y="217" width="38" height="38" rx="4" fill="#1d4ed8" stroke="#1e293b" stroke-width="0.5"/>
+  <rect x="766" y="263" width="38" height="38" rx="4" fill="#1e3a8a" stroke="#1e293b" stroke-width="0.5"/>
+
+  <!-- COL 3 · INDIGO (x=812) -->
+  <rect x="812" y="79"  width="38" height="38" rx="4" fill="#e0e7ff" stroke="#1e293b" stroke-width="0.5"/>
+  <rect x="812" y="125" width="38" height="38" rx="4" fill="#a5b4fc" stroke="#1e293b" stroke-width="0.5"/>
+  <rect x="812" y="171" width="38" height="38" rx="4" fill="#6366f1" stroke="#1e293b" stroke-width="0.5"/>
+  <rect x="812" y="217" width="38" height="38" rx="4" fill="#4338ca" stroke="#1e293b" stroke-width="0.5"/>
+  <rect x="812" y="263" width="38" height="38" rx="4" fill="#312e81" stroke="#1e293b" stroke-width="0.5"/>
+
+  <!-- COL 4 · VIOLET (x=858) -->
+  <rect x="858" y="79"  width="38" height="38" rx="4" fill="#ede9fe" stroke="#1e293b" stroke-width="0.5"/>
+  <rect x="858" y="125" width="38" height="38" rx="4" fill="#c4b5fd" stroke="#1e293b" stroke-width="0.5"/>
+  <rect x="858" y="171" width="38" height="38" rx="4" fill="#8b5cf6" stroke="#1e293b" stroke-width="0.5"/>
+  <rect x="858" y="217" width="38" height="38" rx="4" fill="#6d28d9" stroke="#1e293b" stroke-width="0.5"/>
+  <rect x="858" y="263" width="38" height="38" rx="4" fill="#4c1d95" stroke="#1e293b" stroke-width="0.5"/>
+
+  <!-- COL 5 · PURPLE (x=904) -->
+  <rect x="904" y="79"  width="38" height="38" rx="4" fill="#f3e8ff" stroke="#1e293b" stroke-width="0.5"/>
+  <rect x="904" y="125" width="38" height="38" rx="4" fill="#d8b4fe" stroke="#1e293b" stroke-width="0.5"/>
+  <rect x="904" y="171" width="38" height="38" rx="4" fill="#a855f7" stroke="#1e293b" stroke-width="0.5"/>
+  <rect x="904" y="217" width="38" height="38" rx="4" fill="#7e22ce" stroke="#1e293b" stroke-width="0.5"/>
+  <rect x="904" y="263" width="38" height="38" rx="4" fill="#581c87" stroke="#1e293b" stroke-width="0.5"/>
+
+  <!-- COL 6 · PINK (x=950) -->
+  <rect x="950" y="79"  width="38" height="38" rx="4" fill="#fce7f3" stroke="#1e293b" stroke-width="0.5"/>
+  <rect x="950" y="125" width="38" height="38" rx="4" fill="#f9a8d4" stroke="#1e293b" stroke-width="0.5"/>
+  <rect x="950" y="171" width="38" height="38" rx="4" fill="#ec4899" stroke="#1e293b" stroke-width="0.5"/>
+  <rect x="950" y="217" width="38" height="38" rx="4" fill="#be185d" stroke="#1e293b" stroke-width="0.5"/>
+  <rect x="950" y="263" width="38" height="38" rx="4" fill="#831843" stroke="#1e293b" stroke-width="0.5"/>
+
+  <!-- COL 7 · ROSE (x=996) -->
+  <rect x="996" y="79"  width="38" height="38" rx="4" fill="#ffe4e6" stroke="#1e293b" stroke-width="0.5"/>
+  <rect x="996" y="125" width="38" height="38" rx="4" fill="#fda4af" stroke="#1e293b" stroke-width="0.5"/>
+  <rect x="996" y="171" width="38" height="38" rx="4" fill="#f43f5e" stroke="#1e293b" stroke-width="0.5"/>
+  <rect x="996" y="217" width="38" height="38" rx="4" fill="#be123c" stroke="#1e293b" stroke-width="0.5"/>
+  <rect x="996" y="263" width="38" height="38" rx="4" fill="#881337" stroke="#1e293b" stroke-width="0.5"/>
+
+  <!-- COL 8 · ORANGE (x=1042) -->
+  <rect x="1042" y="79"  width="38" height="38" rx="4" fill="#ffedd5" stroke="#1e293b" stroke-width="0.5"/>
+  <rect x="1042" y="125" width="38" height="38" rx="4" fill="#fdba74" stroke="#1e293b" stroke-width="0.5"/>
+  <rect x="1042" y="171" width="38" height="38" rx="4" fill="#f97316" stroke="#1e293b" stroke-width="0.5"/>
+  <rect x="1042" y="217" width="38" height="38" rx="4" fill="#c2410c" stroke="#1e293b" stroke-width="0.5"/>
+  <rect x="1042" y="263" width="38" height="38" rx="4" fill="#7c2d12" stroke="#1e293b" stroke-width="0.5"/>
+
+  <!-- COL 9 · AMBER (x=1088) -->
+  <rect x="1088" y="79"  width="38" height="38" rx="4" fill="#fef3c7" stroke="#1e293b" stroke-width="0.5"/>
+  <rect x="1088" y="125" width="38" height="38" rx="4" fill="#fcd34d" stroke="#1e293b" stroke-width="0.5"/>
+  <rect x="1088" y="171" width="38" height="38" rx="4" fill="#f59e0b" stroke="#1e293b" stroke-width="0.5"/>
+  <rect x="1088" y="217" width="38" height="38" rx="4" fill="#b45309" stroke="#1e293b" stroke-width="0.5"/>
+  <rect x="1088" y="263" width="38" height="38" rx="4" fill="#78350f" stroke="#1e293b" stroke-width="0.5"/>
+
+  <!-- Column labels (above grid at y=67) -->
+  <text x="693"  y="67" font-family="monospace" font-size="9" fill="#334155" text-anchor="middle">slate</text>
+  <text x="739"  y="67" font-family="monospace" font-size="9" font-weight="700" fill="#38BDF8" text-anchor="middle">sky</text>
+  <text x="785"  y="67" font-family="monospace" font-size="9" fill="#334155" text-anchor="middle">blue</text>
+  <text x="831"  y="67" font-family="monospace" font-size="9" fill="#334155" text-anchor="middle">indigo</text>
+  <text x="877"  y="67" font-family="monospace" font-size="9" fill="#334155" text-anchor="middle">violet</text>
+  <text x="923"  y="67" font-family="monospace" font-size="9" fill="#334155" text-anchor="middle">purple</text>
+  <text x="969"  y="67" font-family="monospace" font-size="9" fill="#334155" text-anchor="middle">pink</text>
+  <text x="1015" y="67" font-family="monospace" font-size="9" fill="#334155" text-anchor="middle">rose</text>
+  <text x="1061" y="67" font-family="monospace" font-size="9" fill="#334155" text-anchor="middle">orange</text>
+  <text x="1107" y="67" font-family="monospace" font-size="9" fill="#334155" text-anchor="middle">amber</text>
+
+  <!-- Shade labels (left of grid) -->
+  <text x="670" y="103" font-family="monospace" font-size="9" fill="#334155" text-anchor="end">100</text>
+  <text x="670" y="149" font-family="monospace" font-size="9" fill="#334155" text-anchor="end">300</text>
+  <text x="670" y="195" font-family="monospace" font-size="9" fill="#334155" text-anchor="end">500</text>
+  <text x="670" y="241" font-family="monospace" font-size="9" fill="#334155" text-anchor="end">700</text>
+  <text x="670" y="287" font-family="monospace" font-size="9" fill="#334155" text-anchor="end">900</text>
+
+  <!-- sky-400 featured label below sky column -->
+  <text x="739" y="318"
+    font-family="monospace" font-size="10" font-weight="600"
+    fill="#38BDF8" text-anchor="middle">sky-400</text>
+
+  <!-- Bottom caption -->
+  <text x="900" y="355"
+    font-family="system-ui,-apple-system,sans-serif"
+    font-size="10" fill="#1e3a5f"
+    text-anchor="middle" letter-spacing="2">TAILWINDCSS COLOR SYSTEM</text>
+
+</svg>
