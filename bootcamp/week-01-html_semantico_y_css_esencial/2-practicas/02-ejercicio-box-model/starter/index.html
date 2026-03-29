@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio — Box Model</title>
+  <style>
+    /* Base — No modificar */
+    body {
+      font-family: system-ui, sans-serif;
+      background: #f1f5f9;
+      padding: 40px;
+      color: #1e293b;
+    }
+
+    h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .demo-area {
+      background: white;
+      border-radius: 12px;
+      padding: 32px;
+      margin-bottom: 32px;
+      border: 1px solid #e2e8f0;
+    }
+
+    .label {
+      font-size: 0.75rem;
+      color: #94a3b8;
+      margin-top: 8px;
+    }
+
+    .row {
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =================================================== -->
+  <!-- BLOQUE 1: Content — El tamaño base                  -->
+  <!-- Descomenta todo el bloque:                          -->
+  <!-- =================================================== -->
+  <!-- <section class="demo-area">
+      <h2>Paso 1 — Content</h2>
+      <style>
+        .paso1 {
+          width: 200px;
+          height: 100px;
+          background-color: #0ea5e9;
+          color: white;
+          font-size: 0.85rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      </style>
+      <div class="paso1">Solo content: 200×100px</div>
+      <p class="label">En DevTools: width=200px, height=100px</p>
+    </section> -->
+
+
+  <!-- =================================================== -->
+  <!-- BLOQUE 2: Padding — Espacio interior                -->
+  <!-- Descomenta todo el bloque:                          -->
+  <!-- =================================================== -->
+  <!-- <section class="demo-area">
+      <h2>Paso 2 — Padding</h2>
+      <style>
+        .paso2 {
+          width: 200px;
+          height: 100px;
+          background-color: #0ea5e9;
+          color: white;
+          font-size: 0.85rem;
+          padding: 24px;
+          /* Con box-sizing: content-box (default):
+             Tamaño visual = 200 + 24 + 24 = 248px de ancho */
+        }
+      </style>
+      <div class="paso2">
+        Con padding: 24px<br>
+        <small>Tamaño visual: 248px (content-box)</small>
+      </div>
+      <p class="label">Abre DevTools y verifica: el box tiene más de 200px</p>
+    </section> -->
+
+
+  <!-- =================================================== -->
+  <!-- BLOQUE 3: Border                                    -->
+  <!-- Descomenta todo el bloque:                          -->
+  <!-- =================================================== -->
+  <!-- <section class="demo-area">
+      <h2>Paso 3 — Border</h2>
+      <style>
+        .paso3 {
+          width: 200px;
+          height: 100px;
+          background-color: #7dd3fc;
+          color: #0c4a6e;
+          font-size: 0.85rem;
+          padding: 24px;
+          border: 4px solid #0369a1;
+          /* Tamaño visual = 200 + 48(padding) + 8(border) = 256px */
+        }
+      </style>
+      <div class="paso3">
+        Padding + Border<br>
+        <small>Tamaño visual: 256px</small>
+      </div>
+      <p class="label">El borde también suma (con content-box)</p>
+    </section> -->
+
+
+  <!-- =================================================== -->
+  <!-- BLOQUE 4: Margin — Espacio exterior                 -->
+  <!-- Descomenta todo el bloque:                          -->
+  <!-- =================================================== -->
+  <!-- <section class="demo-area">
+      <h2>Paso 4 — Margin</h2>
+      <style>
+        .paso4-contenedor {
+          background: #f0f9ff;
+          border: 2px dashed #bae6fd;
+          padding: 4px;
+          display: inline-block;
+        }
+        .paso4 {
+          width: 200px;
+          height: 80px;
+          background-color: #0ea5e9;
+          color: white;
+          font-size: 0.85rem;
+          padding: 16px;
+          border: 2px solid #0369a1;
+          margin: 32px;  /* ← espacio exterior transparente */
+          display: flex;
+          align-items: center;
+        }
+        .paso4b {
+          width: 200px;
+          margin: 0 auto;  /* ← centra horizontalmente */
+          background: #0ea5e9;
+          color: white;
+          padding: 12px;
+          text-align: center;
+          font-size: 0.85rem;
+          margin-top: 16px;
+        }
+      </style>
+      <div class="row">
+        <div>
+          <p class="label" style="margin-bottom:8px">Margin: 32px (el área punteada muestra el espacio)</p>
+          <div class="paso4-contenedor">
+            <div class="paso4">margin: 32px</div>
+          </div>
+        </div>
+        <div>
+          <p class="label" style="margin-bottom:8px">margin: 0 auto — centra el elemento</p>
+          <div style="width:400px; background:#f0f9ff; border: 2px dashed #bae6fd;">
+            <div class="paso4b">margin: 0 auto</div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+
+  <!-- =================================================== -->
+  <!-- BLOQUE 5: box-sizing: border-box vs content-box    -->
+  <!-- Descomenta todo el bloque:                          -->
+  <!-- =================================================== -->
+  <!-- <section class="demo-area">
+      <h2>Paso 5 — border-box vs content-box</h2>
+      <style>
+        .caja-content-box {
+          box-sizing: content-box; /* default del browser */
+          width: 200px;
+          padding: 24px;
+          border: 4px solid #f97316;
+          background: #fed7aa;
+          color: #7c2d12;
+          font-size: 0.8rem;
+          margin-bottom: 16px;
+        }
+        .caja-border-box {
+          box-sizing: border-box; /* el estándar moderno */
+          width: 200px;
+          padding: 24px;
+          border: 4px solid #16a34a;
+          background: #bbf7d0;
+          color: #14532d;
+          font-size: 0.8rem;
+        }
+      </style>
+      <div class="row">
+        <div>
+          <p class="label">content-box (default) — width define solo el content</p>
+          <div class="caja-content-box">
+            width: 200px<br>
+            padding: 24px<br>
+            border: 4px<br>
+            <strong>Visual total: 256px</strong>
+          </div>
+        </div>
+        <div>
+          <p class="label">border-box — width define el elemento completo</p>
+          <div class="caja-border-box">
+            width: 200px<br>
+            padding: 24px<br>
+            border: 4px<br>
+            <strong>Visual total: 200px ✅</strong>
+          </div>
+        </div>
+      </div>
+      <p style="margin-top:16px; font-size:0.85rem; color:#475569;">
+        Con <code>border-box</code>: el espacio del content real = 200 - 48(padding) - 8(border) = 144px.
+        Pero el tamaño en pantalla siempre es exactamente 200px — predecible.
+      </p>
+    </section> -->
+
+
+  <!-- =================================================== -->
+  <!-- BLOQUE 6: Margin Collapsing                         -->
+  <!-- Descomenta todo el bloque:                          -->
+  <!-- =================================================== -->
+  <!-- <section class="demo-area">
+      <h2>Paso 6 — Margin Collapsing</h2>
+      <style>
+        .collapse-wrapper {
+          background: #f8fafc;
+          border: 2px dashed #cbd5e1;
+          padding: 8px;
+          display: inline-block;
+          vertical-align: top;
+        }
+        .parrafo-a {
+          background: #bfdbfe;
+          color: #1e3a8a;
+          padding: 12px;
+          margin-bottom: 32px; /* ← margin inferior */
+          font-size: 0.85rem;
+        }
+        .parrafo-b {
+          background: #bbf7d0;
+          color: #14532d;
+          padding: 12px;
+          margin-top: 32px; /* ← margin superior */
+          font-size: 0.85rem;
+        }
+      </style>
+      <div class="row">
+        <div>
+          <p class="label">Párrafo A con margin-bottom: 32px y Párrafo B con margin-top: 32px</p>
+          <p class="label">¿Cuánto espacio hay entre ellos? ¿32+32=64px? ¡No! Solo 32px (collapse)</p>
+          <div class="collapse-wrapper" style="width:300px">
+            <div class="parrafo-a">Párrafo A<br><small>margin-bottom: 32px</small></div>
+            <div class="parrafo-b">Párrafo B<br><small>margin-top: 32px</small></div>
+          </div>
+        </div>
+      </div>
+      <p style="margin-top:16px; font-size:0.85rem; color:#475569;">
+        Verifica en DevTools: selecciona uno de los párrafos y mira el espacio en el diagrama del box model.
+        El mayor de los dos márgenes gana — en este caso ambos son 32px, así que el espacio = 32px.
+      </p>
+    </section> -->
+
+</body>
+
+</html>

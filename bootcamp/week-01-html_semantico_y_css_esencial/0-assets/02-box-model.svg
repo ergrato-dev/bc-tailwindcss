@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="800" height="480">
+
+  <!-- Background -->
+  <rect width="800" height="480" fill="#0f172a"/>
+
+  <!-- Title -->
+  <text x="400" y="36" text-anchor="middle"
+    font-family="system-ui,-apple-system,sans-serif"
+    font-size="20" font-weight="700" fill="#f1f5f9">El Box Model CSS</text>
+  <text x="400" y="56" text-anchor="middle"
+    font-family="system-ui,-apple-system,sans-serif"
+    font-size="13" fill="#64748b">Cada elemento HTML es una caja rectangular con 4 capas</text>
+
+  <!-- ==========================================
+       LAYER 1: MARGIN (outermost)
+       fill visible as top/bottom/left/right bands
+       ========================================== -->
+  <rect x="40" y="68" width="580" height="302"
+    rx="6" fill="#1e293b"
+    stroke="#334155" stroke-width="1.5" stroke-dasharray="7,4"/>
+
+  <!-- ==========================================
+       LAYER 2: BORDER
+       fill shows as ring between margin inner and padding outer
+       ========================================== -->
+  <rect x="88" y="108" width="484" height="222"
+    rx="4" fill="#0284c7"/>
+
+  <!-- ==========================================
+       LAYER 3: PADDING
+       sits on top of border, leaving border ring visible
+       ========================================== -->
+  <rect x="118" y="138" width="424" height="162"
+    rx="3" fill="#082f49"/>
+
+  <!-- ==========================================
+       LAYER 4: CONTENT (innermost)
+       ========================================== -->
+  <rect x="170" y="174" width="320" height="90"
+    rx="4" fill="#38bdf8"/>
+
+  <!-- Content label -->
+  <text x="330" y="216" text-anchor="middle"
+    font-family="system-ui,-apple-system,sans-serif"
+    font-size="15" font-weight="700" fill="#0c4a6e">Content</text>
+  <text x="330" y="236" text-anchor="middle"
+    font-family="monospace,sans-serif"
+    font-size="11" fill="rgba(7,89,133,0.85)">width: 320px  ·  height: 90px</text>
+
+  <!-- ==========================================
+       LAYER TEXT LABELS (inside each visible ring)
+       ========================================== -->
+
+  <!-- margin — top-left of margin ring -->
+  <text x="56" y="92" font-family="system-ui,-apple-system,sans-serif"
+    font-size="12" font-weight="600" fill="#64748b">margin</text>
+
+  <!-- border — inside the border ring (top area) -->
+  <text x="100" y="130" font-family="system-ui,-apple-system,sans-serif"
+    font-size="12" font-weight="600" fill="white">border</text>
+
+  <!-- padding — inside the padding ring (top-left) -->
+  <text x="132" y="160" font-family="system-ui,-apple-system,sans-serif"
+    font-size="12" font-weight="600" fill="#7dd3fc">padding</text>
+
+  <!-- ==========================================
+       RIGHT SIDE: vertical bracket annotations
+       (x >= 635, right of all boxes)
+       ========================================== -->
+
+  <!-- Bracket helper line -->
+  <line x1="622" y1="68" x2="630" y2="68" stroke="#4b5563" stroke-width="1.5"/>
+  <line x1="622" y1="108" x2="630" y2="108" stroke="#4b5563" stroke-width="1.5"/>
+  <line x1="626" y1="68" x2="626" y2="108" stroke="#4b5563" stroke-width="1.5"/>
+  <text x="636" y="84" font-family="monospace,sans-serif" font-size="11" fill="#64748b">margin:</text>
+  <text x="636" y="98" font-family="monospace,sans-serif" font-size="10" fill="#475569">40px top</text>
+
+  <line x1="622" y1="108" x2="630" y2="108" stroke="#7dd3fc" stroke-width="1.5"/>
+  <line x1="622" y1="138" x2="630" y2="138" stroke="#7dd3fc" stroke-width="1.5"/>
+  <line x1="626" y1="108" x2="626" y2="138" stroke="#7dd3fc" stroke-width="1.5"/>
+  <text x="636" y="120" font-family="monospace,sans-serif" font-size="11" fill="#7dd3fc">border:</text>
+  <text x="636" y="133" font-family="monospace,sans-serif" font-size="10" fill="#7dd3fc">4px solid</text>
+
+  <line x1="622" y1="138" x2="630" y2="138" stroke="#38bdf8" stroke-width="1.5"/>
+  <line x1="622" y1="174" x2="630" y2="174" stroke="#38bdf8" stroke-width="1.5"/>
+  <line x1="626" y1="138" x2="626" y2="174" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="636" y="150" font-family="monospace,sans-serif" font-size="11" fill="#38bdf8">padding:</text>
+  <text x="636" y="163" font-family="monospace,sans-serif" font-size="10" fill="#38bdf8">36px top</text>
+
+  <line x1="622" y1="174" x2="630" y2="174" stroke="#bae6fd" stroke-width="1.5"/>
+  <line x1="622" y1="264" x2="630" y2="264" stroke="#bae6fd" stroke-width="1.5"/>
+  <line x1="626" y1="174" x2="626" y2="264" stroke="#bae6fd" stroke-width="1.5"/>
+  <text x="636" y="214" font-family="monospace,sans-serif" font-size="11" fill="#bae6fd">height:</text>
+  <text x="636" y="227" font-family="monospace,sans-serif" font-size="10" fill="#bae6fd">90px</text>
+
+  <!-- ==========================================
+       BOTTOM: box-sizing comparison
+       ========================================== -->
+  <line x1="40" y1="392" x2="620" y2="392" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- Label: content-box -->
+  <rect x="40" y="404" width="270" height="62" rx="6" fill="#1e293b"/>
+  <text x="55" y="422" font-family="monospace,sans-serif" font-size="11" fill="#ef4444">box-sizing: content-box</text>
+  <text x="55" y="438" font-family="monospace,sans-serif" font-size="10" fill="#94a3b8">total = width + padding×2 + border×2</text>
+  <text x="55" y="453" font-family="monospace,sans-serif" font-size="10" fill="#94a3b8">= 320 + 72 + 8 = 400px ⚠️</text>
+
+  <!-- Label: border-box -->
+  <rect x="330" y="404" width="290" height="62" rx="6" fill="#082f49"/>
+  <text x="345" y="422" font-family="monospace,sans-serif" font-size="11" fill="#38bdf8">box-sizing: border-box</text>
+  <text x="345" y="438" font-family="monospace,sans-serif" font-size="10" fill="#94a3b8">total = width (padding y border incluidos)</text>
+  <text x="345" y="453" font-family="monospace,sans-serif" font-size="10" fill="#7dd3fc">= 320px siempre ✓ predecible</text>
+
+</svg>

@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="#0f172a"/>
+
+  <!-- Title -->
+  <text x="400" y="32" text-anchor="middle"
+    font-family="system-ui,-apple-system,sans-serif"
+    font-size="18" font-weight="700" fill="#f1f5f9">Estructura de una Página HTML Semántica</text>
+  <text x="400" y="50" text-anchor="middle"
+    font-family="system-ui,-apple-system,sans-serif"
+    font-size="12" fill="#64748b">Cada zona tiene un elemento semántico que comunica su propósito</text>
+
+  <!-- ==========================================
+       BROWSER CHROME (decorative)
+       ========================================== -->
+  <rect x="60" y="62" width="680" height="420" rx="8"
+    fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+  <!-- Browser toolbar -->
+  <rect x="60" y="62" width="680" height="28" rx="8"
+    fill="#1e293b"/>
+  <rect x="60" y="78" width="680" height="12" fill="#1e293b"/>
+  <!-- Traffic lights -->
+  <circle cx="82" cy="76" r="5" fill="#ef4444" opacity="0.6"/>
+  <circle cx="98" cy="76" r="5" fill="#f59e0b" opacity="0.6"/>
+  <circle cx="114" cy="76" r="5" fill="#22c55e" opacity="0.6"/>
+  <!-- URL bar -->
+  <rect x="140" y="69" width="480" height="14" rx="7" fill="#334155"/>
+  <text x="380" y="80" text-anchor="middle"
+    font-family="monospace,sans-serif" font-size="9" fill="#64748b">https://mi-sitio.com</text>
+
+  <!-- ==========================================
+       LAYOUT ZONES — inside browser
+       ========================================== -->
+
+  <!-- HEADER zone -->
+  <rect x="76" y="96" width="648" height="54" rx="4" fill="#082f49"/>
+  <text x="174" y="118" text-anchor="middle"
+    font-family="monospace,sans-serif" font-size="13" font-weight="700" fill="#38bdf8">&lt;header&gt;</text>
+  <!-- Nav inside header -->
+  <rect x="340" y="103" width="368" height="40" rx="3" fill="#0c4a6e" opacity="0.7"/>
+  <text x="524" y="118" text-anchor="middle"
+    font-family="monospace,sans-serif" font-size="11" fill="#7dd3fc">&lt;nav&gt;</text>
+  <text x="365" y="130" font-family="monospace,sans-serif" font-size="9" fill="#38bdf8">Inicio</text>
+  <text x="420" y="130" font-family="monospace,sans-serif" font-size="9" fill="#38bdf8">Servicios</text>
+  <text x="483" y="130" font-family="monospace,sans-serif" font-size="9" fill="#38bdf8">Blog</text>
+  <text x="540" y="130" font-family="monospace,sans-serif" font-size="9" fill="#38bdf8">Contacto</text>
+
+  <!-- MAIN zone -->
+  <rect x="76" y="156" width="648" height="254" rx="4" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="93" y="174" font-family="monospace,sans-serif" font-size="11" fill="#64748b">&lt;main&gt;</text>
+
+  <!-- SECTION inside main (left/center) -->
+  <rect x="86" y="180" width="390" height="220" rx="3" fill="#0f172a" stroke="#1e3a5f" stroke-width="1.5"/>
+  <text x="104" y="197" font-family="monospace,sans-serif" font-size="11" fill="#0ea5e9">&lt;section&gt;</text>
+  <text x="104" y="212" font-family="monospace,sans-serif" font-size="9" fill="#475569">aria-labelledby="titulo-section"</text>
+
+  <!-- H2 inside section -->
+  <rect x="96" y="218" width="370" height="20" rx="2" fill="#1e293b"/>
+  <text x="110" y="232" font-family="monospace,sans-serif" font-size="10" fill="#f1f5f9">&lt;h2&gt; Últimas Noticias &lt;/h2&gt;</text>
+
+  <!-- ARTICLE 1 -->
+  <rect x="96" y="244" width="167" height="144" rx="3" fill="#1e293b" stroke="#1e3a5f" stroke-width="1"/>
+  <text x="110" y="260" font-family="monospace,sans-serif" font-size="10" fill="#38bdf8">&lt;article&gt;</text>
+  <rect x="106" y="266" width="147" height="10" rx="2" fill="#334155"/>
+  <rect x="106" y="280" width="130" height="8" rx="2" fill="#1e3a5f"/>
+  <rect x="106" y="292" width="110" height="8" rx="2" fill="#1e3a5f"/>
+  <rect x="106" y="304" width="120" height="8" rx="2" fill="#1e3a5f"/>
+  <rect x="106" y="316" width="70" height="8" rx="2" fill="#1e3a5f"/>
+  <text x="110" y="378" font-family="monospace,sans-serif" font-size="10" fill="#64748b">&lt;/article&gt;</text>
+
+  <!-- ARTICLE 2 -->
+  <rect x="271" y="244" width="175" height="144" rx="3" fill="#1e293b" stroke="#1e3a5f" stroke-width="1"/>
+  <text x="285" y="260" font-family="monospace,sans-serif" font-size="10" fill="#38bdf8">&lt;article&gt;</text>
+  <rect x="281" y="266" width="155" height="10" rx="2" fill="#334155"/>
+  <rect x="281" y="280" width="138" height="8" rx="2" fill="#1e3a5f"/>
+  <rect x="281" y="292" width="118" height="8" rx="2" fill="#1e3a5f"/>
+  <rect x="281" y="304" width="128" height="8" rx="2" fill="#1e3a5f"/>
+  <rect x="281" y="316" width="80" height="8" rx="2" fill="#1e3a5f"/>
+  <text x="285" y="378" font-family="monospace,sans-serif" font-size="10" fill="#64748b">&lt;/article&gt;</text>
+
+  <!-- ASIDE -->
+  <rect x="488" y="180" width="224" height="220" rx="3" fill="#120e1f" stroke="#2e1065" stroke-width="1.5"/>
+  <text x="504" y="197" font-family="monospace,sans-serif" font-size="11" fill="#a78bfa">&lt;aside&gt;</text>
+  <rect x="498" y="204" width="200" height="12" rx="2" fill="#2e1065"/>
+  <text x="506" y="214" font-family="monospace,sans-serif" font-size="9" fill="#8b5cf6">Artículos Relacionados</text>
+  <rect x="498" y="222" width="180" height="8" rx="2" fill="#1e1040"/>
+  <rect x="498" y="235" width="160" height="8" rx="2" fill="#1e1040"/>
+  <rect x="498" y="248" width="170" height="8" rx="2" fill="#1e1040"/>
+  <rect x="498" y="267" width="200" height="12" rx="2" fill="#2e1065"/>
+  <text x="506" y="277" font-family="monospace,sans-serif" font-size="9" fill="#8b5cf6">Recursos</text>
+  <rect x="498" y="285" width="160" height="8" rx="2" fill="#1e1040"/>
+  <rect x="498" y="298" width="140" height="8" rx="2" fill="#1e1040"/>
+  <text x="504" y="390" font-family="monospace,sans-serif" font-size="11" fill="#7c3aed">&lt;/aside&gt;</text>
+
+  <!-- FOOTER zone -->
+  <rect x="76" y="416" width="648" height="54" rx="4" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+  <text x="174" y="438" text-anchor="middle"
+    font-family="monospace,sans-serif" font-size="13" font-weight="700" fill="#475569">&lt;footer&gt;</text>
+  <text x="460" y="438" font-family="monospace,sans-serif" font-size="10" fill="#334155">© 2026 Mi Sitio  ·  Privacidad  ·  Términos</text>
+
+  <!-- ==========================================
+       ANNOTATIONS (right margin labels)
+       ========================================== -->
+
+</svg>

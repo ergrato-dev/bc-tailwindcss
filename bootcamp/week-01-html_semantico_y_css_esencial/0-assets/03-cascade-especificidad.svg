@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="800" height="480">
+
+  <!-- Background -->
+  <rect width="800" height="480" fill="#0f172a"/>
+
+  <!-- Title -->
+  <text x="400" y="36" text-anchor="middle"
+    font-family="system-ui,-apple-system,sans-serif"
+    font-size="20" font-weight="700" fill="#f1f5f9">Cascade: Orden de Prioridad CSS</text>
+  <text x="400" y="56" text-anchor="middle"
+    font-family="system-ui,-apple-system,sans-serif"
+    font-size="13" fill="#64748b">Cuando dos reglas chocan, gana la de mayor especificidad → </text>
+
+  <!-- ==========================================
+       STAIRCASE — 4 columns, increasing height
+       bars bottom anchored at y=360
+       ========================================== -->
+
+  <!-- BAR 1: Selector de elemento — (0, 0, 1) -->
+  <!-- height: 80px → top y = 280 -->
+  <rect x="68" y="280" width="130" height="80" rx="6" fill="#164e63"/>
+  <!-- Top label: selector example -->
+  <text x="133" y="272" text-anchor="middle"
+    font-family="monospace,sans-serif" font-size="13" fill="#94a3b8">p { }</text>
+  <!-- Inside label: specificity -->
+  <text x="133" y="322" text-anchor="middle"
+    font-family="monospace,sans-serif" font-size="14" font-weight="700" fill="#7dd3fc">(0, 0, 1)</text>
+  <!-- Bottom label: category -->
+  <text x="133" y="376" text-anchor="middle"
+    font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#64748b">elemento</text>
+
+  <!-- BAR 2: Selector de clase — (0, 1, 0) -->
+  <!-- height: 150px → top y = 210 -->
+  <rect x="228" y="210" width="130" height="150" rx="6" fill="#075985"/>
+  <text x="293" y="202" text-anchor="middle"
+    font-family="monospace,sans-serif" font-size="13" fill="#94a3b8">.clase { }</text>
+  <text x="293" y="285" text-anchor="middle"
+    font-family="monospace,sans-serif" font-size="14" font-weight="700" fill="#7dd3fc">(0, 1, 0)</text>
+  <text x="293" y="376" text-anchor="middle"
+    font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#64748b">clase / pseudo-clase</text>
+
+  <!-- BAR 3: Selector de ID — (1, 0, 0) -->
+  <!-- height: 230px → top y = 130 -->
+  <rect x="388" y="130" width="130" height="230" rx="6" fill="#0369a1"/>
+  <text x="453" y="122" text-anchor="middle"
+    font-family="monospace,sans-serif" font-size="13" fill="#94a3b8">#id { }</text>
+  <text x="453" y="248" text-anchor="middle"
+    font-family="monospace,sans-serif" font-size="14" font-weight="700" fill="white">(1, 0, 0)</text>
+  <text x="453" y="376" text-anchor="middle"
+    font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#64748b">ID</text>
+
+  <!-- BAR 4: Inline style — wins over all non-!important -->
+  <!-- height: 290px → top y = 70 -->
+  <rect x="548" y="70" width="130" height="290" rx="6" fill="#0284c7"/>
+  <text x="613" y="62" text-anchor="middle"
+    font-family="monospace,sans-serif" font-size="13" fill="#94a3b8">style=""</text>
+  <text x="613" y="218" text-anchor="middle"
+    font-family="monospace,sans-serif" font-size="14" font-weight="700" fill="white">inline</text>
+  <text x="613" y="238" text-anchor="middle"
+    font-family="monospace,sans-serif" font-size="11" fill="#bae6fd">(1, 0, 0, 0)*</text>
+  <text x="613" y="376" text-anchor="middle"
+    font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#64748b">estilo inline</text>
+
+  <!-- ==========================================
+       BASELINE at y=360
+       ========================================== -->
+  <line x1="52" y1="360" x2="700" y2="360" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Direction arrow at bottom -->
+  <line x1="60" y1="392" x2="700" y2="392" stroke="#1e3a5f" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#1e3a5f"/>
+    </marker>
+  </defs>
+  <text x="60" y="410" font-family="system-ui,-apple-system,sans-serif"
+    font-size="11" fill="#475569">Menor especificidad</text>
+  <text x="580" y="410" font-family="system-ui,-apple-system,sans-serif"
+    font-size="11" fill="#475569">Mayor especificidad</text>
+
+  <!-- ==========================================
+       BOTTOM: desempate por orden de aparición
+       ========================================== -->
+  <rect x="40" y="428" width="720" height="36" rx="6" fill="#1e293b"/>
+  <text x="400" y="443" text-anchor="middle"
+    font-family="system-ui,-apple-system,sans-serif"
+    font-size="11" fill="#94a3b8">Empate en especificidad →</text>
+  <text x="400" y="458" text-anchor="middle"
+    font-family="monospace,sans-serif"
+    font-size="11" fill="#38bdf8">gana la regla que aparece DESPUÉS en el archivo CSS</text>
+
+  <!-- Note about !important -->
+  <text x="740" y="280" text-anchor="middle"
+    font-family="monospace,sans-serif"
+    font-size="10" fill="#ef4444" transform="rotate(-90 740 280)">!important rompe la cascada — evitar</text>
+
+</svg>

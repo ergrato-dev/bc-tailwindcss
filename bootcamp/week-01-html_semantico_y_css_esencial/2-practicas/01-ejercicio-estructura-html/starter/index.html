@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dev Blog — Ejercicio HTML Semántico</title>
+
+  <!-- ============================================================ -->
+  <!-- BLOQUE 1: Meta description (SEO y accesibilidad)             -->
+  <!-- Descomenta las siguientes líneas:                            -->
+  <!-- ============================================================ -->
+  <!-- <meta name="description" content="Blog de desarrollo web con artículos sobre HTML, CSS y TailwindCSS" /> -->
+  <!-- <meta name="author" content="Tu Nombre" /> -->
+
+  <style>
+    /* Reset básico para que foquemos en semántica, no en estilos */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, sans-serif;
+      line-height: 1.6;
+      color: #1f2937;
+    }
+
+    a {
+      color: #0ea5e9;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    /* Layout helpers */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    header {
+      background: #f8fafc;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 16px 0;
+    }
+
+    header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 24px;
+    }
+
+    main .container {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 32px;
+      padding-block: 40px;
+    }
+
+    section h2 {
+      font-size: 1.5rem;
+      margin-bottom: 24px;
+      color: #111827;
+    }
+
+    article {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 24px;
+      margin-bottom: 16px;
+    }
+
+    article h3 {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+    }
+
+    article p {
+      color: #6b7280;
+      margin-bottom: 12px;
+    }
+
+    aside {
+      padding: 24px;
+      background: #f9fafb;
+      border-radius: 8px;
+      height: fit-content;
+    }
+
+    aside h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    aside ul li {
+      padding: 6px 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    footer {
+      background: #1f2937;
+      color: #d1d5db;
+      padding: 40px 0 24px;
+      margin-top: 48px;
+    }
+
+    footer .container {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      align-items: center;
+      text-align: center;
+    }
+
+    footer a {
+      color: #9ca3af;
+    }
+
+    footer nav ul {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: #0ea5e9;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ============================================================ -->
+  <!-- BLOQUE 2: Header y Navegación                                -->
+  <!-- Descomenta TODO el bloque de header:                         -->
+  <!-- ============================================================ -->
+  <!-- <header>
+      <div class="container">
+        <a href="/" class="logo" aria-label="Dev Blog - Ir a inicio">Dev Blog</a>
+        <nav aria-label="Navegación principal">
+          <ul>
+            <li><a href="/" aria-current="page">Inicio</a></li>
+            <li><a href="/blog">Artículos</a></li>
+            <li><a href="/about">Acerca</a></li>
+            <li><a href="/contacto">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header> -->
+
+
+  <!-- ============================================================ -->
+  <!-- BLOQUE 3: Contenido Principal (main + section + articles)    -->
+  <!-- Descomenta TODO el bloque de main:                           -->
+  <!-- ============================================================ -->
+  <!-- <main>
+      <div class="container">
+
+        <section aria-labelledby="articulos-titulo">
+          <h2 id="articulos-titulo">Últimos Artículos</h2>
+
+          <article>
+            <header>
+              <h3>
+                <a href="/blog/html-semantico">Por qué el HTML Semántico Importa</a>
+              </h3>
+              <p>
+                Por <strong>Ana García</strong> ·
+                <time datetime="2026-03-20">20 de marzo de 2026</time>
+              </p>
+            </header>
+            <p>
+              El HTML semántico no es solo buena práctica — es la base de la
+              accesibilidad web y el SEO. Descubre cómo estructurar tu código
+              para que tanto las personas como las máquinas lo entiendan.
+            </p>
+            <footer>
+              <a href="/blog/html-semantico">
+                Leer artículo completo sobre HTML Semántico
+              </a>
+            </footer>
+          </article>
+
+          <article>
+            <header>
+              <h3>
+                <a href="/blog/css-box-model">El Box Model: Todo es una Caja</a>
+              </h3>
+              <p>
+                Por <strong>Carlos Ruiz</strong> ·
+                <time datetime="2026-03-15">15 de marzo de 2026</time>
+              </p>
+            </header>
+            <p>
+              Entiende de una vez por todas margin, padding y border. Con este
+              artículo el layout en CSS dejará de ser un misterio.
+            </p>
+            <footer>
+              <a href="/blog/css-box-model">
+                Leer artículo completo sobre el Box Model
+              </a>
+            </footer>
+          </article>
+
+          <article>
+            <header>
+              <h3>
+                <a href="/blog/tailwindcss-v4">TailwindCSS v4: Todo lo Nuevo</a>
+              </h3>
+              <p>
+                Por <strong>María Torres</strong> ·
+                <time datetime="2026-03-10">10 de marzo de 2026</time>
+              </p>
+            </header>
+            <p>
+              Tailwind v4 reescribió el motor en Rust y cambió la forma de
+              configurar el framework. Te explicamos qué cambió y cómo migrar.
+            </p>
+            <footer>
+              <a href="/blog/tailwindcss-v4">
+                Leer artículo completo sobre Tailwind v4
+              </a>
+            </footer>
+          </article>
+
+        </section>
+
+        <!-- BLOQUE 4 va aquí -->
+
+  </div>
+  </main> -->
+
+
+  <!-- ============================================================ -->
+  <!-- BLOQUE 4: Aside (sidebar con artículos relacionados)         -->
+  <!-- IMPORTANTE: este bloque va DENTRO del main, después de       -->
+  <!-- la section. Descomenta solo ESTE aside:                      -->
+  <!-- ============================================================ -->
+  <!-- <aside aria-label="Recursos y enlaces relacionados">
+      <h3>Recursos Recomendados</h3>
+      <ul>
+        <li>
+          <a href="https://developer.mozilla.org" target="_blank" rel="noopener">
+            MDN Web Docs
+          </a>
+        </li>
+        <li>
+          <a href="https://tailwindcss.com/docs" target="_blank" rel="noopener">
+            Documentación oficial de Tailwind
+          </a>
+        </li>
+        <li>
+          <a href="https://play.tailwindcss.com" target="_blank" rel="noopener">
+            Tailwind Play (sandbox)
+          </a>
+        </li>
+        <li>
+          <a href="https://caniuse.com" target="_blank" rel="noopener">
+            Can I Use — compatibilidad de CSS
+          </a>
+        </li>
+      </ul>
+
+      <h3 style="margin-top: 24px;">Temas del Bootcamp</h3>
+      <ul>
+        <li><a href="#">Semana 1: HTML y CSS</a></li>
+        <li><a href="#">Semana 2: Tailwind Setup</a></li>
+        <li><a href="#">Semana 3: Colores y Tipografía</a></li>
+      </ul>
+    </aside> -->
+
+
+  <!-- ============================================================ -->
+  <!-- BLOQUE 5: Footer                                             -->
+  <!-- Descomenta TODO el bloque de footer:                         -->
+  <!-- ============================================================ -->
+  <!-- <footer>
+      <div class="container">
+
+        <nav aria-label="Links de pie de página">
+          <ul>
+            <li><a href="/privacidad">Política de Privacidad</a></li>
+            <li><a href="/terminos">Términos de Uso</a></li>
+            <li><a href="/accesibilidad">Accesibilidad</a></li>
+            <li><a href="/sitemap">Mapa del Sitio</a></li>
+          </ul>
+        </nav>
+
+        <address>
+          Contacto:
+          <a href="mailto:hola@devblog.com">hola@devblog.com</a>
+        </address>
+
+        <p>
+          <small>&copy; 2026 Dev Blog. Hecho con ❤️ para desarrolladores.</small>
+        </p>
+
+      </div>
+    </footer> -->
+
+</body>
+
+</html>

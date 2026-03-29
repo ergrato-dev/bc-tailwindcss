@@ -1,0 +1,149 @@
+/* ================================================================
+   styles.css — Landing Page Estática: PixelCraft Studio
+   Semana 1: HTML Semántico y CSS Esencial
+   ================================================================ */
+
+
+/* ================================================================
+   TODO: RESET Y BASE GLOBAL
+   Aplica el reset de box-sizing y configura los estilos base.
+   Pistas:
+   - Usa *, *::before, *::after { box-sizing: border-box; }
+   - Elimina margin y padding por defecto
+   - Define font-family, line-height y color para body
+   ================================================================ */
+
+/* TODO: Reset aquí */
+
+/* TODO: body base aquí */
+
+
+/* ================================================================
+   TODO: VARIABLES CSS (Custom Properties)
+   Define al menos estas variables en :root {}
+   Sugeridas:
+   --color-primary: (un azul o color de marca)
+   --color-text: (color del texto principal)
+   --color-text-muted: (texto secundario, más claro)
+   --color-bg: (fondo general de la página)
+   --color-white: #ffffff
+   --color-border: (color para bordes sutiles)
+   ================================================================ */
+
+/* TODO: Variables CSS en :root {} aquí */
+
+
+/* ================================================================
+   TODO: CONTENEDOR UTILITARIO
+   Crea una clase .container que:
+   - Tenga un max-width de aprox 1100px
+   - Esté centrado con margin: 0 auto
+   - Tenga padding horizontal
+   ================================================================ */
+
+/* TODO: .container aquí */
+
+
+/* ================================================================
+   TODO: HEADER
+   Estilos para el header y la navegación.
+   Pistas:
+   - El header puede tener un fondo blanco y una sombra sutil
+   - Usa flexbox para alinear logo y nav en la misma línea
+   - Los links del nav deben tener estado hover
+   - Considera position: sticky para que se quede fijo al hacer scroll
+   ================================================================ */
+
+/* TODO: Estilos del header aquí */
+
+/* TODO: Estilos del logo aquí */
+
+/* TODO: Estilos del nav (incluyendo ul, li, a) aquí */
+
+
+/* ================================================================
+   TODO: HERO SECTION
+   Sección de impacto visual — debe llamar la atención.
+   Pistas:
+   - Usa min-height o padding generoso para que tenga altura
+   - Centra el contenido con flexbox o text-align
+   - El h1 debe ser el elemento más grande de la página (2rem o más)
+   - El subtítulo en un color más suave
+   - Los botones inline o con flex gap
+   ================================================================ */
+
+/* TODO: Estilos de la sección hero aquí */
+
+/* TODO: Estilo del h1 del hero */
+
+/* TODO: Estilo del párrafo subtítulo del hero */
+
+/* TODO: Contenedor de los botones CTA */
+
+
+/* ================================================================
+   TODO: BOTONES
+   Define dos variantes de botón: primario y secundario.
+   Clase .btn-primary:
+   - Fondo de color primario, texto blanco
+   - Padding generoso, border-radius, cursor pointer
+   Clase .btn-secondary:
+   - Fondo transparente, borde del color primario, texto del color primario
+   - Mismas dimensiones que el primario
+   Ambos deben tener un estado :hover
+   ================================================================ */
+
+/* TODO: .btn-primary aquí */
+
+/* TODO: .btn-secondary aquí */
+
+
+/* ================================================================
+   TODO: SECCIÓN SERVICIOS / FEATURES
+   Pistas:
+   - El título de sección centrado, con buena separación del grid
+   - .cards-grid: display grid, 3 columnas, gap entre tarjetas
+   ================================================================ */
+
+/* TODO: Estilos de la sección servicios aquí */
+
+/* TODO: Título de la sección */
+
+/* TODO: .cards-grid aquí */
+
+
+/* ================================================================
+   TODO: TARJETAS (.card)
+   Cada article.card debe:
+   - Tener un fondo blanco y borde sutil o sombra
+   - Tener padding interno generoso
+   - Border-radius para bordes redondeados
+   - El icono grande y centrado arriba
+   - El h3 del servicio debajo del icono
+   - El párrafo en color suave debajo del h3
+   Pista: usa flex-direction: column y text-align: center
+   ================================================================ */
+
+/* TODO: .card aquí */
+
+/* TODO: Icono de la card */
+
+/* TODO: h3 de la card */
+
+/* TODO: párrafo de la card */
+
+
+/* ================================================================
+   TODO: FOOTER
+   Pie de página con fondo oscuro y texto claro.
+   Pistas:
+   - Fondo oscuro (ej: #1e293b) con texto claro (#94a3b8)
+   - Los links del nav del footer son más pequeños
+   - Copyright centrado o alineado con los links
+   ================================================================ */
+
+/* TODO: Estilos del footer aquí */
+
+/* TODO: Nav del footer (links de privacidad, etc.) */
+
+/* TODO: Texto de copyright */

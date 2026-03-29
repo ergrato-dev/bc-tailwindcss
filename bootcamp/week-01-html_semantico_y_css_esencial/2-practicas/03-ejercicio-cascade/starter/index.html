@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio — Cascade y Especificidad</title>
+  <style>
+    /* === BASE — No modificar === */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, sans-serif;
+      background: #f8fafc;
+      padding: 40px;
+      color: #1e293b;
+    }
+
+    .demo-area {
+      background: white;
+      border-radius: 12px;
+      padding: 28px;
+      margin-bottom: 24px;
+      border: 1px solid #e2e8f0;
+    }
+
+    h2 {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #94a3b8;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 16px;
+    }
+
+    .hint {
+      font-size: 0.8rem;
+      color: #94a3b8;
+      margin-top: 10px;
+      font-style: italic;
+    }
+
+    /* ==================================================== */
+    /* CSS DE LOS PASOS — NO MODIFICAR ESTE BLOQUE          */
+    /* (aquí se definen los estilos en conflicto)           */
+    /* ==================================================== */
+
+    /* PASO 1: selector de elemento (0,0,1) */
+    p.demo {
+      color: #6b7280;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    /* PASO 2: clase (0,1,0) — mayor especificidad que el elemento */
+    .texto-destacado {
+      color: #0ea5e9;
+      font-weight: 600;
+    }
+
+    /* PASO 3: ID (1,0,0) — mayor especificidad que la clase */
+    #parrafo-especial {
+      color: #16a34a;
+      font-size: 1.1rem;
+    }
+
+    /* PASO 4: orden de aparición (desempate con igual especificidad) */
+    .color-azul {
+      color: #2563eb;
+    }
+
+    .color-verde {
+      color: #16a34a;
+    }
+
+    /* ← Esta gana porque está DESPUÉS */
+
+    /* PASO 5: herencia */
+    .padre-heredado {
+      color: #7c3aed;
+      font-size: 1.1rem;
+      border: 2px solid #7c3aed;
+      padding: 16px;
+    }
+
+    /* Los hijos heredan color y font-size pero NO border ni padding */
+
+    /* PASO 6: !important (antipatrón) */
+    .btn-base {
+      background: #0ea5e9;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      display: inline-block;
+    }
+
+    .btn-override {
+      background: #f97316 !important;
+    }
+
+    /* !important fuerza orange */
+    .btn-final {
+      background: #ef4444 !important;
+    }
+
+    /* !important de nuevo para ganar */
+  </style>
+</head>
+
+<body>
+
+  <!-- ==================================================== -->
+  <!-- BLOQUE 1: Selector de elemento — (0,0,1)            -->
+  <!-- Descomenta todo el bloque:                           -->
+  <!-- ==================================================== -->
+  <!-- <section class="demo-area">
+      <h2>Paso 1 — Selector de Elemento: p { color: gris }</h2>
+      <p class="demo">
+        Este párrafo es seleccionado por el selector de elemento <code>p</code>.
+        Su especificidad es <strong>(0,0,1)</strong> — la más baja posible.
+      </p>
+      <p class="demo">
+        Este otro párrafo también se ve afectado — todos los <code>p</code> de la página.
+      </p>
+      <p class="hint">En DevTools → Styles verás: p.demo { color: #6b7280 }</p>
+    </section> -->
+
+
+  <!-- ==================================================== -->
+  <!-- BLOQUE 2: Clase sobrescribe elemento                 -->
+  <!-- Descomenta todo el bloque:                           -->
+  <!-- ==================================================== -->
+  <!-- <section class="demo-area">
+      <h2>Paso 2 — Clase: .texto-destacado gana sobre p</h2>
+      <p class="demo">
+        Párrafo normal — color gris del selector de elemento.
+      </p>
+      <p class="demo texto-destacado">
+        Párrafo con clase <code>.texto-destacado</code> — color azul cielo.
+        La clase <strong>(0,1,0)</strong> gana sobre el elemento <strong>(0,0,1)</strong>.
+      </p>
+      <p class="hint">
+        En DevTools → Styles verás el estilo de <code>p</code> tachado y
+        <code>.texto-destacado</code> aplicado.
+      </p>
+    </section> -->
+
+
+  <!-- ==================================================== -->
+  <!-- BLOQUE 3: ID sobrescribe clase e elemento            -->
+  <!-- Descomenta todo el bloque:                           -->
+  <!-- ==================================================== -->
+  <!-- <section class="demo-area">
+      <h2>Paso 3 — ID: #parrafo-especial gana sobre todo</h2>
+      <p class="demo">
+        Párrafo normal — gris.
+      </p>
+      <p class="demo texto-destacado">
+        Párrafo con clase — azul cielo.
+      </p>
+      <p class="demo texto-destacado" id="parrafo-especial">
+        Párrafo con clase Y con ID — verde.
+        El ID <strong>(1,0,0)</strong> supera a la clase <strong>(0,1,0)</strong> y al elemento <strong>(0,0,1)</strong>.
+      </p>
+      <p class="hint">
+        Los IDs tienen tan alta especificidad que rompen la mantenibilidad.
+        El CSS moderno recomienda evitar IDs para estilos.
+      </p>
+    </section> -->
+
+
+  <!-- ==================================================== -->
+  <!-- BLOQUE 4: Orden de aparición en CSS                  -->
+  <!-- Descomenta todo el bloque:                           -->
+  <!-- ==================================================== -->
+  <!-- <section class="demo-area">
+      <h2>Paso 4 — Orden en CSS: la última regla desempata</h2>
+      <p class="demo color-azul color-verde">
+        Este párrafo tiene AMBAS clases: <code>color-azul</code> y <code>color-verde</code>.
+        El orden en el atributo <code>class</code> del HTML no importa.
+        Lo que importa es: ¿cuál clase aparece después en el archivo CSS?
+        <strong>Resultado: verde</strong> (porque <code>.color-verde</code> está después en el CSS).
+      </p>
+      <p class="demo color-verde color-azul">
+        Mismo elemento con clases en orden inverso — sigue siendo verde.
+        El HTML no cambia la especificidad.
+      </p>
+      <p class="hint">
+        Ambas clases tienen especificidad (0,1,0). El orden en el CSS decide el ganador.
+      </p>
+    </section> -->
+
+
+  <!-- ==================================================== -->
+  <!-- BLOQUE 5: Herencia de propiedades                    -->
+  <!-- Descomenta todo el bloque:                           -->
+  <!-- ==================================================== -->
+  <!-- <section class="demo-area">
+      <h2>Paso 5 — Herencia: tipografía sí, box model no</h2>
+      <div class="padre-heredado">
+        <p style="margin:0">
+          Soy un párrafo hijo. Heredo <strong>color</strong> (violeta) y
+          <strong>font-size</strong> (1.1rem) de mi padre div.
+          Pero NO heredo el <strong>border</strong> ni el <strong>padding</strong>
+          — esas propiedades no se heredan en CSS.
+        </p>
+        <br>
+        <span>
+          Este span también hereda color y font-size del padre.
+          <em>Y este em hereda del span que hereda del div.</em>
+        </span>
+      </div>
+      <p class="hint">
+        Propiedades que SÍ se heredan: color, font-*, line-height, letter-spacing, list-style, visibility.<br>
+        Propiedades que NO se heredan: border, padding, margin, width, height, background, display, position.
+      </p>
+    </section> -->
+
+
+  <!-- ==================================================== -->
+  <!-- BLOQUE 6: !important — por qué evitarlo             -->
+  <!-- Descomenta todo el bloque:                           -->
+  <!-- ==================================================== -->
+  <!-- <section class="demo-area">
+      <h2>Paso 6 — !important: el antipatrón</h2>
+      <div style="display:flex; gap:12px; flex-wrap:wrap; margin-bottom:12px;">
+        <span class="btn-base">
+          Botón base (azul cielo)
+        </span>
+        <span class="btn-base btn-override">
+          Con !important → naranja
+          (btn-override tiene background !important)
+        </span>
+        <span class="btn-base btn-override btn-final">
+          Necesita otro !important → rojo
+          (btn-final también usa !important para ganar)
+        </span>
+      </div>
+      <p class="hint">
+        Una vez que empiezas a usar <code>!important</code>, necesitas más <code>!important</code>
+        para sobrescribir. El CSS se vuelve impredecible y difícil de mantener.
+        <strong>Solución correcta: arregla la especificidad de tus selectores.</strong>
+      </p>
+    </section> -->
+
+</body>
+
+</html>
