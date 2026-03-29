@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420">
+  <rect width="800" height="420" fill="#0f172a"/>
+  <text x="400" y="34" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#f8fafc">Group, Peer y Transiciones — Interacciones Avanzadas</text>
+
+  <!-- Card interactiva con group -->
+  <text x="30" y="62" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#cbd5e1">Card con group (estado hover activo)</text>
+
+  <!-- card shell -->
+  <rect x="30" y="72" width="220" height="200" rx="16" fill="#1e293b"/>
+  <!-- imagen con zoom simulado -->
+  <rect x="30" y="72" width="220" height="100" rx="0" fill="#0ea5e9" opacity="0.6" clip-path="url(#card-clip)"/>
+  <clipPath id="card-clip">
+    <rect x="30" y="72" width="220" height="100" rx="0"/>
+  </clipPath>
+  <!-- top rounded clip -->
+  <rect x="30" y="72" width="220" height="100" rx="16" fill="none"/>
+  <text x="140" y="128" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="white" opacity="0.8">group-hover:scale-110 → zoom</text>
+  <!-- content -->
+  <text x="50" y="190" font-family="monospace" font-size="10" fill="#38bdf8">group-hover:text-sky-600 ✓</text>
+  <text x="50" y="208" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#f1f5f9">Título del artículo</text>
+  <text x="50" y="252" font-family="monospace" font-size="10" fill="#38bdf8">group-hover:opacity-100 ✓</text>
+  <text x="50" y="268" font-family="system-ui, sans-serif" font-size="11" fill="#38bdf8">Leer más →</text>
+
+  <!-- Annotations -->
+  <line x1="260" y1="108" x2="310" y2="108" stroke="#38bdf8" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="315" y="112" font-family="monospace" font-size="10" fill="#38bdf8">group-hover:scale-110</text>
+  <line x1="260" y1="208" x2="310" y2="208" stroke="#38bdf8" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="315" y="212" font-family="monospace" font-size="10" fill="#38bdf8">group-hover:text-sky-600</text>
+  <line x1="260" y1="268" x2="310" y2="268" stroke="#38bdf8" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="315" y="272" font-family="monospace" font-size="10" fill="#38bdf8">group-hover:opacity-100 translate-x-1</text>
+
+  <!-- Peer toggle diagram -->
+  <text x="30" y="302" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#cbd5e1">Peer — custom toggle</text>
+  <!-- unchecked state -->
+  <rect x="30" y="316" width="44" height="24" rx="12" fill="#475569"/>
+  <circle cx="42" cy="328" r="9" fill="white"/>
+  <text x="85" y="332" font-family="monospace" font-size="10" fill="#64748b">peer (unchecked)</text>
+  <!-- checked state -->
+  <rect x="30" y="355" width="44" height="24" rx="12" fill="#38bdf8"/>
+  <circle cx="62" cy="367" r="9" fill="white"/>
+  <text x="85" y="371" font-family="monospace" font-size="10" fill="#38bdf8">peer-checked: → bg-sky-500 + translate-x-5</text>
+
+  <!-- Transitions guide -->
+  <rect x="490" y="60" width="290" height="340" rx="12" fill="#1e293b"/>
+  <text x="634" y="86" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#f1f5f9">Guía de Transiciones</text>
+
+  <!-- rows -->
+  <text x="510" y="112" font-family="monospace" font-size="10" fill="#38bdf8">transition-colors</text>
+  <text x="510" y="126" font-family="system-ui, sans-serif" font-size="9" fill="#64748b">background-color, color, border-color</text>
+
+  <line x1="510" y1="136" x2="766" y2="136" stroke="#334155" stroke-width="1"/>
+  <text x="510" y="152" font-family="monospace" font-size="10" fill="#38bdf8">transition-shadow</text>
+  <text x="510" y="166" font-family="system-ui, sans-serif" font-size="9" fill="#64748b">box-shadow únicamente</text>
+
+  <line x1="510" y1="176" x2="766" y2="176" stroke="#334155" stroke-width="1"/>
+  <text x="510" y="192" font-family="monospace" font-size="10" fill="#38bdf8">transition-transform</text>
+  <text x="510" y="206" font-family="system-ui, sans-serif" font-size="9" fill="#64748b">scale, translate, rotate</text>
+
+  <line x1="510" y1="216" x2="766" y2="216" stroke="#334155" stroke-width="1"/>
+  <text x="510" y="232" font-family="monospace" font-size="10" fill="#38bdf8">transition-opacity</text>
+  <text x="510" y="246" font-family="system-ui, sans-serif" font-size="9" fill="#64748b">opacity</text>
+
+  <line x1="510" y1="256" x2="766" y2="256" stroke="#334155" stroke-width="1"/>
+  <text x="510" y="272" font-family="monospace" font-size="10" fill="#ef4444">transition-all</text>
+  <text x="510" y="286" font-family="system-ui, sans-serif" font-size="9" fill="#64748b">todo (evitar en producción)</text>
+
+  <line x1="510" y1="296" x2="766" y2="296" stroke="#334155" stroke-width="1"/>
+  <text x="634" y="316" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#94a3b8">Duración recomendada</text>
+  <text x="510" y="336" font-family="monospace" font-size="10" fill="#38bdf8">duration-150</text>
+  <text x="620" y="336" font-family="system-ui, sans-serif" font-size="9" fill="#64748b">active:scale-95 (muy rápido)</text>
+  <text x="510" y="352" font-family="monospace" font-size="10" fill="#38bdf8">duration-200</text>
+  <text x="620" y="352" font-family="system-ui, sans-serif" font-size="9" fill="#64748b">hover colors, shadows</text>
+  <text x="510" y="368" font-family="monospace" font-size="10" fill="#38bdf8">duration-300</text>
+  <text x="620" y="368" font-family="system-ui, sans-serif" font-size="9" fill="#64748b">scale, translate, opacity</text>
+  <text x="510" y="384" font-family="monospace" font-size="10" fill="#ef4444">duration-500+</text>
+  <text x="620" y="384" font-family="system-ui, sans-serif" font-size="9" fill="#64748b">solo para efectos especiales</text>
+</svg>

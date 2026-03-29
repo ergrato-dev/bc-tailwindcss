@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <rect width="800" height="400" fill="#0f172a"/>
+  <text x="400" y="34" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#f8fafc">Estados Interactivos — Pseudo-class Variants</text>
+
+  <!-- Estado diagram: estado normal -->
+  <text x="30" y="64" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">Estado base</text>
+  <rect x="30" y="74" width="120" height="40" rx="8" fill="#0ea5e9"/>
+  <text x="90" y="99" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="white">Botón</text>
+
+  <!-- hover -->
+  <text x="175" y="64" font-family="monospace" font-size="10" fill="#94a3b8">hover:</text>
+  <rect x="175" y="74" width="120" height="40" rx="8" fill="#0284c7"/>
+  <text x="235" y="99" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="white">Botón</text>
+
+  <!-- focus-visible -->
+  <text x="320" y="64" font-family="monospace" font-size="10" fill="#94a3b8">focus-visible:</text>
+  <rect x="320" y="74" width="120" height="40" rx="8" fill="#0ea5e9"/>
+  <rect x="316" y="70" width="128" height="48" rx="10" fill="none" stroke="#38bdf8" stroke-width="2.5"/>
+  <text x="380" y="99" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="white">Botón</text>
+
+  <!-- active -->
+  <text x="468" y="64" font-family="monospace" font-size="10" fill="#94a3b8">active:</text>
+  <rect x="471" y="76" width="112" height="38" rx="8" fill="#075985" transform="scale(0.97)" transform-origin="468 94"/>
+  <text x="527" y="99" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#93c5fd">Botón</text>
+
+  <!-- disabled -->
+  <text x="610" y="64" font-family="monospace" font-size="10" fill="#94a3b8">disabled:</text>
+  <rect x="610" y="74" width="120" height="40" rx="8" fill="#0ea5e9" opacity="0.4"/>
+  <text x="670" y="99" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="white" opacity="0.5">Botón</text>
+  <line x1="610" y1="74" x2="730" y2="114" stroke="#ef4444" stroke-width="1.5" opacity="0.5"/>
+
+  <!-- focus vs focus-visible explanation -->
+  <rect x="30" y="140" width="740" height="80" rx="8" fill="#1e293b"/>
+  <text x="50" y="165" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#f1f5f9">focus: vs focus-visible:</text>
+  <text x="50" y="184" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">• focus: — Activa con click del mouse Y con teclado. Usar en inputs.</text>
+  <text x="50" y="200" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">• focus-visible: — Solo activa con teclado (Tab). Ideal para botones. No molesta al usuario de mouse.</text>
+
+  <!-- group -->
+  <text x="30" y="252" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#cbd5e1">group — reacción del hijo al estado del padre</text>
+  <rect x="30" y="262" width="300" height="90" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="40" y="280" font-family="monospace" font-size="10" fill="#64748b">group</text>
+  <rect x="50" y="286" width="260" height="24" rx="6" fill="#0f172a" stroke="#38bdf8" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="180" y="302" text-anchor="middle" font-family="monospace" font-size="10" fill="#38bdf8">group-hover:text-sky-600</text>
+  <rect x="50" y="316" width="120" height="24" rx="6" fill="#0f172a"/>
+  <text x="110" y="332" text-anchor="middle" font-family="monospace" font-size="10" fill="#64748b">group-hover:opacity-100</text>
+  <line x1="40" y1="275" x2="310" y2="275" stroke="#334155" stroke-width="1"/>
+
+  <!-- peer -->
+  <text x="360" y="252" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#cbd5e1">peer — sibling reactivo</text>
+  <rect x="360" y="262" width="380" height="90" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <!-- checkbox peer -->
+  <rect x="380" y="280" width="24" height="24" rx="4" fill="#38bdf8" stroke="#38bdf8" stroke-width="1"/>
+  <text x="392" y="296" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="white">✓</text>
+  <text x="415" y="296" font-family="monospace" font-size="9" fill="#64748b">peer (input checkbox)</text>
+  <!-- sibling reactivo -->
+  <rect x="380" y="314" width="340" height="24" rx="4" fill="#0f172a" stroke="#38bdf8" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="550" y="330" text-anchor="middle" font-family="monospace" font-size="10" fill="#38bdf8">peer-checked:bg-sky-500 / peer-checked:translate-x-5</text>
+
+  <!-- Transition hint -->
+  <text x="30" y="378" font-family="monospace" font-size="11" fill="#38bdf8">transition-colors duration-200</text>
+  <text x="230" y="378" font-family="system-ui, sans-serif" font-size="11" fill="#64748b">→ siempre añadir a elementos con estados hover/focus para suavizar cambios</text>
+</svg>

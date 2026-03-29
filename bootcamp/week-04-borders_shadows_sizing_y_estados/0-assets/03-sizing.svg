@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420">
+  <rect width="800" height="420" fill="#0f172a"/>
+  <text x="400" y="34" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#f8fafc">Sizing — Width, Height, Min/Max y Aspect Ratio</text>
+
+  <!-- Width scale bars -->
+  <text x="30" y="62" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">Width Scale (% del contenedor)</text>
+  <rect x="30" y="72" width="190" height="18" rx="3" fill="#38bdf8" opacity="0.5"/>
+  <text x="226" y="85" font-family="monospace" font-size="10" fill="#7dd3fc">w-1/4 — 25%</text>
+  <rect x="30" y="96" width="380" height="18" rx="3" fill="#38bdf8" opacity="0.6"/>
+  <text x="416" y="109" font-family="monospace" font-size="10" fill="#7dd3fc">w-1/2 — 50%</text>
+  <rect x="30" y="120" width="570" height="18" rx="3" fill="#38bdf8" opacity="0.75"/>
+  <text x="606" y="133" font-family="monospace" font-size="10" fill="#7dd3fc">w-3/4 — 75%</text>
+  <rect x="30" y="144" width="740" height="18" rx="3" fill="#38bdf8" opacity="0.9"/>
+  <text x="30" y="177" font-family="monospace" font-size="10" fill="#7dd3fc">w-full — 100%</text>
+
+  <!-- Max-width containers -->
+  <text x="30" y="205" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">max-w Containers (centrados con mx-auto)</text>
+  <!-- max-w-sm -->
+  <rect x="30" y="215" width="200" height="20" rx="4" fill="#0ea5e9" opacity="0.2" stroke="#38bdf8" stroke-width="1"/>
+  <text x="130" y="229" text-anchor="middle" font-family="monospace" font-size="9" fill="#38bdf8">max-w-sm · 384px</text>
+  <!-- max-w-xl -->
+  <rect x="30" y="240" width="300" height="20" rx="4" fill="#0ea5e9" opacity="0.3" stroke="#38bdf8" stroke-width="1"/>
+  <text x="180" y="254" text-anchor="middle" font-family="monospace" font-size="9" fill="#38bdf8">max-w-xl · 576px</text>
+  <!-- max-w-2xl -->
+  <rect x="30" y="265" width="350" height="20" rx="4" fill="#0ea5e9" opacity="0.4" stroke="#38bdf8" stroke-width="1"/>
+  <text x="205" y="279" text-anchor="middle" font-family="monospace" font-size="9" fill="#38bdf8">max-w-2xl · 672px</text>
+  <!-- max-w-4xl -->
+  <rect x="30" y="290" width="468" height="20" rx="4" fill="#0ea5e9" opacity="0.5" stroke="#38bdf8" stroke-width="1"/>
+  <text x="264" y="304" text-anchor="middle" font-family="monospace" font-size="9" fill="#38bdf8">max-w-4xl · 896px</text>
+  <!-- max-w-7xl -->
+  <rect x="30" y="315" width="667" height="20" rx="4" fill="#0ea5e9" opacity="0.65" stroke="#38bdf8" stroke-width="1"/>
+  <text x="363" y="329" text-anchor="middle" font-family="monospace" font-size="9" fill="#0f172a" font-weight="700">max-w-7xl · 1280px — layout de página</text>
+
+  <!-- Aspect Ratio -->
+  <text x="30" y="360" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">Aspect Ratio</text>
+  <!-- square -->
+  <rect x="30" y="372" width="40" height="40" rx="4" fill="#0ea5e9" opacity="0.4" stroke="#38bdf8" stroke-width="1"/>
+  <text x="50" y="424" text-anchor="middle" font-family="monospace" font-size="9" fill="#7dd3fc">square</text>
+  <!-- video -->
+  <rect x="90" y="378" width="88" height="49.5" rx="4" fill="#7c3aed" opacity="0.4" stroke="#a78bfa" stroke-width="1"/>
+  <text x="134" y="424" text-anchor="middle" font-family="monospace" font-size="9" fill="#c4b5fd">video 16:9</text>
+  <!-- 4:3 -->
+  <rect x="200" y="376" width="80" height="60" rx="4" fill="#10b981" opacity="0.3" stroke="#34d399" stroke-width="1"/>
+  <text x="240" y="424" text-anchor="middle" font-family="monospace" font-size="9" fill="#6ee7b7">4:3</text>
+  <!-- object-cover label -->
+  <text x="350" y="385" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">object-cover: rellena y recorta</text>
+  <text x="350" y="400" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">object-contain: encuadra sin recortar</text>
+  <text x="350" y="415" font-family="monospace" font-size="10" fill="#38bdf8">h-48 w-full object-cover → imagen responsive</text>
+</svg>

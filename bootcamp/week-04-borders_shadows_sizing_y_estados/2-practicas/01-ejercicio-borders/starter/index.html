@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 01 — Borders y Rounded</title>
+  </head>
+  <body class="min-h-screen bg-gray-50 p-8 font-sans">
+    <h1 class="mb-8 text-2xl font-bold text-gray-900">Borders y Rounded</h1>
+
+
+    <!-- ============================================ -->
+    <!-- BLOQUE 1: Escala visual de border-radius     -->
+    <!-- ============================================ -->
+    <!-- Descomenta las siguientes líneas:            -->
+
+    <!-- <section class="mb-10">                                                                                         -->
+    <!--   <h2 class="mb-4 text-sm font-semibold uppercase tracking-widest text-gray-400">Escala rounded-*</h2>        -->
+    <!--   <div class="flex flex-wrap items-center gap-4">                                                               -->
+    <!--     <div class="h-16 w-16 border-2 border-sky-400 bg-sky-50 rounded-none flex items-center justify-center">   -->
+    <!--       <span class="text-xs text-sky-700">none</span>                                                           -->
+    <!--     </div>                                                                                                      -->
+    <!--     <div class="h-16 w-16 border-2 border-sky-400 bg-sky-50 rounded-sm flex items-center justify-center">     -->
+    <!--       <span class="text-xs text-sky-700">sm</span>                                                             -->
+    <!--     </div>                                                                                                      -->
+    <!--     <div class="h-16 w-16 border-2 border-sky-400 bg-sky-50 rounded flex items-center justify-center">        -->
+    <!--       <span class="text-xs text-sky-700">base</span>                                                           -->
+    <!--     </div>                                                                                                      -->
+    <!--     <div class="h-16 w-16 border-2 border-sky-400 bg-sky-50 rounded-md flex items-center justify-center">     -->
+    <!--       <span class="text-xs text-sky-700">md</span>                                                             -->
+    <!--     </div>                                                                                                      -->
+    <!--     <div class="h-16 w-16 border-2 border-sky-400 bg-sky-50 rounded-lg flex items-center justify-center">     -->
+    <!--       <span class="text-xs text-sky-700">lg</span>                                                             -->
+    <!--     </div>                                                                                                      -->
+    <!--     <div class="h-16 w-16 border-2 border-sky-400 bg-sky-50 rounded-xl flex items-center justify-center">     -->
+    <!--       <span class="text-xs text-sky-700">xl</span>                                                             -->
+    <!--     </div>                                                                                                      -->
+    <!--     <div class="h-16 w-16 border-2 border-sky-400 bg-sky-50 rounded-2xl flex items-center justify-center">    -->
+    <!--       <span class="text-xs text-sky-700">2xl</span>                                                            -->
+    <!--     </div>                                                                                                      -->
+    <!--     <div class="h-16 w-16 border-2 border-sky-400 bg-sky-50 rounded-3xl flex items-center justify-center">    -->
+    <!--       <span class="text-xs text-sky-700">3xl</span>                                                            -->
+    <!--     </div>                                                                                                      -->
+    <!--     <div class="h-16 w-16 border-2 border-sky-400 bg-sky-50 rounded-full flex items-center justify-center">   -->
+    <!--       <span class="text-xs text-sky-700">full</span>                                                           -->
+    <!--     </div>                                                                                                      -->
+    <!--   </div>                                                                                                        -->
+    <!-- </section>                                                                                                      -->
+
+
+    <!-- ============================================ -->
+    <!-- BLOQUE 2: Card con overflow-hidden           -->
+    <!-- ============================================ -->
+    <!-- Descomenta:                                  -->
+
+    <!-- <section class="mb-10">                                                                                         -->
+    <!--   <h2 class="mb-4 text-sm font-semibold uppercase tracking-widest text-gray-400">Card con overflow-hidden</h2> -->
+    <!--   <div class="flex gap-6">                                                                                       -->
+    <!--                                                                                                                  -->
+    <!--     overflow-hidden correcto                                                                                     -->
+    <!--     <div class="w-48 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm">                    -->
+    <!--       <div class="h-28 bg-gradient-to-br from-sky-400 to-sky-600"></div>                                       -->
+    <!--       <div class="p-3">                                                                                          -->
+    <!--         <p class="text-sm font-medium">overflow-hidden ✓</p>                                                   -->
+    <!--         <p class="text-xs text-gray-500">La imagen respeta el rounded</p>                                      -->
+    <!--       </div>                                                                                                     -->
+    <!--     </div>                                                                                                       -->
+    <!--                                                                                                                  -->
+    <!--     sin overflow-hidden — las esquinas de la imagen sobresalen                                                  -->
+    <!--     <div class="w-48 rounded-xl border border-gray-200 bg-white shadow-sm">                                    -->
+    <!--       <div class="h-28 bg-gradient-to-br from-red-400 to-red-600"></div>                                       -->
+    <!--       <div class="p-3">                                                                                          -->
+    <!--         <p class="text-sm font-medium">sin overflow-hidden ✗</p>                                               -->
+    <!--         <p class="text-xs text-gray-500">Las esquinas sobresalen</p>                                           -->
+    <!--       </div>                                                                                                     -->
+    <!--     </div>                                                                                                       -->
+    <!--   </div>                                                                                                         -->
+    <!-- </section>                                                                                                       -->
+
+
+    <!-- ============================================ -->
+    <!-- BLOQUE 3: Lista con divide-y                 -->
+    <!-- ============================================ -->
+    <!-- Descomenta:                                  -->
+
+    <!-- <section class="mb-10">                                                                                        -->
+    <!--   <h2 class="mb-4 text-sm font-semibold uppercase tracking-widest text-gray-400">Lista con divide-y</h2>     -->
+    <!--   <div class="max-w-md rounded-xl border border-gray-200 bg-white shadow-sm">                                 -->
+    <!--     <ul class="divide-y divide-gray-100">                                                                      -->
+    <!--       <li class="flex items-center gap-3 px-4 py-3">                                                          -->
+    <!--         <div class="h-8 w-8 rounded-full bg-sky-100 flex items-center justify-center text-sky-600 text-sm">A</div> -->
+    <!--         <div>                                                                                                   -->
+    <!--           <p class="text-sm font-medium text-gray-900">Ana García</p>                                         -->
+    <!--           <p class="text-xs text-gray-500">Diseñadora UX</p>                                                  -->
+    <!--         </div>                                                                                                  -->
+    <!--       </li>                                                                                                     -->
+    <!--       <li class="flex items-center gap-3 px-4 py-3">                                                          -->
+    <!--         <div class="h-8 w-8 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 text-sm">B</div> -->
+    <!--         <div>                                                                                                   -->
+    <!--           <p class="text-sm font-medium text-gray-900">Bruno López</p>                                        -->
+    <!--           <p class="text-xs text-gray-500">Desarrollador Frontend</p>                                         -->
+    <!--         </div>                                                                                                  -->
+    <!--       </li>                                                                                                     -->
+    <!--       <li class="flex items-center gap-3 px-4 py-3">                                                          -->
+    <!--         <div class="h-8 w-8 rounded-full bg-violet-100 flex items-center justify-center text-violet-600 text-sm">C</div> -->
+    <!--         <div>                                                                                                   -->
+    <!--           <p class="text-sm font-medium text-gray-900">Carla Méndez</p>                                       -->
+    <!--           <p class="text-xs text-gray-500">Product Manager</p>                                                -->
+    <!--         </div>                                                                                                  -->
+    <!--       </li>                                                                                                     -->
+    <!--     </ul>                                                                                                       -->
+    <!--   </div>                                                                                                        -->
+    <!-- </section>                                                                                                      -->
+
+
+    <!-- ============================================ -->
+    <!-- BLOQUE 4: Focus ring accesible               -->
+    <!-- ============================================ -->
+    <!-- Descomenta:                                  -->
+
+    <!-- <section class="mb-10">                                                                                         -->
+    <!--   <h2 class="mb-4 text-sm font-semibold uppercase tracking-widest text-gray-400">Focus ring (navega con Tab)</h2> -->
+    <!--   <p class="mb-4 text-sm text-gray-600">Haz click normalmente y luego presiona Tab para ver la diferencia.</p> -->
+    <!--   <div class="flex flex-wrap gap-4">                                                                            -->
+    <!--     <button class="rounded-lg bg-sky-500 px-4 py-2 text-sm font-medium text-white outline-none                -->
+    <!--       focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2 transition-shadow">         -->
+    <!--       focus-visible:ring (solo teclado)                                                                         -->
+    <!--     </button>                                                                                                   -->
+    <!--     <input class="rounded-lg border border-gray-200 px-3 py-2 text-sm outline-none w-48                      -->
+    <!--       focus:border-sky-500 focus:ring-2 focus:ring-sky-500/20 transition-shadow"                              -->
+    <!--       placeholder="Input con focus ring" />                                                                    -->
+    <!--     <a href="#" class="rounded text-sky-600 underline outline-none                                             -->
+    <!--       focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2">                           -->
+    <!--       Link con focus visible                                                                                    -->
+    <!--     </a>                                                                                                        -->
+    <!--   </div>                                                                                                        -->
+    <!-- </section>                                                                                                      -->
+
+  </body>
+</html>

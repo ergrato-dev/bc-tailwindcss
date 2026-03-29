@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 04 — Estados Interactivos</title>
+  </head>
+  <body class="min-h-screen bg-gray-50 p-8 font-sans">
+    <h1 class="mb-8 text-2xl font-bold text-gray-900">Estados Interactivos</h1>
+
+
+    <!-- ============================================ -->
+    <!-- BLOQUE 1: Sistema de botones                 -->
+    <!-- ============================================ -->
+    <!-- Descomenta las siguientes líneas:            -->
+
+    <!-- <section class="mb-10">                                                                                              -->
+    <!--   <h2 class="mb-4 text-sm font-semibold uppercase tracking-widest text-gray-400">Botones con estados completos</h2> -->
+    <!--   <p class="mb-4 text-sm text-gray-500">Usa Tab para ver focus-visible, haz click para ver active, prueba el disabled.</p> -->
+    <!--   <div class="flex flex-wrap gap-3">                                                                                  -->
+    <!--                                                                                                                       -->
+    <!--     Primario — todos los estados                                                                                      -->
+    <!--     <button class="rounded-lg bg-sky-500 px-4 py-2 text-sm font-semibold text-white outline-none                   -->
+    <!--       hover:bg-sky-600                                                                                                -->
+    <!--       active:bg-sky-700 active:scale-95                                                                              -->
+    <!--       focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2                                   -->
+    <!--       transition-all duration-150">                                                                                   -->
+    <!--       Primario                                                                                                        -->
+    <!--     </button>                                                                                                         -->
+    <!--                                                                                                                       -->
+    <!--     Secundario — outline style                                                                                        -->
+    <!--     <button class="rounded-lg border border-gray-200 bg-white px-4 py-2 text-sm font-semibold text-gray-700 outline-none -->
+    <!--       hover:border-gray-300 hover:bg-gray-50                                                                         -->
+    <!--       active:bg-gray-100 active:scale-95                                                                             -->
+    <!--       focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2                                   -->
+    <!--       transition-all duration-150">                                                                                   -->
+    <!--       Secundario                                                                                                      -->
+    <!--     </button>                                                                                                         -->
+    <!--                                                                                                                       -->
+    <!--     Peligro                                                                                                           -->
+    <!--     <button class="rounded-lg bg-red-500 px-4 py-2 text-sm font-semibold text-white outline-none                   -->
+    <!--       hover:bg-red-600                                                                                                -->
+    <!--       active:bg-red-700                                                                                               -->
+    <!--       focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2                                   -->
+    <!--       transition-all duration-150">                                                                                   -->
+    <!--       Eliminar                                                                                                        -->
+    <!--     </button>                                                                                                         -->
+    <!--                                                                                                                       -->
+    <!--     Disabled                                                                                                          -->
+    <!--     <button disabled class="rounded-lg bg-sky-500 px-4 py-2 text-sm font-semibold text-white                      -->
+    <!--       disabled:opacity-50 disabled:cursor-not-allowed disabled:pointer-events-none">                                 -->
+    <!--       Procesando...                                                                                                   -->
+    <!--     </button>                                                                                                         -->
+    <!--   </div>                                                                                                              -->
+    <!-- </section>                                                                                                            -->
+
+
+    <!-- ============================================ -->
+    <!-- BLOQUE 2: Card con group-hover               -->
+    <!-- ============================================ -->
+    <!-- Descomenta:                                  -->
+
+    <!-- <section class="mb-10">                                                                                              -->
+    <!--   <h2 class="mb-4 text-sm font-semibold uppercase tracking-widest text-gray-400">Card con group (pasa el mouse)</h2> -->
+    <!--   <article class="group max-w-xs cursor-pointer overflow-hidden rounded-2xl bg-white shadow-sm                    -->
+    <!--     hover:shadow-xl transition-all duration-300">                                                                   -->
+    <!--                                                                                                                      -->
+    <!--     Imagen que hace zoom con group-hover                                                                             -->
+    <!--     <div class="overflow-hidden">                                                                                   -->
+    <!--       <div class="h-40 bg-gradient-to-br from-sky-400 to-violet-500                                               -->
+    <!--         transition-transform duration-500 group-hover:scale-110">                                                  -->
+    <!--       </div>                                                                                                        -->
+    <!--     </div>                                                                                                           -->
+    <!--                                                                                                                      -->
+    <!--     <div class="p-5">                                                                                               -->
+    <!--       Badge que gana color con group-hover                                                                          -->
+    <!--       <span class="text-xs font-semibold uppercase tracking-wider text-gray-400                                    -->
+    <!--         group-hover:text-sky-500 transition-colors">Tutorial</span>                                                -->
+    <!--                                                                                                                      -->
+    <!--       Título que cambia de color                                                                                    -->
+    <!--       <h3 class="mt-1 font-bold text-gray-900 group-hover:text-sky-600 transition-colors">                        -->
+    <!--         Título del artículo                                                                                          -->
+    <!--       </h3>                                                                                                          -->
+    <!--                                                                                                                      -->
+    <!--       Flecha que aparece y se mueve                                                                                 -->
+    <!--       <div class="mt-3 flex items-center gap-1 text-sm font-medium text-sky-500                                   -->
+    <!--         translate-x-0 opacity-0 group-hover:translate-x-1 group-hover:opacity-100                                 -->
+    <!--         transition-all duration-200">                                                                               -->
+    <!--         Leer más →                                                                                                   -->
+    <!--       </div>                                                                                                         -->
+    <!--     </div>                                                                                                           -->
+    <!--   </article>                                                                                                         -->
+    <!-- </section>                                                                                                           -->
+
+
+    <!-- ============================================ -->
+    <!-- BLOQUE 3: Toggle con peer                    -->
+    <!-- ============================================ -->
+    <!-- Descomenta:                                  -->
+
+    <!-- <section class="mb-10">                                                                                              -->
+    <!--   <h2 class="mb-4 text-sm font-semibold uppercase tracking-widest text-gray-400">Toggle con peer</h2>             -->
+    <!--   <div class="space-y-4">                                                                                            -->
+    <!--     <label class="flex cursor-pointer items-center gap-3">                                                          -->
+    <!--       <input type="checkbox" class="peer sr-only" />                                                               -->
+    <!--       <div class="relative h-6 w-11 flex-shrink-0 rounded-full bg-gray-200                                        -->
+    <!--         peer-checked:bg-sky-500                                                                                      -->
+    <!--         after:absolute after:left-0.5 after:top-0.5                                                                -->
+    <!--         after:h-5 after:w-5 after:rounded-full after:bg-white after:shadow                                         -->
+    <!--         after:transition-transform after:duration-200                                                               -->
+    <!--         peer-checked:after:translate-x-5                                                                            -->
+    <!--         transition-colors duration-200">                                                                             -->
+    <!--       </div>                                                                                                         -->
+    <!--       <span class="text-sm text-gray-700 peer-checked:font-semibold peer-checked:text-gray-900 transition-all">   -->
+    <!--         Notificaciones por email                                                                                     -->
+    <!--       </span>                                                                                                        -->
+    <!--     </label>                                                                                                         -->
+    <!--                                                                                                                      -->
+    <!--     <label class="flex cursor-pointer items-center gap-3">                                                          -->
+    <!--       <input type="checkbox" class="peer sr-only" checked />                                                       -->
+    <!--       <div class="relative h-6 w-11 flex-shrink-0 rounded-full bg-gray-200                                        -->
+    <!--         peer-checked:bg-emerald-500                                                                                  -->
+    <!--         after:absolute after:left-0.5 after:top-0.5                                                                -->
+    <!--         after:h-5 after:w-5 after:rounded-full after:bg-white after:shadow                                         -->
+    <!--         after:transition-transform after:duration-200                                                               -->
+    <!--         peer-checked:after:translate-x-5                                                                            -->
+    <!--         transition-colors duration-200">                                                                             -->
+    <!--       </div>                                                                                                         -->
+    <!--       <span class="text-sm text-gray-700 peer-checked:font-semibold peer-checked:text-gray-900 transition-all">   -->
+    <!--         Modo oscuro automático                                                                                       -->
+    <!--       </span>                                                                                                        -->
+    <!--     </label>                                                                                                         -->
+    <!--   </div>                                                                                                             -->
+    <!-- </section>                                                                                                           -->
+
+
+    <!-- ============================================ -->
+    <!-- BLOQUE 4: Input con focus-within             -->
+    <!-- ============================================ -->
+    <!-- Descomenta:                                  -->
+
+    <!-- <section class="mb-10">                                                                                              -->
+    <!--   <h2 class="mb-4 text-sm font-semibold uppercase tracking-widest text-gray-400">Input con focus-within</h2>     -->
+    <!--   <div class="max-w-sm space-y-4">                                                                                  -->
+    <!--     <label class="block cursor-text rounded-xl border border-gray-200 bg-white px-4 py-3                          -->
+    <!--       focus-within:border-sky-500 focus-within:ring-2 focus-within:ring-sky-500/20                               -->
+    <!--       transition-all duration-200">                                                                                -->
+    <!--       <span class="block text-xs font-medium text-gray-500 focus-within:text-sky-600 transition-colors">Nombre</span> -->
+    <!--       <input class="mt-0.5 block w-full text-sm text-gray-900 outline-none" type="text" placeholder="Ana García" /> -->
+    <!--     </label>                                                                                                         -->
+    <!--     <label class="block cursor-text rounded-xl border border-gray-200 bg-white px-4 py-3                          -->
+    <!--       focus-within:border-sky-500 focus-within:ring-2 focus-within:ring-sky-500/20                               -->
+    <!--       transition-all duration-200">                                                                                -->
+    <!--       <span class="block text-xs font-medium text-gray-500">Email</span>                                           -->
+    <!--       <input class="mt-0.5 block w-full text-sm text-gray-900 outline-none" type="email" placeholder="correo@ejemplo.com" /> -->
+    <!--     </label>                                                                                                         -->
+    <!--   </div>                                                                                                             -->
+    <!-- </section>                                                                                                           -->
+
+  </body>
+</html>
