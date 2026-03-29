@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" width="800" height="360" font-family="Inter, system-ui, sans-serif">
+  <rect width="800" height="360" fill="#0f172a"/>
+
+  <!-- Title -->
+  <text x="400" y="34" text-anchor="middle" fill="#f1f5f9" font-size="17" font-weight="700">Escala de Espaciado — Tailwind CSS</text>
+  <text x="400" y="54" text-anchor="middle" fill="#64748b" font-size="11">Cada unidad = 4px (0.25rem) · Aplica a: p-, m-, gap-, w-, h-, etc.</text>
+
+  <!-- Headers -->
+  <text x="80" y="78" text-anchor="middle" fill="#94a3b8" font-size="10" font-weight="600">Clase</text>
+  <text x="180" y="78" text-anchor="middle" fill="#94a3b8" font-size="10" font-weight="600">Valor</text>
+  <text x="310" y="78" text-anchor="middle" fill="#94a3b8" font-size="10" font-weight="600">Visualización (p-*)</text>
+  <text x="600" y="78" text-anchor="middle" fill="#94a3b8" font-size="10" font-weight="600">Uso típico</text>
+
+  <!-- Row 0 -->
+  <rect x="40" y="86" width="720" height="24" rx="4" fill="#1e293b"/>
+  <text x="80" y="103" text-anchor="middle" fill="#38bdf8" font-size="11" font-family="monospace">0</text>
+  <text x="180" y="103" text-anchor="middle" fill="#64748b" font-size="10">0px</text>
+  <rect x="250" y="91" width="0" height="14" rx="2" fill="#38bdf8"/>
+  <text x="600" y="103" text-anchor="middle" fill="#64748b" font-size="9">Eliminar espaciado</text>
+
+  <!-- Row 1 -->
+  <rect x="40" y="114" width="720" height="24" rx="4" fill="#1e293b"/>
+  <text x="80" y="131" text-anchor="middle" fill="#38bdf8" font-size="11" font-family="monospace">1</text>
+  <text x="180" y="131" text-anchor="middle" fill="#64748b" font-size="10">4px / 0.25rem</text>
+  <rect x="250" y="119" width="4" height="14" rx="2" fill="#38bdf8"/>
+  <text x="600" y="131" text-anchor="middle" fill="#64748b" font-size="9">Micro ajuste, separadores</text>
+
+  <!-- Row 2 -->
+  <rect x="40" y="142" width="720" height="24" rx="4" fill="#1e293b"/>
+  <text x="80" y="159" text-anchor="middle" fill="#38bdf8" font-size="11" font-family="monospace">2</text>
+  <text x="180" y="159" text-anchor="middle" fill="#64748b" font-size="10">8px / 0.5rem</text>
+  <rect x="250" y="147" width="8" height="14" rx="2" fill="#38bdf8"/>
+  <text x="600" y="159" text-anchor="middle" fill="#64748b" font-size="9">Gap entre ícono y texto</text>
+
+  <!-- Row 3 -->
+  <rect x="40" y="170" width="720" height="24" rx="4" fill="#1e293b"/>
+  <text x="80" y="187" text-anchor="middle" fill="#38bdf8" font-size="11" font-family="monospace">4</text>
+  <text x="180" y="187" text-anchor="middle" fill="#64748b" font-size="10">16px / 1rem</text>
+  <rect x="250" y="175" width="16" height="14" rx="2" fill="#38bdf8"/>
+  <text x="600" y="187" text-anchor="middle" fill="#64748b" font-size="9">Padding de botón, gap de grid</text>
+
+  <!-- Row 4 (highlighted) -->
+  <rect x="40" y="198" width="720" height="28" rx="4" fill="#0c4a6e"/>
+  <text x="80" y="218" text-anchor="middle" fill="#38bdf8" font-size="11" font-family="monospace" font-weight="700">6</text>
+  <text x="180" y="218" text-anchor="middle" fill="#7dd3fc" font-size="10">24px / 1.5rem</text>
+  <rect x="250" y="203" width="24" height="18" rx="2" fill="#38bdf8"/>
+  <text x="600" y="218" text-anchor="middle" fill="#7dd3fc" font-size="9">★ Padding de card (el más común)</text>
+
+  <!-- Row 5 -->
+  <rect x="40" y="230" width="720" height="24" rx="4" fill="#1e293b"/>
+  <text x="80" y="247" text-anchor="middle" fill="#38bdf8" font-size="11" font-family="monospace">8</text>
+  <text x="180" y="247" text-anchor="middle" fill="#64748b" font-size="10">32px / 2rem</text>
+  <rect x="250" y="235" width="32" height="14" rx="2" fill="#38bdf8"/>
+  <text x="600" y="247" text-anchor="middle" fill="#64748b" font-size="9">Separación entre secciones</text>
+
+  <!-- Row 6 -->
+  <rect x="40" y="258" width="720" height="24" rx="4" fill="#1e293b"/>
+  <text x="80" y="275" text-anchor="middle" fill="#38bdf8" font-size="11" font-family="monospace">12</text>
+  <text x="180" y="275" text-anchor="middle" fill="#64748b" font-size="10">48px / 3rem</text>
+  <rect x="250" y="263" width="48" height="14" rx="2" fill="#38bdf8"/>
+  <text x="600" y="275" text-anchor="middle" fill="#64748b" font-size="9">Padding de sección</text>
+
+  <!-- Row 7 -->
+  <rect x="40" y="286" width="720" height="24" rx="4" fill="#1e293b"/>
+  <text x="80" y="303" text-anchor="middle" fill="#38bdf8" font-size="11" font-family="monospace">16</text>
+  <text x="180" y="303" text-anchor="middle" fill="#64748b" font-size="10">64px / 4rem</text>
+  <rect x="250" y="291" width="64" height="14" rx="2" fill="#38bdf8"/>
+  <text x="600" y="303" text-anchor="middle" fill="#64748b" font-size="9">Padding de hero/landing</text>
+
+  <!-- Row 8 -->
+  <rect x="40" y="314" width="720" height="24" rx="4" fill="#1e293b"/>
+  <text x="80" y="331" text-anchor="middle" fill="#38bdf8" font-size="11" font-family="monospace">24</text>
+  <text x="180" y="331" text-anchor="middle" fill="#64748b" font-size="10">96px / 6rem</text>
+  <rect x="250" y="319" width="96" height="14" rx="2" fill="#38bdf8"/>
+  <text x="600" y="331" text-anchor="middle" fill="#64748b" font-size="9">Separación entre zonas de la página</text>
+
+  <!-- Footer note -->
+  <text x="400" y="352" text-anchor="middle" fill="#475569" font-size="10">También disponible: 0.5, 1.5, 2.5, 3.5 y valores hasta 96 (384px)</text>
+</svg>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 02 — Utility vs CSS</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="min-h-screen bg-gray-100 p-8">
+
+    <h1 class="mb-8 text-2xl font-bold text-gray-900">
+      Utility-First vs CSS Tradicional
+    </h1>
+
+
+    <!-- ============================================ -->
+    <!-- BLOQUE 1: Descripción del componente objetivo -->
+    <!-- ============================================ -->
+    <!-- El target: una tarjeta de alerta de éxito    -->
+    <!-- Descomenta las siguientes líneas:            -->
+
+    <!-- <div class="mb-8 rounded-lg border border-dashed border-gray-300 bg-white p-4"> -->
+    <!--   <p class="text-sm text-gray-500 font-medium">Target: Alert Card</p>           -->
+    <!--   <p class="mt-1 text-xs text-gray-400">                                        -->
+    <!--     Una card con: icono verde + título + mensaje + botón                        -->
+    <!--   </p>                                                                          -->
+    <!-- </div>                                                                          -->
+
+
+    <!-- ============================================ -->
+    <!-- BLOQUE 2: Versión CSS Tradicional            -->
+    <!-- ============================================ -->
+    <!-- Requiere la clase .alert-card en styles.css  -->
+    <!-- Descomenta:                                  -->
+
+    <!-- <section class="mb-8">                                                             -->
+    <!--   <h2 class="mb-3 text-lg font-semibold text-gray-700">CSS Tradicional</h2>      -->
+    <!--   <div class="alert-card">                                                         -->
+    <!--     <div class="alert-icon-wrapper">                                              -->
+    <!--       <span class="alert-icon"></span>                                            -->
+    <!--     </div>                                                                        -->
+    <!--     <div class="alert-content">                                                   -->
+    <!--       <p class="alert-title">Pago procesado exitosamente</p>                     -->
+    <!--       <p class="alert-message">Tu orden #1234 fue confirmada y será entregada.</p> -->
+    <!--     </div>                                                                        -->
+    <!--     <button class="alert-btn">Ver orden</button>                                 -->
+    <!--   </div>                                                                          -->
+    <!-- </section>                                                                         -->
+
+
+    <!-- ============================================ -->
+    <!-- BLOQUE 3: Versión Tailwind                   -->
+    <!-- ============================================ -->
+    <!-- Exactamente el mismo diseño, cero CSS propio -->
+    <!-- Descomenta:                                  -->
+
+    <!-- <section class="mb-8">                                                                                 -->
+    <!--   <h2 class="mb-3 text-lg font-semibold text-gray-700">Tailwind CSS</h2>                             -->
+    <!--   <div class="flex items-start gap-4 rounded-xl bg-white p-4 shadow-sm">                             -->
+    <!--     <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-emerald-100">    -->
+    <!--       <span class="block h-4 w-4 rounded-full bg-emerald-500"></span>                               -->
+    <!--     </div>                                                                                            -->
+    <!--     <div class="flex-1">                                                                              -->
+    <!--       <p class="font-semibold text-gray-900">Pago procesado exitosamente</p>                        -->
+    <!--       <p class="mt-0.5 text-sm text-gray-500">Tu orden #1234 fue confirmada y será entregada.</p>   -->
+    <!--     </div>                                                                                            -->
+    <!--     <button class="shrink-0 rounded-lg border border-gray-200 px-3 py-1.5 text-sm font-medium text-gray-700 hover:bg-gray-50"> -->
+    <!--       Ver orden                                                                                       -->
+    <!--     </button>                                                                                         -->
+    <!--   </div>                                                                                              -->
+    <!-- </section>                                                                                            -->
+
+
+    <!-- ============================================ -->
+    <!-- BLOQUE 4: Comparación de métricas            -->
+    <!-- ============================================ -->
+    <!-- Descomenta:                                  -->
+
+    <!-- <section class="rounded-xl border border-gray-200 bg-gray-50 p-6">                -->
+    <!--   <h2 class="mb-4 text-lg font-semibold text-gray-700">📊 Comparación</h2>       -->
+    <!--   <div class="grid grid-cols-2 gap-4">                                            -->
+    <!--     <div class="rounded-lg bg-white p-4 shadow-sm">                              -->
+    <!--       <p class="font-medium text-gray-900">CSS Tradicional</p>                   -->
+    <!--       <p class="mt-2 text-2xl font-bold text-red-500">~30 líneas CSS</p>         -->
+    <!--       <p class="mt-1 text-sm text-gray-500">+ nombres de clases inventados</p>   -->
+    <!--       <p class="mt-1 text-sm text-gray-500">+ riesgo de conflictos globales</p>  -->
+    <!--     </div>                                                                        -->
+    <!--     <div class="rounded-lg bg-white p-4 shadow-sm">                              -->
+    <!--       <p class="font-medium text-gray-900">Tailwind</p>                          -->
+    <!--       <p class="mt-2 text-2xl font-bold text-emerald-500">0 líneas CSS</p>       -->
+    <!--       <p class="mt-1 text-sm text-gray-500">sin nombres de clases propios</p>    -->
+    <!--       <p class="mt-1 text-sm text-gray-500">sin riesgo de conflictos</p>         -->
+    <!--     </div>                                                                        -->
+    <!--   </div>                                                                          -->
+    <!-- </section>                                                                        -->
+
+  </body>
+</html>

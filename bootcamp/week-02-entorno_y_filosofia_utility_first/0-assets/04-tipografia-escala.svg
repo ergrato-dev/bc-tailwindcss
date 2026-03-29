@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" width="800" height="380" font-family="Inter, system-ui, sans-serif">
+  <rect width="800" height="380" fill="#0f172a"/>
+
+  <!-- Title -->
+  <text x="400" y="34" text-anchor="middle" fill="#f1f5f9" font-size="17" font-weight="700">Escala de Tipografía — Tailwind CSS</text>
+  <text x="400" y="54" text-anchor="middle" fill="#64748b" font-size="11">Referencia: tamaño de fuente y line-height por clase</text>
+
+  <!-- Scale items -->
+  <!-- text-xs -->
+  <rect x="40" y="70" width="720" height="34" rx="6" fill="#1e293b"/>
+  <text x="56" y="93" fill="#38bdf8" font-size="10" font-family="monospace" font-weight="600">text-xs</text>
+  <text x="140" y="93" fill="#94a3b8" font-size="10">0.75rem / 12px</text>
+  <text x="290" y="93" fill="#e2e8f0" font-size="12">Texto de etiqueta, nota al pie, badge</text>
+
+  <!-- text-sm -->
+  <rect x="40" y="110" width="720" height="36" rx="6" fill="#1e293b"/>
+  <text x="56" y="134" fill="#38bdf8" font-size="10" font-family="monospace" font-weight="600">text-sm</text>
+  <text x="140" y="134" fill="#94a3b8" font-size="10">0.875rem / 14px</text>
+  <text x="290" y="134" fill="#e2e8f0" font-size="14">Texto secundario, captions, descripciones</text>
+
+  <!-- text-base -->
+  <rect x="40" y="152" width="720" height="38" rx="6" fill="#1e293b"/>
+  <rect x="40" y="152" width="4" height="38" rx="2" fill="#38bdf8"/>
+  <text x="56" y="177" fill="#38bdf8" font-size="10" font-family="monospace" font-weight="600">text-base</text>
+  <text x="140" y="177" fill="#94a3b8" font-size="10">1rem / 16px — default</text>
+  <text x="290" y="177" fill="#e2e8f0" font-size="16">Cuerpo de texto principal</text>
+
+  <!-- text-lg -->
+  <rect x="40" y="196" width="720" height="40" rx="6" fill="#1e293b"/>
+  <text x="56" y="222" fill="#38bdf8" font-size="10" font-family="monospace" font-weight="600">text-lg</text>
+  <text x="140" y="222" fill="#94a3b8" font-size="10">1.125rem / 18px</text>
+  <text x="290" y="222" fill="#e2e8f0" font-size="18">Subtítulo de sección</text>
+
+  <!-- text-xl -->
+  <rect x="40" y="242" width="720" height="42" rx="6" fill="#1e293b"/>
+  <text x="56" y="270" fill="#38bdf8" font-size="10" font-family="monospace" font-weight="600">text-xl</text>
+  <text x="140" y="270" fill="#94a3b8" font-size="10">1.25rem / 20px</text>
+  <text x="290" y="270" fill="#e2e8f0" font-size="20">Título de card o widget</text>
+
+  <!-- text-2xl -->
+  <rect x="40" y="290" width="720" height="44" rx="6" fill="#1e293b"/>
+  <text x="56" y="319" fill="#38bdf8" font-size="10" font-family="monospace" font-weight="600">text-2xl</text>
+  <text x="140" y="319" fill="#94a3b8" font-size="10">1.5rem / 24px</text>
+  <text x="290" y="319" fill="#e2e8f0" font-size="24">Heading de sección</text>
+
+  <!-- text-4xl -->
+  <rect x="40" y="340" width="720" height="30" rx="6" fill="#0c1a4d"/>
+  <text x="56" y="360" fill="#7dd3fc" font-size="10" font-family="monospace" font-weight="600">text-4xl+</text>
+  <text x="140" y="360" fill="#7dd3fc" font-size="10">2.25rem+ / 36px+</text>
+  <text x="290" y="360" fill="#93c5fd" font-size="16">text-3xl → text-9xl para heroes y displays grandes</text>
+</svg>
