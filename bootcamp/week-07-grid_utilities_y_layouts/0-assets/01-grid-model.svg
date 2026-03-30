@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" font-family="Inter, system-ui, sans-serif">
+  <!-- Background -->
+  <rect width="900" height="540" fill="#030712"/>
+
+  <!-- Title -->
+  <text x="450" y="44" text-anchor="middle" font-size="20" font-weight="700" fill="#f9fafb">Modelo CSS Grid</text>
+  <text x="450" y="68" text-anchor="middle" font-size="13" fill="#6b7280">Contenedor, ítems, líneas de cuadrícula</text>
+
+  <!-- ─── GRID CONTAINER ─── -->
+  <!-- Container label -->
+  <text x="100" y="110" font-size="12" font-weight="600" fill="#38bdf8">contenedor grid</text>
+  <text x="100" y="126" font-size="11" fill="#6b7280">display: grid</text>
+
+  <!-- Container border -->
+  <rect x="100" y="135" width="680" height="370" rx="12" fill="#0f172a" stroke="#38bdf8" stroke-width="2" stroke-dasharray="6,3"/>
+
+  <!-- ─── GRID LINES (columns) ─── -->
+  <!-- Col line 1 (left edge) -->
+  <line x1="100" y1="135" x2="100" y2="505" stroke="#1e3a5f" stroke-width="1"/>
+  <!-- Col line 2 -->
+  <line x1="327" y1="135" x2="327" y2="505" stroke="#1e3a5f" stroke-width="1" stroke-dasharray="4,2"/>
+  <!-- Col line 3 -->
+  <line x1="554" y1="135" x2="554" y2="505" stroke="#1e3a5f" stroke-width="1" stroke-dasharray="4,2"/>
+  <!-- Col line 4 (right edge) -->
+  <line x1="780" y1="135" x2="780" y2="505" stroke="#1e3a5f" stroke-width="1"/>
+
+  <!-- ─── GRID LINES (rows) ─── -->
+  <!-- Row line 1 (top edge) -->
+  <line x1="100" y1="135" x2="780" y2="135" stroke="#1e3a5f" stroke-width="1"/>
+  <!-- Row line 2 -->
+  <line x1="100" y1="320" x2="780" y2="320" stroke="#1e3a5f" stroke-width="1" stroke-dasharray="4,2"/>
+  <!-- Row line 3 (bottom edge) -->
+  <line x1="100" y1="505" x2="780" y2="505" stroke="#1e3a5f" stroke-width="1"/>
+
+  <!-- ─── GRID CELLS (items) ─── -->
+  <!-- Padding around cells: 12px from grid lines -->
+  <!-- Cell 1 (row1, col1) -->
+  <rect x="116" y="151" width="195" height="153" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="213" y="224" text-anchor="middle" font-size="13" font-weight="600" fill="#94a3b8">Ítem 1</text>
+  <text x="213" y="242" text-anchor="middle" font-size="11" fill="#475569">col 1 / row 1</text>
+
+  <!-- Cell 2 (row1, col2) -->
+  <rect x="343" y="151" width="195" height="153" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="440" y="224" text-anchor="middle" font-size="13" font-weight="600" fill="#94a3b8">Ítem 2</text>
+  <text x="440" y="242" text-anchor="middle" font-size="11" fill="#475569">col 2 / row 1</text>
+
+  <!-- Cell 3 (row1, col3) -->
+  <rect x="570" y="151" width="194" height="153" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="667" y="224" text-anchor="middle" font-size="13" font-weight="600" fill="#94a3b8">Ítem 3</text>
+  <text x="667" y="242" text-anchor="middle" font-size="11" fill="#475569">col 3 / row 1</text>
+
+  <!-- Cell 4 (row2, col1) -->
+  <rect x="116" y="336" width="195" height="153" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="213" y="409" text-anchor="middle" font-size="13" font-weight="600" fill="#94a3b8">Ítem 4</text>
+  <text x="213" y="427" text-anchor="middle" font-size="11" fill="#475569">col 1 / row 2</text>
+
+  <!-- Cell 5 (row2, col2) -->
+  <rect x="343" y="336" width="195" height="153" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="440" y="409" text-anchor="middle" font-size="13" font-weight="600" fill="#94a3b8">Ítem 5</text>
+  <text x="440" y="427" text-anchor="middle" font-size="11" fill="#475569">col 2 / row 2</text>
+
+  <!-- Cell 6 (row2, col3) -->
+  <rect x="570" y="336" width="194" height="153" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="667" y="409" text-anchor="middle" font-size="13" font-weight="600" fill="#94a3b8">Ítem 6</text>
+  <text x="667" y="427" text-anchor="middle" font-size="11" fill="#475569">col 3 / row 2</text>
+
+  <!-- ─── AXIS LABELS ─── -->
+  <!-- Inline axis (horizontal) arrow -->
+  <defs>
+    <marker id="arrowH" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#38bdf8"/>
+    </marker>
+    <marker id="arrowV" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#38bdf8"/>
+    </marker>
+  </defs>
+
+  <!-- Horizontal axis -->
+  <line x1="108" y1="518" x2="770" y2="518" stroke="#38bdf8" stroke-width="1.5" marker-end="url(#arrowH)"/>
+  <text x="440" y="534" text-anchor="middle" font-size="11" fill="#38bdf8">Eje en línea (inline axis) → columnas</text>
+
+  <!-- Line numbers (columns) -->
+  <text x="100" y="132" text-anchor="middle" font-size="10" fill="#64748b">1</text>
+  <text x="327" y="132" text-anchor="middle" font-size="10" fill="#64748b">2</text>
+  <text x="554" y="132" text-anchor="middle" font-size="10" fill="#64748b">3</text>
+  <text x="780" y="132" text-anchor="middle" font-size="10" fill="#64748b">4</text>
+
+  <!-- Line numbers (rows) -->
+  <text x="88" y="140" text-anchor="middle" font-size="10" fill="#64748b">1</text>
+  <text x="88" y="325" text-anchor="middle" font-size="10" fill="#64748b">2</text>
+  <text x="88" y="510" text-anchor="middle" font-size="10" fill="#64748b">3</text>
+
+  <!-- Vertical axis label -->
+  <text x="28" y="330" text-anchor="middle" font-size="11" fill="#38bdf8" transform="rotate(-90,28,330)">Eje de bloque (block axis) ↓ filas</text>
+</svg>

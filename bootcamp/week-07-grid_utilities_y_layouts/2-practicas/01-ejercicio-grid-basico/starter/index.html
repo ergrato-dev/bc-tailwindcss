@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 01 — Grid Básico</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-gray-950 p-8 font-sans">
+
+  <h1 class="mb-8 text-2xl font-bold text-white">Ejercicio 01: Grid Básico</h1>
+
+  <!-- ============================================ -->
+  <!-- BLOQUE 1: sin grid vs. con grid              -->
+  <!-- ============================================ -->
+  <!-- Descomenta las siguientes líneas:            -->
+
+  <!-- <section class="mb-12">                                                                                            -->
+  <!--   <h2 class="mb-4 text-lg font-semibold text-gray-300">Bloque 1: Sin grid vs. con grid</h2>                    -->
+  <!--                                                                                                                   -->
+  <!--   <p class="mb-2 text-sm text-gray-400">Sin grid — los ítems se apilan en bloque:</p>                           -->
+  <!--   <div class="mb-6 rounded-xl bg-gray-800 p-4">                                                                  -->
+  <!--     <div class="rounded-lg bg-sky-500 p-3 text-center text-white">Ítem 1</div>                                   -->
+  <!--     <div class="rounded-lg bg-sky-400 p-3 text-center text-white">Ítem 2</div>                                   -->
+  <!--     <div class="rounded-lg bg-sky-300 p-3 text-center text-sky-900">Ítem 3</div>                                 -->
+  <!--     <div class="rounded-lg bg-sky-500 p-3 text-center text-white">Ítem 4</div>                                   -->
+  <!--     <div class="rounded-lg bg-sky-400 p-3 text-center text-white">Ítem 5</div>                                   -->
+  <!--     <div class="rounded-lg bg-sky-300 p-3 text-center text-sky-900">Ítem 6</div>                                 -->
+  <!--   </div>                                                                                                          -->
+  <!--                                                                                                                   -->
+  <!--   <p class="mb-2 text-sm text-gray-400">Con grid-cols-3 — cuadrícula de 3×2 automática:</p>                     -->
+  <!--   <div class="grid grid-cols-3 gap-4 rounded-xl bg-gray-800 p-4">                                                -->
+  <!--     <div class="rounded-lg bg-sky-500 p-4 text-center text-white font-semibold">1</div>                          -->
+  <!--     <div class="rounded-lg bg-sky-400 p-4 text-center text-white font-semibold">2</div>                          -->
+  <!--     <div class="rounded-lg bg-sky-300 p-4 text-center text-sky-900 font-semibold">3</div>                        -->
+  <!--     <div class="rounded-lg bg-sky-500 p-4 text-center text-white font-semibold">4</div>                          -->
+  <!--     <div class="rounded-lg bg-sky-400 p-4 text-center text-white font-semibold">5</div>                          -->
+  <!--     <div class="rounded-lg bg-sky-300 p-4 text-center text-sky-900 font-semibold">6</div>                        -->
+  <!--   </div>                                                                                                          -->
+  <!-- </section>                                                                                                        -->
+
+
+  <!-- ============================================ -->
+  <!-- BLOQUE 2: grid-flow-row vs grid-flow-col     -->
+  <!-- ============================================ -->
+  <!-- Descomenta las siguientes líneas:            -->
+
+  <!-- <section class="mb-12">                                                                                            -->
+  <!--   <h2 class="mb-4 text-lg font-semibold text-gray-300">Bloque 2: grid-flow-row vs. grid-flow-col</h2>           -->
+  <!--                                                                                                                   -->
+  <!--   <p class="mb-2 text-sm text-gray-400">grid-flow-row (default) — rellena fila por fila: 1,2,3 / 4,5</p>       -->
+  <!--   <div class="mb-6 grid grid-cols-3 grid-flow-row gap-4 rounded-xl bg-gray-800 p-4">                             -->
+  <!--     <div class="rounded-lg bg-violet-500 p-4 text-center text-white font-bold">1</div>                           -->
+  <!--     <div class="rounded-lg bg-violet-500 p-4 text-center text-white font-bold">2</div>                           -->
+  <!--     <div class="rounded-lg bg-violet-500 p-4 text-center text-white font-bold">3</div>                           -->
+  <!--     <div class="rounded-lg bg-violet-400 p-4 text-center text-white font-bold">4</div>                           -->
+  <!--     <div class="rounded-lg bg-violet-400 p-4 text-center text-white font-bold">5</div>                           -->
+  <!--   </div>                                                                                                          -->
+  <!--                                                                                                                   -->
+  <!--   <p class="mb-2 text-sm text-gray-400">grid-flow-col — rellena columna por columna: 1,4 / 2,5 / 3</p>         -->
+  <!--   <div class="grid grid-rows-2 grid-flow-col gap-4 rounded-xl bg-gray-800 p-4">                                  -->
+  <!--     <div class="rounded-lg bg-emerald-500 p-4 text-center text-white font-bold">1</div>                          -->
+  <!--     <div class="rounded-lg bg-emerald-400 p-4 text-center text-white font-bold">4</div>                          -->
+  <!--     <div class="rounded-lg bg-emerald-500 p-4 text-center text-white font-bold">2</div>                          -->
+  <!--     <div class="rounded-lg bg-emerald-400 p-4 text-center text-white font-bold">5</div>                          -->
+  <!--     <div class="rounded-lg bg-emerald-500 p-4 text-center text-white font-bold">3</div>                          -->
+  <!--   </div>                                                                                                          -->
+  <!-- </section>                                                                                                        -->
+
+
+  <!-- ============================================ -->
+  <!-- BLOQUE 3: place-items-center                 -->
+  <!-- ============================================ -->
+  <!-- Descomenta las siguientes líneas:            -->
+
+  <!-- <section class="mb-12">                                                                                            -->
+  <!--   <h2 class="mb-4 text-lg font-semibold text-gray-300">Bloque 3: place-items-center</h2>                        -->
+  <!--                                                                                                                   -->
+  <!--   <p class="mb-2 text-sm text-gray-400">place-items-center: centra el contenido en ambos ejes de la celda</p>   -->
+  <!--   <div class="mb-6 grid grid-cols-3 gap-4 rounded-xl bg-gray-800 p-4" style="height: 200px">                    -->
+  <!--     <div class="grid place-items-center rounded-lg bg-sky-900">                                                   -->
+  <!--       <span class="text-sm font-bold text-sky-400">center</span>                                                  -->
+  <!--     </div>                                                                                                         -->
+  <!--     <div class="grid place-items-center rounded-lg bg-sky-900">                                                   -->
+  <!--       <div class="rounded-lg bg-sky-600 px-4 py-2 text-white text-sm">Botón</div>                                -->
+  <!--     </div>                                                                                                         -->
+  <!--     <div class="grid place-items-center rounded-lg bg-sky-900">                                                   -->
+  <!--       <span class="text-3xl">⭐</span>                                                                            -->
+  <!--     </div>                                                                                                         -->
+  <!--   </div>                                                                                                           -->
+  <!--                                                                                                                   -->
+  <!--   <p class="mb-2 text-sm text-gray-400">Comparación: centrado total con una sola clase en Grid vs. 3 en Flex</p> -->
+  <!--   <div class="grid grid-cols-2 gap-4">                                                                             -->
+  <!--     <div>                                                                                                           -->
+  <!--       <p class="mb-1 text-xs text-gray-500">Grid (2 clases: grid + place-items-center)</p>                        -->
+  <!--       <div class="grid place-items-center rounded-xl bg-gray-800" style="height: 120px">                          -->
+  <!--         <div class="rounded-lg bg-sky-600 px-6 py-3 text-white font-bold">Centrado</div>                          -->
+  <!--       </div>                                                                                                        -->
+  <!--     </div>                                                                                                          -->
+  <!--     <div>                                                                                                           -->
+  <!--       <p class="mb-1 text-xs text-gray-500">Flex (3 clases: flex + items-center + justify-center)</p>             -->
+  <!--       <div class="flex items-center justify-center rounded-xl bg-gray-800" style="height: 120px">                  -->
+  <!--         <div class="rounded-lg bg-violet-600 px-6 py-3 text-white font-bold">Centrado</div>                       -->
+  <!--       </div>                                                                                                        -->
+  <!--     </div>                                                                                                          -->
+  <!--   </div>                                                                                                            -->
+  <!-- </section>                                                                                                         -->
+
+
+  <!-- ============================================ -->
+  <!-- BLOQUE 4: place-self-* en ítems              -->
+  <!-- ============================================ -->
+  <!-- Descomenta las siguientes líneas:            -->
+
+  <!-- <section class="mb-12">                                                                                            -->
+  <!--   <h2 class="mb-4 text-lg font-semibold text-gray-300">Bloque 4: place-self-* en ítems individuales</h2>        -->
+  <!--   <p class="mb-2 text-sm text-gray-400">                                                                          -->
+  <!--     El contenedor NO declara alineación. Cada ítem se posiciona a sí mismo con place-self-*.                     -->
+  <!--   </p>                                                                                                             -->
+  <!--   <div class="grid grid-cols-4 gap-4 rounded-xl bg-gray-800 p-4" style="height: 160px">                          -->
+  <!--                                                                                                                   -->
+  <!--     <div class="place-self-start rounded-lg bg-rose-600 px-4 py-2 text-sm text-white">                           -->
+  <!--       place-self-start                                                                                             -->
+  <!--     </div>                                                                                                         -->
+  <!--                                                                                                                   -->
+  <!--     <div class="place-self-center rounded-lg bg-amber-500 px-4 py-2 text-sm text-white">                         -->
+  <!--       place-self-center                                                                                            -->
+  <!--     </div>                                                                                                         -->
+  <!--                                                                                                                   -->
+  <!--     <div class="place-self-end rounded-lg bg-emerald-600 px-4 py-2 text-sm text-white">                          -->
+  <!--       place-self-end                                                                                               -->
+  <!--     </div>                                                                                                         -->
+  <!--                                                                                                                   -->
+  <!--     <div class="place-self-stretch rounded-lg bg-sky-600 px-4 py-2 text-sm text-white">                          -->
+  <!--       place-self-stretch                                                                                           -->
+  <!--     </div>                                                                                                         -->
+  <!--                                                                                                                   -->
+  <!--   </div>                                                                                                           -->
+  <!-- </section>                                                                                                         -->
+
+</body>
+
+</html>

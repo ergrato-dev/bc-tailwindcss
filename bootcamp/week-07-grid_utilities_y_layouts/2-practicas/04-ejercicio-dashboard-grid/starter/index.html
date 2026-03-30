@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 04 — Dashboard con Grid</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-gray-950 p-8 font-sans">
+
+  <h1 class="mb-8 text-2xl font-bold text-white">Ejercicio 04: Dashboard con Grid</h1>
+
+  <!-- ============================================ -->
+  <!-- BLOQUE 1: 4 stat widgets iguales             -->
+  <!-- ============================================ -->
+  <!-- Descomenta las siguientes líneas:            -->
+
+  <!-- <section class="mb-12">                                                                                            -->
+  <!--   <h2 class="mb-4 text-lg font-semibold text-gray-300">Bloque 1: Stat widgets (grid de 6 cols, cada widget 3)</h2> -->
+  <!--   <div class="grid grid-cols-6 gap-4">                                                                             -->
+  <!--                                                                                                                   -->
+  <!--     <!-- Cada widget ocupa 3 de las 6 columnas = 50% del ancho --> -->
+  <!--     <div class="col-span-3 rounded-xl bg-gray-800 p-5">                                                           -->
+  <!--       <div class="flex items-center justify-between">                                                              -->
+  <!--         <div>                                                                                                       -->
+  <!--           <p class="text-sm text-gray-400">Usuarios activos</p>                                                    -->
+  <!--           <p class="mt-1 text-3xl font-bold text-white">4,821</p>                                                  -->
+  <!--           <p class="mt-1 text-xs text-emerald-400">↑ 12% vs. el mes pasado</p>                                    -->
+  <!--         </div>                                                                                                      -->
+  <!--         <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-sky-500/20 text-2xl">                -->
+  <!--           👥                                                                                                        -->
+  <!--         </div>                                                                                                      -->
+  <!--       </div>                                                                                                        -->
+  <!--     </div>                                                                                                          -->
+  <!--     <div class="col-span-3 rounded-xl bg-gray-800 p-5">                                                           -->
+  <!--       <div class="flex items-center justify-between">                                                              -->
+  <!--         <div>                                                                                                       -->
+  <!--           <p class="text-sm text-gray-400">Ingresos</p>                                                            -->
+  <!--           <p class="mt-1 text-3xl font-bold text-white">$12,340</p>                                               -->
+  <!--           <p class="mt-1 text-xs text-emerald-400">↑ 8% vs. el mes pasado</p>                                     -->
+  <!--         </div>                                                                                                      -->
+  <!--         <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-500/20 text-2xl">            -->
+  <!--           💰                                                                                                        -->
+  <!--         </div>                                                                                                      -->
+  <!--       </div>                                                                                                        -->
+  <!--     </div>                                                                                                          -->
+  <!--     <div class="col-span-3 rounded-xl bg-gray-800 p-5">                                                           -->
+  <!--       <div class="flex items-center justify-between">                                                              -->
+  <!--         <div>                                                                                                       -->
+  <!--           <p class="text-sm text-gray-400">Nuevas suscripciones</p>                                               -->
+  <!--           <p class="mt-1 text-3xl font-bold text-white">342</p>                                                    -->
+  <!--           <p class="mt-1 text-xs text-rose-400">↓ 3% vs. el mes pasado</p>                                        -->
+  <!--         </div>                                                                                                      -->
+  <!--         <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-violet-500/20 text-2xl">             -->
+  <!--           📧                                                                                                        -->
+  <!--         </div>                                                                                                      -->
+  <!--       </div>                                                                                                        -->
+  <!--     </div>                                                                                                          -->
+  <!--     <div class="col-span-3 rounded-xl bg-gray-800 p-5">                                                           -->
+  <!--       <div class="flex items-center justify-between">                                                              -->
+  <!--         <div>                                                                                                       -->
+  <!--           <p class="text-sm text-gray-400">Tasa de conversión</p>                                                  -->
+  <!--           <p class="mt-1 text-3xl font-bold text-white">3.2%</p>                                                   -->
+  <!--           <p class="mt-1 text-xs text-emerald-400">↑ 0.4% vs. el mes pasado</p>                                   -->
+  <!--         </div>                                                                                                      -->
+  <!--         <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-amber-500/20 text-2xl">              -->
+  <!--           📈                                                                                                        -->
+  <!--         </div>                                                                                                      -->
+  <!--       </div>                                                                                                        -->
+  <!--     </div>                                                                                                          -->
+  <!--                                                                                                                   -->
+  <!--   </div>                                                                                                            -->
+  <!-- </section>                                                                                                         -->
+
+
+  <!-- ============================================ -->
+  <!-- BLOQUE 2: widgets de diferentes tamaños      -->
+  <!-- ============================================ -->
+  <!-- Descomenta las siguientes líneas:            -->
+
+  <!-- <section class="mb-12">                                                                                            -->
+  <!--   <h2 class="mb-4 text-lg font-semibold text-gray-300">Bloque 2: Widgets de diferentes tamaños</h2>              -->
+  <!--   <div class="grid grid-cols-6 gap-4">                                                                             -->
+  <!--                                                                                                                   -->
+  <!--     <!-- Gráfico principal: 4 de 6 columnas --> -->
+  <!--     <div class="col-span-4 rounded-xl bg-gray-800 p-6">                                                           -->
+  <!--       <div class="mb-4 flex items-center justify-between">                                                         -->
+  <!--         <h3 class="font-semibold text-white">Ingresos mensuales</h3>                                              -->
+  <!--         <select class="rounded-lg bg-gray-700 px-3 py-1 text-xs text-gray-300">                                   -->
+  <!--           <option>Últimos 6 meses</option>                                                                         -->
+  <!--           <option>Este año</option>                                                                               -->
+  <!--         </select>                                                                                                   -->
+  <!--       </div>                                                                                                        -->
+  <!--       <!-- Gráfico simulado con barras CSS --> -->
+  <!--       <div class="flex items-end gap-2 h-32">                                                                      -->
+  <!--         <div class="flex-1 flex flex-col items-center gap-1">                                                      -->
+  <!--           <div class="w-full rounded-t bg-sky-600" style="height: 40%"></div>                                      -->
+  <!--           <span class="text-xs text-gray-500">Ene</span>                                                           -->
+  <!--         </div>                                                                                                      -->
+  <!--         <div class="flex-1 flex flex-col items-center gap-1">                                                      -->
+  <!--           <div class="w-full rounded-t bg-sky-600" style="height: 65%"></div>                                      -->
+  <!--           <span class="text-xs text-gray-500">Feb</span>                                                           -->
+  <!--         </div>                                                                                                      -->
+  <!--         <div class="flex-1 flex flex-col items-center gap-1">                                                      -->
+  <!--           <div class="w-full rounded-t bg-sky-500" style="height: 55%"></div>                                      -->
+  <!--           <span class="text-xs text-gray-500">Mar</span>                                                           -->
+  <!--         </div>                                                                                                      -->
+  <!--         <div class="flex-1 flex flex-col items-center gap-1">                                                      -->
+  <!--           <div class="w-full rounded-t bg-sky-500" style="height: 80%"></div>                                      -->
+  <!--           <span class="text-xs text-gray-500">Abr</span>                                                           -->
+  <!--         </div>                                                                                                      -->
+  <!--         <div class="flex-1 flex flex-col items-center gap-1">                                                      -->
+  <!--           <div class="w-full rounded-t bg-sky-400" style="height: 70%"></div>                                      -->
+  <!--           <span class="text-xs text-gray-500">May</span>                                                           -->
+  <!--         </div>                                                                                                      -->
+  <!--         <div class="flex-1 flex flex-col items-center gap-1">                                                      -->
+  <!--           <div class="w-full rounded-t bg-sky-300" style="height: 95%"></div>                                      -->
+  <!--           <span class="text-xs text-gray-500">Jun</span>                                                           -->
+  <!--         </div>                                                                                                      -->
+  <!--       </div>                                                                                                        -->
+  <!--     </div>                                                                                                          -->
+  <!--                                                                                                                   -->
+  <!--     <!-- Widget de estado: 2 de 6 columnas --> -->
+  <!--     <div class="col-span-2 flex flex-col gap-4">                                                                   -->
+  <!--       <div class="flex-1 rounded-xl bg-emerald-900/50 border border-emerald-800 p-4">                             -->
+  <!--         <p class="text-xs text-emerald-400">Estado del sistema</p>                                                 -->
+  <!--         <p class="mt-2 text-lg font-bold text-white">● Operativo</p>                                              -->
+  <!--         <p class="mt-1 text-xs text-gray-400">Todos los servicios activos</p>                                      -->
+  <!--       </div>                                                                                                        -->
+  <!--       <div class="flex-1 rounded-xl bg-gray-800 p-4">                                                             -->
+  <!--         <p class="text-xs text-gray-400">Almacenamiento</p>                                                        -->
+  <!--         <p class="mt-2 text-2xl font-bold text-white">68%</p>                                                      -->
+  <!--         <div class="mt-2 h-2 w-full rounded-full bg-gray-700">                                                     -->
+  <!--           <div class="h-2 w-[68%] rounded-full bg-sky-500"></div>                                                  -->
+  <!--         </div>                                                                                                      -->
+  <!--       </div>                                                                                                        -->
+  <!--     </div>                                                                                                          -->
+  <!--                                                                                                                   -->
+  <!--   </div>                                                                                                            -->
+  <!-- </section>                                                                                                         -->
+
+
+  <!-- ============================================ -->
+  <!-- BLOQUE 3: row-span-2 (tabla lateral)         -->
+  <!-- ============================================ -->
+  <!-- Descomenta las siguientes líneas:            -->
+
+  <!-- <section class="mb-12">                                                                                            -->
+  <!--   <h2 class="mb-4 text-lg font-semibold text-gray-300">Bloque 3: row-span-2 — tabla que ocupa 2 filas</h2>       -->
+  <!--   <div class="grid grid-cols-6 gap-4">                                                                             -->
+  <!--                                                                                                                   -->
+  <!--     <!-- Dos widgets pequeños a la izquierda (col-span-2 cada uno) --> -->
+  <!--     <div class="col-span-2 rounded-xl bg-gray-800 p-5">                                                           -->
+  <!--       <p class="text-sm text-gray-400">Visitas hoy</p>                                                             -->
+  <!--       <p class="mt-1 text-3xl font-bold text-white">1,204</p>                                                      -->
+  <!--       <p class="mt-1 text-xs text-emerald-400">↑ 5%</p>                                                            -->
+  <!--     </div>                                                                                                          -->
+  <!--     <div class="col-span-2 rounded-xl bg-gray-800 p-5">                                                           -->
+  <!--       <p class="text-sm text-gray-400">Tasa de rebote</p>                                                          -->
+  <!--       <p class="mt-1 text-3xl font-bold text-white">34%</p>                                                        -->
+  <!--       <p class="mt-1 text-xs text-rose-400">↑ 2%</p>                                                               -->
+  <!--     </div>                                                                                                          -->
+  <!--                                                                                                                   -->
+  <!--     <!-- Tabla de actividad: col-span-2, row-span-2 → ocupa 2 filas --> -->
+  <!--     <div class="col-span-2 row-span-2 rounded-xl bg-gray-800 p-5">                                                -->
+  <!--       <h3 class="mb-3 text-sm font-semibold text-white">Actividad reciente</h3>                                   -->
+  <!--       <ul class="space-y-3">                                                                                        -->
+  <!--         <li class="flex items-center gap-3">                                                                        -->
+  <!--           <div class="h-8 w-8 shrink-0 rounded-full bg-sky-700 text-center text-white leading-8 text-sm">A</div>  -->
+  <!--           <div class="min-w-0 flex-1">                                                                              -->
+  <!--             <p class="truncate text-sm text-white">Ana García inició sesión</p>                                    -->
+  <!--             <p class="text-xs text-gray-500">hace 2 min</p>                                                        -->
+  <!--           </div>                                                                                                     -->
+  <!--         </li>                                                                                                       -->
+  <!--         <li class="flex items-center gap-3">                                                                        -->
+  <!--           <div class="h-8 w-8 shrink-0 rounded-full bg-emerald-700 text-center text-white leading-8 text-sm">C</div> -->
+  <!--           <div class="min-w-0 flex-1">                                                                              -->
+  <!--             <p class="truncate text-sm text-white">Carlos creó un proyecto</p>                                     -->
+  <!--             <p class="text-xs text-gray-500">hace 5 min</p>                                                        -->
+  <!--           </div>                                                                                                     -->
+  <!--         </li>                                                                                                       -->
+  <!--         <li class="flex items-center gap-3">                                                                        -->
+  <!--           <div class="h-8 w-8 shrink-0 rounded-full bg-violet-700 text-center text-white leading-8 text-sm">M</div> -->
+  <!--           <div class="min-w-0 flex-1">                                                                              -->
+  <!--             <p class="truncate text-sm text-white">María subió un archivo</p>                                      -->
+  <!--             <p class="text-xs text-gray-500">hace 8 min</p>                                                        -->
+  <!--           </div>                                                                                                     -->
+  <!--         </li>                                                                                                       -->
+  <!--         <li class="flex items-center gap-3">                                                                        -->
+  <!--           <div class="h-8 w-8 shrink-0 rounded-full bg-amber-700 text-center text-white leading-8 text-sm">J</div> -->
+  <!--           <div class="min-w-0 flex-1">                                                                              -->
+  <!--             <p class="truncate text-sm text-white">Javier actualizó el perfil</p>                                  -->
+  <!--             <p class="text-xs text-gray-500">hace 12 min</p>                                                       -->
+  <!--           </div>                                                                                                     -->
+  <!--         </li>                                                                                                       -->
+  <!--       </ul>                                                                                                         -->
+  <!--     </div>                                                                                                          -->
+  <!--                                                                                                                   -->
+  <!--     <!-- Segunda fila: acomoda el row-span-2 de la tabla --> -->
+  <!--     <div class="col-span-4 rounded-xl bg-gray-800 p-5">                                                           -->
+  <!--       <h3 class="mb-3 text-sm font-semibold text-white">Widget extra (col-span-4)</h3>                            -->
+  <!--       <p class="text-sm text-gray-400">Este widget comparte vertical con la tabla gracias a row-span-2.</p>       -->
+  <!--     </div>                                                                                                          -->
+  <!--                                                                                                                   -->
+  <!--   </div>                                                                                                            -->
+  <!-- </section>                                                                                                         -->
+
+
+  <!-- ============================================ -->
+  <!-- BLOQUE 4: dashboard completo responsive      -->
+  <!-- ============================================ -->
+  <!-- Descomenta las siguientes líneas:            -->
+
+  <!-- <section class="mb-12">                                                                                            -->
+  <!--   <h2 class="mb-4 text-lg font-semibold text-gray-300">Bloque 4: Dashboard completo responsive</h2>              -->
+  <!--   <div class="grid grid-cols-1 gap-4 md:grid-cols-4 lg:grid-cols-6">                                              -->
+  <!--                                                                                                                   -->
+  <!--     <!-- Stats: full en mobile, col-span-2 en md, col-span-3 en lg --> -->
+  <!--     <div class="rounded-xl bg-gray-800 p-5 md:col-span-2 lg:col-span-3">                                         -->
+  <!--       <p class="text-sm text-gray-400">Usuarios activos</p>                                                        -->
+  <!--       <p class="mt-1 text-3xl font-bold text-white">4,821</p>                                                      -->
+  <!--     </div>                                                                                                          -->
+  <!--     <div class="rounded-xl bg-gray-800 p-5 md:col-span-2 lg:col-span-3">                                         -->
+  <!--       <p class="text-sm text-gray-400">Ingresos</p>                                                                -->
+  <!--       <p class="mt-1 text-3xl font-bold text-white">$12,340</p>                                                   -->
+  <!--     </div>                                                                                                          -->
+  <!--                                                                                                                   -->
+  <!--     <!-- Gráfico: full en mobile y md, col-span-4 en lg --> -->
+  <!--     <div class="rounded-xl bg-gray-800 p-6 md:col-span-4 lg:col-span-4">                                         -->
+  <!--       <h3 class="mb-4 font-semibold text-white">Ingresos mensuales</h3>                                           -->
+  <!--       <div class="flex h-28 items-end gap-2">                                                                      -->
+  <!--         <div class="flex flex-1 flex-col items-center gap-1">                                                      -->
+  <!--           <div class="w-full rounded-t bg-sky-600" style="height: 40%"></div>                                      -->
+  <!--           <span class="text-xs text-gray-500">E</span>                                                             -->
+  <!--         </div>                                                                                                      -->
+  <!--         <div class="flex flex-1 flex-col items-center gap-1">                                                      -->
+  <!--           <div class="w-full rounded-t bg-sky-500" style="height: 75%"></div>                                      -->
+  <!--           <span class="text-xs text-gray-500">F</span>                                                             -->
+  <!--         </div>                                                                                                      -->
+  <!--         <div class="flex flex-1 flex-col items-center gap-1">                                                      -->
+  <!--           <div class="w-full rounded-t bg-sky-400" style="height: 100%"></div>                                     -->
+  <!--           <span class="text-xs text-gray-500">M</span>                                                             -->
+  <!--         </div>                                                                                                      -->
+  <!--       </div>                                                                                                        -->
+  <!--     </div>                                                                                                          -->
+  <!--                                                                                                                   -->
+  <!--     <!-- Actividad: full en mobile, col-span-4 en md, col-span-2 en lg --> -->
+  <!--     <div class="rounded-xl bg-gray-800 p-5 md:col-span-4 lg:col-span-2">                                         -->
+  <!--       <h3 class="mb-3 text-sm font-semibold text-white">Actividad reciente</h3>                                   -->
+  <!--       <ul class="space-y-2 text-sm text-gray-400">                                                                 -->
+  <!--         <li>Ana García inició sesión — <span class="text-gray-500 text-xs">2 min</span></li>                      -->
+  <!--         <li>Carlos creó un proyecto — <span class="text-gray-500 text-xs">5 min</span></li>                       -->
+  <!--         <li>María subió un archivo — <span class="text-gray-500 text-xs">8 min</span></li>                        -->
+  <!--       </ul>                                                                                                         -->
+  <!--     </div>                                                                                                          -->
+  <!--                                                                                                                   -->
+  <!--   </div>                                                                                                            -->
+  <!-- </section>                                                                                                         -->
+
+</body>
+
+</html>

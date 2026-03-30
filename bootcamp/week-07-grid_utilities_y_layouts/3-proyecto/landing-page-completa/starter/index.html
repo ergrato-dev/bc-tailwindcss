@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FlowGrid — Proyecto Landing Page Completa</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<!--
+  ============================================================
+  PROYECTO: Landing Page Completa — FlowGrid SaaS
+  ============================================================
+
+  Estructura de la landing (de arriba hacia abajo):
+  ┌──────────────────────────────────────┐
+  │  NAVBAR (Flex: justify-between)      │
+  │  HERO   (Flex: flex-col centered)    │
+  │  FEATURES (Grid: 3 cols)             │
+  │  STATS    (Grid: 4 cols)             │
+  │  PRICING  (Grid: 3 cols)             │
+  │  TESTIMONIOS (Grid: 2 cols)          │
+  │  FOOTER   (Grid: 4 cols)             │
+  └──────────────────────────────────────┘
+
+  INSTRUCCIONES:
+  - Lee el README.md antes de empezar
+  - Completa las secciones reemplazando las clases "???"
+  - Puedes añadir o quitar elementos, pero mantén la estructura
+  - El mínimo aprobatorio es 70/100
+
+  PISTAS GENERALES:
+  - Navbar y Hero → Flexbox (1D)
+  - Features, Stats, Pricing, Testimonios, Footer → Grid (2D)
+  - Dentro de cada card → Flexbox (flex-col)
+  ============================================================
+-->
+
+<body class="bg-gray-950 font-sans text-white">
+
+  <!-- ============================================ -->
+  <!-- NAVBAR                                       -->
+  <!-- Usa: flex items-center justify-between       -->
+  <!-- Logo a la izquierda, links en el centro      -->
+  <!-- (ocultos en mobile), CTA a la derecha        -->
+  <!-- ============================================ -->
+
+  <!-- TODO: Navbar container con flex, sticky, border-b -->
+  <header class="???">
+    <nav class="mx-auto flex max-w-7xl items-center px-6 py-4 ???">
+
+      <!-- TODO: Logo — texto con font-bold text-white text-xl -->
+      <a href="#" class="???">
+        <!-- TODO: ícono ⊞ + texto "FlowGrid" -->
+      </a>
+
+      <!-- TODO: Links de navegación — hidden md:flex gap-8 -->
+      <!-- Links: Features, Pricing, Testimonials, Docs -->
+      <ul class="???">
+        <!-- TODO: 4 <li><a> con text-gray-400 hover:text-white transition-colors -->
+      </ul>
+
+      <!-- TODO: CTA buttons — flex gap-3 -->
+      <div class="???">
+        <!-- TODO: "Log in" (text-gray-400) y "Get started" (bg-sky-500 rounded-lg px-4 py-2) -->
+      </div>
+
+    </nav>
+  </header>
+
+
+  <main>
+
+    <!-- ============================================ -->
+    <!-- HERO SECTION                                 -->
+    <!-- Usa: flex flex-col items-center text-center  -->
+    <!-- Badge + título grande + subtítulo + 2 botones -->
+    <!-- ============================================ -->
+
+    <!-- TODO: section con py-24 bg-gray-950 -->
+    <section class="???">
+      <div class="mx-auto max-w-4xl px-6 ???">
+
+        <!-- TODO: Badge pill — inline-flex, rounded-full, bg-sky-500/10, text-sky-400 -->
+        <div class="???">
+          <!-- ✨ Nuevo: ahora con AI incorporado -->
+        </div>
+
+        <!-- TODO: h1 con text-5xl md:text-7xl font-extrabold tracking-tight -->
+        <h1 class="??? mt-6">
+          Gestiona proyectos.<br />
+          <span class="text-sky-400">Sin fricciones.</span>
+        </h1>
+
+        <!-- TODO: párrafo con text-xl text-gray-400 max-w-2xl mt-6 -->
+        <p class="???">
+          FlowGrid combina la potencia de Grid y Flex para que tu equipo fluya.
+          Todo en un solo lugar, sin complejidad innecesaria.
+        </p>
+
+        <!-- TODO: CTA buttons — flex flex-col sm:flex-row gap-4 mt-10 -->
+        <div class="???">
+          <!-- TODO: Botón 1: "Empezar gratis" — bg-sky-500 hover:bg-sky-400, rounded-xl, px-8 py-4, font-semibold -->
+          <a href="#" class="???">Empezar gratis →</a>
+          <!-- TODO: Botón 2: "Ver demo" — border border-gray-700 hover:border-gray-500, rounded-xl, px-8 py-4 -->
+          <a href="#" class="???">Ver demo</a>
+        </div>
+
+        <!-- TODO: Texto social proof — text-sm text-gray-500 mt-8 -->
+        <p class="???">Más de 10,000 equipos confían en FlowGrid</p>
+
+      </div>
+    </section>
+
+
+    <!-- ============================================ -->
+    <!-- FEATURES SECTION                             -->
+    <!-- Grid: grid-cols-1 md:grid-cols-3             -->
+    <!-- 3 feature cards con icono + título + texto   -->
+    <!-- ============================================ -->
+
+    <!-- TODO: section con py-24 bg-gray-900 -->
+    <section class="???">
+      <div class="mx-auto max-w-7xl px-6">
+
+        <!-- TODO: header de sección — text-center mb-16 -->
+        <div class="???">
+          <!-- TODO: h2 — text-3xl font-bold -->
+          <h2 class="???">Todo lo que necesitas</h2>
+          <!-- TODO: párrafo — text-gray-400 mt-4 max-w-2xl mx-auto -->
+          <p class="???">
+            FlowGrid incluye las herramientas esenciales para que tu equipo sea más productivo.
+          </p>
+        </div>
+
+        <!-- TODO: Grid de features — grid-cols-1 gap-8 md:grid-cols-3 -->
+        <div class="???">
+
+          <!-- Feature 1 -->
+          <!-- TODO: article/div con rounded-2xl bg-gray-800 p-8 -->
+          <div class="???">
+            <!-- TODO: icono con flex h-14 w-14 items-center justify-center rounded-2xl bg-sky-500/20 mb-6 -->
+            <div class="???">⚡</div>
+            <!-- TODO: h3 text-xl font-bold text-white -->
+            <h3 class="???">Kanban en tiempo real</h3>
+            <!-- TODO: párrafo text-gray-400 mt-3 text-sm leading-relaxed -->
+            <p class="???">
+              Tableros sincronizados al instante. Sin recargar, sin perder actualizaciones.
+            </p>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="???">
+            <div class="???">📊</div>
+            <h3 class="???">Analytics integrado</h3>
+            <p class="???">
+              Métricas de productividad, burndown charts y reportes automáticos del sprint.
+            </p>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="???">
+            <div class="???">🔗</div>
+            <h3 class="???">Integraciones sin límites</h3>
+            <p class="???">
+              Conecta con GitHub, Slack, Figma y más de 200 herramientas de tu stack.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================ -->
+    <!-- STATS SECTION                                -->
+    <!-- Grid: grid-cols-2 md:grid-cols-4             -->
+    <!-- 4 métricas con número grande + label         -->
+    <!-- ============================================ -->
+
+    <!-- TODO: section con py-20 bg-gray-950 border-y border-gray-800 -->
+    <section class="???">
+      <div class="mx-auto max-w-5xl px-6">
+
+        <!-- TODO: Grid — grid-cols-2 gap-8 text-center md:grid-cols-4 -->
+        <div class="???">
+
+          <!-- Stat 1 -->
+          <!-- TODO: div con flex flex-col items-center gap-1 -->
+          <div class="???">
+            <!-- TODO: p con text-4xl font-extrabold text-sky-400 -->
+            <p class="???">10,000+</p>
+            <!-- TODO: p con text-sm text-gray-400 -->
+            <p class="???">Equipos activos</p>
+          </div>
+
+          <!-- Stat 2 -->
+          <div class="???">
+            <p class="???">99.9%</p>
+            <p class="???">Uptime garantizado</p>
+          </div>
+
+          <!-- Stat 3 -->
+          <div class="???">
+            <p class="???">+48%</p>
+            <p class="???">Más productividad</p>
+          </div>
+
+          <!-- Stat 4 -->
+          <div class="???">
+            <p class="???">4.9/5</p>
+            <p class="???">Rating promedio</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================ -->
+    <!-- PRICING SECTION                              -->
+    <!-- Grid: grid-cols-1 md:grid-cols-3             -->
+    <!-- Plan Pro destacado con ring-2 ring-sky-500   -->
+    <!-- Cada card: flex flex-col (botón al fondo)    -->
+    <!-- ============================================ -->
+
+    <!-- TODO: section con py-24 bg-gray-900 -->
+    <section id="pricing" class="???">
+      <div class="mx-auto max-w-6xl px-6">
+
+        <div class="mb-16 text-center">
+          <h2 class="text-3xl font-bold text-white">Precios simples y transparentes</h2>
+          <p class="mt-4 text-gray-400">Sin contratos. Cancela cuando quieras.</p>
+        </div>
+
+        <!-- TODO: Grid de pricing — grid-cols-1 gap-8 md:grid-cols-3 items-start -->
+        <div class="???">
+
+          <!-- Plan Free -->
+          <!-- TODO: card con flex flex-col rounded-2xl bg-gray-800 p-8 -->
+          <div class="???">
+            <div>
+              <p class="text-sm font-semibold uppercase tracking-wider text-gray-400">Free</p>
+              <!-- TODO: precio con flex items-baseline gap-1 mt-4 -->
+              <div class="???">
+                <span class="text-5xl font-extrabold text-white">$0</span>
+                <span class="text-gray-400">/mes</span>
+              </div>
+              <p class="mt-2 text-sm text-gray-400">Para individuos y proyectos personales.</p>
+            </div>
+            <!-- TODO: lista de features con mt-8 space-y-3 flex-1 -->
+            <ul class="???">
+              <li class="flex items-center gap-3 text-sm text-gray-300">
+                <span class="text-emerald-400">✓</span> 3 proyectos activos
+              </li>
+              <li class="flex items-center gap-3 text-sm text-gray-300">
+                <span class="text-emerald-400">✓</span> 1 usuario
+              </li>
+              <li class="flex items-center gap-3 text-sm text-gray-400">
+                <span class="text-gray-600">✗</span> Analytics avanzado
+              </li>
+              <li class="flex items-center gap-3 text-sm text-gray-400">
+                <span class="text-gray-600">✗</span> Integraciones externas
+              </li>
+            </ul>
+            <!-- TODO: botón al fondo — mt-8, border border-gray-600 hover:border-gray-400 -->
+            <a href="#" class="??? mt-8 block rounded-xl px-6 py-3 text-center text-sm font-semibold">
+              Comenzar gratis
+            </a>
+          </div>
+
+          <!-- Plan Pro (destacado) -->
+          <!-- TODO: card con ring-2 ring-sky-500 bg-sky-600, flex flex-col rounded-2xl p-8 -->
+          <div class="???">
+            <!-- TODO: badge "Más popular" — flex justify-between items-center mb-4 -->
+            <div class="mb-4 flex items-center justify-between">
+              <p class="text-sm font-semibold uppercase tracking-wider text-sky-200">Pro</p>
+              <span class="rounded-full bg-sky-400/20 px-3 py-1 text-xs font-medium text-sky-200">
+                Más popular
+              </span>
+            </div>
+            <div class="flex items-baseline gap-1 mt-4">
+              <span class="text-5xl font-extrabold text-white">$19</span>
+              <span class="text-sky-200">/mes</span>
+            </div>
+            <p class="mt-2 text-sm text-sky-200">Para equipos en crecimiento.</p>
+            <!-- TODO: lista de features con mt-8 space-y-3 flex-1 -->
+            <ul class="???">
+              <li class="flex items-center gap-3 text-sm text-white">
+                <span class="text-sky-200">✓</span> Proyectos ilimitados
+              </li>
+              <li class="flex items-center gap-3 text-sm text-white">
+                <span class="text-sky-200">✓</span> Hasta 15 usuarios
+              </li>
+              <li class="flex items-center gap-3 text-sm text-white">
+                <span class="text-sky-200">✓</span> Analytics avanzado
+              </li>
+              <li class="flex items-center gap-3 text-sm text-white">
+                <span class="text-sky-200">✓</span> 50+ integraciones
+              </li>
+            </ul>
+            <!-- TODO: botón al fondo — mt-8, bg-white text-sky-700 font-bold hover:bg-sky-50 -->
+            <a href="#" class="??? mt-8 block rounded-xl px-6 py-3 text-center text-sm font-semibold">
+              Comenzar con Pro
+            </a>
+          </div>
+
+          <!-- Plan Enterprise -->
+          <div class="flex flex-col rounded-2xl bg-gray-800 p-8">
+            <div>
+              <p class="text-sm font-semibold uppercase tracking-wider text-gray-400">Enterprise</p>
+              <div class="mt-4 flex items-baseline gap-1">
+                <span class="text-5xl font-extrabold text-white">$99</span>
+                <span class="text-gray-400">/mes</span>
+              </div>
+              <p class="mt-2 text-sm text-gray-400">Para empresas con necesidades avanzadas.</p>
+            </div>
+            <!-- TODO: lista de features con mt-8 space-y-3 flex-1 -->
+            <ul class="???">
+              <li class="flex items-center gap-3 text-sm text-gray-300">
+                <span class="text-emerald-400">✓</span> Todo de Pro
+              </li>
+              <li class="flex items-center gap-3 text-sm text-gray-300">
+                <span class="text-emerald-400">✓</span> Usuarios ilimitados
+              </li>
+              <li class="flex items-center gap-3 text-sm text-gray-300">
+                <span class="text-emerald-400">✓</span> SSO y SAML
+              </li>
+              <li class="flex items-center gap-3 text-sm text-gray-300">
+                <span class="text-emerald-400">✓</span> Soporte dedicado 24/7
+              </li>
+            </ul>
+            <!-- TODO: botón al fondo — mt-8, border border-gray-600 hover:border-gray-400 -->
+            <a href="#" class="??? mt-8 block rounded-xl px-6 py-3 text-center text-sm font-semibold">
+              Contactar ventas
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================ -->
+    <!-- TESTIMONIALS SECTION                         -->
+    <!-- Grid: grid-cols-1 md:grid-cols-2             -->
+    <!-- + col-span-full para el CTA al final         -->
+    <!-- ============================================ -->
+
+    <!-- TODO: section con py-24 bg-gray-950 -->
+    <section class="???">
+      <div class="mx-auto max-w-6xl px-6">
+
+        <div class="mb-16 text-center">
+          <h2 class="text-3xl font-bold text-white">Lo que dicen nuestros usuarios</h2>
+        </div>
+
+        <!-- TODO: Grid — grid-cols-1 gap-6 md:grid-cols-2 -->
+        <div class="???">
+
+          <!-- Testimonio 1 -->
+          <!-- TODO: blockquote con rounded-2xl bg-gray-800 p-8 -->
+          <blockquote class="???">
+            <p class="text-gray-300 leading-relaxed">
+              "FlowGrid transformó cómo trabaja nuestro equipo de 8 personas. Los tableros
+              Kanban en tiempo real son increíblemente fluidos y la integración con GitHub
+              nos ahorra horas cada semana."
+            </p>
+            <!-- TODO: autor con flex items-center gap-4 mt-6 -->
+            <footer class="???">
+              <!-- Avatar placeholder -->
+              <div
+                class="h-10 w-10 shrink-0 rounded-full bg-sky-700 flex items-center justify-center font-bold text-white">
+                A
+              </div>
+              <div>
+                <p class="font-semibold text-white">Ana García</p>
+                <p class="text-sm text-gray-400">CTO · Startup Tech</p>
+              </div>
+            </footer>
+          </blockquote>
+
+          <!-- Testimonio 2 -->
+          <blockquote class="rounded-2xl bg-gray-800 p-8">
+            <p class="text-gray-300 leading-relaxed">
+              "Migramos de Jira y no miramos atrás. La simplicidad de FlowGrid con toda
+              la potencia que necesitamos. El soporte del equipo es excepcional."
+            </p>
+            <footer class="mt-6 flex items-center gap-4">
+              <div
+                class="h-10 w-10 shrink-0 rounded-full bg-violet-700 flex items-center justify-center font-bold text-white">
+                C
+              </div>
+              <div>
+                <p class="font-semibold text-white">Carlos Mendoza</p>
+                <p class="text-sm text-gray-400">Engineering Manager · SaaS Corp</p>
+              </div>
+            </footer>
+          </blockquote>
+
+          <!-- Testimonio 3 -->
+          <blockquote class="rounded-2xl bg-gray-800 p-8">
+            <p class="text-gray-300 leading-relaxed">
+              "Usamos FlowGrid para coordinar 3 equipos en diferentes zonas horarias.
+              Las notificaciones en tiempo real y el historial de actividad son clave."
+            </p>
+            <footer class="mt-6 flex items-center gap-4">
+              <div
+                class="h-10 w-10 shrink-0 rounded-full bg-emerald-700 flex items-center justify-center font-bold text-white">
+                M
+              </div>
+              <div>
+                <p class="font-semibold text-white">María Torres</p>
+                <p class="text-sm text-gray-400">Product Manager · GlobalTech</p>
+              </div>
+            </footer>
+          </blockquote>
+
+          <!-- Testimonio 4 -->
+          <blockquote class="rounded-2xl bg-gray-800 p-8">
+            <p class="text-gray-300 leading-relaxed">
+              "La curva de aprendizaje es mínima. Incorporamos a nuevos miembros del
+              equipo en minutos. El ROI fue evidente desde el primer mes."
+            </p>
+            <footer class="mt-6 flex items-center gap-4">
+              <div
+                class="h-10 w-10 shrink-0 rounded-full bg-amber-700 flex items-center justify-center font-bold text-white">
+                J
+              </div>
+              <div>
+                <p class="font-semibold text-white">Javier Ruiz</p>
+                <p class="text-sm text-gray-400">CEO · Agency Pro</p>
+              </div>
+            </footer>
+          </blockquote>
+
+          <!-- CTA: col-span-full — ocupa las 2 columnas -->
+          <!-- TODO: div con col-span-full rounded-2xl bg-sky-950 border border-sky-900 p-12 text-center -->
+          <div class="???">
+            <h3 class="text-2xl font-bold text-white">¿Listo para mejorar tu flujo de trabajo?</h3>
+            <p class="mt-3 text-sky-300">Únete a más de 10,000 equipos. Los primeros 14 días son gratis.</p>
+            <!-- TODO: Botón grande — mt-8 inline-flex items-center gap-2 bg-sky-500 hover:bg-sky-400 rounded-xl px-8 py-4 font-bold -->
+            <a href="#" class="???">
+              Comenzar gratis — sin tarjeta de crédito
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ============================================ -->
+  <!-- FOOTER                                       -->
+  <!-- Grid: grid-cols-2 md:grid-cols-4             -->
+  <!-- Logo column + 3 columns of links             -->
+  <!-- ============================================ -->
+
+  <!-- TODO: footer con bg-gray-900 border-t border-gray-800 py-16 -->
+  <footer class="???">
+    <div class="mx-auto max-w-7xl px-6">
+
+      <!-- TODO: Grid — grid-cols-2 gap-12 md:grid-cols-4 -->
+      <div class="???">
+
+        <!-- Logo + descripción: col-span-2 en mobile, col-span-1 en md -->
+        <!-- TODO: div con col-span-2 md:col-span-1 -->
+        <div class="???">
+          <a href="#" class="text-xl font-bold text-white">⊞ FlowGrid</a>
+          <p class="mt-3 text-sm text-gray-400 max-w-xs">
+            La herramienta de gestión de proyectos que tu equipo merece.
+          </p>
+          <!-- TODO: social links — flex gap-4 mt-6 -->
+          <div class="???">
+            <a href="#" class="text-gray-400 hover:text-white" aria-label="Twitter">𝕏</a>
+            <a href="#" class="text-gray-400 hover:text-white" aria-label="GitHub">⌥</a>
+            <a href="#" class="text-gray-400 hover:text-white" aria-label="LinkedIn">in</a>
+          </div>
+        </div>
+
+        <!-- Columna Product -->
+        <div>
+          <h4 class="text-sm font-semibold uppercase tracking-wider text-gray-400">Producto</h4>
+          <!-- TODO: nav links con mt-4 space-y-3 -->
+          <ul class="???">
+            <li><a href="#" class="text-sm text-gray-400 hover:text-white">Features</a></li>
+            <li><a href="#" class="text-sm text-gray-400 hover:text-white">Pricing</a></li>
+            <li><a href="#" class="text-sm text-gray-400 hover:text-white">Roadmap</a></li>
+            <li><a href="#" class="text-sm text-gray-400 hover:text-white">Changelog</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna Company -->
+        <div>
+          <h4 class="text-sm font-semibold uppercase tracking-wider text-gray-400">Empresa</h4>
+          <ul class="mt-4 space-y-3">
+            <li><a href="#" class="text-sm text-gray-400 hover:text-white">About</a></li>
+            <li><a href="#" class="text-sm text-gray-400 hover:text-white">Blog</a></li>
+            <li><a href="#" class="text-sm text-gray-400 hover:text-white">Careers</a></li>
+            <li><a href="#" class="text-sm text-gray-400 hover:text-white">Press</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna Legal/Connect -->
+        <div>
+          <h4 class="text-sm font-semibold uppercase tracking-wider text-gray-400">Legal</h4>
+          <ul class="mt-4 space-y-3">
+            <li><a href="#" class="text-sm text-gray-400 hover:text-white">Privacy</a></li>
+            <li><a href="#" class="text-sm text-gray-400 hover:text-white">Terms</a></li>
+            <li><a href="#" class="text-sm text-gray-400 hover:text-white">Security</a></li>
+            <li><a href="#" class="text-sm text-gray-400 hover:text-white">Cookies</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- TODO: Bottom bar — mt-16 border-t border-gray-800 pt-8 flex items-center justify-between -->
+      <div class="???">
+        <p class="text-sm text-gray-500">© 2026 FlowGrid. Todos los derechos reservados.</p>
+        <p class="text-sm text-gray-500">Hecho con ♥ y TailwindCSS</p>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" font-family="Inter, system-ui, sans-serif">
+  <!-- Background -->
+  <rect width="960" height="560" fill="#030712"/>
+
+  <!-- Title -->
+  <text x="480" y="40" text-anchor="middle" font-size="20" font-weight="700" fill="#f9fafb">grid-cols-* y grid-rows-* en Tailwind</text>
+  <text x="480" y="62" text-anchor="middle" font-size="13" fill="#6b7280">Columnas iguales · Proporcionales con fr · auto-fill + minmax()</text>
+
+  <!-- ─── PANEL 1: grid-cols-3 (3 iguales) ─── -->
+  <rect x="30" y="90" width="280" height="220" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+  <text x="170" y="114" text-anchor="middle" font-size="12" font-weight="700" fill="#38bdf8">grid-cols-3</text>
+  <text x="170" y="130" text-anchor="middle" font-size="10" fill="#475569">3 columnas iguales (1fr cada una)</text>
+
+  <!-- 3 equal columns, 2 rows -->
+  <!-- Row 1 -->
+  <rect x="46" y="142" width="74" height="60" rx="6" fill="#1e3a5f" stroke="#38bdf8" stroke-width="1"/>
+  <text x="83" y="177" text-anchor="middle" font-size="10" fill="#7dd3fc">1fr</text>
+  <rect x="130" y="142" width="74" height="60" rx="6" fill="#1e3a5f" stroke="#38bdf8" stroke-width="1"/>
+  <text x="167" y="177" text-anchor="middle" font-size="10" fill="#7dd3fc">1fr</text>
+  <rect x="214" y="142" width="74" height="60" rx="6" fill="#1e3a5f" stroke="#38bdf8" stroke-width="1"/>
+  <text x="251" y="177" text-anchor="middle" font-size="10" fill="#7dd3fc">1fr</text>
+  <!-- Row 2 -->
+  <rect x="46" y="212" width="74" height="60" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <rect x="130" y="212" width="74" height="60" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <rect x="214" y="212" width="74" height="60" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+
+  <!-- equal width indicator -->
+  <line x1="46" y1="286" x2="288" y2="286" stroke="#22d3ee" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="170" y="299" text-anchor="middle" font-size="9" fill="#0891b2">igual ancho</text>
+
+  <!-- Code snippet -->
+  <rect x="46" y="308" width="242" height="22" rx="4" fill="#020617"/>
+  <text x="57" y="322" font-size="10" fill="#7dd3fc" font-family="monospace">class="grid grid-cols-3 gap-4"</text>
+
+  <!-- ─── PANEL 2: grid-cols with fr (proportional) ─── -->
+  <rect x="340" y="90" width="280" height="220" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+  <text x="480" y="114" text-anchor="middle" font-size="12" font-weight="700" fill="#a78bfa">Proporcional con fr</text>
+  <text x="480" y="130" text-anchor="middle" font-size="10" fill="#475569">grid-cols-[1fr_2fr] — sidebar + main</text>
+
+  <!-- 1fr + 2fr columns -->
+  <!-- Row 1: sidebar (1fr ~90px) + main (2fr ~170px) -->
+  <rect x="356" y="142" width="88" height="60" rx="6" fill="#2e1065" stroke="#7c3aed" stroke-width="1"/>
+  <text x="400" y="168" text-anchor="middle" font-size="10" fill="#c4b5fd">1fr</text>
+  <text x="400" y="182" text-anchor="middle" font-size="9" fill="#7c3aed">sidebar</text>
+  <rect x="454" y="142" width="150" height="60" rx="6" fill="#1e1b4b" stroke="#818cf8" stroke-width="1"/>
+  <text x="529" y="168" text-anchor="middle" font-size="10" fill="#c7d2fe">2fr</text>
+  <text x="529" y="182" text-anchor="middle" font-size="9" fill="#818cf8">main content</text>
+
+  <!-- Row 2: same structure -->
+  <rect x="356" y="212" width="88" height="60" rx="6" fill="#2e1065" stroke="#7c3aed" stroke-width="1"/>
+  <rect x="454" y="212" width="150" height="60" rx="6" fill="#1e1b4b" stroke="#818cf8" stroke-width="1"/>
+
+  <!-- Proportion indicator -->
+  <text x="400" y="292" text-anchor="middle" font-size="9" fill="#7c3aed">33%</text>
+  <text x="529" y="292" text-anchor="middle" font-size="9" fill="#6366f1">67%</text>
+
+  <!-- Code snippet -->
+  <rect x="356" y="308" width="248" height="22" rx="4" fill="#020617"/>
+  <text x="367" y="322" font-size="10" fill="#c4b5fd" font-family="monospace">class="grid grid-cols-[1fr_2fr]"</text>
+
+  <!-- ─── PANEL 3: auto-fill + minmax ─── -->
+  <rect x="650" y="90" width="280" height="220" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+  <text x="790" y="114" text-anchor="middle" font-size="12" font-weight="700" fill="#34d399">auto-fill + minmax()</text>
+  <text x="790" y="130" text-anchor="middle" font-size="10" fill="#475569">Columnas responsivas sin breakpoints</text>
+
+  <!-- Wide viewport: 3 cols -->
+  <text x="666" y="150" font-size="9" fill="#64748b">wide viewport →</text>
+  <rect x="666" y="155" width="72" height="40" rx="5" fill="#052e16" stroke="#16a34a" stroke-width="1"/>
+  <rect x="746" y="155" width="72" height="40" rx="5" fill="#052e16" stroke="#16a34a" stroke-width="1"/>
+  <rect x="826" y="155" width="72" height="40" rx="5" fill="#052e16" stroke="#16a34a" stroke-width="1"/>
+  <text x="702" y="180" text-anchor="middle" font-size="9" fill="#4ade80">250px</text>
+  <text x="782" y="180" text-anchor="middle" font-size="9" fill="#4ade80">250px</text>
+  <text x="862" y="180" text-anchor="middle" font-size="9" fill="#4ade80">250px</text>
+
+  <!-- Medium viewport: 2 cols -->
+  <text x="666" y="215" font-size="9" fill="#64748b">medium →</text>
+  <rect x="666" y="220" width="108" height="40" rx="5" fill="#052e16" stroke="#16a34a" stroke-width="1"/>
+  <rect x="782" y="220" width="108" height="40" rx="5" fill="#052e16" stroke="#16a34a" stroke-width="1"/>
+  <text x="720" y="245" text-anchor="middle" font-size="9" fill="#4ade80">1fr cada una</text>
+  <text x="836" y="245" text-anchor="middle" font-size="9" fill="#4ade80">1fr cada una</text>
+
+  <!-- Small viewport: 1 col -->
+  <text x="666" y="278" font-size="9" fill="#64748b">narrow →</text>
+  <rect x="666" y="283" width="222" height="24" rx="5" fill="#052e16" stroke="#16a34a" stroke-width="1"/>
+  <text x="777" y="299" text-anchor="middle" font-size="9" fill="#4ade80">max-width: 1fr</text>
+
+  <!-- Code snippet -->
+  <rect x="651" y="308" width="278" height="22" rx="4" fill="#020617"/>
+  <text x="660" y="322" font-size="9.5" fill="#6ee7b7" font-family="monospace">grid-cols-[repeat(auto-fill,minmax(250px,1fr))]</text>
+
+  <!-- ─── BOTTOM: gap-x vs gap-y ─── -->
+  <rect x="30" y="360" width="900" height="170" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+  <text x="480" y="384" text-anchor="middle" font-size="13" font-weight="700" fill="#f9fafb">gap-x-* vs gap-y-* — controlar el espacio</text>
+
+  <!-- gap-x demo (horizontal) -->
+  <text x="120" y="408" text-anchor="middle" font-size="11" font-weight="600" fill="#fbbf24">gap-x-8</text>
+  <text x="120" y="422" text-anchor="middle" font-size="9" fill="#78716c">espacio entre columnas</text>
+
+  <rect x="50" y="430" width="70" height="40" rx="5" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <rect x="150" y="430" width="70" height="40" rx="5" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <rect x="250" y="430" width="70" height="40" rx="5" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <!-- horizontal gap arrow -->
+  <line x1="120" y1="445" x2="150" y2="445" stroke="#fbbf24" stroke-width="2"/>
+  <text x="135" y="460" text-anchor="middle" font-size="9" fill="#fbbf24">gap-x</text>
+  <line x1="220" y1="445" x2="250" y2="445" stroke="#fbbf24" stroke-width="2"/>
+
+  <!-- gap-y demo (vertical) -->
+  <text x="500" y="408" text-anchor="middle" font-size="11" font-weight="600" fill="#f472b6">gap-y-6</text>
+  <text x="500" y="422" text-anchor="middle" font-size="9" fill="#78716c">espacio entre filas</text>
+
+  <rect x="420" y="430" width="80" height="36" rx="5" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <rect x="510" y="430" width="80" height="36" rx="5" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <rect x="600" y="430" width="80" height="36" rx="5" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <rect x="420" y="484" width="80" height="36" rx="5" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <rect x="510" y="484" width="80" height="36" rx="5" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <rect x="600" y="484" width="80" height="36" rx="5" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <!-- vertical gap arrow -->
+  <line x1="840" y1="466" x2="840" y2="484" stroke="#f472b6" stroke-width="2"/>
+  <text x="868" y="478" text-anchor="middle" font-size="9" fill="#f472b6">gap-y</text>
+</svg>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 02 — Galería Responsive</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-gray-950 p-8 font-sans">
+
+  <h1 class="mb-8 text-2xl font-bold text-white">Ejercicio 02: Galería Responsive</h1>
+
+  <!-- ============================================ -->
+  <!-- BLOQUE 1: breakpoints explícitos             -->
+  <!-- ============================================ -->
+  <!-- Descomenta las siguientes líneas:            -->
+
+  <!-- <section class="mb-12">                                                                                            -->
+  <!--   <h2 class="mb-2 text-lg font-semibold text-gray-300">Bloque 1: Galería con breakpoints explícitos</h2>        -->
+  <!--   <p class="mb-4 text-sm text-gray-400">                                                                          -->
+  <!--     grid-cols-1 (mobile) → md:grid-cols-2 (tablet) → lg:grid-cols-3 (desktop)                                   -->
+  <!--   </p>                                                                                                             -->
+  <!--   <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">                                              -->
+  <!--     <div class="overflow-hidden rounded-xl bg-gray-800">                                                           -->
+  <!--       <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&h=300&fit=crop"                  -->
+  <!--            alt="Código en pantalla" class="h-48 w-full object-cover" loading="lazy" />                            -->
+  <!--       <div class="p-4">                                                                                            -->
+  <!--         <h3 class="font-semibold text-white">Desarrollo Web</h3>                                                  -->
+  <!--         <p class="mt-1 text-sm text-gray-400">HTML, CSS y JavaScript</p>                                          -->
+  <!--       </div>                                                                                                        -->
+  <!--     </div>                                                                                                          -->
+  <!--     <div class="overflow-hidden rounded-xl bg-gray-800">                                                           -->
+  <!--       <img src="https://images.unsplash.com/photo-1593720219276-0b1eacd0aef4?w=400&h=300&fit=crop"               -->
+  <!--            alt="Diseño UI" class="h-48 w-full object-cover" loading="lazy" />                                     -->
+  <!--       <div class="p-4">                                                                                            -->
+  <!--         <h3 class="font-semibold text-white">Diseño UI/UX</h3>                                                    -->
+  <!--         <p class="mt-1 text-sm text-gray-400">Figma y Tailwind</p>                                                -->
+  <!--       </div>                                                                                                        -->
+  <!--     </div>                                                                                                          -->
+  <!--     <div class="overflow-hidden rounded-xl bg-gray-800">                                                           -->
+  <!--       <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop"               -->
+  <!--            alt="Programación" class="h-48 w-full object-cover" loading="lazy" />                                  -->
+  <!--       <div class="p-4">                                                                                            -->
+  <!--         <h3 class="font-semibold text-white">Backend</h3>                                                          -->
+  <!--         <p class="mt-1 text-sm text-gray-400">Node.js y arquitectura</p>                                          -->
+  <!--       </div>                                                                                                        -->
+  <!--     </div>                                                                                                          -->
+  <!--     <div class="overflow-hidden rounded-xl bg-gray-800">                                                           -->
+  <!--       <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop"               -->
+  <!--            alt="Hardware" class="h-48 w-full object-cover" loading="lazy" />                                      -->
+  <!--       <div class="p-4">                                                                                            -->
+  <!--         <h3 class="font-semibold text-white">Hardware</h3>                                                         -->
+  <!--         <p class="mt-1 text-sm text-gray-400">Computación y redes</p>                                             -->
+  <!--       </div>                                                                                                        -->
+  <!--     </div>                                                                                                          -->
+  <!--     <div class="overflow-hidden rounded-xl bg-gray-800">                                                           -->
+  <!--       <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?w=400&h=300&fit=crop"               -->
+  <!--            alt="Machine Learning" class="h-48 w-full object-cover" loading="lazy" />                              -->
+  <!--       <div class="p-4">                                                                                            -->
+  <!--         <h3 class="font-semibold text-white">Machine Learning</h3>                                                 -->
+  <!--         <p class="mt-1 text-sm text-gray-400">Python y modelos</p>                                                -->
+  <!--       </div>                                                                                                        -->
+  <!--     </div>                                                                                                          -->
+  <!--     <div class="overflow-hidden rounded-xl bg-gray-800">                                                           -->
+  <!--       <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop"                  -->
+  <!--            alt="Data analysis" class="h-48 w-full object-cover" loading="lazy" />                                 -->
+  <!--       <div class="p-4">                                                                                            -->
+  <!--         <h3 class="font-semibold text-white">Data Analysis</h3>                                                    -->
+  <!--         <p class="mt-1 text-sm text-gray-400">SQL y visualización</p>                                             -->
+  <!--       </div>                                                                                                        -->
+  <!--     </div>                                                                                                          -->
+  <!--   </div>                                                                                                            -->
+  <!-- </section>                                                                                                         -->
+
+
+  <!-- ============================================ -->
+  <!-- BLOQUE 2: auto-fill + minmax()               -->
+  <!-- ============================================ -->
+  <!-- Descomenta las siguientes líneas:            -->
+
+  <!-- <section class="mb-12">                                                                                            -->
+  <!--   <h2 class="mb-2 text-lg font-semibold text-gray-300">Bloque 2: auto-fill + minmax() — sin breakpoints</h2>    -->
+  <!--   <p class="mb-4 text-sm text-gray-400">                                                                          -->
+  <!--     Las columnas se crean solas: mínimo 200px, máximo 1fr. Redimensiona el navegador.                            -->
+  <!--   </p>                                                                                                             -->
+  <!--   <div class="grid gap-4" style="grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))">                   -->
+  <!--     <div class="overflow-hidden rounded-xl bg-gray-800">                                                           -->
+  <!--       <div class="h-40 bg-sky-800"></div>                                                                          -->
+  <!--       <div class="p-3"><p class="text-sm font-medium text-white">Foto 1</p></div>                                 -->
+  <!--     </div>                                                                                                          -->
+  <!--     <div class="overflow-hidden rounded-xl bg-gray-800">                                                           -->
+  <!--       <div class="h-40 bg-violet-800"></div>                                                                        -->
+  <!--       <div class="p-3"><p class="text-sm font-medium text-white">Foto 2</p></div>                                 -->
+  <!--     </div>                                                                                                          -->
+  <!--     <div class="overflow-hidden rounded-xl bg-gray-800">                                                           -->
+  <!--       <div class="h-40 bg-emerald-800"></div>                                                                      -->
+  <!--       <div class="p-3"><p class="text-sm font-medium text-white">Foto 3</p></div>                                 -->
+  <!--     </div>                                                                                                          -->
+  <!--     <div class="overflow-hidden rounded-xl bg-gray-800">                                                           -->
+  <!--       <div class="h-40 bg-rose-800"></div>                                                                         -->
+  <!--       <div class="p-3"><p class="text-sm font-medium text-white">Foto 4</p></div>                                 -->
+  <!--     </div>                                                                                                          -->
+  <!--     <div class="overflow-hidden rounded-xl bg-gray-800">                                                           -->
+  <!--       <div class="h-40 bg-amber-800"></div>                                                                        -->
+  <!--       <div class="p-3"><p class="text-sm font-medium text-white">Foto 5</p></div>                                 -->
+  <!--     </div>                                                                                                          -->
+  <!--   </div>                                                                                                            -->
+  <!-- </section>                                                                                                         -->
+
+
+  <!-- ============================================ -->
+  <!-- BLOQUE 3: auto-fill vs auto-fit              -->
+  <!-- ============================================ -->
+  <!-- Descomenta las siguientes líneas:            -->
+
+  <!-- <section class="mb-12">                                                                                            -->
+  <!--   <h2 class="mb-4 text-lg font-semibold text-gray-300">Bloque 3: auto-fill vs. auto-fit (con 2 ítems)</h2>      -->
+  <!--                                                                                                                   -->
+  <!--   <p class="mb-2 text-sm text-gray-400">                                                                          -->
+  <!--     auto-fill — deja columnas vacías (los 2 ítems NO se estiran):                                                 -->
+  <!--   </p>                                                                                                             -->
+  <!--   <div class="mb-4 grid gap-4 rounded-xl bg-gray-800 p-4"                                                         -->
+  <!--        style="grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))">                                       -->
+  <!--     <div class="rounded-lg bg-sky-700 p-4 text-center text-white">Ítem A</div>                                    -->
+  <!--     <div class="rounded-lg bg-sky-600 p-4 text-center text-white">Ítem B</div>                                    -->
+  <!--   </div>                                                                                                            -->
+  <!--                                                                                                                   -->
+  <!--   <p class="mb-2 text-sm text-gray-400">                                                                          -->
+  <!--     auto-fit — los 2 ítems se estiran para ocupar todo el espacio disponible:                                     -->
+  <!--   </p>                                                                                                             -->
+  <!--   <div class="grid gap-4 rounded-xl bg-gray-800 p-4"                                                              -->
+  <!--        style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))">                                        -->
+  <!--     <div class="rounded-lg bg-violet-700 p-4 text-center text-white">Ítem A</div>                                 -->
+  <!--     <div class="rounded-lg bg-violet-600 p-4 text-center text-white">Ítem B</div>                                 -->
+  <!--   </div>                                                                                                            -->
+  <!-- </section>                                                                                                         -->
+
+
+  <!-- ============================================ -->
+  <!-- BLOQUE 4: galería con aspect-ratio y hover   -->
+  <!-- ============================================ -->
+  <!-- Descomenta las siguientes líneas:            -->
+
+  <!-- <section class="mb-12">                                                                                            -->
+  <!--   <h2 class="mb-4 text-lg font-semibold text-gray-300">Bloque 4: Galería de imágenes con hover effect</h2>      -->
+  <!--   <div class="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">                                              -->
+  <!--                                                                                                                   -->
+  <!--     <div class="group overflow-hidden rounded-xl">                                                                 -->
+  <!--       <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&h=400&fit=crop"                  -->
+  <!--            alt="Código" loading="lazy"                                                                             -->
+  <!--            class="aspect-square w-full object-cover transition-transform duration-500 group-hover:scale-110" />  -->
+  <!--     </div>                                                                                                          -->
+  <!--     <div class="group overflow-hidden rounded-xl">                                                                 -->
+  <!--       <img src="https://images.unsplash.com/photo-1593720219276-0b1eacd0aef4?w=400&h=400&fit=crop"               -->
+  <!--            alt="Diseño" loading="lazy"                                                                             -->
+  <!--            class="aspect-square w-full object-cover transition-transform duration-500 group-hover:scale-110" />  -->
+  <!--     </div>                                                                                                          -->
+  <!--     <div class="group overflow-hidden rounded-xl">                                                                 -->
+  <!--       <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=400&fit=crop"               -->
+  <!--            alt="Backend" loading="lazy"                                                                             -->
+  <!--            class="aspect-square w-full object-cover transition-transform duration-500 group-hover:scale-110" />  -->
+  <!--     </div>                                                                                                          -->
+  <!--     <div class="group overflow-hidden rounded-xl">                                                                 -->
+  <!--       <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=400&fit=crop"               -->
+  <!--            alt="Hardware" loading="lazy"                                                                            -->
+  <!--            class="aspect-square w-full object-cover transition-transform duration-500 group-hover:scale-110" />  -->
+  <!--     </div>                                                                                                          -->
+  <!--     <div class="group overflow-hidden rounded-xl">                                                                 -->
+  <!--       <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?w=400&h=400&fit=crop"               -->
+  <!--            alt="ML" loading="lazy"                                                                                  -->
+  <!--            class="aspect-square w-full object-cover transition-transform duration-500 group-hover:scale-110" />  -->
+  <!--     </div>                                                                                                          -->
+  <!--     <div class="group overflow-hidden rounded-xl">                                                                 -->
+  <!--       <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=400&fit=crop"                  -->
+  <!--            alt="Data" loading="lazy"                                                                                -->
+  <!--            class="aspect-square w-full object-cover transition-transform duration-500 group-hover:scale-110" />  -->
+  <!--     </div>                                                                                                          -->
+  <!--     <div class="group overflow-hidden rounded-xl">                                                                 -->
+  <!--       <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&h=400&fit=crop"               -->
+  <!--            alt="Laptop" loading="lazy"                                                                             -->
+  <!--            class="aspect-square w-full object-cover transition-transform duration-500 group-hover:scale-110" />  -->
+  <!--     </div>                                                                                                          -->
+  <!--     <div class="group overflow-hidden rounded-xl">                                                                 -->
+  <!--       <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=400&h=400&fit=crop"               -->
+  <!--            alt="Servidor" loading="lazy"                                                                            -->
+  <!--            class="aspect-square w-full object-cover transition-transform duration-500 group-hover:scale-110" />  -->
+  <!--     </div>                                                                                                          -->
+  <!--                                                                                                                   -->
+  <!--   </div>                                                                                                            -->
+  <!-- </section>                                                                                                         -->
+
+</body>
+
+</html>
