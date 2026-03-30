@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 01 — Plugin Typography</title>
+  <!--
+    IMPORTANTE: El CDN con ?plugins=typography carga el plugin de tipografía.
+    Sin esta query, la clase "prose" no tendrá ningún efecto.
+  -->
+  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    }
+  </script>
+</head>
+
+<body class="min-h-screen bg-gray-50 dark:bg-gray-950 py-12 px-4
+             text-gray-900 dark:text-gray-100
+             transition-colors duration-300">
+
+  <!-- ================================================ -->
+  <!-- BLOQUE 1: prose base                             -->
+  <!-- Descomenta el siguiente bloque para empezar.     -->
+  <!-- ================================================ -->
+
+  <!--
+  <section>
+    <div class="max-w-3xl mx-auto mb-16">
+      <h2 class="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-2">
+        BLOQUE 1 — clase <code class="font-mono text-sky-600 dark:text-sky-400">prose</code> base
+      </h2>
+      <p class="text-gray-500 dark:text-gray-400 mb-6 text-sm">
+        Sin <code class="font-mono">prose</code> el HTML no tiene estilos tipográficos.
+        Con <code class="font-mono">prose</code> todo el contenido queda formateado automáticamente.
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-8">
+
+        <!- - SIN prose: el HTML se ve sin estilo - ->
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-widest text-red-400 mb-3">
+            ❌ Sin prose
+          </p>
+          <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl p-6">
+            <h1>Guía de TailwindCSS v4</h1>
+            <p>TailwindCSS es un framework de CSS utility-first que te permite construir interfaces directamente en tu HTML.</p>
+            <h2>Instalación</h2>
+            <p>Para instalar Tailwind con Vite ejecuta el siguiente comando:</p>
+            <pre><code>pnpm add -D tailwindcss @tailwindcss/vite</code></pre>
+            <blockquote>La filosofía utility-first prioriza la composición sobre la abstracción.</blockquote>
+            <ul>
+              <li>Rápido de aprender</li>
+              <li>Altamente personalizable</li>
+              <li>Sin CSS escrito a mano</li>
+            </ul>
+          </div>
+        </div>
+
+        <!- - CON prose: estilos tipográficos automáticos - ->
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-widest text-green-400 mb-3">
+            ✅ Con prose
+          </p>
+          <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl p-6">
+            <article class="prose max-w-none">
+              <h1>Guía de TailwindCSS v4</h1>
+              <p>TailwindCSS es un framework de CSS utility-first que te permite construir interfaces directamente en tu HTML.</p>
+              <h2>Instalación</h2>
+              <p>Para instalar Tailwind con Vite ejecuta el siguiente comando:</p>
+              <pre><code>pnpm add -D tailwindcss @tailwindcss/vite</code></pre>
+              <blockquote>La filosofía utility-first prioriza la composición sobre la abstracción.</blockquote>
+              <ul>
+                <li>Rápido de aprender</li>
+                <li>Altamente personalizable</li>
+                <li>Sin CSS escrito a mano</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  -->
+
+
+  <!-- ================================================ -->
+  <!-- BLOQUE 2: modificadores de tamaño               -->
+  <!-- Descomenta el siguiente bloque.                  -->
+  <!-- ================================================ -->
+
+  <!--
+  <section class="max-w-3xl mx-auto mb-16">
+    <h2 class="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-2">
+      BLOQUE 2 — Modificadores de tamaño
+    </h2>
+    <p class="text-gray-500 dark:text-gray-400 mb-6 text-sm">
+      <code class="font-mono">prose-sm</code>, <code class="font-mono">prose-lg</code>, <code class="font-mono">prose-xl</code>
+      escalan todos los elementos proporcionalmente.
+    </p>
+
+    <div class="space-y-8">
+
+      <!- - prose-sm: texto compacto para sidebars, modales - ->
+      <div>
+        <p class="text-xs font-mono text-gray-400 mb-2">prose prose-sm</p>
+        <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl p-6">
+          <article class="prose prose-sm max-w-none">
+            <h2>Título en prose-sm</h2>
+            <p>Este texto usa <code>prose prose-sm</code>. El tamaño base es 14px, ideal para contenido denso o áreas compactas como sidebars o tooltips extendidos.</p>
+            <ul>
+              <li>Elementos de lista también escalan</li>
+              <li>El espaciado entre párrafos es menor</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+
+      <!- - prose: tamaño default (16px) - ->
+      <div>
+        <p class="text-xs font-mono text-gray-400 mb-2">prose (sin modificador)</p>
+        <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl p-6">
+          <article class="prose max-w-none">
+            <h2>Título en prose (default)</h2>
+            <p>Este texto usa solo <code>prose</code>. El tamaño base es 16px. Es el punto de partida estándar para artículos de blog.</p>
+            <ul>
+              <li>Bueno para la mayoría de artículos</li>
+              <li>Espaciado equilibrado</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+
+      <!- - prose-lg: para artículos con mucho texto, más cómodo - ->
+      <div>
+        <p class="text-xs font-mono text-gray-400 mb-2">prose prose-lg</p>
+        <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl p-6">
+          <article class="prose prose-lg max-w-none">
+            <h2>Título en prose-lg</h2>
+            <p>Este texto usa <code>prose prose-lg</code>. El tamaño base es 18px. Mayor legibilidad para artículos largos y texto editorial.</p>
+            <ul>
+              <li>Más espacio entre líneas</li>
+              <li>Mayor comfort de lectura</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  -->
+
+
+  <!-- ================================================ -->
+  <!-- BLOQUE 3: prose con modificadores de elemento   -->
+  <!-- Descomenta el siguiente bloque.                  -->
+  <!-- ================================================ -->
+
+  <!--
+  <section class="max-w-3xl mx-auto mb-16">
+    <h2 class="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-2">
+      BLOQUE 3 — Modificadores de elemento
+    </h2>
+    <p class="text-gray-500 dark:text-gray-400 mb-6 text-sm">
+      Personaliza cada tipo de elemento HTML dentro de prose con
+      <code class="font-mono">prose-headings:</code>,
+      <code class="font-mono">prose-a:</code>,
+      <code class="font-mono">prose-code:</code>, etc.
+    </p>
+
+    <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl p-8">
+      <article class="prose prose-lg max-w-none
+        prose-headings:text-sky-700
+        prose-headings:font-extrabold
+        prose-h1:text-3xl
+        prose-a:text-sky-600
+        prose-a:no-underline
+        hover:prose-a:underline
+        prose-code:bg-sky-50
+        prose-code:text-sky-700
+        prose-code:rounded
+        prose-code:px-1.5
+        prose-code:py-0.5
+        prose-code:before:content-none
+        prose-code:after:content-none
+        prose-blockquote:border-sky-400
+        prose-blockquote:text-gray-600
+        prose-img:rounded-xl
+        prose-img:shadow-md">
+
+        <h1>Introducción a TailwindCSS v4</h1>
+
+        <p>TailwindCSS es el framework CSS más popular del ecosistema moderno. Permite construir interfaces <a href="#">directamente en tu markup</a> sin salir del HTML.</p>
+
+        <h2>¿Por qué utility-first?</h2>
+
+        <p>La filosofía utility-first tiene varias ventajas sobre los enfoques tradicionales:</p>
+
+        <ul>
+          <li>No necesitas inventar nombres de clases</li>
+          <li>No hay CSS global que rompa otras cosas</li>
+          <li>El diseño es visible directamente en el HTML</li>
+        </ul>
+
+        <blockquote>
+          Con Tailwind, rara vez necesitas escribir CSS personalizado para cosas que no son únicas.
+        </blockquote>
+
+        <h2>Ejemplo de configuración</h2>
+
+        <p>En Tailwind v4, la configuración se hace directamente en CSS:</p>
+
+        <pre><code>@import "tailwindcss";
+
+@theme {
+  --color-brand: #0ea5e9;
+  --font-display: "Inter", sans-serif;
+}</code></pre>
+
+        <p>Los tokens definidos en <code>@theme</code> generan automáticamente todas las utilidades de Tailwind correspondientes.</p>
+
+      </article>
+    </div>
+  </section>
+  -->
+
+
+  <!-- ================================================ -->
+  <!-- BLOQUE 4: prose-invert y dark mode toggle       -->
+  <!-- Descomenta el siguiente bloque.                  -->
+  <!-- ================================================ -->
+
+  <!--
+  <section class="max-w-3xl mx-auto mb-16">
+    <h2 class="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">
+      BLOQUE 4 — <code class="font-mono text-sky-600 dark:text-sky-400">prose-invert</code> y dark mode
+    </h2>
+
+    <div class="flex justify-end mb-4">
+      <!- - Toggle de dark mode con persistencia en localStorage - ->
+      <button id="theme-btn"
+              onclick="toggleTheme()"
+              class="flex items-center gap-2 px-4 py-2 rounded-xl
+                     bg-gray-100 dark:bg-gray-800
+                     text-gray-700 dark:text-gray-300
+                     border border-gray-200 dark:border-gray-700
+                     hover:bg-gray-200 dark:hover:bg-gray-700
+                     transition-colors text-sm font-medium"
+              aria-label="Cambiar tema">
+        <span id="theme-icon">🌙</span>
+        <span id="theme-label">Modo oscuro</span>
+      </button>
+    </div>
+
+    <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl p-8
+                transition-colors duration-300">
+      <!- - prose-invert: invierte los colores para fondos oscuros - ->
+      <!- - dark:prose-invert aplica solo cuando dark mode está activo - ->
+      <article class="prose prose-lg dark:prose-invert
+        prose-headings:text-sky-700 dark:prose-headings:text-sky-400
+        prose-a:text-sky-600 dark:prose-a:text-sky-400
+        prose-code:before:content-none prose-code:after:content-none
+        max-w-none">
+
+        <h1>Blog con Dark Mode</h1>
+
+        <p>Este artículo demuestra cómo <code>prose-invert</code> adapta automáticamente todos los colores del plugin Typography para fondos oscuros.</p>
+
+        <h2>¿Cómo funciona?</h2>
+
+        <p>Con la clase <code>dark:prose-invert</code>, el plugin invierte su paleta de colores cuando el modo oscuro está activo:</p>
+
+        <ul>
+          <li>Texto principal: de <strong>gris oscuro</strong> a <strong>blanco</strong></li>
+          <li>Headings: adaptados para fondos oscuros</li>
+          <li>Links: colores que contrastan sobre fondos oscuros</li>
+          <li>Código: fondos y colores invertidos</li>
+        </ul>
+
+        <blockquote>
+          No necesitas definir colores individuales para dark mode en cada elemento del artículo.
+        </blockquote>
+
+        <h2>Código de ejemplo</h2>
+
+        <pre><code>&lt;article class="prose dark:prose-invert"&gt;
+  &lt;!-- Todo el contenido se adapta automáticamente --&gt;
+&lt;/article&gt;</code></pre>
+
+      </article>
+    </div>
+  </section>
+
+  <script>
+    // Inicializar tema — aplica antes de mostrar para evitar flash
+    function initTheme() {
+      const stored = localStorage.getItem('theme')
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+      if (stored === 'dark' || (!stored && prefersDark)) {
+        document.documentElement.classList.add('dark')
+        document.getElementById('theme-icon').textContent = '☀️'
+        document.getElementById('theme-label').textContent = 'Modo claro'
+      }
+    }
+
+    function toggleTheme() {
+      const isDark = document.documentElement.classList.toggle('dark')
+      localStorage.setItem('theme', isDark ? 'dark' : 'light')
+      document.getElementById('theme-icon').textContent = isDark ? '☀️' : '🌙'
+      document.getElementById('theme-label').textContent = isDark ? 'Modo claro' : 'Modo oscuro'
+    }
+
+    initTheme()
+  </script>
+  -->
+
+
+</body>
+
+</html>

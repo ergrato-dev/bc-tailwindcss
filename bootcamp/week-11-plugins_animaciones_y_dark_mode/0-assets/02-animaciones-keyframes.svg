@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 480" width="860" height="480">
+  <defs>
+    <style>
+      text { font-family: Inter, 'Roboto', system-ui, sans-serif; }
+      .code { font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="860" height="480" fill="#030712"/>
+
+  <!-- Title -->
+  <text x="430" y="36" font-size="18" font-weight="700" fill="#F9FAFB" text-anchor="middle">Animaciones y Transiciones en Tailwind</text>
+  <text x="430" y="54" font-size="11" fill="#6B7280" text-anchor="middle">built-in animations · custom @keyframes · motion-safe:</text>
+
+  <!-- ======================== TOP SECTION: Built-in Animations ======================== -->
+  <text x="430" y="78" font-size="12" font-weight="600" fill="#9CA3AF" text-anchor="middle">· · · Animaciones Built-in · · ·</text>
+
+  <!-- animate-spin card -->
+  <rect x="20" y="88" width="192" height="110" rx="10" fill="#111827" stroke="#1F2937" stroke-width="1"/>
+  <text x="116" y="108" font-size="11" font-weight="600" fill="#38BDF8" text-anchor="middle">animate-spin</text>
+  <!-- Spinner visual -->
+  <circle cx="116" cy="148" r="22" fill="none" stroke="#374151" stroke-width="4"/>
+  <path d="M138 148 A22 22 0 0 1 116 126" fill="none" stroke="#38BDF8" stroke-width="4" stroke-linecap="round"/>
+  <text x="116" y="186" font-size="10" fill="#6B7280" text-anchor="middle">Loading spinner</text>
+
+  <!-- animate-pulse card -->
+  <rect x="228" y="88" width="192" height="110" rx="10" fill="#111827" stroke="#1F2937" stroke-width="1"/>
+  <text x="324" y="108" font-size="11" font-weight="600" fill="#A78BFA" text-anchor="middle">animate-pulse</text>
+  <!-- Skeleton visual -->
+  <rect x="248" y="118" width="152" height="12" rx="4" fill="#374151"/>
+  <rect x="248" y="136" width="120" height="10" rx="4" fill="#374151"/>
+  <rect x="248" y="152" width="136" height="10" rx="4" fill="#374151"/>
+  <text x="324" y="186" font-size="10" fill="#6B7280" text-anchor="middle">Skeleton loading</text>
+
+  <!-- animate-bounce card -->
+  <rect x="436" y="88" width="192" height="110" rx="10" fill="#111827" stroke="#1F2937" stroke-width="1"/>
+  <text x="532" y="108" font-size="11" font-weight="600" fill="#FCD34D" text-anchor="middle">animate-bounce</text>
+  <!-- Arrow visual -->
+  <text x="532" y="145" font-size="24" fill="#FCD34D" text-anchor="middle">⬇</text>
+  <text x="532" y="186" font-size="10" fill="#6B7280" text-anchor="middle">Scroll cue · Llamada de atención</text>
+
+  <!-- animate-ping card -->
+  <rect x="644" y="88" width="196" height="110" rx="10" fill="#111827" stroke="#1F2937" stroke-width="1"/>
+  <text x="742" y="108" font-size="11" font-weight="600" fill="#F87171" text-anchor="middle">animate-ping</text>
+  <!-- Ping visual: outer ring expanding -->
+  <circle cx="742" cy="148" r="16" fill="none" stroke="#F8717150" stroke-width="10"/>
+  <circle cx="742" cy="148" r="7" fill="#EF4444"/>
+  <text x="742" y="186" font-size="10" fill="#6B7280" text-anchor="middle">Notification badge</text>
+
+  <!-- ======================== DIVIDER ======================== -->
+  <line x1="20" y1="212" x2="840" y2="212" stroke="#1F2937" stroke-width="1"/>
+  <text x="430" y="226" font-size="12" font-weight="600" fill="#9CA3AF" text-anchor="middle">· · · Custom Animations con @keyframes · · ·</text>
+
+  <!-- ======================== BOTTOM SECTION: Custom @keyframes flow ======================== -->
+
+  <!-- Step 1: Define keyframes in config -->
+  <rect x="20" y="238" width="320" height="180" rx="10" fill="#111827" stroke="#1F2937" stroke-width="1"/>
+  <rect x="20" y="238" width="320" height="28" rx="10" fill="#0C1A2E"/>
+  <rect x="20" y="252" width="320" height="14" fill="#0C1A2E"/>
+  <text x="180" y="256" font-size="11" font-weight="600" fill="#38BDF8" text-anchor="middle">1 · Define en tailwind.config.js</text>
+
+  <text x="35" y="282" font-size="10" fill="#9CA3AF" class="code">keyframes: {</text>
+  <text x="45" y="296" font-size="10" fill="#FCD34D" class="code">'fade-in': {</text>
+  <text x="55" y="310" font-size="10" fill="#6B7280" class="code">'0%':   { opacity: '0',</text>
+  <text x="55" y="322" font-size="10" fill="#6B7280" class="code">         transform: 'translateY(8px)' },</text>
+  <text x="55" y="334" font-size="10" fill="#6B7280" class="code">'100%': { opacity: '1',</text>
+  <text x="55" y="346" font-size="10" fill="#6B7280" class="code">         transform: 'translateY(0)' },</text>
+  <text x="45" y="358" font-size="10" fill="#FCD34D" class="code">},</text>
+  <text x="35" y="372" font-size="10" fill="#9CA3AF" class="code">}</text>
+  <text x="35" y="388" font-size="10" fill="#9CA3AF" class="code">animation: {</text>
+  <text x="45" y="400" font-size="10" fill="#FCD34D" class="code">'fade-in': 'fade-in 0.4s ease-out',</text>
+  <text x="35" y="412" font-size="10" fill="#9CA3AF" class="code">}</text>
+
+  <!-- Arrow 1 -->
+  <line x1="350" y1="328" x2="390" y2="328" stroke="#374151" stroke-width="1.5"/>
+  <polygon points="390,323 400,328 390,333" fill="#374151"/>
+  <text x="373" y="322" font-size="9" fill="#6B7280" text-anchor="middle">genera</text>
+
+  <!-- Step 2: Generated class -->
+  <rect x="406" y="300" width="170" height="58" rx="8" fill="#0C1A2E" stroke="#1E3A5F" stroke-width="1"/>
+  <text x="491" y="320" font-size="10" font-weight="600" fill="#38BDF8" text-anchor="middle">Clase generada:</text>
+  <rect x="421" y="326" width="140" height="22" rx="4" fill="#1F2937"/>
+  <text x="491" y="341" font-size="11" font-weight="700" fill="#FCD34D" text-anchor="middle" class="code">animate-fade-in</text>
+
+  <!-- Arrow 2 -->
+  <line x1="576" y1="328" x2="616" y2="328" stroke="#374151" stroke-width="1.5"/>
+  <polygon points="616,323 626,328 616,333" fill="#374151"/>
+  <text x="599" y="322" font-size="9" fill="#6B7280" text-anchor="middle">aplica a</text>
+
+  <!-- Step 3: Rendered element with fade-in -->
+  <rect x="632" y="272" width="208" height="112" rx="10" fill="#111827" stroke="#1F2937" stroke-width="1"/>
+  <text x="736" y="292" font-size="10" fill="#9CA3AF" text-anchor="middle">Elemento con fade-in:</text>
+  <rect x="648" y="300" width="176" height="70" rx="8" fill="#0C1A2E" stroke="#1E3A5F" stroke-width="1"/>
+  <!-- Animated element: arrow showing movement -->
+  <text x="736" y="325" font-size="20" fill="#38BDF8" text-anchor="middle">⬛</text>
+  <!-- Arrow showing movement direction -->
+  <line x1="736" y1="342" x2="736" y2="332" stroke="#38BDF8" stroke-width="1" stroke-dasharray="2,2"/>
+  <polygon points="732,333 736,326 740,333" fill="#38BDF8" opacity="0.5"/>
+  <text x="736" y="358" font-size="9" fill="#6B7280" text-anchor="middle">opacidad 0→1  translateY 8px→0</text>
+
+  <!-- motion-safe note at bottom -->
+  <rect x="406" y="380" width="434" height="36" rx="8" fill="#1A1A0C" stroke="#92400E50" stroke-width="1"/>
+  <text x="430" y="396" font-size="10" font-weight="600" fill="#FCD34D">Buena práctica de accesibilidad:</text>
+  <text x="430" y="410" font-size="10" fill="#9CA3AF">Usa siempre  </text>
+  <text x="497" y="410" font-size="10" fill="#38BDF8" class="code">motion-safe:animate-fade-in</text>
+  <text x="666" y="410" font-size="10" fill="#9CA3AF">  para respetar</text>
+  <text x="430" y="424" font-size="10" fill="#6B7280">prefers-reduced-motion del sistema operativo del usuario</text>
+
+  <!-- Transition reference strip at bottom -->
+  <rect x="20" y="438" width="820" height="32" rx="6" fill="#111827" stroke="#1F2937" stroke-width="1"/>
+  <text x="35" y="449" font-size="9" fill="#6B7280">Transiciones básicas:</text>
+  <text x="35" y="463" font-size="9" fill="#38BDF8" class="code">transition-colors duration-200 ease-out</text>
+  <text x="260" y="456" font-size="9" fill="#374151">|</text>
+  <text x="270" y="449" font-size="9" fill="#6B7280">Transform hover:</text>
+  <text x="270" y="463" font-size="9" fill="#A78BFA" class="code">hover:-translate-y-1 hover:shadow-xl transition-all duration-300</text>
+  <text x="650" y="456" font-size="9" fill="#374151">|</text>
+  <text x="660" y="449" font-size="9" fill="#6B7280">Delay:</text>
+  <text x="660" y="463" font-size="9" fill="#FCD34D" class="code">delay-100  delay-300</text>
+</svg>

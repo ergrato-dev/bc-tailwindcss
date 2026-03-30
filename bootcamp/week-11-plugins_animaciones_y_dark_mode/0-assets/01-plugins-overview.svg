@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 460" width="860" height="460">
+  <defs>
+    <style>
+      text { font-family: Inter, 'Roboto', system-ui, sans-serif; }
+      .code { font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="860" height="460" fill="#030712"/>
+
+  <!-- Title -->
+  <text x="430" y="38" font-size="18" font-weight="700" fill="#F9FAFB" text-anchor="middle">Plugins Oficiales de TailwindCSS</text>
+  <text x="430" y="56" font-size="11" fill="#6B7280" text-anchor="middle">Soluciones de dominio específico que complementan las utilidades base</text>
+
+  <!-- Top CDN strip -->
+  <rect x="180" y="66" width="500" height="24" rx="6" fill="#111827" stroke="#374151" stroke-width="1"/>
+  <text x="430" y="82" font-size="11" fill="#38BDF8" text-anchor="middle" class="code">&lt;script src="https://cdn.tailwindcss.com?plugins=typography,forms"&gt;&lt;/script&gt;</text>
+
+  <!-- ======================== COLUMN 1: Typography ======================== -->
+  <rect x="20" y="106" width="258" height="334" rx="12" fill="#111827" stroke="#1F2937" stroke-width="1"/>
+
+  <!-- Header -->
+  <rect x="20" y="106" width="258" height="38" rx="12" fill="#0C4A6E"/>
+  <rect x="20" y="130" width="258" height="14" fill="#0C4A6E"/>
+  <text x="149" y="130" font-size="13" font-weight="700" fill="#38BDF8" text-anchor="middle">@tailwindcss/typography</text>
+
+  <!-- Subtitle -->
+  <text x="149" y="162" font-size="11" fill="#9CA3AF" text-anchor="middle">Estilos tipográficos automáticos</text>
+  <text x="149" y="176" font-size="11" fill="#9CA3AF" text-anchor="middle">para HTML generado por Markdown/CMS</text>
+
+  <!-- Without prose label -->
+  <text x="35" y="202" font-size="10" font-weight="600" fill="#F87171">❌ Sin prose</text>
+  <rect x="35" y="208" width="228" height="54" rx="6" fill="#1F2937" stroke="#374151" stroke-width="1"/>
+  <text x="45" y="224" font-size="10" fill="#6B7280" class="code">&lt;h1&gt;Título&lt;/h1&gt;</text>
+  <text x="45" y="238" font-size="10" fill="#6B7280" class="code">&lt;p&gt;Párrafo...&lt;/p&gt;</text>
+  <text x="45" y="252" font-size="10" fill="#6B7280" class="code">&lt;code&gt;código&lt;/code&gt;</text>
+
+  <!-- With prose label -->
+  <text x="35" y="278" font-size="10" font-weight="600" fill="#4ADE80">✅ Con prose prose-lg dark:prose-invert</text>
+  <rect x="35" y="284" width="228" height="54" rx="6" fill="#1F2937" stroke="#374151" stroke-width="1"/>
+  <!-- Simulated rendered prose -->
+  <text x="45" y="299" font-size="13" font-weight="700" fill="#F9FAFB">Título estilizado</text>
+  <text x="45" y="311" font-size="9" fill="#9CA3AF">Párrafo con estilos automáticos...</text>
+  <rect x="45" y="315" width="60" height="13" rx="3" fill="#1E3A5F"/>
+  <text x="75" y="325" font-size="9" fill="#38BDF8" class="code" text-anchor="middle">código</text>
+
+  <!-- Modifiers list -->
+  <text x="35" y="356" font-size="10" font-weight="600" fill="#9CA3AF">Modificadores:</text>
+  <text x="35" y="372" font-size="10" fill="#6B7280">• prose-sm / prose-lg / prose-xl</text>
+  <text x="35" y="386" font-size="10" fill="#6B7280">• prose-invert (dark mode)</text>
+  <text x="35" y="400" font-size="10" fill="#38BDF8">• prose-headings:   prose-a:</text>
+  <text x="35" y="414" font-size="10" fill="#38BDF8">• prose-code:   prose-blockquote:</text>
+  <text x="35" y="428" font-size="10" fill="#FCD34D">• max-w-prose  (65ch óptimo de lectura)</text>
+
+  <!-- ======================== COLUMN 2: Forms ======================== -->
+  <rect x="300" y="106" width="258" height="334" rx="12" fill="#111827" stroke="#1F2937" stroke-width="1"/>
+
+  <!-- Header -->
+  <rect x="300" y="106" width="258" height="38" rx="12" fill="#1A1A2E"/>
+  <rect x="300" y="130" width="258" height="14" fill="#1A1A2E"/>
+  <text x="429" y="130" font-size="13" font-weight="700" fill="#A78BFA" text-anchor="middle">@tailwindcss/forms</text>
+
+  <!-- Subtitle -->
+  <text x="429" y="162" font-size="11" fill="#9CA3AF" text-anchor="middle">Normaliza estilos de formularios</text>
+  <text x="429" y="176" font-size="11" fill="#9CA3AF" text-anchor="middle">entre navegadores</text>
+
+  <!-- Before label -->
+  <text x="315" y="202" font-size="10" font-weight="600" fill="#F87171">❌ Sin plugin — aspecto varía por browser</text>
+  <rect x="315" y="208" width="228" height="40" rx="6" fill="#1F2937" stroke="#374151" stroke-width="1"/>
+  <rect x="325" y="216" width="208" height="22" rx="3" fill="#374151" stroke="#4B5563" stroke-width="1"/>
+  <text x="335" y="231" font-size="10" fill="#6B7280">email@ejemplo.com</text>
+
+  <!-- After label -->
+  <text x="315" y="262" font-size="10" font-weight="600" fill="#4ADE80">✅ Con plugin + focus:ring-2</text>
+  <rect x="315" y="268" width="228" height="72" rx="6" fill="#1F2937" stroke="#374151" stroke-width="1"/>
+  <!-- Styled input -->
+  <rect x="325" y="276" width="208" height="26" rx="6" fill="#111827" stroke="#A78BFA" stroke-width="1.5"/>
+  <text x="335" y="293" font-size="10" fill="#9CA3AF">email@ejemplo.com</text>
+  <!-- Styled select -->
+  <rect x="325" y="308" width="208" height="24" rx="6" fill="#111827" stroke="#374151" stroke-width="1"/>
+  <text x="335" y="324" font-size="10" fill="#6B7280">Seleccionar opción...</text>
+  <text x="521" y="324" font-size="9" fill="#6B7280">▾</text>
+
+  <!-- Strategy info -->
+  <text x="315" y="358" font-size="10" font-weight="600" fill="#9CA3AF">Estrategias de instalación:</text>
+  <rect x="315" y="364" width="228" height="14" rx="3" fill="#1F2937"/>
+  <text x="325" y="374" font-size="9" fill="#A78BFA" class="code">strategy: 'base'  ← reset global</text>
+  <rect x="315" y="382" width="228" height="14" rx="3" fill="#1F2937"/>
+  <text x="325" y="392" font-size="9" fill="#A78BFA" class="code">strategy: 'class' ← con form-input</text>
+
+  <text x="315" y="412" font-size="9" fill="#6B7280">Clases disponibles con strategy: class</text>
+  <text x="315" y="426" font-size="9" fill="#38BDF8" class="code">form-input  form-select  form-checkbox</text>
+  <text x="315" y="440" font-size="9" fill="#38BDF8" class="code">form-radio  form-textarea</text>
+
+  <!-- ======================== COLUMN 3: Aspect Ratio ======================== -->
+  <rect x="580" y="106" width="258" height="334" rx="12" fill="#111827" stroke="#1F2937" stroke-width="1"/>
+
+  <!-- Header -->
+  <rect x="580" y="106" width="258" height="38" rx="12" fill="#1A2A1A"/>
+  <rect x="580" y="130" width="258" height="14" fill="#1A2A1A"/>
+  <text x="709" y="130" font-size="13" font-weight="700" fill="#4ADE80" text-anchor="middle">aspect-ratio (core v3+)</text>
+
+  <!-- Subtitle -->
+  <text x="709" y="162" font-size="11" fill="#9CA3AF" text-anchor="middle">Mantiene proporciones de imágenes</text>
+  <text x="709" y="176" font-size="11" fill="#9CA3AF" text-anchor="middle">y videos cross-browser</text>
+
+  <!-- aspect-video box -->
+  <text x="595" y="202" font-size="10" font-weight="600" fill="#9CA3AF">aspect-video  (16:9)</text>
+  <rect x="595" y="208" width="228" height="90" rx="6" fill="#0C1A0C" stroke="#374151" stroke-width="1"/>
+  <text x="709" y="253" font-size="11" fill="#4ADE80" text-anchor="middle">16 : 9</text>
+  <text x="709" y="270" font-size="10" fill="#6B7280" text-anchor="middle">Videos, hero images</text>
+  <rect x="595" y="208" width="228" height="7" rx="0" fill="#1A2A1A" rx="6"/>
+  <rect x="595" y="208" width="228" height="7" rx="6" fill="#1A2A1A"/>
+
+  <!-- aspect-square box -->
+  <text x="595" y="316" font-size="10" font-weight="600" fill="#9CA3AF">aspect-square  (1:1)</text>
+  <rect x="595" y="322" width="80" height="80" rx="6" fill="#0C1A0C" stroke="#374151" stroke-width="1"/>
+  <text x="635" y="364" font-size="10" fill="#4ADE80" text-anchor="middle">1:1</text>
+  <text x="635" y="378" font-size="8" fill="#6B7280" text-anchor="middle">Avatar</text>
+
+  <!-- aspect-[4/3] box -->
+  <rect x="700" y="322" width="120" height="80" rx="6" fill="#0C1A0C" stroke="#374151" stroke-width="1"/>
+  <text x="760" y="358" font-size="10" fill="#4ADE80" text-anchor="middle">4:3</text>
+  <text x="760" y="372" font-size="8" fill="#6B7280" text-anchor="middle">aspect-[4/3]</text>
+
+  <!-- Code sample -->
+  <rect x="595" y="414" width="228" height="20" rx="4" fill="#1F2937"/>
+  <text x="605" y="428" font-size="9" fill="#38BDF8" class="code">&lt;div class="aspect-video overflow-hidden"&gt;</text>
+
+  <!-- Bottom strip: comparison -->
+  <rect x="20" y="446" width="820" height="8" rx="4" fill="#0F172A"/>
+  <text x="430" y="453" font-size="9" fill="#374151" text-anchor="middle">npm install @tailwindcss/typography   @tailwindcss/forms</text>
+</svg>

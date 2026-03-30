@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 04 — Accesibilidad con Tailwind</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          keyframes: {
+            'fade-in': {
+              '0%': { opacity: '0', transform: 'translateY(8px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+          },
+          animation: {
+            'fade-in': 'fade-in 0.4s ease-out forwards',
+          },
+        },
+      },
+    }
+  </script>
+</head>
+
+<body class="min-h-screen bg-gray-50 text-gray-900 py-12 px-4">
+
+  <!-- ================================================ -->
+  <!-- BLOQUE 1: sr-only e íconos accesibles           -->
+  <!-- Descomenta el siguiente bloque.                  -->
+  <!-- ================================================ -->
+
+  <!--
+  <section class="max-w-3xl mx-auto mb-16">
+    <h2 class="text-2xl font-bold text-gray-900 mb-1">BLOQUE 1 — <code class="font-mono text-sky-600">sr-only</code></h2>
+    <p class="text-gray-500 text-sm mb-8">
+      <code class="font-mono">sr-only</code> oculta texto visualmente pero lo mantiene accesible
+      para lectores de pantalla. Esencial en botones-ícono y labels ocultos.
+    </p>
+
+    <div class="grid sm:grid-cols-2 gap-8">
+
+      <!- - Comparación: ANTES (inaccesible) vs DESPUÉS (accesible) - ->
+      <div>
+        <p class="text-xs font-semibold uppercase tracking-widest text-red-500 mb-4">
+          ❌ Inaccesible — el lector de pantalla no sabe qué hace cada botón
+        </p>
+        <div class="bg-white border border-gray-200 rounded-xl p-5">
+          <div class="flex items-center gap-2">
+            <!- - Botones-ícono sin descripción accesible - ->
+            <!- - Un lector de pantalla no puede saber qué hacen - ->
+            <button class="p-2 rounded-lg hover:bg-gray-100 transition-colors">
+              <svg class="w-5 h-5 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+              </svg>
+            </button>
+            <button class="p-2 rounded-lg hover:bg-gray-100 transition-colors">
+              <svg class="w-5 h-5 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+              </svg>
+            </button>
+            <button class="p-2 rounded-lg hover:bg-gray-100 transition-colors">
+              <svg class="w-5 h-5 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/>
+              </svg>
+            </button>
+          </div>
+          <p class="mt-3 text-xs text-gray-400">
+            Un lector de pantalla anunciaría "button button button" sin contexto.
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <p class="text-xs font-semibold uppercase tracking-widest text-green-600 mb-4">
+          ✅ Accesible — con sr-only y aria-label
+        </p>
+        <div class="bg-white border border-gray-200 rounded-xl p-5">
+          <div class="flex items-center gap-2">
+
+            <!- - Opción 1: aria-label directamente en el botón - ->
+            <button class="p-2 rounded-lg hover:bg-gray-100 transition-colors"
+                    aria-label="Buscar artículos">
+              <!- - aria-hidden="true": el ícono es decorativo, el lector usa aria-label - ->
+              <svg class="w-5 h-5 text-gray-700" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+              </svg>
+            </button>
+
+            <!- - Opción 2: span con sr-only dentro del botón - ->
+            <button class="p-2 rounded-lg hover:bg-gray-100 transition-colors">
+              <svg class="w-5 h-5 text-gray-700" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+              </svg>
+              <!- - sr-only: texto oculto visualmente, visible para lectores de pantalla - ->
+              <span class="sr-only">Guardar en favoritos</span>
+            </button>
+
+            <!- - Opción 3: aria-label en botón con icono decorativo - ->
+            <button class="p-2 rounded-lg hover:bg-gray-100 transition-colors"
+                    aria-label="Compartir artículo">
+              <svg class="w-5 h-5 text-gray-700" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/>
+              </svg>
+            </button>
+
+          </div>
+          <p class="mt-3 text-xs text-gray-400">
+            Un lector de pantalla anunciaría los labels correctos para cada botón.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  -->
+
+
+  <!-- ================================================ -->
+  <!-- BLOQUE 2: focus-visible: y skip link            -->
+  <!-- Descomenta el siguiente bloque.                  -->
+  <!-- Usa Tab en el browser para probar la navegación  -->
+  <!-- por teclado.                                     -->
+  <!-- ================================================ -->
+
+  <!--
+  <section class="max-w-3xl mx-auto mb-16">
+    <h2 class="text-2xl font-bold text-gray-900 mb-1">BLOQUE 2 — <code class="font-mono text-sky-600">focus-visible:</code></h2>
+    <p class="text-gray-500 text-sm mb-2">
+      <code class="font-mono">focus-visible:</code> muestra el ring SOLO al navegar con teclado,
+      no al hacer click con el mouse. Usa <kbd class="font-mono font-bold">Tab</kbd> para probar.
+    </p>
+    <p class="text-amber-600 text-xs font-medium mb-8">
+      💡 Presiona Tab para ver el foco en cada elemento interactivo.
+    </p>
+
+    <!- - Skip link: primer elemento focusable de la página - ->
+    <!- - sr-only por defecto, not-sr-only al recibir foco - ->
+    <a href="#main-content"
+       class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-1/2 focus:-translate-x-1/2
+              focus:z-50 focus:px-5 focus:py-2.5 focus:bg-sky-500 focus:text-white
+              focus:rounded-xl focus:font-medium focus:shadow-lg">
+      Saltar al contenido principal
+    </a>
+
+    <div class="grid sm:grid-cols-2 gap-8">
+
+      <!- - Sin focus-visible: feo con mouse - ->
+      <div>
+        <p class="text-xs font-semibold uppercase tracking-widest text-red-500 mb-4">
+          ❌ Problema: sin foco o foco siempre visible
+        </p>
+        <div class="bg-white border border-gray-200 rounded-xl p-5 space-y-3">
+          <!- - Sin foco: usuarios de teclado no saben dónde están - ->
+          <button class="w-full px-4 py-2.5 rounded-xl bg-sky-500 text-white font-semibold
+                         outline-none"
+                  type="button">
+            Sin foco visible para teclado
+          </button>
+          <!- - Foco al hacer click: molesto con mouse - ->
+          <button class="w-full px-4 py-2.5 rounded-xl border border-gray-300 text-gray-700 font-medium
+                         focus:ring-2 focus:ring-sky-400 focus:outline-none"
+                  type="button">
+            Foco siempre (incluso con mouse)
+          </button>
+        </div>
+      </div>
+
+      <!- - Con focus-visible: solo al tabear - ->
+      <div>
+        <p class="text-xs font-semibold uppercase tracking-widest text-green-600 mb-4">
+          ✅ focus-visible: ring solo con teclado
+        </p>
+        <div class="bg-white border border-gray-200 rounded-xl p-5 space-y-3" id="main-content">
+          <!- - outline-none elimina el default, focus-visible añade el nuestro - ->
+          <button class="w-full px-4 py-2.5 rounded-xl bg-sky-500 text-white font-semibold
+                         outline-none
+                         focus-visible:ring-2 focus-visible:ring-sky-500
+                         focus-visible:ring-offset-2 transition-colors hover:bg-sky-400"
+                  type="button">
+            Accesible por teclado
+          </button>
+          <a href="#"
+             class="block text-center w-full px-4 py-2.5 rounded-xl border border-gray-300 text-gray-700 font-medium
+                    outline-none
+                    focus-visible:ring-2 focus-visible:ring-sky-500
+                    focus-visible:ring-offset-2 transition-colors hover:bg-gray-50">
+            Link accesible (Tab para probar)
+          </a>
+          <input type="text"
+                 placeholder="Input accessible..."
+                 class="w-full px-4 py-2.5 rounded-xl border border-gray-300 text-sm
+                        outline-none
+                        focus-visible:ring-2 focus-visible:ring-sky-500
+                        focus-visible:border-sky-500 transition-colors" />
+        </div>
+      </div>
+
+    </div>
+  </section>
+  -->
+
+
+  <!-- ================================================ -->
+  <!-- BLOQUE 3: contraste WCAG                        -->
+  <!-- Descomenta el siguiente bloque.                  -->
+  <!-- ================================================ -->
+
+  <!--
+  <section class="max-w-3xl mx-auto mb-16">
+    <h2 class="text-2xl font-bold text-gray-900 mb-1">BLOQUE 3 — Contraste WCAG AA</h2>
+    <p class="text-gray-500 text-sm mb-8">
+      WCAG AA requiere relación de contraste mínima de <strong>4.5:1</strong> para texto normal.
+      Muchos colores de Tailwind que parecen "suficientemente visibles" no pasan este umbral.
+    </p>
+
+    <div class="grid sm:grid-cols-2 gap-8 mb-8">
+
+      <!- - ANTES: colores problemáticos - ->
+      <div>
+        <p class="text-xs font-semibold uppercase tracking-widest text-red-500 mb-4">
+          ❌ ANTES — No pasa WCAG AA
+        </p>
+        <div class="bg-white border border-gray-200 rounded-xl p-5 space-y-4">
+          <!- - gray-400 sobre blanco: 2.5:1 — falla - ->
+          <div>
+            <span class="text-xs font-mono bg-red-50 text-red-600 px-2 py-0.5 rounded">
+              2.5:1 ← texto normal → ❌ Falla
+            </span>
+            <p class="text-gray-400 mt-1">gray-400 sobre white — difícil de leer para muchos usuarios</p>
+          </div>
+          <!- - sky-400 sobre blanco: 2.5:1 — no alcanza para texto - ->
+          <div>
+            <span class="text-xs font-mono bg-red-50 text-red-600 px-2 py-0.5 rounded">
+              2.5:1 ← texto normal → ❌ Falla
+            </span>
+            <p class="text-sky-400 mt-1">sky-400 sobre white — bonito pero ilegible para texto</p>
+          </div>
+          <!- - Badge: text-yellow-400 sobre blanco - ->
+          <div>
+            <span class="text-xs font-mono bg-red-50 text-red-600 px-2 py-0.5 rounded">1.8:1 — ❌ Falla</span>
+            <div class="mt-1">
+              <span class="bg-yellow-100 text-yellow-400 text-xs px-2 py-1 rounded-full font-medium">
+                Badge con texto amarillo claro
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!- - DESPUÉS: colores corregidos - ->
+      <div>
+        <p class="text-xs font-semibold uppercase tracking-widest text-green-600 mb-4">
+          ✅ DESPUÉS — Pasa WCAG AA (≥4.5:1)
+        </p>
+        <div class="bg-white border border-gray-200 rounded-xl p-5 space-y-4">
+          <!- - gray-600 sobre blanco: 7.0:1 - ->
+          <div>
+            <span class="text-xs font-mono bg-green-50 text-green-700 px-2 py-0.5 rounded">
+              7.0:1 ← texto normal → ✅ Excelente
+            </span>
+            <p class="text-gray-600 mt-1">gray-600 sobre white — legible y accesible</p>
+          </div>
+          <!- - sky-700 sobre blanco: 5.9:1 - ->
+          <div>
+            <span class="text-xs font-mono bg-green-50 text-green-700 px-2 py-0.5 rounded">
+              5.9:1 ← texto normal → ✅ Aprueba AA
+            </span>
+            <p class="text-sky-700 mt-1">sky-700 sobre white — links accesibles</p>
+          </div>
+          <!- - Badge con contraste correcto - ->
+          <div>
+            <span class="text-xs font-mono bg-green-50 text-green-700 px-2 py-0.5 rounded">
+              5.3:1 — ✅ Aprueba AA
+            </span>
+            <div class="mt-1">
+              <span class="bg-yellow-100 text-yellow-700 text-xs px-2 py-1 rounded-full font-medium">
+                Badge con texto amarillo oscuro
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!- - Tabla de referencia rápida - ->
+    <div class="bg-white border border-gray-200 rounded-xl p-5">
+      <p class="text-sm font-semibold text-gray-700 mb-3">Referencia rápida — colores de Tailwind sobre blanco</p>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+        <div class="text-center p-3 bg-red-50 rounded-lg border border-red-100">
+          <p class="text-gray-400 font-medium text-sm">gray-400</p>
+          <p class="text-xs text-red-500 font-mono mt-1">2.5:1 ❌</p>
+        </div>
+        <div class="text-center p-3 bg-amber-50 rounded-lg border border-amber-100">
+          <p class="text-gray-500 font-medium text-sm">gray-500</p>
+          <p class="text-xs text-amber-600 font-mono mt-1">4.6:1 ⚠️</p>
+        </div>
+        <div class="text-center p-3 bg-green-50 rounded-lg border border-green-100">
+          <p class="text-gray-600 font-medium text-sm">gray-600</p>
+          <p class="text-xs text-green-600 font-mono mt-1">7.0:1 ✅</p>
+        </div>
+        <div class="text-center p-3 bg-green-50 rounded-lg border border-green-100">
+          <p class="text-gray-700 font-medium text-sm">gray-700</p>
+          <p class="text-xs text-green-600 font-mono mt-1">9.7:1 ✅</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  -->
+
+
+  <!-- ================================================ -->
+  <!-- BLOQUE 4: motion-safe: y atributos ARIA         -->
+  <!-- Descomenta el siguiente bloque.                  -->
+  <!-- ================================================ -->
+
+  <!--
+  <section class="max-w-3xl mx-auto mb-16">
+    <h2 class="text-2xl font-bold text-gray-900 mb-1">BLOQUE 4 — <code class="font-mono text-sky-600">motion-safe:</code> y ARIA</h2>
+    <p class="text-gray-500 text-sm mb-8">
+      Las animaciones deben respetar las preferencias del usuario.
+      Los atributos ARIA comunican estados dinámicos a lectores de pantalla.
+    </p>
+
+    <div class="space-y-6">
+
+      <!- - motion-safe: en sección que aparece al cargar - ->
+      <!- - La animación se omite si prefers-reduced-motion está activo - ->
+      <div class="bg-white border border-gray-200 rounded-xl p-6
+                  motion-safe:animate-fade-in">
+        <p class="text-xs font-mono text-sky-600 mb-2">motion-safe:animate-fade-in</p>
+        <h3 class="font-bold text-gray-900">Sección con animación accesible</h3>
+        <p class="text-sm text-gray-600 mt-1">
+          Esta sección usa <code class="font-mono">motion-safe:animate-fade-in</code>.
+          Si el usuario tiene activado "reducir movimiento" en su OS, esta animación
+          no se ejecuta y el contenido aparece directamente.
+        </p>
+      </div>
+
+      <!- - aria-pressed: estado de botón toggle - ->
+      <div class="bg-white border border-gray-200 rounded-xl p-6">
+        <p class="text-xs font-mono text-sky-600 mb-3">aria-pressed — botón toggle de estado</p>
+        <div class="flex flex-wrap gap-3">
+
+          <!- - Botón favorito con aria-pressed - ->
+          <button id="fav-btn"
+                  aria-pressed="false"
+                  onclick="togglePressed(this)"
+                  class="flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium
+                         border border-gray-200 bg-white text-gray-700
+                         hover:bg-gray-50
+                         aria-pressed:bg-red-50 aria-pressed:border-red-200 aria-pressed:text-red-700
+                         outline-none focus-visible:ring-2 focus-visible:ring-sky-500
+                         focus-visible:ring-offset-2 transition-colors">
+            <span aria-hidden="true">♡</span>
+            Guardar en favoritos
+          </button>
+
+          <!- - Botón notificaciones con aria-pressed - ->
+          <button id="notif-btn"
+                  aria-pressed="false"
+                  onclick="togglePressed(this)"
+                  class="flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium
+                         border border-gray-200 bg-white text-gray-700
+                         hover:bg-gray-50
+                         outline-none focus-visible:ring-2 focus-visible:ring-sky-500
+                         focus-visible:ring-offset-2 transition-colors">
+            <svg class="w-4 h-4" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+            </svg>
+            Activar notificaciones
+          </button>
+
+        </div>
+        <p class="mt-3 text-xs text-gray-400">
+          Inspecciona el elemento en DevTools y haz click para ver cómo cambia <code class="font-mono">aria-pressed</code>.
+        </p>
+      </div>
+
+      <!- - aria-current: item activo en navegación - ->
+      <div class="bg-white border border-gray-200 rounded-xl p-6">
+        <p class="text-xs font-mono text-sky-600 mb-3">aria-current="page" — nav con item activo</p>
+        <nav aria-label="Sección del artículo">
+          <ul class="flex flex-wrap gap-2">
+            <li>
+              <!- - aria-current="page": lector anuncia "actual" para el item activo - ->
+              <a href="#"
+                 aria-current="page"
+                 class="px-4 py-2 rounded-lg text-sm font-medium
+                        bg-sky-50 text-sky-700 border border-sky-200
+                        outline-none focus-visible:ring-2 focus-visible:ring-sky-500">
+                Introducción
+              </a>
+            </li>
+            <li>
+              <a href="#"
+                 class="px-4 py-2 rounded-lg text-sm font-medium
+                        text-gray-600 hover:bg-gray-50 border border-gray-200
+                        outline-none focus-visible:ring-2 focus-visible:ring-sky-500
+                        transition-colors">
+                Instalación
+              </a>
+            </li>
+            <li>
+              <a href="#"
+                 class="px-4 py-2 rounded-lg text-sm font-medium
+                        text-gray-600 hover:bg-gray-50 border border-gray-200
+                        outline-none focus-visible:ring-2 focus-visible:ring-sky-500
+                        transition-colors">
+                Configuración
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    // Toggle aria-pressed en botones de estado
+    function togglePressed(btn) {
+      const isPressed = btn.getAttribute('aria-pressed') === 'true'
+      btn.setAttribute('aria-pressed', !isPressed)
+    }
+  </script>
+  -->
+
+
+</body>
+
+</html>
