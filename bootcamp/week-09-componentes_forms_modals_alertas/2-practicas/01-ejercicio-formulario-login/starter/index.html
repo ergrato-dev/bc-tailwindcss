@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 01 — Formulario de Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-gray-950 text-white flex items-center justify-center p-4">
+
+  <!--
+  ============================================================
+  EJERCICIO 01: Formulario de Login
+  ============================================================
+  Instrucciones:
+  1. Lee el README.md para entender cada bloque.
+  2. Descomenta UN bloque a la vez.
+  3. Guarda y observa el resultado en el browser.
+  4. Avanza al siguiente bloque.
+
+  Solo debe estar activo UN bloque a la vez.
+  ============================================================
+  -->
+
+
+  <!-- ============================================================ -->
+  <!-- BLOQUE 1: Campos básicos — label + input sin estados         -->
+  <!-- ============================================================ -->
+
+  <!-- Descomenta las siguientes líneas: -->
+
+  <!-- <div class="w-full max-w-sm space-y-5"> -->
+  <!--   <h1 class="text-xl font-bold text-white">Iniciar sesión</h1> -->
+  <!--  -->
+  <!--   <!-- Campo email básico (sin estados de error) -->
+  <!--   <div class="space-y-1.5"> -->
+  <!--     <label for="email-b1" class="block text-sm font-medium text-gray-300"> -->
+  <!--       Email -->
+  <!--     </label> -->
+  <!--     <!-- -->
+  <!--       block: elemento de bloque (ocupa todo el ancho) -->
+  <!--       w-full: width 100% del padre -->
+  <!--       rounded-lg: border-radius grande -->
+  <!--       border border-gray-700: borde visible en reposo -->
+  <!--       bg-gray-800: fondo oscuro del input -->
+  <!--       px-4 py-2.5: padding horizontal y vertical -->
+  <!--       text-sm text-white: tamaño y color del texto -->
+  <!--       placeholder:text-gray-500: color del placeholder text -->
+  <!--     --> -->
+  <!--     <input -->
+  <!--       type="email" -->
+  <!--       id="email-b1" -->
+  <!--       name="email" -->
+  <!--       placeholder="tu@email.com" -->
+  <!--       class="block w-full rounded-lg border border-gray-700 bg-gray-800 -->
+  <!--              px-4 py-2.5 text-sm text-white placeholder:text-gray-500" -->
+  <!--     /> -->
+  <!--   </div> -->
+  <!--  -->
+  <!--   <!-- Campo password básico --> -->
+  <!--   <div class="space-y-1.5"> -->
+  <!--     <label for="password-b1" class="block text-sm font-medium text-gray-300"> -->
+  <!--       Contraseña -->
+  <!--     </label> -->
+  <!--     <input -->
+  <!--       type="password" -->
+  <!--       id="password-b1" -->
+  <!--       name="password" -->
+  <!--       placeholder="••••••••" -->
+  <!--       class="block w-full rounded-lg border border-gray-700 bg-gray-800 -->
+  <!--              px-4 py-2.5 text-sm text-white placeholder:text-gray-500" -->
+  <!--     /> -->
+  <!--   </div> -->
+  <!-- </div> -->
+
+
+  <!-- ============================================================ -->
+  <!-- BLOQUE 2: Focus ring — visual de enfoque accesible          -->
+  <!-- ============================================================ -->
+
+  <!-- Descomenta las siguientes líneas: -->
+
+  <!-- <div class="w-full max-w-sm space-y-5"> -->
+  <!--   <h1 class="text-xl font-bold text-white">Iniciar sesión</h1> -->
+  <!--  -->
+  <!--   <div class="space-y-1.5"> -->
+  <!--     <label for="email-b2" class="block text-sm font-medium text-gray-300">Email</label> -->
+  <!--     <!-- -->
+  <!--       Agrega las clases de focus al grupo anterior: -->
+  <!--       focus:border-sky-500: borde azul al enfocar -->
+  <!--       focus:outline-none: elimina el outline nativo del browser -->
+  <!--       focus:ring-2 focus:ring-sky-500/20: anillo de glow suave -->
+  <!--       transition-colors: suaviza el cambio de color -->
+  <!--     --> -->
+  <!--     <input -->
+  <!--       type="email" -->
+  <!--       id="email-b2" -->
+  <!--       name="email" -->
+  <!--       placeholder="tu@email.com" -->
+  <!--       class="block w-full rounded-lg border border-gray-700 bg-gray-800 -->
+  <!--              px-4 py-2.5 text-sm text-white placeholder:text-gray-500 -->
+  <!--              focus:border-sky-500 focus:outline-none -->
+  <!--              focus:ring-2 focus:ring-sky-500/20 -->
+  <!--              transition-colors" -->
+  <!--     /> -->
+  <!--   </div> -->
+  <!--  -->
+  <!--   <div class="space-y-1.5"> -->
+  <!--     <label for="password-b2" class="block text-sm font-medium text-gray-300">Contraseña</label> -->
+  <!--     <input -->
+  <!--       type="password" -->
+  <!--       id="password-b2" -->
+  <!--       name="password" -->
+  <!--       placeholder="••••••••" -->
+  <!--       class="block w-full rounded-lg border border-gray-700 bg-gray-800 -->
+  <!--              px-4 py-2.5 text-sm text-white placeholder:text-gray-500 -->
+  <!--              focus:border-sky-500 focus:outline-none -->
+  <!--              focus:ring-2 focus:ring-sky-500/20 -->
+  <!--              transition-colors" -->
+  <!--     /> -->
+  <!--   </div> -->
+  <!-- </div> -->
+
+
+  <!-- ============================================================ -->
+  <!-- BLOQUE 3: Estado de error en email                          -->
+  <!-- ============================================================ -->
+
+  <!-- Descomenta las siguientes líneas: -->
+
+  <!-- <div class="w-full max-w-sm space-y-5"> -->
+  <!--   <h1 class="text-xl font-bold text-white">Iniciar sesión</h1> -->
+  <!--  -->
+  <!--   <!-- Campo con estado de ERROR --> -->
+  <!--   <div class="space-y-1.5"> -->
+  <!--     <label for="email-b3" class="block text-sm font-medium text-gray-300">Email</label> -->
+  <!--     <div class="relative"> -->
+  <!--       <!-- -->
+  <!--         El input tiene border-red-500 en lugar de border-gray-700 -->
+  <!--         aria-invalid="true": indica al browser/screenreader que hay un error -->
+  <!--         aria-describedby="email-b3-error": vincula el input con el mensaje -->
+  <!--         pr-10: padding-right para dejar espacio al icono de error -->
+  <!--       --> -->
+  <!--       <input -->
+  <!--         type="email" -->
+  <!--         id="email-b3" -->
+  <!--         name="email" -->
+  <!--         value="email-no-valido" -->
+  <!--         aria-invalid="true" -->
+  <!--         aria-describedby="email-b3-error" -->
+  <!--         class="block w-full rounded-lg border border-red-500 bg-gray-800 -->
+  <!--                px-4 py-2.5 pr-10 text-sm text-white placeholder:text-gray-500 -->
+  <!--                focus:border-red-500 focus:outline-none -->
+  <!--                focus:ring-2 focus:ring-red-500/20 -->
+  <!--                transition-colors" -->
+  <!--       /> -->
+  <!--       <!-- Icono de error posicionado absolute dentro del input --> -->
+  <!--       <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3"> -->
+  <!--         <svg class="h-5 w-5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"> -->
+  <!--           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0"/> -->
+  <!--         </svg> -->
+  <!--       </div> -->
+  <!--     </div> -->
+  <!--     <!-- Mensaje de error vinculado con aria-describedby --> -->
+  <!--     <p id="email-b3-error" class="flex items-center gap-1.5 text-xs text-red-400"> -->
+  <!--       <svg class="h-3.5 w-3.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"> -->
+  <!--         <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/> -->
+  <!--       </svg> -->
+  <!--       Ingresa una dirección de email válida. -->
+  <!--     </p> -->
+  <!--   </div> -->
+  <!--  -->
+  <!--   <!-- Password sigue normal --> -->
+  <!--   <div class="space-y-1.5"> -->
+  <!--     <label for="password-b3" class="block text-sm font-medium text-gray-300">Contraseña</label> -->
+  <!--     <input type="password" id="password-b3" placeholder="••••••••" -->
+  <!--       class="block w-full rounded-lg border border-gray-700 bg-gray-800 -->
+  <!--              px-4 py-2.5 text-sm text-white placeholder:text-gray-500 -->
+  <!--              focus:border-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-500/20 transition-colors" -->
+  <!--     /> -->
+  <!--   </div> -->
+  <!-- </div> -->
+
+
+  <!-- ============================================================ -->
+  <!-- BLOQUE 4: Login card completa                               -->
+  <!-- ============================================================ -->
+
+  <!-- Descomenta las siguientes líneas: -->
+
+  <!-- <div class="w-full max-w-sm overflow-hidden rounded-2xl bg-gray-900 shadow-2xl ring-1 ring-gray-800"> -->
+  <!--  -->
+  <!--   <!-- Header de la card --> -->
+  <!--   <div class="border-b border-gray-800 px-6 py-5"> -->
+  <!--     <h1 class="text-lg font-bold text-white">Iniciar sesión</h1> -->
+  <!--     <p class="mt-0.5 text-sm text-gray-500">Bienvenido de vuelta</p> -->
+  <!--   </div> -->
+  <!--  -->
+  <!--   <!-- Formulario --> -->
+  <!--   <form class="px-6 py-6 space-y-5"> -->
+  <!--  -->
+  <!--     <!-- Email con estado de error --> -->
+  <!--     <div class="space-y-1.5"> -->
+  <!--       <label for="email-b4" class="block text-sm font-medium text-gray-300"> -->
+  <!--         Email <span class="text-red-400">*</span> -->
+  <!--       </label> -->
+  <!--       <div class="relative"> -->
+  <!--         <input type="email" id="email-b4" name="email" value="email-no-valido" -->
+  <!--           aria-invalid="true" aria-describedby="email-b4-error" -->
+  <!--           class="block w-full rounded-lg border border-red-500 bg-gray-800 -->
+  <!--                  px-4 py-2.5 pr-10 text-sm text-white placeholder:text-gray-500 -->
+  <!--                  focus:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500/20 transition-colors" -->
+  <!--         /> -->
+  <!--         <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3"> -->
+  <!--           <svg class="h-5 w-5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"> -->
+  <!--             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0"/> -->
+  <!--           </svg> -->
+  <!--         </div> -->
+  <!--       </div> -->
+  <!--       <p id="email-b4-error" class="flex items-center gap-1.5 text-xs text-red-400"> -->
+  <!--         <svg class="h-3.5 w-3.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"> -->
+  <!--           <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/> -->
+  <!--         </svg> -->
+  <!--         Ingresa una dirección de email válida. -->
+  <!--       </p> -->
+  <!--     </div> -->
+  <!--  -->
+  <!--     <!-- Password --> -->
+  <!--     <div class="space-y-1.5"> -->
+  <!--       <div class="flex items-center justify-between"> -->
+  <!--         <label for="password-b4" class="block text-sm font-medium text-gray-300"> -->
+  <!--           Contraseña <span class="text-red-400">*</span> -->
+  <!--         </label> -->
+  <!--         <a href="#" class="text-xs text-sky-400 hover:text-sky-300 transition-colors"> -->
+  <!--           ¿Olvidaste tu contraseña? -->
+  <!--         </a> -->
+  <!--       </div> -->
+  <!--       <input type="password" id="password-b4" name="password" placeholder="••••••••" -->
+  <!--         class="block w-full rounded-lg border border-gray-700 bg-gray-800 -->
+  <!--                px-4 py-2.5 text-sm text-white placeholder:text-gray-500 -->
+  <!--                focus:border-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-500/20 transition-colors" -->
+  <!--       /> -->
+  <!--     </div> -->
+  <!--  -->
+  <!--     <!-- Remember me checkbox --> -->
+  <!--     <label class="flex cursor-pointer items-center gap-2.5"> -->
+  <!--       <input type="checkbox" name="remember" -->
+  <!--         class="h-4 w-4 rounded border-gray-600 bg-gray-800 text-sky-500 -->
+  <!--                focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 focus:ring-offset-gray-900" -->
+  <!--       /> -->
+  <!--       <span class="text-sm text-gray-300">Recordarme</span> -->
+  <!--     </label> -->
+  <!--  -->
+  <!--     <!-- Submit button --> -->
+  <!--     <button type="submit" -->
+  <!--       class="w-full rounded-lg bg-sky-500 px-5 py-2.5 text-sm font-semibold text-white -->
+  <!--              hover:bg-sky-400 active:scale-95 transition-all -->
+  <!--              focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 -->
+  <!--              focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900" -->
+  <!--     > -->
+  <!--       Ingresar -->
+  <!--     </button> -->
+  <!--  -->
+  <!--   </form> -->
+  <!--  -->
+  <!--   <!-- Footer de la card --> -->
+  <!--   <div class="border-t border-gray-800 px-6 py-4 text-center"> -->
+  <!--     <p class="text-sm text-gray-500"> -->
+  <!--       ¿No tienes cuenta? -->
+  <!--       <a href="#" class="text-sky-400 hover:text-sky-300 transition-colors">Regístrate</a> -->
+  <!--     </p> -->
+  <!--   </div> -->
+  <!--  -->
+  <!-- </div> -->
+
+</body>
+
+</html>

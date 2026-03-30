@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Página de Contacto — Semana 9</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-gray-950 text-white">
+
+  <!--
+  ============================================================
+  PROYECTO SEMANA 9: Página de Contacto y Notificaciones
+  ============================================================
+  Instrucciones:
+  1. Lee el README.md del proyecto.
+  2. Implementa los TODO de cada sección.
+  3. Revisa la tabla de evaluación para verificar todos los puntos.
+  4. Usa los archivos de teoría como referencia.
+  ============================================================
+  -->
+
+  <!-- ============================================================ -->
+  <!-- BANNER: Mensaje de anuncio/éxito al tope de la página       -->
+  <!-- TODO: implementar banner con botón dismiss accesible        -->
+  <!-- Pistas:
+    - relative en el contenedor para posicionar el botón absolute
+    - border-b border-sky-500/20 bg-sky-500/10 para fondo sutil
+    - El botón dismiss debe tener aria-label="Cerrar anuncio"
+  -->
+  <!-- ============================================================ -->
+
+  <!-- BANNER va aquí -->
+
+
+  <!-- ============================================================ -->
+  <!-- MODAL: Confirmación de envío de formulario                  -->
+  <!-- TODO: implementar modal con técnica peer                    -->
+  <!-- Pistas:
+    - <input type="checkbox" id="modal-confirm" class="peer hidden">
+    - Overlay: fixed inset-0 z-50 bg-gray-950/80 backdrop-blur-sm
+    - Panel: relative z-10 w-full max-w-md rounded-2xl bg-gray-900
+    - El botón submit del formulario debe ser un <label for="modal-confirm">
+  -->
+  <!-- ============================================================ -->
+
+  <!-- MODAL va aquí (antes del main para que sea hermano del nav si lo hay) -->
+
+
+  <main class="mx-auto max-w-2xl px-4 py-12">
+
+    <!-- ============================================================ -->
+    <!-- SECCIÓN DE ALERTAS                                          -->
+    <!-- TODO: implementar 3 alertas inline con variantes distintas  -->
+    <!-- Pistas:
+      - Usa emerald (success), red (error) y amber (warning)
+      - role="alert" en cada una
+      - Fórmula: bg-COLOR-500/10 border border-COLOR-500/20
+      - Botón dismiss con aria-label en cada alerta
+    -->
+    <!-- ============================================================ -->
+
+    <div class="mb-8 space-y-4">
+      <h2 class="text-sm font-semibold uppercase tracking-wider text-gray-500">Notificaciones</h2>
+
+      <!-- TODO: Alerta success (emerald) -->
+
+      <!-- TODO: Alerta error (red) -->
+
+      <!-- TODO: Alerta warning (amber) -->
+    </div>
+
+
+    <!-- ============================================================ -->
+    <!-- FORMULARIO DE CONTACTO                                      -->
+    <!-- TODO: implementar formulario completo con validación visual -->
+    <!-- ============================================================ -->
+
+    <div class="overflow-hidden rounded-2xl bg-gray-900 shadow-2xl ring-1 ring-gray-800">
+
+      <div class="border-b border-gray-800 px-6 py-5">
+        <h1 class="text-lg font-bold text-white">Contáctanos</h1>
+        <p class="mt-0.5 text-sm text-gray-500">Te responderemos en menos de 24 horas.</p>
+      </div>
+
+      <!-- TODO: <form> con los campos requeridos -->
+      <!-- Campos obligatorios:
+        - Nombre (text, required) — con estado de error visual
+        - Email (email, required) — con estado de error visual
+        - Teléfono (tel, opcional)
+        - Asunto (select con 4 opciones, required) — con estado de error visual
+        - Mensaje (textarea rows="5", required)
+        - Checkbox "Acepto los términos" (required)
+        - Botón submit (como <label for="modal-confirm">)
+      -->
+      <div class="px-6 py-6">
+        <p class="text-sm text-gray-500">[ El formulario va aquí ]</p>
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <!-- ============================================================ -->
+  <!-- TOASTS: Notificación flotante en la esquina inferior        -->
+  <!-- TODO: implementar al menos 1 toast                          -->
+  <!-- Pistas:
+    - fixed bottom-4 right-4 z-50 flex flex-col gap-3
+    - aria-live="polite" en el contenedor
+    - role="alert" en cada toast individual
+    - w-80 max-w-sm para el ancho
+    - Botón dismiss con aria-label="Cerrar notificación"
+  -->
+  <!-- ============================================================ -->
+
+  <!-- TOASTS van aquí (fuera del main, fixed sobre todo) -->
+
+
+</body>
+
+</html>

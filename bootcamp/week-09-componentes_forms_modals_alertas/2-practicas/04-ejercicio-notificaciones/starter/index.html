@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 04 — Alertas, Toasts y Banners</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-gray-950 text-white">
+
+  <!--
+  ============================================================
+  EJERCICIO 04: Alertas, Toasts y Banners
+  ============================================================
+  Instrucciones:
+  1. Lee el README.md para entender cada bloque.
+  2. Descomenta UN bloque a la vez.
+  3. Guarda y observa el resultado en el browser.
+  4. Avanza al siguiente bloque.
+
+  Solo debe estar activo UN bloque a la vez.
+  ============================================================
+  -->
+
+  <div class="mx-auto max-w-2xl px-4 py-12 space-y-6">
+
+
+    <!-- ============================================================ -->
+    <!-- BLOQUE 1: 4 alertas inline semánticas con dismiss           -->
+    <!-- ============================================================ -->
+
+    <!-- Descomenta las siguientes líneas: -->
+
+    <!-- <div class="space-y-4"> -->
+    <!--   <h2 class="text-sm font-semibold uppercase tracking-wider text-gray-500">Alertas Inline</h2> -->
+    <!--  -->
+    <!--   <!-- ✅ SUCCESS (emerald) --> -->
+    <!--   <!-- -->
+    <!--     role="alert": anuncia al usuario de lectura en pantalla que hay un mensaje importante -->
+    <!--     bg-emerald-500/10: fondo muy sutil (10% de opacidad del emerald) -->
+    <!--     border-emerald-500/20: borde sutil (20% de opacidad) -->
+    <!--     Fórmula: bg-COLOR/10 border-COLOR/20 text-COLOR-X00 -->
+    <!--   --> -->
+    <!--   <div role="alert" -->
+    <!--     class="flex items-start gap-3 rounded-xl border border-emerald-500/20 bg-emerald-500/10 px-4 py-3.5"> -->
+    <!--     <svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"> -->
+    <!--       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0"/> -->
+    <!--     </svg> -->
+    <!--     <div class="flex-1"> -->
+    <!--       <p class="text-sm font-semibold text-emerald-300">¡Perfil actualizado!</p> -->
+    <!--       <p class="mt-0.5 text-sm text-emerald-400/80">Tus cambios se guardaron correctamente.</p> -->
+    <!--     </div> -->
+    <!--     <button type="button" class="ml-auto rounded-md p-0.5 text-emerald-400 hover:bg-emerald-500/20 transition-colors" aria-label="Cerrar alerta"> -->
+    <!--       <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg> -->
+    <!--     </button> -->
+    <!--   </div> -->
+    <!--  -->
+    <!--   <!-- ❌ ERROR (red) --> -->
+    <!--   <div role="alert" -->
+    <!--     class="flex items-start gap-3 rounded-xl border border-red-500/20 bg-red-500/10 px-4 py-3.5"> -->
+    <!--     <svg class="mt-0.5 h-5 w-5 shrink-0 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"> -->
+    <!--       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0"/> -->
+    <!--     </svg> -->
+    <!--     <div class="flex-1"> -->
+    <!--       <p class="text-sm font-semibold text-red-300">Error al guardar</p> -->
+    <!--       <p class="mt-0.5 text-sm text-red-400/80">No se pudo conectar con el servidor. Intenta de nuevo.</p> -->
+    <!--     </div> -->
+    <!--     <button type="button" class="ml-auto rounded-md p-0.5 text-red-400 hover:bg-red-500/20 transition-colors" aria-label="Cerrar alerta"> -->
+    <!--       <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg> -->
+    <!--     </button> -->
+    <!--   </div> -->
+    <!--  -->
+    <!--   <!-- ⚠️ WARNING (amber) --> -->
+    <!--   <div role="alert" -->
+    <!--     class="flex items-start gap-3 rounded-xl border border-amber-500/20 bg-amber-500/10 px-4 py-3.5"> -->
+    <!--     <svg class="mt-0.5 h-5 w-5 shrink-0 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"> -->
+    <!--       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.923-.833-2.464 0L4.35 16.5c-.77.833.192 2.5 1.732 2.5z"/> -->
+    <!--     </svg> -->
+    <!--     <div class="flex-1"> -->
+    <!--       <p class="text-sm font-semibold text-amber-300">Sesión por expirar</p> -->
+    <!--       <p class="mt-0.5 text-sm text-amber-400/80">Tu sesión expirará en 5 minutos. Guarda el progreso.</p> -->
+    <!--     </div> -->
+    <!--     <button type="button" class="ml-auto rounded-md p-0.5 text-amber-400 hover:bg-amber-500/20 transition-colors" aria-label="Cerrar alerta"> -->
+    <!--       <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg> -->
+    <!--     </button> -->
+    <!--   </div> -->
+    <!--  -->
+    <!--   <!-- ℹ️ INFO (sky) --> -->
+    <!--   <div role="alert" -->
+    <!--     class="flex items-start gap-3 rounded-xl border border-sky-500/20 bg-sky-500/10 px-4 py-3.5"> -->
+    <!--     <svg class="mt-0.5 h-5 w-5 shrink-0 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"> -->
+    <!--       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0"/> -->
+    <!--     </svg> -->
+    <!--     <div class="flex-1"> -->
+    <!--       <p class="text-sm font-semibold text-sky-300">Actualización disponible</p> -->
+    <!--       <p class="mt-0.5 text-sm text-sky-400/80">Nueva versión de Tailwind disponible. Ver novedades.</p> -->
+    <!--     </div> -->
+    <!--     <button type="button" class="ml-auto rounded-md p-0.5 text-sky-400 hover:bg-sky-500/20 transition-colors" aria-label="Cerrar alerta"> -->
+    <!--       <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg> -->
+    <!--     </button> -->
+    <!--   </div> -->
+    <!--  -->
+    <!-- </div> -->
+
+
+    <!-- ============================================================ -->
+    <!-- BLOQUE 2: Banner full-width dismissable                     -->
+    <!-- ============================================================ -->
+
+    <!-- Descomenta las siguientes líneas: -->
+
+    <!-- <div class="space-y-4"> -->
+    <!--   <h2 class="text-sm font-semibold uppercase tracking-wider text-gray-500">Banner</h2> -->
+    <!--  -->
+    <!--   <!-- -->
+    <!--     relative: necesario para posicionar el botón dismiss absolute -->
+    <!--     El banner es parte del flujo del documento (sin fixed) -->
+    <!--     text-center: centra el texto por defecto -->
+    <!--   --> -->
+    <!--   <div class="relative rounded-xl border border-sky-500/20 bg-sky-500/10 px-4 py-3 text-center"> -->
+    <!--     <p class="text-sm text-sky-300"> -->
+    <!--       🎉 <strong>Nuevo:</strong> TailwindCSS v4 disponible con mejoras de rendimiento. -->
+    <!--       <a href="#" class="ml-1.5 underline hover:text-sky-200 transition-colors">Ver novedades →</a> -->
+    <!--     </p> -->
+    <!--     <!-- -->
+    <!--       absolute right-3 top-1/2 -translate-y-1/2: -->
+    <!--       Posiciona el botón dismiss al lado derecho, centrado verticalmente -->
+    <!--     --> -->
+    <!--     <button type="button" -->
+    <!--       class="absolute right-3 top-1/2 -translate-y-1/2 rounded-md p-1 text-sky-400 -->
+    <!--              hover:bg-sky-500/20 hover:text-sky-300 transition-colors" -->
+    <!--       aria-label="Cerrar anuncio"> -->
+    <!--       <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"> -->
+    <!--         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/> -->
+    <!--       </svg> -->
+    <!--     </button> -->
+    <!--   </div> -->
+    <!--  -->
+    <!--   <!-- Banner de error/mantenimiento --> -->
+    <!--   <div class="relative flex items-center justify-between rounded-xl border border-red-500/20 bg-red-500/10 px-4 py-3"> -->
+    <!--     <div class="flex items-center gap-3"> -->
+    <!--       <svg class="h-5 w-5 shrink-0 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"> -->
+    <!--         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.923-.833-2.464 0L4.35 16.5c-.77.833.192 2.5 1.732 2.5z"/> -->
+    <!--       </svg> -->
+    <!--       <p class="text-sm text-red-300"><strong>Mantenimiento:</strong> El servicio estará inactivo el lunes 2:00–4:00 UTC.</p> -->
+    <!--     </div> -->
+    <!--     <button type="button" class="ml-4 shrink-0 rounded-md p-1 text-red-400 hover:bg-red-500/20 transition-colors" aria-label="Cerrar aviso"> -->
+    <!--       <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg> -->
+    <!--     </button> -->
+    <!--   </div> -->
+    <!--  -->
+    <!-- </div> -->
+
+
+    <!-- ============================================================ -->
+    <!-- BLOQUE 3: Toasts flotantes                                  -->
+    <!-- ============================================================ -->
+
+    <!-- Descomenta las siguientes líneas: -->
+
+    <!-- <div> -->
+    <!--   <h2 class="text-sm font-semibold uppercase tracking-wider text-gray-500">Toasts (mira la esquina inferior derecha)</h2> -->
+    <!--  -->
+    <!--   <!-- -->
+    <!--     Contenedor de toasts: -->
+    <!--     fixed bottom-4 right-4: flotante en la esquina inferior derecha -->
+    <!--     z-50: encima de todo el contenido -->
+    <!--     flex flex-col gap-3: apila los toasts verticalmente -->
+    <!--     aria-live="polite": anuncia cambios al lector de pantalla sin interrumpir -->
+    <!--   --> -->
+    <!--   <div class="fixed bottom-4 right-4 z-50 flex flex-col gap-3" aria-live="polite"> -->
+    <!--  -->
+    <!--     <!-- Toast de éxito --> -->
+    <!--     <div role="alert" -->
+    <!--       class="flex w-80 items-start gap-3 rounded-xl border border-emerald-500/20 bg-gray-900 -->
+    <!--              px-4 py-3.5 shadow-lg shadow-black/20 ring-1 ring-gray-800"> -->
+    <!--       <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-emerald-500/15"> -->
+    <!--         <svg class="h-4 w-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> -->
+    <!--       </div> -->
+    <!--       <div class="flex-1 pt-0.5"> -->
+    <!--         <p class="text-sm font-semibold text-white">Archivo guardado</p> -->
+    <!--         <p class="mt-0.5 text-xs text-gray-400">proyecto-final.html se guardó sin errores.</p> -->
+    <!--       </div> -->
+    <!--       <button type="button" class="shrink-0 rounded-md p-0.5 text-gray-500 hover:text-gray-300 transition-colors" aria-label="Cerrar"> -->
+    <!--         <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg> -->
+    <!--       </button> -->
+    <!--     </div> -->
+    <!--  -->
+    <!--     <!-- Toast de advertencia --> -->
+    <!--     <div role="alert" -->
+    <!--       class="flex w-80 items-start gap-3 rounded-xl border border-amber-500/20 bg-gray-900 -->
+    <!--              px-4 py-3.5 shadow-lg shadow-black/20 ring-1 ring-gray-800"> -->
+    <!--       <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-amber-500/15"> -->
+    <!--         <svg class="h-4 w-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.923-.833-2.464 0L4.35 16.5c-.77.833.192 2.5 1.732 2.5z"/></svg> -->
+    <!--       </div> -->
+    <!--       <div class="flex-1 pt-0.5"> -->
+    <!--         <p class="text-sm font-semibold text-white">Conexión lenta</p> -->
+    <!--         <p class="mt-0.5 text-xs text-gray-400">Detectamos una conexión inestable.</p> -->
+    <!--       </div> -->
+    <!--       <button type="button" class="shrink-0 rounded-md p-0.5 text-gray-500 hover:text-gray-300 transition-colors" aria-label="Cerrar"> -->
+    <!--         <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg> -->
+    <!--       </button> -->
+    <!--     </div> -->
+    <!--  -->
+    <!--     <!-- Toast de error --> -->
+    <!--     <div role="alert" -->
+    <!--       class="flex w-80 items-start gap-3 rounded-xl border border-red-500/20 bg-gray-900 -->
+    <!--              px-4 py-3.5 shadow-lg shadow-black/20 ring-1 ring-gray-800"> -->
+    <!--       <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-red-500/15"> -->
+    <!--         <svg class="h-4 w-4 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg> -->
+    <!--       </div> -->
+    <!--       <div class="flex-1 pt-0.5"> -->
+    <!--         <p class="text-sm font-semibold text-white">Error de sincronización</p> -->
+    <!--         <p class="mt-0.5 text-xs text-gray-400">No se pudieron sincronizar los datos.</p> -->
+    <!--       </div> -->
+    <!--       <button type="button" class="shrink-0 rounded-md p-0.5 text-gray-500 hover:text-gray-300 transition-colors" aria-label="Cerrar"> -->
+    <!--         <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg> -->
+    <!--       </button> -->
+    <!--     </div> -->
+    <!--  -->
+    <!--   </div> -->
+    <!-- </div> -->
+
+
+    <!-- ============================================================ -->
+    <!-- BLOQUE 4: Sistema completo — banner + alertas + toasts      -->
+    <!-- ============================================================ -->
+
+    <!-- Descomenta las siguientes líneas: -->
+
+    <!-- <!-- Banner al tope de la sección --> -->
+    <!-- <div class="relative rounded-xl border border-sky-500/20 bg-sky-500/10 px-4 py-3 text-center"> -->
+    <!--   <p class="text-sm text-sky-300"> -->
+    <!--     🎉 <strong>Beta disponible:</strong> TailwindCSS v4 ya está lista para pruebas. -->
+    <!--     <a href="#" class="ml-1.5 underline hover:text-sky-200 transition-colors">Probar ahora →</a> -->
+    <!--   </p> -->
+    <!--   <button type="button" class="absolute right-3 top-1/2 -translate-y-1/2 rounded-md p-1 text-sky-400 hover:bg-sky-500/20 transition-colors" aria-label="Cerrar banner"> -->
+    <!--     <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg> -->
+    <!--   </button> -->
+    <!-- </div> -->
+    <!--  -->
+    <!-- <!-- Sección de alertas --> -->
+    <!-- <div class="space-y-4"> -->
+    <!--   <h2 class="text-sm font-semibold uppercase tracking-wider text-gray-500">Estado del sistema</h2> -->
+    <!--   <div role="alert" class="flex items-start gap-3 rounded-xl border border-emerald-500/20 bg-emerald-500/10 px-4 py-3.5"> -->
+    <!--     <svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0"/></svg> -->
+    <!--     <div class="flex-1"> -->
+    <!--       <p class="text-sm font-semibold text-emerald-300">Todos los sistemas operativos</p> -->
+    <!--       <p class="mt-0.5 text-sm text-emerald-400/80">No hay incidencias reportadas en las últimas 24 horas.</p> -->
+    <!--     </div> -->
+    <!--   </div> -->
+    <!--   <div role="alert" class="flex items-start gap-3 rounded-xl border border-amber-500/20 bg-amber-500/10 px-4 py-3.5"> -->
+    <!--     <svg class="mt-0.5 h-5 w-5 shrink-0 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.923-.833-2.464 0L4.35 16.5c-.77.833.192 2.5 1.732 2.5z"/></svg> -->
+    <!--     <div class="flex-1"> -->
+    <!--       <p class="text-sm font-semibold text-amber-300">Latencia elevada en EU-West</p> -->
+    <!--       <p class="mt-0.5 text-sm text-amber-400/80">El equipo está investigando el problema.</p> -->
+    <!--     </div> -->
+    <!--     <button type="button" class="ml-auto rounded-md p-0.5 text-amber-400 hover:bg-amber-500/20 transition-colors" aria-label="Cerrar"> -->
+    <!--       <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg> -->
+    <!--     </button> -->
+    <!--   </div> -->
+    <!-- </div> -->
+    <!--  -->
+    <!-- <!-- Toasts en la esquina --> -->
+    <!-- <div class="fixed bottom-4 right-4 z-50 flex flex-col gap-3" aria-live="polite"> -->
+    <!--   <div role="alert" class="flex w-80 items-start gap-3 rounded-xl border border-emerald-500/20 bg-gray-900 px-4 py-3.5 shadow-lg shadow-black/20 ring-1 ring-gray-800"> -->
+    <!--     <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-emerald-500/15"> -->
+    <!--       <svg class="h-4 w-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> -->
+    <!--     </div> -->
+    <!--     <div class="flex-1 pt-0.5"> -->
+    <!--       <p class="text-sm font-semibold text-white">Datos sincronizados</p> -->
+    <!--       <p class="mt-0.5 text-xs text-gray-400">Última sincronización: hace 2 segundos.</p> -->
+    <!--     </div> -->
+    <!--     <button type="button" class="shrink-0 rounded-md p-0.5 text-gray-500 hover:text-gray-300 transition-colors" aria-label="Cerrar"> -->
+    <!--       <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg> -->
+    <!--     </button> -->
+    <!--   </div> -->
+    <!-- </div> -->
+
+  </div>
+
+</body>
+
+</html>

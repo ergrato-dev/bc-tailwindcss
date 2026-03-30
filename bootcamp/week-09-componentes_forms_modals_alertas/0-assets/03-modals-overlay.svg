@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" font-family="Inter, system-ui, sans-serif">
+  <!-- Background -->
+  <rect width="900" height="540" fill="#030712"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" fill="#F9FAFB" font-size="18" font-weight="700">Modals y Drawers — Overlay, Capas y Anatomía</text>
+  <text x="450" y="64" text-anchor="middle" fill="#6B7280" font-size="12">TailwindCSS Semana 9</text>
+
+  <!-- ============ PILA Z-INDEX ============ -->
+  <text x="60" y="100" fill="#9CA3AF" font-size="11" font-weight="600" letter-spacing="1">PILA DE CAPAS (z-index)</text>
+
+  <!-- Layer 0: Page content -->
+  <rect x="60" y="112" width="320" height="44" rx="6" fill="#0F172A" stroke="#1F2937" stroke-width="1"/>
+  <text x="76" y="132" fill="#6B7280" font-size="12">Contenido de la página</text>
+  <text x="76" y="147" fill="#374151" font-size="10">z-0 (normal flow)</text>
+
+  <!-- Layer 1: Sticky navbar -->
+  <rect x="60" y="160" width="320" height="44" rx="6" fill="#0F172A" stroke="#374151" stroke-width="1.5"/>
+  <text x="76" y="180" fill="#9CA3AF" font-size="12">Navbar sticky</text>
+  <text x="76" y="195" fill="#374151" font-size="10">sticky top-0 z-50</text>
+
+  <!-- Layer 2: Modal overlay -->
+  <rect x="60" y="208" width="320" height="44" rx="6" fill="#111827" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="76" y="228" fill="#38BDF8" font-size="12">Modal overlay</text>
+  <text x="76" y="243" fill="#38BDF8" font-size="10">fixed inset-0 z-50 bg-gray-950/80 backdrop-blur-sm</text>
+
+  <!-- Layer 3: Modal content -->
+  <rect x="60" y="256" width="320" height="44" rx="6" fill="#1F2937" stroke="#38BDF8" stroke-width="2"/>
+  <text x="76" y="276" fill="#F9FAFB" font-size="12" font-weight="600">Modal panel</text>
+  <text x="76" y="291" fill="#D1D5DB" font-size="10">relative z-10 bg-gray-900 rounded-2xl shadow-2xl</text>
+
+  <!-- Arrows between layers -->
+  <text x="396" y="136" fill="#4B5563" font-size="11">↑ z-index aumenta</text>
+  <line x1="390" x2="390" y1="115" y2="300" stroke="#1F2937" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- ============ MODAL ANATOMÍA ============ -->
+  <text x="460" y="100" fill="#9CA3AF" font-size="11" font-weight="600" letter-spacing="1">ANATOMÍA DEL MODAL</text>
+
+  <!-- Overlay (outer) -->
+  <rect x="460" y="112" width="370" height="232" rx="8" fill="#030712" stroke="#374151" stroke-width="1" stroke-dasharray="5,3"/>
+  <text x="470" y="127" fill="#4B5563" font-size="10">fixed inset-0 z-50 flex items-center justify-center</text>
+  <text x="470" y="140" fill="#4B5563" font-size="10">bg-gray-950/80 backdrop-blur-sm</text>
+
+  <!-- Modal panel -->
+  <rect x="490" y="148" width="310" height="185" rx="10" fill="#111827" stroke="#374151" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <rect x="490" y="148" width="310" height="48" rx="10" fill="#111827" stroke="none"/>
+  <rect x="490" y="185" width="310" height="1" fill="#1F2937"/>
+  <text x="506" y="172" fill="#F9FAFB" font-size="12" font-weight="600">Título del Modal</text>
+  <!-- X button -->
+  <circle cx="776" cy="172" r="12" fill="#1F2937"/>
+  <line x1="772" x2="780" y1="168" y2="176" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round"/>
+  <line x1="780" x2="772" y1="168" y2="176" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round"/>
+  <text x="490" y="192" fill="#374151" font-size="9">HEADER</text>
+
+  <!-- Body -->
+  <text x="506" y="210" fill="#9CA3AF" font-size="11">¿Confirmar esta acción?</text>
+  <text x="506" y="226" fill="#6B7280" font-size="10">Esta acción no puede deshacerse.</text>
+  <text x="490" y="239" fill="#374151" font-size="9">BODY</text>
+
+  <!-- Footer -->
+  <rect x="490" y="242" width="310" height="91" rx="0" fill="none"/>
+  <rect x="490" y="243" width="310" height="1" fill="#1F2937"/>
+  <!-- Buttons -->
+  <rect x="634" y="254" width="75" height="30" rx="6" fill="#1F2937"/>
+  <text x="671" y="273" text-anchor="middle" fill="#9CA3AF" font-size="11">Cancelar</text>
+  <rect x="716" y="254" width="68" height="30" rx="6" fill="#EF4444"/>
+  <text x="750" y="273" text-anchor="middle" fill="#FFFFFF" font-size="11">Eliminar</text>
+  <text x="490" y="296" fill="#374151" font-size="9">FOOTER</text>
+
+  <!-- Labels with arrows -->
+  <line x1="452" x2="488" y1="172" y2="172" stroke="#374151" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="400" y="172" text-anchor="end" fill="#6B7280" font-size="10">Header</text>
+  <line x1="452" x2="488" y1="218" y2="218" stroke="#374151" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="400" y="218" text-anchor="end" fill="#6B7280" font-size="10">Body</text>
+  <line x1="452" x2="488" y1="270" y2="270" stroke="#374151" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="400" y="270" text-anchor="end" fill="#6B7280" font-size="10">Footer</text>
+
+  <!-- ============ DRAWER ============ -->
+  <text x="60" y="340" fill="#9CA3AF" font-size="11" font-weight="600" letter-spacing="1">DRAWER (PANEL LATERAL)</text>
+
+  <!-- Page mockup -->
+  <rect x="60" y="358" width="370" height="150" rx="8" fill="#0A0F1A" stroke="#1F2937" stroke-width="1"/>
+  <text x="76" y="382" fill="#374151" font-size="11">Contenido de la página</text>
+
+  <!-- Overlay -->
+  <rect x="60" y="358" width="370" height="150" rx="8" fill="#030712" opacity="0.6"/>
+
+  <!-- Drawer panel (right side) -->
+  <rect x="290" y="358" width="140" height="150" rx="0" fill="#111827" stroke="#374151" stroke-width="1.5"/>
+  <rect x="290" y="358" width="140" height="40" fill="#111827" stroke="none"/>
+  <rect x="290" y="397" width="140" height="1" fill="#1F2937"/>
+  <text x="300" y="382" fill="#F9FAFB" font-size="11" font-weight="600">Panel</text>
+  <!-- X button small -->
+  <line x1="412" x2="418" y1="373" y2="379" stroke="#9CA3AF" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="418" x2="412" y1="373" y2="379" stroke="#9CA3AF" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Nav items -->
+  <text x="300" y="416" fill="#9CA3AF" font-size="10">Perfil</text>
+  <text x="300" y="432" fill="#9CA3AF" font-size="10">Configuración</text>
+  <text x="300" y="448" fill="#9CA3AF" font-size="10">Ayuda</text>
+
+  <!-- Slide arrow -->
+  <line x1="264" x2="288" y1="433" y2="433" stroke="#38BDF8" stroke-width="2"/>
+  <polygon points="264,429 256,433 264,437" fill="#38BDF8"/>
+  <text x="210" y="428" fill="#38BDF8" font-size="10" text-anchor="middle">translate-x-full</text>
+  <text x="210" y="441" fill="#38BDF8" font-size="10" text-anchor="middle">→ translate-x-0</text>
+
+  <!-- Drawer code labels -->
+  <text x="460" y="370" fill="#6B7280" font-size="11">fixed inset-y-0 right-0 z-50</text>
+  <text x="460" y="385" fill="#6B7280" font-size="11">w-80 bg-gray-900</text>
+  <text x="460" y="400" fill="#38BDF8" font-size="11">translate-x-full → translate-x-0</text>
+  <text x="460" y="415" fill="#6B7280" font-size="11">transition-transform duration-300</text>
+
+  <!-- Key rule -->
+  <rect x="460" y="430" width="370" height="60" rx="8" fill="#0F172A" stroke="#1F2937" stroke-width="1"/>
+  <text x="480" y="450" fill="#38BDF8" font-size="12" font-weight="600">Regla clave</text>
+  <text x="480" y="466" fill="#D1D5DB" font-size="11">Modal overlay → mismo hermano del navbar en el</text>
+  <text x="480" y="481" fill="#D1D5DB" font-size="11">DOM asegura que el modal queda encima (z-50).</text>
+</svg>

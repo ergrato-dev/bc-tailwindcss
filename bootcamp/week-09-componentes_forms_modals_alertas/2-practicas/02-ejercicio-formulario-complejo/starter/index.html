@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 02 — Formulario Complejo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-gray-950 text-white py-12 px-4">
+
+  <!--
+  ============================================================
+  EJERCICIO 02: Formulario Complejo (Registro)
+  ============================================================
+  Instrucciones:
+  1. Lee el README.md para entender cada bloque.
+  2. Descomenta UN bloque a la vez.
+  3. Guarda y observa el resultado en el browser.
+  4. Avanza al siguiente bloque.
+
+  Solo debe estar activo UN bloque a la vez.
+  ============================================================
+  -->
+
+  <div class="mx-auto w-full max-w-2xl">
+
+    <!-- ============================================================ -->
+    <!-- BLOQUE 1: Grid de campos de texto (nombre, apellido, email) -->
+    <!-- ============================================================ -->
+
+    <!-- Descomenta las siguientes líneas: -->
+
+    <!-- <div class="overflow-hidden rounded-2xl bg-gray-900 shadow-2xl ring-1 ring-gray-800"> -->
+    <!--   <div class="border-b border-gray-800 px-6 py-5"> -->
+    <!--     <h1 class="text-lg font-bold text-white">Crear cuenta</h1> -->
+    <!--     <p class="mt-0.5 text-sm text-gray-500">Paso 1: Información básica</p> -->
+    <!--   </div> -->
+    <!--   <div class="px-6 py-6"> -->
+    <!--     <!-- -->
+    <!--       grid-cols-1: una columna en móvil -->
+    <!--       sm:grid-cols-2: dos columnas en pantallas ≥ 640px -->
+    <!--       gap-x-6: espacio horizontal entre columnas -->
+    <!--       gap-y-5: espacio vertical entre filas -->
+    <!--     --> -->
+    <!--     <div class="grid grid-cols-1 gap-x-6 gap-y-5 sm:grid-cols-2"> -->
+    <!--  -->
+    <!--       <!-- Nombre (1 columna) --> -->
+    <!--       <div class="space-y-1.5"> -->
+    <!--         <label for="fname" class="block text-sm font-medium text-gray-300">Nombre</label> -->
+    <!--         <input type="text" id="fname" name="fname" placeholder="Ana" -->
+    <!--           class="block w-full rounded-lg border border-gray-700 bg-gray-800 -->
+    <!--                  px-4 py-2.5 text-sm text-white placeholder:text-gray-500 -->
+    <!--                  focus:border-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-500/20 transition-colors" -->
+    <!--         /> -->
+    <!--       </div> -->
+    <!--  -->
+    <!--       <!-- Apellido (1 columna) --> -->
+    <!--       <div class="space-y-1.5"> -->
+    <!--         <label for="lname" class="block text-sm font-medium text-gray-300">Apellido</label> -->
+    <!--         <input type="text" id="lname" name="lname" placeholder="García" -->
+    <!--           class="block w-full rounded-lg border border-gray-700 bg-gray-800 -->
+    <!--                  px-4 py-2.5 text-sm text-white placeholder:text-gray-500 -->
+    <!--                  focus:border-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-500/20 transition-colors" -->
+    <!--         /> -->
+    <!--       </div> -->
+    <!--  -->
+    <!--       <!-- Email: sm:col-span-2 hace que ocupe las 2 columnas en desktop --> -->
+    <!--       <div class="space-y-1.5 sm:col-span-2"> -->
+    <!--         <label for="email-reg" class="block text-sm font-medium text-gray-300"> -->
+    <!--           Email <span class="text-red-400">*</span> -->
+    <!--         </label> -->
+    <!--         <input type="email" id="email-reg" name="email" placeholder="ana@email.com" required -->
+    <!--           class="block w-full rounded-lg border border-gray-700 bg-gray-800 -->
+    <!--                  px-4 py-2.5 text-sm text-white placeholder:text-gray-500 -->
+    <!--                  focus:border-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-500/20 transition-colors" -->
+    <!--         /> -->
+    <!--       </div> -->
+    <!--  -->
+    <!--     </div> -->
+    <!--   </div> -->
+    <!-- </div> -->
+
+
+    <!-- ============================================================ -->
+    <!-- BLOQUE 2: Select, textarea y file input                     -->
+    <!-- ============================================================ -->
+
+    <!-- Descomenta las siguientes líneas: -->
+
+    <!-- <div class="overflow-hidden rounded-2xl bg-gray-900 shadow-2xl ring-1 ring-gray-800"> -->
+    <!--   <div class="border-b border-gray-800 px-6 py-5"> -->
+    <!--     <h1 class="text-lg font-bold text-white">Perfil</h1> -->
+    <!--     <p class="mt-0.5 text-sm text-gray-500">Select, textarea y file input</p> -->
+    <!--   </div> -->
+    <!--   <div class="px-6 py-6 space-y-5"> -->
+    <!--  -->
+    <!--     <!-- Select con flecha personalizada --> -->
+    <!--     <div class="space-y-1.5"> -->
+    <!--       <label for="country" class="block text-sm font-medium text-gray-300">País</label> -->
+    <!--       <!-- -->
+    <!--         relative en el wrapper para posicionar la flecha absolute -->
+    <!--         appearance-none elimina la flecha nativa del browser -->
+    <!--         pr-10 para dejar espacio a la flecha SVG personalizada -->
+    <!--       --> -->
+    <!--       <div class="relative"> -->
+    <!--         <select id="country" name="country" -->
+    <!--           class="block w-full appearance-none rounded-lg border border-gray-700 bg-gray-800 -->
+    <!--                  py-2.5 pl-4 pr-10 text-sm text-white -->
+    <!--                  focus:border-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-500/20 transition-colors" -->
+    <!--         > -->
+    <!--           <option value="" class="bg-gray-800 text-gray-500">Selecciona un país</option> -->
+    <!--           <option value="mx" class="bg-gray-800">México</option> -->
+    <!--           <option value="es" class="bg-gray-800">España</option> -->
+    <!--           <option value="ar" class="bg-gray-800">Argentina</option> -->
+    <!--           <option value="co" class="bg-gray-800">Colombia</option> -->
+    <!--         </select> -->
+    <!--         <!-- Flecha SVG personalizada (pointer-events-none para no bloquear el select) --> -->
+    <!--         <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3"> -->
+    <!--           <svg class="h-4 w-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"> -->
+    <!--             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/> -->
+    <!--           </svg> -->
+    <!--         </div> -->
+    <!--       </div> -->
+    <!--     </div> -->
+    <!--  -->
+    <!--     <!-- Textarea --> -->
+    <!--     <div class="space-y-1.5"> -->
+    <!--       <label for="bio" class="block text-sm font-medium text-gray-300">Bio</label> -->
+    <!--       <!-- resize-none evita que el usuario cambie el tamaño manualmente --> -->
+    <!--       <textarea id="bio" name="bio" rows="4" -->
+    <!--         placeholder="Cuéntanos un poco sobre ti..." -->
+    <!--         class="block w-full resize-none rounded-lg border border-gray-700 bg-gray-800 -->
+    <!--                px-4 py-3 text-sm text-white placeholder:text-gray-500 -->
+    <!--                focus:border-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-500/20 transition-colors"> -->
+    <!--       </textarea> -->
+    <!--       <p class="text-xs text-gray-500">Máximo 200 caracteres.</p> -->
+    <!--     </div> -->
+    <!--  -->
+    <!--     <!-- File input --> -->
+    <!--     <div class="space-y-1.5"> -->
+    <!--       <label for="avatar" class="block text-sm font-medium text-gray-300">Foto de perfil</label> -->
+    <!--       <!-- -->
+    <!--         file:* clases afectan al botón nativo "Elegir archivo" -->
+    <!--         file:cursor-pointer file:rounded-lg file:border-0: estilo del botón -->
+    <!--       --> -->
+    <!--       <input type="file" id="avatar" name="avatar" accept="image/*" -->
+    <!--         class="block w-full text-sm text-gray-400 -->
+    <!--                file:mr-4 file:cursor-pointer file:rounded-lg file:border-0 -->
+    <!--                file:bg-sky-500/15 file:px-4 file:py-2 -->
+    <!--                file:text-sm file:font-semibold file:text-sky-400 -->
+    <!--                hover:file:bg-sky-500/25 transition-colors" -->
+    <!--       /> -->
+    <!--     </div> -->
+    <!--  -->
+    <!--   </div> -->
+    <!-- </div> -->
+
+
+    <!-- ============================================================ -->
+    <!-- BLOQUE 3: Checkboxes y radios con fieldset + legend         -->
+    <!-- ============================================================ -->
+
+    <!-- Descomenta las siguientes líneas: -->
+
+    <!-- <div class="overflow-hidden rounded-2xl bg-gray-900 shadow-2xl ring-1 ring-gray-800"> -->
+    <!--   <div class="border-b border-gray-800 px-6 py-5"> -->
+    <!--     <h1 class="text-lg font-bold text-white">Preferencias</h1> -->
+    <!--     <p class="mt-0.5 text-sm text-gray-500">Checkboxes, radios y fieldset</p> -->
+    <!--   </div> -->
+    <!--   <div class="px-6 py-6 space-y-6"> -->
+    <!--  -->
+    <!--     <!-- Grupo de checkboxes con fieldset + legend --> -->
+    <!--     <!-- fieldset agrupa campos relacionados; legend actúa como título del grupo --> -->
+    <!--     <fieldset class="space-y-3"> -->
+    <!--       <legend class="text-sm font-medium text-gray-300">Notificaciones</legend> -->
+    <!--       <label class="flex cursor-pointer items-center gap-3"> -->
+    <!--         <!-- -->
+    <!--           h-4 w-4: tamaño del checkbox -->
+    <!--           rounded: checkbox con bordes redondeados (para radio no se usa) -->
+    <!--           border-gray-600 bg-gray-800: estilo en reposo -->
+    <!--           text-sky-500: color del check cuando está marcado -->
+    <!--           focus:ring-offset-gray-900: ajusta el ring al fondo oscuro -->
+    <!--         --> -->
+    <!--         <input type="checkbox" name="notify-email" checked -->
+    <!--           class="h-4 w-4 rounded border-gray-600 bg-gray-800 text-sky-500 -->
+    <!--                  focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 focus:ring-offset-gray-900" -->
+    <!--         /> -->
+    <!--         <span class="text-sm text-gray-300">Notificaciones por email</span> -->
+    <!--       </label> -->
+    <!--       <label class="flex cursor-pointer items-center gap-3"> -->
+    <!--         <input type="checkbox" name="notify-sms" -->
+    <!--           class="h-4 w-4 rounded border-gray-600 bg-gray-800 text-sky-500 -->
+    <!--                  focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 focus:ring-offset-gray-900" -->
+    <!--         /> -->
+    <!--         <span class="text-sm text-gray-300">Notificaciones por SMS</span> -->
+    <!--       </label> -->
+    <!--       <label class="flex cursor-pointer items-center gap-3"> -->
+    <!--         <input type="checkbox" name="notify-push" -->
+    <!--           class="h-4 w-4 rounded border-gray-600 bg-gray-800 text-sky-500 -->
+    <!--                  focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 focus:ring-offset-gray-900" -->
+    <!--         /> -->
+    <!--         <span class="text-sm text-gray-300">Notificaciones push</span> -->
+    <!--       </label> -->
+    <!--     </fieldset> -->
+    <!--  -->
+    <!--     <!-- Divider --> -->
+    <!--     <div class="border-t border-gray-800"></div> -->
+    <!--  -->
+    <!--     <!-- Grupo de radios --> -->
+    <!--     <fieldset class="space-y-3"> -->
+    <!--       <legend class="text-sm font-medium text-gray-300">Plan</legend> -->
+    <!--       <label class="flex cursor-pointer items-center gap-3"> -->
+    <!--         <!-- Para radio NO se usa rounded (es circular por defecto) --> -->
+    <!--         <input type="radio" name="plan" value="free" -->
+    <!--           class="h-4 w-4 border-gray-600 bg-gray-800 text-sky-500 -->
+    <!--                  focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 focus:ring-offset-gray-900" -->
+    <!--         /> -->
+    <!--         <span class="text-sm text-gray-300">Free <span class="text-xs text-gray-500">— 5 proyectos</span></span> -->
+    <!--       </label> -->
+    <!--       <label class="flex cursor-pointer items-center gap-3"> -->
+    <!--         <input type="radio" name="plan" value="pro" checked -->
+    <!--           class="h-4 w-4 border-gray-600 bg-gray-800 text-sky-500 -->
+    <!--                  focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 focus:ring-offset-gray-900" -->
+    <!--         /> -->
+    <!--         <span class="text-sm text-gray-300"> -->
+    <!--           Pro -->
+    <!--           <span class="ml-1.5 rounded-full bg-sky-500/15 px-2 py-0.5 text-xs font-medium text-sky-400">Recomendado</span> -->
+    <!--         </span> -->
+    <!--       </label> -->
+    <!--       <label class="flex cursor-pointer items-center gap-3"> -->
+    <!--         <input type="radio" name="plan" value="enterprise" -->
+    <!--           class="h-4 w-4 border-gray-600 bg-gray-800 text-sky-500 -->
+    <!--                  focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 focus:ring-offset-gray-900" -->
+    <!--         /> -->
+    <!--         <span class="text-sm text-gray-300">Enterprise <span class="text-xs text-gray-500">— Proyectos ilimitados</span></span> -->
+    <!--       </label> -->
+    <!--     </fieldset> -->
+    <!--  -->
+    <!--   </div> -->
+    <!-- </div> -->
+
+
+    <!-- ============================================================ -->
+    <!-- BLOQUE 4: Formulario de registro completo                   -->
+    <!-- ============================================================ -->
+
+    <!-- Descomenta las siguientes líneas: -->
+
+    <!-- <form class="overflow-hidden rounded-2xl bg-gray-900 shadow-2xl ring-1 ring-gray-800"> -->
+    <!--  -->
+    <!--   <!-- Header --> -->
+    <!--   <div class="border-b border-gray-800 px-6 py-5"> -->
+    <!--     <h1 class="text-lg font-bold text-white">Crear cuenta</h1> -->
+    <!--     <p class="mt-0.5 text-sm text-gray-500">Completa los datos para registrarte</p> -->
+    <!--   </div> -->
+    <!--  -->
+    <!--   <!-- Sección: Datos personales --> -->
+    <!--   <div class="px-6 py-6"> -->
+    <!--     <h2 class="mb-4 text-sm font-semibold uppercase tracking-wider text-gray-500">Datos personales</h2> -->
+    <!--     <div class="grid grid-cols-1 gap-x-6 gap-y-5 sm:grid-cols-2"> -->
+    <!--       <div class="space-y-1.5"> -->
+    <!--         <label for="fname-b4" class="block text-sm font-medium text-gray-300">Nombre</label> -->
+    <!--         <input type="text" id="fname-b4" name="fname" placeholder="Ana" -->
+    <!--           class="block w-full rounded-lg border border-gray-700 bg-gray-800 px-4 py-2.5 text-sm text-white placeholder:text-gray-500 focus:border-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-500/20 transition-colors"/> -->
+    <!--       </div> -->
+    <!--       <div class="space-y-1.5"> -->
+    <!--         <label for="lname-b4" class="block text-sm font-medium text-gray-300">Apellido</label> -->
+    <!--         <input type="text" id="lname-b4" name="lname" placeholder="García" -->
+    <!--           class="block w-full rounded-lg border border-gray-700 bg-gray-800 px-4 py-2.5 text-sm text-white placeholder:text-gray-500 focus:border-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-500/20 transition-colors"/> -->
+    <!--       </div> -->
+    <!--       <div class="space-y-1.5 sm:col-span-2"> -->
+    <!--         <label for="email-b4" class="block text-sm font-medium text-gray-300">Email <span class="text-red-400">*</span></label> -->
+    <!--         <input type="email" id="email-b4" name="email" placeholder="ana@email.com" required -->
+    <!--           class="block w-full rounded-lg border border-gray-700 bg-gray-800 px-4 py-2.5 text-sm text-white placeholder:text-gray-500 focus:border-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-500/20 transition-colors"/> -->
+    <!--       </div> -->
+    <!--       <div class="space-y-1.5"> -->
+    <!--         <label for="country-b4" class="block text-sm font-medium text-gray-300">País</label> -->
+    <!--         <div class="relative"> -->
+    <!--           <select id="country-b4" name="country" -->
+    <!--             class="block w-full appearance-none rounded-lg border border-gray-700 bg-gray-800 py-2.5 pl-4 pr-10 text-sm text-white focus:border-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-500/20 transition-colors"> -->
+    <!--             <option value="" class="bg-gray-800 text-gray-500">Selecciona...</option> -->
+    <!--             <option value="mx" class="bg-gray-800">México</option> -->
+    <!--             <option value="es" class="bg-gray-800">España</option> -->
+    <!--             <option value="ar" class="bg-gray-800">Argentina</option> -->
+    <!--           </select> -->
+    <!--           <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3"> -->
+    <!--             <svg class="h-4 w-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg> -->
+    <!--           </div> -->
+    <!--         </div> -->
+    <!--       </div> -->
+    <!--       <div class="space-y-1.5 sm:col-span-2"> -->
+    <!--         <label for="bio-b4" class="block text-sm font-medium text-gray-300">Bio</label> -->
+    <!--         <textarea id="bio-b4" name="bio" rows="3" placeholder="Cuéntanos sobre ti..." -->
+    <!--           class="block w-full resize-none rounded-lg border border-gray-700 bg-gray-800 px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:border-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-500/20 transition-colors"> -->
+    <!--         </textarea> -->
+    <!--       </div> -->
+    <!--     </div> -->
+    <!--   </div> -->
+    <!--  -->
+    <!--   <!-- Divider --> -->
+    <!--   <div class="border-t border-gray-800"></div> -->
+    <!--  -->
+    <!--   <!-- Sección: Preferencias --> -->
+    <!--   <div class="px-6 py-6 space-y-5"> -->
+    <!--     <h2 class="text-sm font-semibold uppercase tracking-wider text-gray-500">Preferencias</h2> -->
+    <!--     <fieldset class="space-y-3"> -->
+    <!--       <legend class="text-sm font-medium text-gray-300">Notificaciones</legend> -->
+    <!--       <label class="flex cursor-pointer items-center gap-3"> -->
+    <!--         <input type="checkbox" name="notify-email" checked class="h-4 w-4 rounded border-gray-600 bg-gray-800 text-sky-500 focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 focus:ring-offset-gray-900"/> -->
+    <!--         <span class="text-sm text-gray-300">Email</span> -->
+    <!--       </label> -->
+    <!--       <label class="flex cursor-pointer items-center gap-3"> -->
+    <!--         <input type="checkbox" name="notify-push" class="h-4 w-4 rounded border-gray-600 bg-gray-800 text-sky-500 focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 focus:ring-offset-gray-900"/> -->
+    <!--         <span class="text-sm text-gray-300">Push</span> -->
+    <!--       </label> -->
+    <!--     </fieldset> -->
+    <!--     <fieldset class="space-y-3"> -->
+    <!--       <legend class="text-sm font-medium text-gray-300">Plan</legend> -->
+    <!--       <label class="flex cursor-pointer items-center gap-3"> -->
+    <!--         <input type="radio" name="plan" value="free" class="h-4 w-4 border-gray-600 bg-gray-800 text-sky-500 focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 focus:ring-offset-gray-900"/> -->
+    <!--         <span class="text-sm text-gray-300">Free</span> -->
+    <!--       </label> -->
+    <!--       <label class="flex cursor-pointer items-center gap-3"> -->
+    <!--         <input type="radio" name="plan" value="pro" checked class="h-4 w-4 border-gray-600 bg-gray-800 text-sky-500 focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 focus:ring-offset-gray-900"/> -->
+    <!--         <span class="text-sm text-gray-300">Pro <span class="ml-1.5 rounded-full bg-sky-500/15 px-2 py-0.5 text-xs font-medium text-sky-400">Recomendado</span></span> -->
+    <!--       </label> -->
+    <!--     </fieldset> -->
+    <!--   </div> -->
+    <!--  -->
+    <!--   <!-- Footer: acciones --> -->
+    <!--   <div class="flex items-center justify-end gap-3 border-t border-gray-800 px-6 py-4"> -->
+    <!--     <button type="button" class="rounded-lg px-5 py-2.5 text-sm font-semibold text-gray-400 hover:text-white transition-colors">Cancelar</button> -->
+    <!--     <button type="submit" class="rounded-lg bg-sky-500 px-5 py-2.5 text-sm font-semibold text-white hover:bg-sky-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900">Crear cuenta</button> -->
+    <!--   </div> -->
+    <!--  -->
+    <!-- </form> -->
+
+  </div>
+
+</body>
+
+</html>

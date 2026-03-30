@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 03 — Modal y Drawer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-gray-950 text-white flex items-center justify-center p-8 gap-4 flex-wrap">
+
+  <!--
+  ============================================================
+  EJERCICIO 03: Modal y Drawer
+  ============================================================
+  Instrucciones:
+  1. Lee el README.md para entender cada bloque.
+  2. Descomenta UN bloque a la vez.
+  3. Guarda y observa el resultado en el browser.
+  4. Avanza al siguiente bloque.
+
+  Solo debe estar activo UN bloque a la vez.
+  ============================================================
+  -->
+
+
+  <!-- ============================================================ -->
+  <!-- BLOQUE 1: Overlay básico (fixed inset-0)                    -->
+  <!-- ============================================================ -->
+
+  <!-- Descomenta las siguientes líneas: -->
+
+  <!-- Botón de prueba para ver que el overlay cubre todo -->
+  <!-- <div class="text-center"> -->
+  <!--   <p class="text-sm text-gray-500 mb-4">El overlay debería cubrir toda la pantalla</p> -->
+  <!--   <!-- -->
+  <!--     fixed: posición fija respecto al viewport (no el documento) -->
+  <!--     inset-0: top, right, bottom, left todos en 0 → cubre 100vw × 100vh -->
+  <!--     z-50: por encima de todo el contenido -->
+  <!--     bg-gray-950/80: gris muy oscuro con 80% de opacidad -->
+  <!--   --> -->
+  <!--   <div class="fixed inset-0 z-50 bg-gray-950/80"> -->
+  <!--     <p class="text-center text-white mt-8">Este overlay cubre toda la pantalla</p> -->
+  <!--   </div> -->
+  <!-- </div> -->
+
+
+  <!-- ============================================================ -->
+  <!-- BLOQUE 2: Panel centrado dentro del overlay                 -->
+  <!-- ============================================================ -->
+
+  <!-- Descomenta las siguientes líneas: -->
+
+  <!-- <div class="text-center"> -->
+  <!--   <p class="text-sm text-gray-500 mb-4">El panel debe estar centrado</p> -->
+  <!--   <!-- -->
+  <!--     El overlay ahora también hace de contenedor flex para centrar -->
+  <!--     flex items-center justify-center: centra el modal horizontal y verticalmente -->
+  <!--     p-4: padding para que en móvil el modal no toque los bordes -->
+  <!--   --> -->
+  <!--   <div class="fixed inset-0 z-50 flex items-center justify-center bg-gray-950/80 p-4"> -->
+  <!--  -->
+  <!--     <!-- Panel del modal centrado --> -->
+  <!--     <!-- -->
+  <!--       w-full max-w-md: ancho fluido con límite máximo -->
+  <!--       rounded-2xl: bordes muy redondeados -->
+  <!--       bg-gray-900: fondo del panel (más claro que el body) -->
+  <!--       shadow-2xl: sombra profunda para sensación de elevación -->
+  <!--       ring-1 ring-gray-800: borde sutil como alternativa a border -->
+  <!--     --> -->
+  <!--     <div class="w-full max-w-md rounded-2xl bg-gray-900 shadow-2xl ring-1 ring-gray-800"> -->
+  <!--       <div class="p-6"> -->
+  <!--         <h2 class="text-base font-semibold text-white">Modal centrado</h2> -->
+  <!--         <p class="mt-2 text-sm text-gray-400">El overlay centra este panel en la pantalla.</p> -->
+  <!--       </div> -->
+  <!--     </div> -->
+  <!--  -->
+  <!--   </div> -->
+  <!-- </div> -->
+
+
+  <!-- ============================================================ -->
+  <!-- BLOQUE 3: Modal completo con blur y cierre con peer         -->
+  <!-- ============================================================ -->
+
+  <!-- Descomenta las siguientes líneas: -->
+
+  <!-- La técnica peer: un checkbox hidden controla el estado abierto/cerrado -->
+  <!-- <input type="checkbox" id="modal-3" class="peer hidden" /> -->
+  <!--  -->
+  <!-- <!-- Botón que abre el modal (activa el checkbox) --> -->
+  <!-- <label for="modal-3" -->
+  <!--   class="cursor-pointer inline-flex items-center gap-2 rounded-lg bg-sky-500 px-5 py-2.5 -->
+  <!--          text-sm font-semibold text-white hover:bg-sky-400 transition-colors" -->
+  <!-- > -->
+  <!--   Abrir modal -->
+  <!-- </label> -->
+  <!--  -->
+  <!-- <!-- Overlay + contenido del modal: -->
+  <!--      - hidden por defecto -->
+  <!--      - peer-checked:flex: se muestra cuando el checkbox está marcado -->
+  <!--      - backdrop-blur-sm: desenfoca el contenido detrás (requiere bg-color/opacity) -->
+  <!-- --> -->
+  <!-- <div class="fixed inset-0 z-50 hidden items-center justify-center p-4 -->
+  <!--             bg-gray-950/80 backdrop-blur-sm peer-checked:flex"> -->
+  <!--  -->
+  <!--   <!-- Label encima del overlay para cerrar al hacer clic fuera del modal --> -->
+  <!--   <label for="modal-3" class="absolute inset-0 cursor-pointer" aria-label="Cerrar modal"></label> -->
+  <!--  -->
+  <!--   <!-- z-10 para estar encima del label-overlay --> -->
+  <!--   <div class="relative z-10 w-full max-w-md overflow-hidden rounded-2xl bg-gray-900 shadow-2xl ring-1 ring-gray-800"> -->
+  <!--  -->
+  <!--     <!-- Header --> -->
+  <!--     <div class="flex items-center justify-between border-b border-gray-800 px-6 py-4"> -->
+  <!--       <h2 class="text-base font-semibold text-white">Confirmar eliminación</h2> -->
+  <!--       <label for="modal-3" -->
+  <!--         class="cursor-pointer rounded-lg p-1.5 text-gray-400 hover:bg-gray-800 hover:text-white transition-colors" -->
+  <!--         aria-label="Cerrar modal"> -->
+  <!--         <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"> -->
+  <!--           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/> -->
+  <!--         </svg> -->
+  <!--       </label> -->
+  <!--     </div> -->
+  <!--     <!-- Body --> -->
+  <!--     <div class="px-6 py-5"> -->
+  <!--       <p class="text-sm text-gray-400">¿Seguro que deseas eliminar este elemento? Esta acción no puede deshacerse.</p> -->
+  <!--     </div> -->
+  <!--     <!-- Footer --> -->
+  <!--     <div class="flex items-center justify-end gap-3 border-t border-gray-800 px-6 py-4"> -->
+  <!--       <label for="modal-3" class="cursor-pointer rounded-lg px-5 py-2.5 text-sm font-semibold text-gray-400 hover:text-white transition-colors">Cancelar</label> -->
+  <!--       <button class="rounded-lg bg-red-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-red-500 transition-colors">Eliminar</button> -->
+  <!--     </div> -->
+  <!--  -->
+  <!--   </div> -->
+  <!-- </div> -->
+
+
+  <!-- ============================================================ -->
+  <!-- BLOQUE 4: Drawer lateral (panel desde la derecha)           -->
+  <!-- ============================================================ -->
+
+  <!-- Descomenta las siguientes líneas: -->
+
+  <!-- <input type="checkbox" id="drawer-4" class="peer hidden" /> -->
+  <!--  -->
+  <!-- <!-- Botones para abrir modal y drawer --> -->
+  <!-- <div class="flex flex-wrap gap-3"> -->
+  <!--  -->
+  <!--   <!-- Botón modal (mismo que Bloque 3) --> -->
+  <!--   <input type="checkbox" id="modal-4" class="peer/modal hidden" /> -->
+  <!--   <label for="modal-4" -->
+  <!--     class="cursor-pointer inline-flex items-center gap-2 rounded-lg bg-sky-500 px-5 py-2.5 -->
+  <!--            text-sm font-semibold text-white hover:bg-sky-400 transition-colors" -->
+  <!--   > -->
+  <!--     Abrir modal -->
+  <!--   </label> -->
+  <!--  -->
+  <!--   <!-- Botón drawer --> -->
+  <!--   <label for="drawer-4" -->
+  <!--     class="cursor-pointer inline-flex items-center gap-2 rounded-lg border border-gray-700 px-5 py-2.5 -->
+  <!--            text-sm font-semibold text-gray-300 hover:border-gray-500 hover:text-white transition-colors" -->
+  <!--   > -->
+  <!--     Abrir panel lateral -->
+  <!--   </label> -->
+  <!--  -->
+  <!-- </div> -->
+  <!--  -->
+  <!-- <!-- Modal (idéntico al Bloque 3) --> -->
+  <!-- <div class="fixed inset-0 z-50 hidden items-center justify-center p-4 -->
+  <!--             bg-gray-950/80 backdrop-blur-sm peer-checked/modal:flex"> -->
+  <!--   <label for="modal-4" class="absolute inset-0 cursor-pointer" aria-label="Cerrar"></label> -->
+  <!--   <div class="relative z-10 w-full max-w-md overflow-hidden rounded-2xl bg-gray-900 shadow-2xl ring-1 ring-gray-800"> -->
+  <!--     <div class="flex items-center justify-between border-b border-gray-800 px-6 py-4"> -->
+  <!--       <h2 class="text-base font-semibold text-white">Modal de confirmación</h2> -->
+  <!--       <label for="modal-4" class="cursor-pointer rounded-lg p-1.5 text-gray-400 hover:bg-gray-800 hover:text-white transition-colors" aria-label="Cerrar"> -->
+  <!--         <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg> -->
+  <!--       </label> -->
+  <!--     </div> -->
+  <!--     <div class="px-6 py-5"><p class="text-sm text-gray-400">Contenido del modal.</p></div> -->
+  <!--     <div class="flex justify-end gap-3 border-t border-gray-800 px-6 py-4"> -->
+  <!--       <label for="modal-4" class="cursor-pointer rounded-lg px-5 py-2.5 text-sm font-semibold text-gray-400 hover:text-white transition-colors">Cancelar</label> -->
+  <!--       <button class="rounded-lg bg-sky-500 px-5 py-2.5 text-sm font-semibold text-white hover:bg-sky-400 transition-colors">Confirmar</button> -->
+  <!--     </div> -->
+  <!--   </div> -->
+  <!-- </div> -->
+  <!--  -->
+  <!-- <!-- Overlay del drawer (independiente del modal) --> -->
+  <!-- <div class="fixed inset-0 z-40 hidden bg-gray-950/60 backdrop-blur-sm peer-checked:block"> -->
+  <!--   <label for="drawer-4" class="absolute inset-0 cursor-pointer" aria-label="Cerrar panel"></label> -->
+  <!-- </div> -->
+  <!--  -->
+  <!-- <!-- DRAWER: panel lateral derecho -->
+  <!--      translate-x-full: oculto fuera de la pantalla (a la derecha) -->
+  <!--      peer-checked:translate-x-0: se desliza hacia dentro cuando el checkbox está activo -->
+  <!--      transition-transform duration-300: animación suave de entrada -->
+  <!-- --> -->
+  <!-- <div class="fixed inset-y-0 right-0 z-50 flex w-80 flex-col bg-gray-900 shadow-2xl -->
+  <!--             translate-x-full transition-transform duration-300 ease-in-out -->
+  <!--             peer-checked:translate-x-0"> -->
+  <!--  -->
+  <!--   <!-- Drawer header --> -->
+  <!--   <div class="flex items-center justify-between border-b border-gray-800 px-5 py-4"> -->
+  <!--     <h2 class="text-base font-semibold text-white">Panel lateral</h2> -->
+  <!--     <label for="drawer-4" -->
+  <!--       class="cursor-pointer rounded-lg p-1.5 text-gray-400 hover:bg-gray-800 hover:text-white transition-colors" -->
+  <!--       aria-label="Cerrar panel"> -->
+  <!--       <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"> -->
+  <!--         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/> -->
+  <!--       </svg> -->
+  <!--     </label> -->
+  <!--   </div> -->
+  <!--  -->
+  <!--   <!-- Drawer body --> -->
+  <!--   <div class="flex-1 overflow-y-auto px-5 py-4 space-y-4"> -->
+  <!--     <p class="text-sm text-gray-400">Contenido del panel lateral. Puede incluir navegación, filtros o configuraciones.</p> -->
+  <!--     <nav class="space-y-1"> -->
+  <!--       <a href="#" class="flex items-center gap-2.5 rounded-lg px-3 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white transition-colors">Perfil</a> -->
+  <!--       <a href="#" class="flex items-center gap-2.5 rounded-lg px-3 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white transition-colors">Configuración</a> -->
+  <!--       <a href="#" class="flex items-center gap-2.5 rounded-lg px-3 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white transition-colors">Ayuda</a> -->
+  <!--     </nav> -->
+  <!--   </div> -->
+  <!--  -->
+  <!--   <!-- Drawer footer --> -->
+  <!--   <div class="border-t border-gray-800 px-5 py-4"> -->
+  <!--     <label for="drawer-4" class="block cursor-pointer text-center rounded-xl bg-sky-500 py-2.5 text-sm font-semibold text-white hover:bg-sky-400 transition-colors"> -->
+  <!--       Cerrar panel -->
+  <!--     </label> -->
+  <!--   </div> -->
+  <!--  -->
+  <!-- </div> -->
+
+</body>
+
+</html>
