@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 02 — Tipografía Custom</title>
+
+  <!-- Fuentes de Google Fonts -->
+  <!-- Descomenta cuando actives el BLOQUE 1: -->
+  <!-- <style> -->
+  <!--   @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap'); -->
+  <!-- </style> -->
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-gray-950 text-white p-8">
+
+  <!--
+  ============================================================
+  EJERCICIO 02: Tipografía Custom
+  ============================================================
+  Instrucciones:
+  1. Lee el README.md para entender cada bloque.
+  2. Descomenta UN bloque a la vez.
+  3. Guarda y observa el resultado en el browser.
+  4. Avanza al siguiente bloque.
+
+  Solo debe estar activo UN bloque a la vez.
+  ============================================================
+  -->
+
+
+  <!-- ============================================================ -->
+  <!-- BLOQUE 1: Config de Tailwind con fuentes y tamaños custom    -->
+  <!-- ============================================================ -->
+
+  <!-- Descomenta el siguiente script Y el @import de Google Fonts en el <head>: -->
+
+  <!-- <script> -->
+  <!--   tailwind.config = { -->
+  <!--     darkMode: 'class', -->
+  <!--     theme: { -->
+  <!--       extend: { -->
+  <!--         // -->
+  <!--         // fontFamily: registra las fuentes con nombres semánticos -->
+  <!--         // Los strings con espacios llevan comillas internas dobles -->
+  <!--         // La lista es un fallback: si la primera falla, usa la siguiente -->
+  <!--         // -->
+  <!--         fontFamily: { -->
+  <!--           display: ['"Plus Jakarta Sans"', 'Inter', 'system-ui', 'sans-serif'], -->
+  <!--           body:    ['Inter', 'system-ui', 'sans-serif'], -->
+  <!--           mono:    ['"JetBrains Mono"', '"Fira Code"', 'monospace'], -->
+  <!--         }, -->
+  <!--         // -->
+  <!--         // fontSize: sintaxis extendida [size, { lineHeight, fontWeight, letterSpacing }] -->
+  <!--         // Crea clases semánticas: text-hero, text-caption, text-label -->
+  <!--         // -->
+  <!--         fontSize: { -->
+  <!--           'hero-lg': ['5rem',     { lineHeight: '1',   fontWeight: '800', letterSpacing: '-0.03em' }], -->
+  <!--           'hero':    ['3.5rem',   { lineHeight: '1.1', fontWeight: '700', letterSpacing: '-0.02em' }], -->
+  <!--           'hero-sm': ['2.5rem',   { lineHeight: '1.2', fontWeight: '700', letterSpacing: '-0.01em' }], -->
+  <!--           'caption': ['0.6875rem',{ lineHeight: '1.4', letterSpacing: '0.02em' }], -->
+  <!--           'label':   ['0.8125rem',{ lineHeight: '1.5', fontWeight: '500' }], -->
+  <!--         }, -->
+  <!--       }, -->
+  <!--     }, -->
+  <!--   } -->
+  <!-- </script> -->
+
+
+  <!-- ============================================================ -->
+  <!-- BLOQUE 2: Comparación font-display vs font-body              -->
+  <!-- ============================================================ -->
+
+  <!-- Descomenta las siguientes líneas: -->
+
+  <!-- <section class="mb-12 space-y-6"> -->
+  <!--   <h2 class="text-xl font-semibold text-gray-400 uppercase tracking-widest mb-8"> -->
+  <!--     Personas de Fuente -->
+  <!--   </h2> -->
+  <!--  -->
+  <!--   <!-- -->
+  <!--     font-display: Plus Jakarta Sans -->
+  <!--     Geométrica, moderna, fuerte impacto visual, ideal para headings -->
+  <!--   --> -->
+  <!--   <div class="p-8 bg-gray-900 rounded-2xl border border-gray-800 space-y-3"> -->
+  <!--     <p class="text-xs text-gray-500 uppercase tracking-widest mb-4">font-display → Plus Jakarta Sans</p> -->
+  <!--  -->
+  <!--     <!-- text-hero usa la config: 3.5rem + lineHeight 1.1 + weight 700 --> -->
+  <!--     <h1 class="font-display text-hero text-white"> -->
+  <!--       El futuro del diseño -->
+  <!--     </h1> -->
+  <!--     <h2 class="font-display text-3xl font-semibold text-gray-200"> -->
+  <!--       Interfaces que comunican -->
+  <!--     </h2> -->
+  <!--     <h3 class="font-display text-xl font-medium text-gray-300"> -->
+  <!--       Componentes reutilizables -->
+  <!--     </h3> -->
+  <!--   </div> -->
+  <!--  -->
+  <!--   <!-- -->
+  <!--     font-body: Inter -->
+  <!--     Humanista, neutral, excelente legibilidad en texto largo -->
+  <!--   --> -->
+  <!--   <div class="p-8 bg-gray-900 rounded-2xl border border-gray-800 space-y-3"> -->
+  <!--     <p class="text-xs text-gray-500 uppercase tracking-widest mb-4">font-body → Inter</p> -->
+  <!--  -->
+  <!--     <p class="font-body text-base text-gray-300 leading-relaxed max-w-prose"> -->
+  <!--       La tipografía es la base de cualquier buen diseño. Una buena elección de fuente -->
+  <!--       comunica la personalidad de la marca antes de que el usuario lea una sola palabra. -->
+  <!--       Inter está diseñado específicamente para pantallas de alta resolución. -->
+  <!--     </p> -->
+  <!--  -->
+  <!--     <!-- text-label y text-caption usan los tamaños custom --> -->
+  <!--     <p class="font-body text-label text-gray-500">Texto de label — 0.8125rem / 13px</p> -->
+  <!--     <p class="font-body text-caption text-gray-500 uppercase tracking-wider"> -->
+  <!--       Metadata · text-caption / 11px · 30 marzo 2026 -->
+  <!--     </p> -->
+  <!--   </div> -->
+  <!-- </section> -->
+
+
+  <!-- ============================================================ -->
+  <!-- BLOQUE 3: Type specimen — jerarquía tipográfica completa     -->
+  <!-- ============================================================ -->
+
+  <!-- Descomenta las siguientes líneas: -->
+
+  <!-- <section class="mb-12"> -->
+  <!--   <h2 class="text-xl font-semibold text-gray-400 uppercase tracking-widest mb-8"> -->
+  <!--     Type Specimen — Jerarquía Visual -->
+  <!--   </h2> -->
+  <!--  -->
+  <!--   <article class="max-w-2xl space-y-6 p-10 bg-gray-900 rounded-2xl border border-gray-800"> -->
+  <!--  -->
+  <!--     <!-- Meta: fecha y categoría --> -->
+  <!--     <div class="flex items-center gap-3"> -->
+  <!--       <span class="text-caption text-gray-500 uppercase tracking-widest"> -->
+  <!--         30 Marzo 2026 -->
+  <!--       </span> -->
+  <!--       <span class="text-gray-700">·</span> -->
+  <!--       <span class="font-body text-label text-sky-400 font-medium">Diseño UI</span> -->
+  <!--     </div> -->
+  <!--  -->
+  <!--     <!-- H1 con fuente display y tamaño hero --> -->
+  <!--     <h1 class="font-display text-hero text-white"> -->
+  <!--       Tailwind Config: Tu Design System -->
+  <!--     </h1> -->
+  <!--  -->
+  <!--     <!-- Subtítulo con menos contraste --> -->
+  <!--     <p class="font-display text-xl text-gray-400 font-medium leading-snug"> -->
+  <!--       Aprende a definir colores, tipografías y espaciados que hacen únicos tus proyectos. -->
+  <!--     </p> -->
+  <!--  -->
+  <!--     <!-- Divider --> -->
+  <!--     <hr class="border-gray-800" /> -->
+  <!--  -->
+  <!--     <!-- Párrafo de body --> -->
+  <!--     <p class="font-body text-base text-gray-300 leading-relaxed"> -->
+  <!--       El archivo <code class="font-mono text-sm bg-gray-800 text-sky-400 px-2 py-0.5 rounded"> -->
+  <!--       tailwind.config.js</code> es el corazón de tu design system. Aquí defines... -->
+  <!--     </p> -->
+  <!--  -->
+  <!--     <!-- Lista --> -->
+  <!--     <ul class="font-body text-sm text-gray-400 space-y-2 list-disc list-inside"> -->
+  <!--       <li>La paleta de colores de tu marca</li> -->
+  <!--       <li>Las fuentes y sus variantes</li> -->
+  <!--       <li>El espaciado semántico</li> -->
+  <!--     </ul> -->
+  <!--  -->
+  <!--   </article> -->
+  <!-- </section> -->
+
+
+  <!-- ============================================================ -->
+  <!-- BLOQUE 4: Dark mode toggle con tipografía                    -->
+  <!-- ============================================================ -->
+
+  <!-- Descomenta las siguientes líneas: -->
+
+  <!-- <section> -->
+  <!--   <h2 class="text-xl font-semibold text-gray-400 uppercase tracking-widest mb-8"> -->
+  <!--     Dark / Light Mode -->
+  <!--   </h2> -->
+  <!--  -->
+  <!--   <!-- Toggle button (usa JS mínimo para activar 'dark' en <html>) --> -->
+  <!--   <button -->
+  <!--     onclick="document.documentElement.classList.toggle('dark'); this.textContent = document.documentElement.classList.contains('dark') ? '☀️ Modo Claro' : '🌙 Modo Oscuro'" -->
+  <!--     class="mb-6 px-4 py-2 rounded-lg border border-gray-700 text-gray-300 text-sm -->
+  <!--            hover:bg-gray-800 transition-colors"> -->
+  <!--     🌙 Modo Oscuro -->
+  <!--   </button> -->
+  <!--  -->
+  <!--   <!-- Card que cambia de tema --> -->
+  <!--   <div class="p-8 rounded-2xl transition-colors duration-300 -->
+  <!--               bg-white dark:bg-gray-900 -->
+  <!--               border border-gray-200 dark:border-gray-800 -->
+  <!--               max-w-md"> -->
+  <!--  -->
+  <!--     <!-- Heading dark/light diferente --> -->
+  <!--     <h3 class="font-display text-hero-sm text-gray-950 dark:text-gray-50 mb-3"> -->
+  <!--       Legibilidad en ambos temas -->
+  <!--     </h3> -->
+  <!--  -->
+  <!--     <!-- Texto secundario --> -->
+  <!--     <p class="font-body text-base leading-relaxed text-gray-600 dark:text-gray-400"> -->
+  <!--       En modo claro el texto oscuro sobre fondo blanco ofrece máximo contraste. -->
+  <!--       En modo oscuro, el gris 400 (no blanco puro) reduce la fatiga visual. -->
+  <!--     </p> -->
+  <!--  -->
+  <!--     <!-- Caption con metadata --> -->
+  <!--     <p class="mt-4 text-caption text-gray-400 dark:text-gray-600 uppercase tracking-widest"> -->
+  <!--       ACTUALIZADO · SEMANA 10 -->
+  <!--     </p> -->
+  <!--   </div> -->
+  <!-- </section> -->
+
+
+</body>
+
+</html>

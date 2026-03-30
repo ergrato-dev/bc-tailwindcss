@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 500" width="860" height="500">
+  <defs>
+    <style>
+      text { font-family: Inter, system-ui, sans-serif; }
+      .mono { font-family: 'JetBrains Mono', 'Fira Code', monospace; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#374151"/>
+    </marker>
+    <marker id="arrow-sky" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#38BDF8"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="860" height="500" fill="#030712" rx="12"/>
+
+  <!-- Title -->
+  <text x="430" y="38" text-anchor="middle" fill="#F9FAFB" font-size="16" font-weight="700">
+    Design Tokens: Primitivos → Semánticos → Componentes
+  </text>
+
+  <!-- ============================= -->
+  <!-- LAYER 1: PRIMITIVOS           -->
+  <!-- ============================= -->
+  <g transform="translate(28, 72)">
+    <!-- Box header -->
+    <rect width="220" height="28" rx="6 6 0 0" fill="#1E3A5F"/>
+    <text x="12" y="19" fill="#93C5FD" font-size="11" font-weight="700">CAPA 1 — PRIMITIVOS</text>
+
+    <!-- Box body -->
+    <rect y="28" width="220" height="232" rx="0 0 6 6" fill="#0F172A" stroke="#1E3A5F" stroke-width="1.5"/>
+
+    <text x="12" y="54" fill="#6B7280" font-size="8.5" class="mono">/* Solo valores crudos */</text>
+    <text x="12" y="54" dy="0" fill="#6B7280" font-size="8.5" class="mono">/* Sin significado semántico */</text>
+
+    <text x="12" y="82" fill="#9CA3AF" font-size="9" class="mono">--primitive-sky-50: #f0f9ff;</text>
+    <text x="12" y="98" fill="#9CA3AF" font-size="9" class="mono">--primitive-sky-200: #bae6fd;</text>
+    <text x="12" y="114" fill="#38BDF8" font-size="9" font-weight="600" class="mono">--primitive-sky-500: #0ea5e9;</text>
+    <text x="12" y="130" fill="#9CA3AF" font-size="9" class="mono">--primitive-sky-600: #0284c7;</text>
+    <text x="12" y="146" fill="#9CA3AF" font-size="9" class="mono">--primitive-sky-950: #082f49;</text>
+
+    <line x1="12" y1="158" x2="208" y2="158" stroke="#1E3A5F" stroke-width="1"/>
+
+    <text x="12" y="178" fill="#9CA3AF" font-size="9" class="mono">--primitive-gray-50:  #f9fafb;</text>
+    <text x="12" y="194" fill="#9CA3AF" font-size="9" class="mono">--primitive-gray-500: #6b7280;</text>
+    <text x="12" y="210" fill="#9CA3AF" font-size="9" class="mono">--primitive-gray-900: #111827;</text>
+    <text x="12" y="226" fill="#9CA3AF" font-size="9" class="mono">--primitive-gray-950: #030712;</text>
+
+    <text x="12" y="250" fill="#1E3A5F" font-size="8">Nunca se usan directamente en HTML</text>
+  </g>
+
+  <!-- Arrow 1→2 -->
+  <line x1="248" y1="190" x2="288" y2="190" stroke="#374151" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="268" y="184" text-anchor="middle" fill="#4B5563" font-size="8">referencia</text>
+
+  <!-- ============================= -->
+  <!-- LAYER 2: SEMÁNTICOS           -->
+  <!-- ============================= -->
+  <g transform="translate(290, 72)">
+    <!-- Box header light -->
+    <rect width="260" height="28" rx="6 6 0 0" fill="#14532D"/>
+    <text x="12" y="19" fill="#86EFAC" font-size="11" font-weight="700">CAPA 2 — SEMÁNTICOS</text>
+
+    <!-- Box body -->
+    <rect y="28" width="260" height="232" rx="0 0 6 6" fill="#0F172A" stroke="#14532D" stroke-width="1.5"/>
+
+    <text x="12" y="52" fill="#6B7280" font-size="8.5" class="mono">/* :root — Tema Claro */</text>
+
+    <text x="12" y="72" fill="#4ADE80" font-size="9" class="mono">--color-primary:</text>
+    <text x="12" y="72" dx="108" fill="#9CA3AF" font-size="9" class="mono">var(--primitive-sky-500);</text>
+
+    <text x="12" y="88" fill="#4ADE80" font-size="9" class="mono">--color-primary-hover:</text>
+    <text x="12" y="88" dx="132" fill="#9CA3AF" font-size="9" class="mono">var(--primitive-sky-600);</text>
+
+    <text x="12" y="104" fill="#4ADE80" font-size="9" class="mono">--color-bg:</text>
+    <text x="12" y="104" dx="72" fill="#9CA3AF" font-size="9" class="mono">var(--primitive-gray-50);</text>
+
+    <text x="12" y="120" fill="#4ADE80" font-size="9" class="mono">--color-surface:</text>
+    <text x="12" y="120" dx="104" fill="#9CA3AF" font-size="9" class="mono">#ffffff;</text>
+
+    <text x="12" y="136" fill="#4ADE80" font-size="9" class="mono">--color-text:</text>
+    <text x="12" y="136" dx="80" fill="#9CA3AF" font-size="9" class="mono">var(--primitive-gray-900);</text>
+
+    <line x1="12" y1="150" x2="248" y2="150" stroke="#14532D" stroke-width="1"/>
+
+    <text x="12" y="170" fill="#6B7280" font-size="8.5" class="mono">/* .dark — Tema Oscuro */</text>
+
+    <text x="12" y="190" fill="#FBBF24" font-size="9" class="mono">.dark &#123;</text>
+
+    <text x="24" y="208" fill="#4ADE80" font-size="9" class="mono">--color-primary:</text>
+    <text x="24" y="208" dx="108" fill="#9CA3AF" font-size="9" class="mono">var(--primitive-sky-400);</text>
+
+    <text x="24" y="224" fill="#4ADE80" font-size="9" class="mono">--color-bg:</text>
+    <text x="24" y="224" dx="72" fill="#9CA3AF" font-size="9" class="mono">var(--primitive-gray-950);</text>
+
+    <text x="12" y="242" fill="#FBBF24" font-size="9" class="mono">&#125;</text>
+
+    <text x="12" y="258" fill="#14532D" font-size="8">Cambiar 1 primitivo → actualiza toda la UI</text>
+  </g>
+
+  <!-- Arrow 2→3 -->
+  <line x1="550" y1="190" x2="590" y2="190" stroke="#374151" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="570" y="184" text-anchor="middle" fill="#4B5563" font-size="8">aplica</text>
+
+  <!-- ============================= -->
+  <!-- LAYER 3: TAILWIND / HTML      -->
+  <!-- ============================= -->
+  <g transform="translate(592, 72)">
+    <!-- Box header -->
+    <rect width="240" height="28" rx="6 6 0 0" fill="#1F2937"/>
+    <text x="12" y="19" fill="#9CA3AF" font-size="11" font-weight="700">CAPA 3 — TAILWIND / HTML</text>
+
+    <!-- Box body -->
+    <rect y="28" width="240" height="232" rx="0 0 6 6" fill="#0F172A" stroke="#1F2937" stroke-width="1.5"/>
+
+    <text x="12" y="54" fill="#6B7280" font-size="8.5" class="mono">/* Valores arbitrarios via var() */</text>
+
+    <!-- Button example -->
+    <rect x="12" y="64" width="216" height="48" rx="6" fill="#1E293B"/>
+
+    <text x="24" y="81" fill="#9CA3AF" font-size="8.5" class="mono">&lt;button class="</text>
+    <text x="24" y="96" fill="#38BDF8" font-size="8.5" class="mono">  bg-[var(--color-primary)]</text>
+    <text x="24" y="111" fill="#9CA3AF" font-size="8.5" class="mono">"&gt;Comprar&lt;/button&gt;</text>
+
+    <!-- Rendered button -->
+    <rect x="12" y="124" width="216" height="32" rx="6" fill="#0EA5E9"/>
+    <text x="120" y="145" text-anchor="middle" fill="white" font-size="12" font-weight="600">Comprar</text>
+
+    <line x1="12" y1="168" x2="228" y2="168" stroke="#1F2937" stroke-width="1"/>
+
+    <!-- Card example -->
+    <text x="12" y="188" fill="#6B7280" font-size="8.5" class="mono">&lt;div class="</text>
+    <text x="12" y="203" fill="#38BDF8" font-size="8.5" class="mono">  bg-[var(--color-surface)]</text>
+    <text x="12" y="218" fill="#38BDF8" font-size="8.5" class="mono">  text-[var(--color-text)]</text>
+    <text x="12" y="233" fill="#38BDF8" font-size="8.5" class="mono">  border-[var(--color-border)]</text>
+    <text x="12" y="248" fill="#6B7280" font-size="8.5" class="mono">"&gt;Card&lt;/div&gt;</text>
+  </g>
+
+  <!-- ============================= -->
+  <!-- BOTTOM: KEY INSIGHT           -->
+  <!-- ============================= -->
+  <g transform="translate(28, 356)">
+    <rect width="804" height="68" rx="8" fill="#111827" stroke="#374151" stroke-width="1"/>
+
+    <!-- Sky dot -->
+    <circle cx="24" cy="34" r="10" fill="#0EA5E9"/>
+    <text x="24" y="39" text-anchor="middle" fill="white" font-size="11" font-weight="700">!</text>
+
+    <text x="48" y="26" fill="#F9FAFB" font-size="12" font-weight="600">
+      Ventaja clave: cambiar 1 primitivo actualiza toda la UI automáticamente
+    </text>
+    <text x="48" y="47" fill="#9CA3AF" font-size="10">
+      Si cambias --primitive-sky-500 de #0ea5e9 a #7c3aed, todos los componentes que usan --color-primary se
+    </text>
+    <text x="48" y="62" fill="#9CA3AF" font-size="10">
+      actualizan en cascada. No hay que buscar y reemplazar colores por todo el HTML.
+    </text>
+  </g>
+
+  <!-- ============================= -->
+  <!-- DARK MODE TOGGLE PREVIEW      -->
+  <!-- ============================= -->
+  <g transform="translate(28, 438)">
+    <text x="0" y="0" fill="#6B7280" font-size="10">Toggle dark mode:</text>
+    <rect x="130" y="-14" width="102" height="22" rx="4" fill="#1F2937" stroke="#374151" stroke-width="1"/>
+    <text x="140" y="3" fill="#9CA3AF" font-size="9" class="mono">class="dark"</text>
+    <text x="250" y="3" fill="#4B5563" font-size="9">en &lt;html&gt; → todos los tokens de .dark&#123;&#125; toman efecto</text>
+  </g>
+
+</svg>

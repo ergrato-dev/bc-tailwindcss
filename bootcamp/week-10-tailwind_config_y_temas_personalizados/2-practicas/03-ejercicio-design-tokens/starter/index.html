@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 03 — Design Tokens</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Config de Tailwind: necesario para darkMode: 'class' -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    }
+  </script>
+</head>
+
+<body class="min-h-screen bg-gray-950 dark:bg-gray-950 text-white p-8 transition-colors">
+
+  <!--
+  ============================================================
+  EJERCICIO 03: Design Tokens con CSS Variables
+  ============================================================
+  Instrucciones:
+  1. Lee el README.md para entender cada bloque.
+  2. Descomenta UN bloque a la vez.
+  3. Guarda y observa el resultado en el browser.
+  4. Avanza al siguiente bloque.
+
+  Solo debe estar activo UN bloque a la vez.
+  ============================================================
+  -->
+
+
+  <!-- ============================================================ -->
+  <!-- BLOQUE 1: Tokens primitivos en CSS                           -->
+  <!-- ============================================================ -->
+
+  <!-- Descomenta el siguiente bloque <style>: -->
+
+  <!-- <style> -->
+  <!--   /*  -->
+  <!--     CAPA 1: PRIMITIVOS -->
+  <!--     Valores crudos sin significado semántico. -->
+  <!--     Estos son los "átomos" de nuestro design system. -->
+  <!--     Nunca se usan directamente en el HTML — solo los semánticos los referencian. -->
+  <!--   */ -->
+  <!--   :root { -->
+  <!--     /* Paleta sky (azul cielo) */ -->
+  <!--     --primitive-sky-50:  #f0f9ff; -->
+  <!--     --primitive-sky-100: #e0f2fe; -->
+  <!--     --primitive-sky-200: #bae6fd; -->
+  <!--     --primitive-sky-400: #38bdf8; -->
+  <!--     --primitive-sky-500: #0ea5e9; -->
+  <!--     --primitive-sky-600: #0284c7; -->
+  <!--     --primitive-sky-900: #0c4a6e; -->
+  <!--     --primitive-sky-950: #082f49; -->
+  <!--  -->
+  <!--     /* Paleta de grises */ -->
+  <!--     --primitive-gray-50:  #f9fafb; -->
+  <!--     --primitive-gray-100: #f3f4f6; -->
+  <!--     --primitive-gray-200: #e5e7eb; -->
+  <!--     --primitive-gray-300: #d1d5db; -->
+  <!--     --primitive-gray-400: #9ca3af; -->
+  <!--     --primitive-gray-500: #6b7280; -->
+  <!--     --primitive-gray-700: #374151; -->
+  <!--     --primitive-gray-800: #1f2937; -->
+  <!--     --primitive-gray-900: #111827; -->
+  <!--     --primitive-gray-950: #030712; -->
+  <!--   } -->
+  <!-- </style> -->
+
+
+  <!-- ============================================================ -->
+  <!-- BLOQUE 2: Tokens semánticos y tema oscuro                    -->
+  <!-- ============================================================ -->
+
+  <!-- Descomenta el siguiente bloque <style>: -->
+
+  <!-- <style> -->
+  <!--   /*  -->
+  <!--     CAPA 2: SEMÁNTICOS (TEMA CLARO) -->
+  <!--     Los tokens semánticos tienen "significado de diseño": -->
+  <!--     dicen QUÉ HACEN, no qué color son. -->
+  <!--   */ -->
+  <!--   :root { -->
+  <!--     --color-primary:        var(--primitive-sky-500); -->
+  <!--     --color-primary-hover:  var(--primitive-sky-600); -->
+  <!--     --color-primary-subtle: var(--primitive-sky-50); -->
+  <!--     --color-primary-text:   var(--primitive-sky-900); -->
+  <!--  -->
+  <!--     --color-bg:       var(--primitive-gray-50); -->
+  <!--     --color-surface:  #ffffff; -->
+  <!--     --color-border:   var(--primitive-gray-200); -->
+  <!--  -->
+  <!--     --color-text:        var(--primitive-gray-900); -->
+  <!--     --color-text-subtle: var(--primitive-gray-500); -->
+  <!--     --color-text-muted:  var(--primitive-gray-400); -->
+  <!--   } -->
+  <!--  -->
+  <!--   /*  -->
+  <!--     CAPA 2: SEMÁNTICOS (TEMA OSCURO) -->
+  <!--     Solo sobreescribimos los tokens semánticos — los primitivos no cambian. -->
+  <!--     El HTML de los componentes no cambia: solo cambian los valores de los tokens. -->
+  <!--   */ -->
+  <!--   .dark { -->
+  <!--     --color-primary:        var(--primitive-sky-400); -->
+  <!--     --color-primary-hover:  var(--primitive-sky-500); -->
+  <!--     --color-primary-subtle: var(--primitive-sky-950); -->
+  <!--     --color-primary-text:   var(--primitive-sky-100); -->
+  <!--  -->
+  <!--     --color-bg:       var(--primitive-gray-950); -->
+  <!--     --color-surface:  var(--primitive-gray-900); -->
+  <!--     --color-border:   var(--primitive-gray-700); -->
+  <!--  -->
+  <!--     --color-text:        var(--primitive-gray-50); -->
+  <!--     --color-text-subtle: var(--primitive-gray-400); -->
+  <!--     --color-text-muted:  var(--primitive-gray-500); -->
+  <!--   } -->
+  <!-- </style> -->
+
+
+  <!-- ============================================================ -->
+  <!-- BLOQUE 3: Card de usuario usando tokens via Tailwind         -->
+  <!-- ============================================================ -->
+
+  <!-- Descomenta las siguientes líneas: -->
+
+  <!-- <div class="max-w-md transition-colors duration-300 -->
+  <!--             rounded-2xl border p-6 space-y-5 -->
+  <!--             bg-[var(--color-surface)] border-[var(--color-border)]"> -->
+  <!--  -->
+  <!--   <!-- Header de la card --> -->
+  <!--   <div class="flex items-center justify-between"> -->
+  <!--     <div class="flex items-center gap-3"> -->
+  <!--       <!-- Avatar placeholder --> -->
+  <!--       <div class="w-12 h-12 rounded-full flex items-center justify-center -->
+  <!--                   bg-[var(--color-primary-subtle)] text-[var(--color-primary)]"> -->
+  <!--         <span class="text-lg font-bold">AG</span> -->
+  <!--       </div> -->
+  <!--       <!-- Nombre y rol --> -->
+  <!--       <div> -->
+  <!--         <p class="font-semibold text-[var(--color-text)]">Ana García</p> -->
+  <!--         <p class="text-sm text-[var(--color-text-subtle)]">Frontend Developer</p> -->
+  <!--       </div> -->
+  <!--     </div> -->
+  <!--     <!-- Botón secondary --> -->
+  <!--     <button class="px-3 py-1.5 rounded-lg text-sm font-medium transition-colors -->
+  <!--                    border border-[var(--color-border)] -->
+  <!--                    text-[var(--color-text-subtle)] -->
+  <!--                    hover:bg-[var(--color-border)]"> -->
+  <!--       Editar -->
+  <!--     </button> -->
+  <!--   </div> -->
+  <!--  -->
+  <!--   <!-- Divider --> -->
+  <!--   <hr class="border-[var(--color-border)]" /> -->
+  <!--  -->
+  <!--   <!-- Stats de la cuenta --> -->
+  <!--   <div class="grid grid-cols-3 gap-4"> -->
+  <!--     <div class="text-center"> -->
+  <!--       <p class="text-2xl font-bold text-[var(--color-primary)]">48</p> -->
+  <!--       <p class="text-xs text-[var(--color-text-muted)]">Proyectos</p> -->
+  <!--     </div> -->
+  <!--     <div class="text-center"> -->
+  <!--       <p class="text-2xl font-bold text-[var(--color-text)]">1.2k</p> -->
+  <!--       <p class="text-xs text-[var(--color-text-muted)]">Commits</p> -->
+  <!--     </div> -->
+  <!--     <div class="text-center"> -->
+  <!--       <p class="text-2xl font-bold text-[var(--color-text)]">230</p> -->
+  <!--       <p class="text-xs text-[var(--color-text-muted)]">Seguidores</p> -->
+  <!--     </div> -->
+  <!--   </div> -->
+  <!--  -->
+  <!--   <!-- Botón CTA primario --> -->
+  <!--   <button class="w-full py-2.5 rounded-xl font-semibold text-sm transition-colors -->
+  <!--                  bg-[var(--color-primary)] hover:bg-[var(--color-primary-hover)] -->
+  <!--                  text-white"> -->
+  <!--     Ver Perfil Completo -->
+  <!--   </button> -->
+  <!-- </div> -->
+
+
+  <!-- ============================================================ -->
+  <!-- BLOQUE 4: Toggle de tema y verificación                      -->
+  <!-- ============================================================ -->
+
+  <!-- Descomenta las siguientes líneas: -->
+
+  <!-- <div class="mt-8 space-y-4"> -->
+  <!--   <!-- -->
+  <!--     Toggle que agrega/quita la clase 'dark' en el elemento <html> -->
+  <!--     Cuando 'dark' está en <html>, los tokens .dark{} toman efecto -->
+  <!--     Todo el HTML de la card de arriba se actualiza automáticamente -->
+  <!--   --> -->
+  <!--   <button -->
+  <!--     id="theme-toggle" -->
+  <!--     class="px-5 py-2.5 rounded-lg text-sm font-medium border transition-colors -->
+  <!--            border-[var(--color-border)] text-[var(--color-text-subtle)] -->
+  <!--            hover:bg-[var(--color-border)]"> -->
+  <!--     ☀️ Cambiar a Modo Claro -->
+  <!--   </button> -->
+  <!--  -->
+  <!--   <p class="text-xs text-[var(--color-text-muted)] max-w-md"> -->
+  <!--     Al hacer clic, la clase <code class="text-[var(--color-primary)]">dark</code> -->
+  <!--     se agrega/quita del elemento &lt;html&gt;. Los tokens CSS cambian de valor, -->
+  <!--     y TODA la UI se actualiza sin modificar el HTML. -->
+  <!--   </p> -->
+  <!-- </div> -->
+  <!--  -->
+  <!-- <script> -->
+  <!--   const btn = document.getElementById('theme-toggle') -->
+  <!--   btn.addEventListener('click', () => { -->
+  <!--     document.documentElement.classList.toggle('dark') -->
+  <!--     const isDark = document.documentElement.classList.contains('dark') -->
+  <!--     btn.textContent = isDark ? '☀️ Cambiar a Modo Claro' : '🌙 Cambiar a Modo Oscuro' -->
+  <!--   }) -->
+  <!-- </script> -->
+
+
+</body>
+
+</html>

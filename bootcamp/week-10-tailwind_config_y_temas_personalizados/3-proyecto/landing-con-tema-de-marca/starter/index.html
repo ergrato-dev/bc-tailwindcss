@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Landing con Tema de Marca — Semana 10</title>
+
+  <!-- TODO: Importar fuentes de Google Fonts aquí -->
+  <!-- Pista: usa @import url('https://fonts.googleapis.com/css2?family=...&display=swap') -->
+  <!-- Elige 2 fuentes: una para display y otra para body -->
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!--
+  ============================================================
+  TODO 1: Configuración de Tailwind
+  ============================================================
+  Define aquí tu tailwind.config completo con:
+  - darkMode: 'class'
+  - theme.extend.colors: tu paleta brand-* (mínimo brand-50 a brand-950)
+  - theme.extend.fontFamily: font-display y font-body con tus fuentes
+  - theme.extend.fontSize: text-hero y text-caption como mínimo
+  - theme.extend.spacing: py-section, px-gutter y lo que necesites
+  - theme.extend.screens: xs: '375px'
+
+  Pista: tailwind.config = { darkMode: 'class', theme: { extend: { ... } } }
+  ============================================================
+  -->
+
+  <!-- TODO 1: Agrega el script con tailwind.config aquí -->
+
+
+  <!--
+  ============================================================
+  TODO 2: Design Tokens (CSS Variables)
+  ============================================================
+  Define aquí tus tokens en :root y .dark usando CSS variables.
+  Mínimo 6 tokens semánticos.
+
+  Estructura:
+    - Primitivos (--primitive-brand-500: #...)
+    - Semánticos :root (--color-primary: var(--primitive-...))
+    - Semánticos .dark (sobreescribir los tokens que cambian)
+
+  Pista: usa <style> normal, NO type="text/tailwindcss"
+  ============================================================
+  -->
+
+  <!-- TODO 2: Agrega el bloque <style> con tokens aquí -->
+
+
+  <!--
+  ============================================================
+  TODO 3: @layer utilities y @layer components
+  ============================================================
+  Define aquí tus clases custom.
+  IMPORTANTE: usa <style type="text/tailwindcss"> para que
+  el CDN procese @layer y @apply correctamente.
+
+  Mínimo:
+  - 1 utilidad custom en @layer utilities (ej: .text-gradient-brand)
+  - 1 componente en @layer components (ej: .btn-brand con @apply)
+  ============================================================
+  -->
+
+  <!-- TODO 3: Agrega <style type="text/tailwindcss"> con @layer aquí -->
+
+</head>
+
+<body class="min-h-screen bg-gray-950 text-white font-body">
+
+  <!--
+  ============================================================
+  TODO 4: NAVBAR
+  ============================================================
+  Crea un navbar sticky con:
+  - Logo (texto) a la izquierda
+  - Links de navegación en el centro/derecha (ocultos en mobile)
+  - Botón CTA a la derecha — usa tu clase .btn-brand
+  - Usa backdrop-blur y bg-opacity para efecto glassmorphism
+
+  Pistas:
+  - sticky top-0 z-50 para que se quede fijo
+  - flex items-center justify-between para el layout
+  - hidden md:flex para los links en desktop
+  ============================================================
+  -->
+
+  <!-- TODO 4: Navbar aquí -->
+  <header class="???">
+    <!-- Logo -->
+    <!-- Nav links -->
+    <!-- CTA button -->
+  </header>
+
+
+  <!--
+  ============================================================
+  TODO 5: HERO SECTION
+  ============================================================
+  Crea una hero section con:
+  - Badge decorativo (span con bg-brand-500/10 y borde)
+  - Heading principal con font-display, text-hero y tu utilidad de gradiente
+  - Subheading con font-body y texto de menor contraste
+  - 2 botones CTA: .btn-brand y .btn-brand-outline (o similar)
+  - Usa py-section-lg para el padding vertical
+
+  Pistas:
+  - text-center para centrar el contenido
+  - max-w-3xl mx-auto para limitar el ancho del texto
+  - flex flex-wrap gap-4 justify-center para los botones
+  ============================================================
+  -->
+
+  <!-- TODO 5: Hero section aquí -->
+  <section class="???">
+    <!-- Badge -->
+    <!-- Heading con gradiente -->
+    <!-- Subheading -->
+    <!-- Botones CTA -->
+  </section>
+
+
+  <!--
+  ============================================================
+  TODO 6: FEATURES SECTION
+  ============================================================
+  Crea una sección de 3 features con:
+  - Título de sección centrado
+  - Grid responsive: 1 col mobile → 2 col sm → 3 col lg
+  - Cada card con tu utilidad .card-hover (o similar)
+  - Cada card: icono, título (font-display), descripción (font-body)
+  - Alterna colores de iconos: brand-* y accent-* para variedad
+  - Usa py-section para el padding vertical
+
+  Pistas:
+  - grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6
+  - Mínimo 3 cards
+  ============================================================
+  -->
+
+  <!-- TODO 6: Features section aquí -->
+  <section class="???">
+    <h2 class="???"><!-- Título de sección --></h2>
+    <div class="???">
+      <!-- Card 1 -->
+      <!-- Card 2 -->
+      <!-- Card 3 -->
+    </div>
+  </section>
+
+
+  <!--
+  ============================================================
+  TODO 7: CTA SECTION
+  ============================================================
+  Crea una sección de llamada a acción con:
+  - Fondo sólido de tu color brand (bg-brand-500 o brand-600)
+  - Heading centrado en texto blanco
+  - Subheading
+  - Botón con estilo invertido (ej: bg-white text-brand-600)
+  - Usa py-section para el padding vertical
+
+  Pistas:
+  - text-center para centrar todo
+  - El botón sobre fondo de color debe tener buen contraste
+  ============================================================
+  -->
+
+  <!-- TODO 7: CTA section aquí -->
+  <section class="???">
+    <!-- Heading -->
+    <!-- Texto -->
+    <!-- Botón invertido -->
+  </section>
+
+
+  <!--
+  ============================================================
+  TODO 8: FOOTER
+  ============================================================
+  Crea un footer con:
+  - Logo y tagline a la izquierda
+  - Links en columnas a la derecha (o centrado si prefieres)
+  - Copyright en la parte inferior
+  - Fondo más oscuro que el body (ej: bg-gray-900 o bg-black)
+  - Separador con borde superior
+
+  Pistas:
+  - flex flex-col md:flex-row para layout adaptativo
+  - text-gray-500 para texto de menor importancia
+  ============================================================
+  -->
+
+  <!-- TODO 8: Footer aquí -->
+  <footer class="???">
+    <!-- Logo + tagline -->
+    <!-- Links -->
+    <!-- Copyright -->
+  </footer>
+
+</body>
+
+</html>

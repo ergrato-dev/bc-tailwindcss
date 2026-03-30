@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 04 — Tema Completo</title>
+
+  <!-- Google Fonts para el ejercicio completo -->
+  <!-- Descomenta cuando actives el BLOQUE 1: -->
+  <!-- <style> -->
+  <!--   @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap'); -->
+  <!-- </style> -->
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-gray-950 text-white">
+
+  <!--
+  ============================================================
+  EJERCICIO 04: Tema Completo
+  ============================================================
+  Instrucciones:
+  1. Lee el README.md para entender cada bloque.
+  2. Descomenta UN bloque a la vez.
+  3. Guarda y observa el resultado en el browser.
+  4. Avanza al siguiente bloque.
+
+  Solo debe estar activo UN bloque a la vez.
+  ============================================================
+  -->
+
+
+  <!-- ============================================================ -->
+  <!-- BLOQUE 1: Config completa de Tailwind (colores + fuentes     -->
+  <!--           + spacing + breakpoints + darkMode)                 -->
+  <!-- ============================================================ -->
+
+  <!-- Descomenta el script tailwind.config Y el @import de fuentes en el <head>: -->
+
+  <!-- <script> -->
+  <!--   tailwind.config = { -->
+  <!--     darkMode: 'class', -->
+  <!--     theme: { -->
+  <!--       extend: { -->
+  <!--         // Paleta brand — fuchsia/violeta -->
+  <!--         colors: { -->
+  <!--           brand: { -->
+  <!--             50:  '#fdf4ff', -->
+  <!--             100: '#fae8ff', -->
+  <!--             200: '#f5d0fe', -->
+  <!--             300: '#f0abfc', -->
+  <!--             400: '#e879f9', -->
+  <!--             500: '#d946ef', -->
+  <!--             600: '#c026d3', -->
+  <!--             700: '#a21caf', -->
+  <!--             800: '#86198f', -->
+  <!--             900: '#701a75', -->
+  <!--             950: '#4a044e', -->
+  <!--           }, -->
+  <!--           // Paleta accent — naranja -->
+  <!--           accent: { -->
+  <!--             50:  '#fff7ed', -->
+  <!--             100: '#ffedd5', -->
+  <!--             300: '#fdba74', -->
+  <!--             500: '#f97316', -->
+  <!--             700: '#c2410c', -->
+  <!--             900: '#7c2d12', -->
+  <!--           }, -->
+  <!--         }, -->
+  <!--         // Fuentes semánticas -->
+  <!--         fontFamily: { -->
+  <!--           display: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'], -->
+  <!--           body:    ['Inter', 'system-ui', 'sans-serif'], -->
+  <!--         }, -->
+  <!--         // Tamaños semánticos -->
+  <!--         fontSize: { -->
+  <!--           'hero': ['3.5rem', { lineHeight: '1.1', fontWeight: '700', letterSpacing: '-0.02em' }], -->
+  <!--           'caption': ['0.6875rem', { lineHeight: '1.4', letterSpacing: '0.02em' }], -->
+  <!--         }, -->
+  <!--         // Spacing semántico para secciones -->
+  <!--         spacing: { -->
+  <!--           'section-sm':  '4rem', -->
+  <!--           'section':     '6rem', -->
+  <!--           'section-lg':  '10rem', -->
+  <!--           'gutter':      '1.5rem', -->
+  <!--           'gutter-lg':   '3rem', -->
+  <!--         }, -->
+  <!--         // Breakpoint extra para móviles pequeños -->
+  <!--         screens: { -->
+  <!--           'xs': '375px', -->
+  <!--         }, -->
+  <!--       }, -->
+  <!--     }, -->
+  <!--   } -->
+  <!-- </script> -->
+
+
+  <!-- ============================================================ -->
+  <!-- BLOQUE 2: @layer utilities y @layer components (CDN)         -->
+  <!-- ============================================================ -->
+
+  <!-- Descomenta el siguiente bloque <style type="text/tailwindcss">: -->
+  <!-- NOTA: el atributo type="text/tailwindcss" es OBLIGATORIO para que -->
+  <!-- Tailwind CDN procese @layer, @apply, etc. en este bloque. -->
+
+  <!-- <style type="text/tailwindcss"> -->
+  <!--   @layer utilities { -->
+  <!--     /* Texto con gradiente de la paleta brand */ -->
+  <!--     .text-gradient-brand { -->
+  <!--       background-image: linear-gradient(135deg, #d946ef, #f97316); -->
+  <!--       background-clip: text; -->
+  <!--       -webkit-background-clip: text; -->
+  <!--       color: transparent; -->
+  <!--     } -->
+  <!--  -->
+  <!--     /* Efecto hover en cards — eleva la sombra y sube levemente */ -->
+  <!--     .card-hover { -->
+  <!--       @apply transition-all duration-300; -->
+  <!--     } -->
+  <!--     .card-hover:hover { -->
+  <!--       @apply -translate-y-1 shadow-xl; -->
+  <!--       box-shadow: 0 20px 40px -8px rgb(217 70 239 / 0.25); -->
+  <!--     } -->
+  <!--   } -->
+  <!--  -->
+  <!--   @layer components { -->
+  <!--     /* Botón primario de marca — se repite en toda la landing */ -->
+  <!--     .btn-brand { -->
+  <!--       @apply inline-flex items-center justify-center gap-2; -->
+  <!--       @apply px-6 py-3 rounded-xl font-semibold text-sm text-white; -->
+  <!--       @apply bg-brand-500 hover:bg-brand-600 active:bg-brand-700; -->
+  <!--       @apply focus:outline-none focus:ring-2 focus:ring-brand-500/40; -->
+  <!--       @apply transition-colors duration-200; -->
+  <!--     } -->
+  <!--  -->
+  <!--     /* Botón outline de marca */ -->
+  <!--     .btn-brand-outline { -->
+  <!--       @apply inline-flex items-center justify-center gap-2; -->
+  <!--       @apply px-6 py-3 rounded-xl font-semibold text-sm; -->
+  <!--       @apply border border-brand-500 text-brand-400; -->
+  <!--       @apply hover:bg-brand-950 hover:text-brand-300; -->
+  <!--       @apply focus:outline-none focus:ring-2 focus:ring-brand-500/40; -->
+  <!--       @apply transition-colors duration-200; -->
+  <!--     } -->
+  <!--   } -->
+  <!-- </style> -->
+
+
+  <!-- ============================================================ -->
+  <!-- BLOQUE 3: Hero section con el design system completo         -->
+  <!-- ============================================================ -->
+
+  <!-- Descomenta las siguientes líneas: -->
+
+  <!-- <header class="sticky top-0 z-50 border-b border-brand-900/50 bg-gray-950/80 backdrop-blur-sm"> -->
+  <!--   <div class="flex items-center justify-between px-gutter-lg py-4"> -->
+  <!--     <span class="font-display font-bold text-xl text-white">BrandUI</span> -->
+  <!--     <nav class="hidden md:flex gap-8"> -->
+  <!--       <a href="#" class="text-sm text-gray-400 hover:text-brand-400 transition-colors font-body">Docs</a> -->
+  <!--       <a href="#" class="text-sm text-gray-400 hover:text-brand-400 transition-colors font-body">Blog</a> -->
+  <!--       <a href="#" class="text-sm text-gray-400 hover:text-brand-400 transition-colors font-body">Recursos</a> -->
+  <!--     </nav> -->
+  <!--     <!-- Botón usando el componente .btn-brand --> -->
+  <!--     <button class="btn-brand text-sm px-4 py-2">Empezar</button> -->
+  <!--   </div> -->
+  <!-- </header> -->
+  <!--  -->
+  <!-- <!-- Hero section --> -->
+  <!-- <section class="py-section-lg px-gutter-lg text-center"> -->
+  <!--   <!-- Badge --> -->
+  <!--   <span class="inline-block mb-6 bg-brand-500/10 border border-brand-500/20 -->
+  <!--                text-brand-300 text-sm font-medium px-3 py-1 rounded-full"> -->
+  <!--     ✦ Semana 10 · Tailwind Config -->
+  <!--   </span> -->
+  <!--  -->
+  <!--   <!-- Heading con gradiente — usa la utilidad custom --> -->
+  <!--   <!-- text-hero viene del fontSize config: 3.5rem + lineHeight 1.1 --> -->
+  <!--   <h1 class="font-display text-hero text-gradient-brand max-w-3xl mx-auto"> -->
+  <!--     Tu Design System a Medida -->
+  <!--   </h1> -->
+  <!--  -->
+  <!--   <p class="font-body mt-6 text-gray-400 text-lg leading-relaxed max-w-xl mx-auto"> -->
+  <!--     Configura TailwindCSS con tu paleta, tipografía y espaciado únicos. -->
+  <!--     De genérico a completamente personal en minutos. -->
+  <!--   </p> -->
+  <!--  -->
+  <!--   <!-- CTAs con las clases de componentes custom --> -->
+  <!--   <div class="mt-10 flex flex-wrap gap-4 justify-center"> -->
+  <!--     <button class="btn-brand">Comenzar ahora →</button> -->
+  <!--     <button class="btn-brand-outline">Ver Documentación</button> -->
+  <!--   </div> -->
+  <!-- </section> -->
+
+
+  <!-- ============================================================ -->
+  <!-- BLOQUE 4: Cards section con grid responsive y card-hover     -->
+  <!-- ============================================================ -->
+
+  <!-- Descomenta las siguientes líneas: -->
+
+  <!-- <section class="py-section px-gutter-lg"> -->
+  <!--   <!-- Divider con gradiente de marca --> -->
+  <!--   <div class="h-px bg-gradient-to-r from-transparent via-brand-800 to-transparent mb-section-sm"></div> -->
+  <!--  -->
+  <!--   <h2 class="font-display text-3xl font-bold text-white text-center mb-2">Todo en un config</h2> -->
+  <!--   <p class="font-body text-gray-500 text-center mb-12">Una configuración, una identidad de marca</p> -->
+  <!--  -->
+  <!--   <!-- Grid con breakpoint xs custom + card-hover utility --> -->
+  <!--   <!-- xs: 375px — breakpoint para móviles muy pequeños --> -->
+  <!--   <div class="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"> -->
+  <!--  -->
+  <!--     <!-- Card 1: Colores --> -->
+  <!--     <!-- card-hover: utilidad custom que hace hover con sombra de marca --> -->
+  <!--     <div class="card-hover rounded-2xl p-6 bg-gray-900 border border-gray-800 space-y-4"> -->
+  <!--       <div class="w-12 h-12 rounded-xl bg-brand-500/15 flex items-center justify-center"> -->
+  <!--         <span class="text-brand-400 text-2xl">🎨</span> -->
+  <!--       </div> -->
+  <!--       <h3 class="font-display font-semibold text-lg text-white">Paleta de Marca</h3> -->
+  <!--       <p class="font-body text-sm text-gray-500 leading-relaxed"> -->
+  <!--         Define colores brand-* con 11 tonos que se usan como cualquier clase Tailwind. -->
+  <!--       </p> -->
+  <!--       <p class="text-caption text-brand-500 uppercase tracking-widest">theme.extend.colors</p> -->
+  <!--     </div> -->
+  <!--  -->
+  <!--     <!-- Card 2: Tipografía --> -->
+  <!--     <div class="card-hover rounded-2xl p-6 bg-gray-900 border border-gray-800 space-y-4"> -->
+  <!--       <div class="w-12 h-12 rounded-xl bg-accent-500/15 flex items-center justify-center"> -->
+  <!--         <span class="text-accent-400 text-2xl">Tt</span> -->
+  <!--       </div> -->
+  <!--       <h3 class="font-display font-semibold text-lg text-white">Tipografía Custom</h3> -->
+  <!--       <p class="font-body text-sm text-gray-500 leading-relaxed"> -->
+  <!--         Registra font-display y font-body con Google Fonts y escala de tamaños semántica. -->
+  <!--       </p> -->
+  <!--       <p class="text-caption text-accent-500 uppercase tracking-widest">theme.extend.fontFamily</p> -->
+  <!--     </div> -->
+  <!--  -->
+  <!--     <!-- Card 3: Spacing --> -->
+  <!--     <div class="card-hover rounded-2xl p-6 bg-gray-900 border border-gray-800 space-y-4"> -->
+  <!--       <div class="w-12 h-12 rounded-xl bg-brand-500/15 flex items-center justify-center"> -->
+  <!--         <span class="text-brand-400 text-2xl">⬡</span> -->
+  <!--       </div> -->
+  <!--       <h3 class="font-display font-semibold text-lg text-white">Spacing Semántico</h3> -->
+  <!--       <p class="font-body text-sm text-gray-500 leading-relaxed"> -->
+  <!--         py-section, px-gutter — espaciado con significado en lugar de números mágicos. -->
+  <!--       </p> -->
+  <!--       <p class="text-caption text-brand-500 uppercase tracking-widest">theme.extend.spacing</p> -->
+  <!--     </div> -->
+  <!--  -->
+  <!--   </div> -->
+  <!-- </section> -->
+
+
+</body>
+
+</html>

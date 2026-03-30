@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 01 — Colores de Marca</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-gray-950 text-white p-8">
+
+  <!--
+  ============================================================
+  EJERCICIO 01: Colores de Marca
+  ============================================================
+  Instrucciones:
+  1. Lee el README.md para entender cada bloque.
+  2. Descomenta UN bloque a la vez.
+  3. Guarda y observa el resultado en el browser.
+  4. Avanza al siguiente bloque.
+
+  Solo debe estar activo UN bloque a la vez.
+  ============================================================
+  -->
+
+
+  <!-- ============================================================ -->
+  <!-- BLOQUE 1: Definir la paleta brand en tailwind.config (CDN)   -->
+  <!-- ============================================================ -->
+
+  <!-- Descomenta el siguiente script: -->
+
+  <!-- <script> -->
+  <!--   tailwind.config = { -->
+  <!--     theme: { -->
+  <!--       extend: { -->
+  <!--         colors: { -->
+  <!--           // -->
+  <!--           // Paleta brand — 11 tonos siguiendo la convención Tailwind -->
+  <!--           // Tono 500 = color base / 50 = más claro / 950 = más oscuro -->
+  <!--           // -->
+  <!--           brand: { -->
+  <!--             50:  '#fdf4ff', // casi blanco con tinte violeta -->
+  <!--             100: '#fae8ff', // fondos muy suaves -->
+  <!--             200: '#f5d0fe', // bordes suaves -->
+  <!--             300: '#f0abfc', // texto sobre fondo oscuro -->
+  <!--             400: '#e879f9', // iconos sobre fondo oscuro -->
+  <!--             500: '#d946ef', // color base — botones, badges, links -->
+  <!--             600: '#c026d3', // hover de botones -->
+  <!--             700: '#a21caf', // pressed / active -->
+  <!--             800: '#86198f', // texto sobre fondo claro -->
+  <!--             900: '#701a75', // texto oscuro -->
+  <!--             950: '#4a044e', // casi negro — dark mode background -->
+  <!--           }, -->
+  <!--         }, -->
+  <!--       }, -->
+  <!--     }, -->
+  <!--   } -->
+  <!-- </script> -->
+
+  <!-- Nota: bg-brand-*, text-brand-*, border-brand-* ya están disponibles -->
+  <!-- Verifica en DevTools que las clases generan CSS correcto -->
+
+
+  <!-- ============================================================ -->
+  <!-- BLOQUE 2: Swatches de la paleta brand                        -->
+  <!-- ============================================================ -->
+
+  <!-- Descomenta las siguientes líneas: -->
+
+  <!-- <section class="mb-12"> -->
+  <!--   <h2 class="text-2xl font-bold text-white mb-6">Paleta Brand</h2> -->
+  <!--  -->
+  <!--   <!-- -->
+  <!--     Swatch grid: muestra cada tono con su clase de fondo -->
+  <!--     y el nombre de la clase correspondiente. -->
+  <!--     Los tonos oscuros (600+) muestran texto blanco. -->
+  <!--     Los tonos claros (-400) muestran texto de la paleta oscura. -->
+  <!--   --> -->
+  <!--   <div class="flex flex-wrap gap-2"> -->
+  <!--  -->
+  <!--     <!-- Tono 50 — texto oscuro para contraste --> -->
+  <!--     <div class="flex-1 min-w-[80px] h-16 rounded-xl bg-brand-50 -->
+  <!--                 flex flex-col items-center justify-center gap-1"> -->
+  <!--       <span class="text-brand-900 text-xs font-bold">50</span> -->
+  <!--       <span class="text-brand-800 text-[10px]">#fdf4ff</span> -->
+  <!--     </div> -->
+  <!--  -->
+  <!--     <div class="flex-1 min-w-[80px] h-16 rounded-xl bg-brand-100 -->
+  <!--                 flex flex-col items-center justify-center gap-1"> -->
+  <!--       <span class="text-brand-900 text-xs font-bold">100</span> -->
+  <!--       <span class="text-brand-800 text-[10px]">#fae8ff</span> -->
+  <!--     </div> -->
+  <!--  -->
+  <!--     <div class="flex-1 min-w-[80px] h-16 rounded-xl bg-brand-200 -->
+  <!--                 flex flex-col items-center justify-center gap-1"> -->
+  <!--       <span class="text-brand-900 text-xs font-bold">200</span> -->
+  <!--       <span class="text-brand-800 text-[10px]">#f5d0fe</span> -->
+  <!--     </div> -->
+  <!--  -->
+  <!--     <div class="flex-1 min-w-[80px] h-16 rounded-xl bg-brand-300 -->
+  <!--                 flex flex-col items-center justify-center gap-1"> -->
+  <!--       <span class="text-brand-900 text-xs font-bold">300</span> -->
+  <!--       <span class="text-brand-800 text-[10px]">#f0abfc</span> -->
+  <!--     </div> -->
+  <!--  -->
+  <!--     <div class="flex-1 min-w-[80px] h-16 rounded-xl bg-brand-400 -->
+  <!--                 flex flex-col items-center justify-center gap-1"> -->
+  <!--       <span class="text-brand-950 text-xs font-bold">400</span> -->
+  <!--       <span class="text-brand-900 text-[10px]">#e879f9</span> -->
+  <!--     </div> -->
+  <!--  -->
+  <!--     <!-- Tono 500 — el color base: usa texto blanco --> -->
+  <!--     <div class="flex-1 min-w-[80px] h-16 rounded-xl bg-brand-500 ring-2 ring-white/40 -->
+  <!--                 flex flex-col items-center justify-center gap-1"> -->
+  <!--       <span class="text-white text-xs font-bold">500 ★</span> -->
+  <!--       <span class="text-brand-100 text-[10px]">#d946ef</span> -->
+  <!--     </div> -->
+  <!--  -->
+  <!--     <div class="flex-1 min-w-[80px] h-16 rounded-xl bg-brand-600 -->
+  <!--                 flex flex-col items-center justify-center gap-1"> -->
+  <!--       <span class="text-white text-xs font-bold">600</span> -->
+  <!--       <span class="text-brand-200 text-[10px]">#c026d3</span> -->
+  <!--     </div> -->
+  <!--  -->
+  <!--     <div class="flex-1 min-w-[80px] h-16 rounded-xl bg-brand-700 -->
+  <!--                 flex flex-col items-center justify-center gap-1"> -->
+  <!--       <span class="text-white text-xs font-bold">700</span> -->
+  <!--       <span class="text-brand-200 text-[10px]">#a21caf</span> -->
+  <!--     </div> -->
+  <!--  -->
+  <!--     <div class="flex-1 min-w-[80px] h-16 rounded-xl bg-brand-800 -->
+  <!--                 flex flex-col items-center justify-center gap-1"> -->
+  <!--       <span class="text-white text-xs font-bold">800</span> -->
+  <!--       <span class="text-brand-300 text-[10px]">#86198f</span> -->
+  <!--     </div> -->
+  <!--  -->
+  <!--     <div class="flex-1 min-w-[80px] h-16 rounded-xl bg-brand-900 -->
+  <!--                 flex flex-col items-center justify-center gap-1"> -->
+  <!--       <span class="text-white text-xs font-bold">900</span> -->
+  <!--       <span class="text-brand-300 text-[10px]">#701a75</span> -->
+  <!--     </div> -->
+  <!--  -->
+  <!--     <div class="flex-1 min-w-[80px] h-16 rounded-xl bg-brand-950 border border-brand-800 -->
+  <!--                 flex flex-col items-center justify-center gap-1"> -->
+  <!--       <span class="text-white text-xs font-bold">950</span> -->
+  <!--       <span class="text-brand-400 text-[10px]">#4a044e</span> -->
+  <!--     </div> -->
+  <!--  -->
+  <!--   </div> -->
+  <!-- </section> -->
+
+
+  <!-- ============================================================ -->
+  <!-- BLOQUE 3: Badge y botones con la paleta brand                -->
+  <!-- ============================================================ -->
+
+  <!-- Descomenta las siguientes líneas: -->
+
+  <!-- <section class="mb-12 space-y-6"> -->
+  <!--   <h2 class="text-2xl font-bold text-white mb-6">Elementos Interactivos</h2> -->
+  <!--  -->
+  <!--   <!-- Badge: fondo suave + texto de la parte media-alta de la paleta --> -->
+  <!--   <div class="flex flex-wrap gap-3"> -->
+  <!--     <!-- -->
+  <!--       bg-brand-100: fondo muy suave del tono más claro -->
+  <!--       text-brand-700: texto oscuro pero aún con el color de marca -->
+  <!--       Este patrón crea badges "soft" muy usados en UI modernas -->
+  <!--     --> -->
+  <!--     <span class="bg-brand-100 text-brand-700 px-3 py-1 rounded-full text-sm font-medium"> -->
+  <!--       Nuevo -->
+  <!--     </span> -->
+  <!--     <span class="bg-brand-500 text-white px-3 py-1 rounded-full text-sm font-medium"> -->
+  <!--       Destacado -->
+  <!--     </span> -->
+  <!--     <span class="border border-brand-400 text-brand-400 px-3 py-1 rounded-full text-sm font-medium"> -->
+  <!--       Beta -->
+  <!--     </span> -->
+  <!--   </div> -->
+  <!--  -->
+  <!--   <!-- Botones: variantes usando la escala de colores --> -->
+  <!--   <div class="flex flex-wrap gap-3"> -->
+  <!--     <!-- -->
+  <!--       Botón primario: bg-500 → hover bg-600 → active bg-700 -->
+  <!--       Cada estado usa un tono más oscuro de la misma paleta -->
+  <!--       focus:ring-brand-500/40 — ring semi-transparente del color de marca -->
+  <!--     --> -->
+  <!--     <button class="bg-brand-500 hover:bg-brand-600 active:bg-brand-700 -->
+  <!--                    text-white px-5 py-2.5 rounded-lg font-medium text-sm -->
+  <!--                    focus:outline-none focus:ring-2 focus:ring-brand-500/40 -->
+  <!--                    transition-colors"> -->
+  <!--       Botón Primario -->
+  <!--     </button> -->
+  <!--  -->
+  <!--     <!-- Botón outline: borde + texto de la paleta, fondo suave en hover --> -->
+  <!--     <button class="border border-brand-400 text-brand-400 px-5 py-2.5 rounded-lg font-medium text-sm -->
+  <!--                    hover:bg-brand-950 hover:text-brand-300 hover:border-brand-500 -->
+  <!--                    focus:outline-none focus:ring-2 focus:ring-brand-500/40 -->
+  <!--                    transition-colors"> -->
+  <!--       Botón Outline -->
+  <!--     </button> -->
+  <!--  -->
+  <!--     <!-- Botón ghost: sin borde, solo texto visible --> -->
+  <!--     <button class="text-brand-400 px-5 py-2.5 rounded-lg font-medium text-sm -->
+  <!--                    hover:bg-brand-950 hover:text-brand-300 -->
+  <!--                    focus:outline-none focus:ring-2 focus:ring-brand-500/40 -->
+  <!--                    transition-colors"> -->
+  <!--       Botón Ghost -->
+  <!--     </button> -->
+  <!--   </div> -->
+  <!-- </section> -->
+
+
+  <!-- ============================================================ -->
+  <!-- BLOQUE 4: Card de producto con la paleta brand completa      -->
+  <!-- ============================================================ -->
+
+  <!-- Descomenta las siguientes líneas: -->
+
+  <!-- <section> -->
+  <!--   <h2 class="text-2xl font-bold text-white mb-6">Card de Producto</h2> -->
+  <!--  -->
+  <!--   <!-- -->
+  <!--     Card completa — usa SOLO brand-* y grises neutros -->
+  <!--     Objetivo: que toda la identidad visual venga de la paleta definida -->
+  <!--     Restricción: no usar ningún color default de Tailwind (sky, blue, etc.) -->
+  <!--   --> -->
+  <!--   <div class="max-w-sm rounded-2xl overflow-hidden border border-brand-800 bg-brand-950"> -->
+  <!--  -->
+  <!--     <!-- Header de la card: gradiente suave de la paleta --> -->
+  <!--     <div class="relative bg-gradient-to-br from-brand-900 to-brand-800 p-6"> -->
+  <!--       <!-- Tag sobre imagen --> -->
+  <!--       <span class="absolute top-4 right-4 bg-brand-500 text-white text-xs font-bold -->
+  <!--                    px-2.5 py-1 rounded-full"> -->
+  <!--         NUEVO -->
+  <!--       </span> -->
+  <!--       <!-- Placeholder de imagen --> -->
+  <!--       <div class="h-32 flex items-center justify-center"> -->
+  <!--         <div class="w-20 h-20 rounded-2xl bg-brand-700/50 border border-brand-600 -->
+  <!--                     flex items-center justify-center"> -->
+  <!--           <span class="text-brand-300 text-4xl">✦</span> -->
+  <!--         </div> -->
+  <!--       </div> -->
+  <!--     </div> -->
+  <!--  -->
+  <!--     <!-- Cuerpo: nombre, descripción, precio --> -->
+  <!--     <div class="p-6 space-y-4"> -->
+  <!--       <!-- Badge de categoría --> -->
+  <!--       <span class="bg-brand-100 text-brand-700 text-xs font-medium px-2.5 py-1 rounded-full"> -->
+  <!--         Diseño UI -->
+  <!--       </span> -->
+  <!--  -->
+  <!--       <h3 class="text-white font-bold text-xl leading-snug"> -->
+  <!--         Curso de TailwindCSS -->
+  <!--       </h3> -->
+  <!--  -->
+  <!--       <p class="text-brand-300 text-sm leading-relaxed"> -->
+  <!--         Aprende a construir interfaces modernas de nivel profesional -->
+  <!--         con el framework CSS más popular de 2024. -->
+  <!--       </p> -->
+  <!--  -->
+  <!--       <!-- Precio: usa el tono 400 para resaltar en fondo oscuro --> -->
+  <!--       <div class="flex items-baseline gap-2"> -->
+  <!--         <span class="text-brand-400 text-2xl font-bold">$49</span> -->
+  <!--         <span class="text-brand-700 text-sm line-through">$120</span> -->
+  <!--         <span class="text-brand-400 text-sm font-medium">60% off</span> -->
+  <!--       </div> -->
+  <!--     </div> -->
+  <!--  -->
+  <!--     <!-- Footer: botón CTA --> -->
+  <!--     <div class="px-6 pb-6"> -->
+  <!--       <button class="w-full bg-brand-500 hover:bg-brand-600 active:bg-brand-700 -->
+  <!--                      text-white py-3 rounded-xl font-semibold text-sm -->
+  <!--                      focus:outline-none focus:ring-2 focus:ring-brand-500/40 focus:ring-offset-2 -->
+  <!--                      focus:ring-offset-brand-950 transition-colors"> -->
+  <!--         Comprar ahora -->
+  <!--       </button> -->
+  <!--     </div> -->
+  <!--   </div> -->
+  <!-- </section> -->
+
+
+</body>
+
+</html>

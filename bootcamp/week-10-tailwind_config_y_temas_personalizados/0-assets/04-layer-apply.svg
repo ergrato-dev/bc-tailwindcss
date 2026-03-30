@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 480" width="860" height="480">
+  <defs>
+    <style>
+      text { font-family: Inter, system-ui, sans-serif; }
+      .mono { font-family: 'JetBrains Mono', 'Fira Code', monospace; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="860" height="480" fill="#030712" rx="12"/>
+
+  <!-- Title -->
+  <text x="430" y="36" text-anchor="middle" fill="#F9FAFB" font-size="16" font-weight="700">
+    @layer base · @layer components · @layer utilities
+  </text>
+
+  <!-- Subtitle: specificity direction -->
+  <text x="430" y="56" text-anchor="middle" fill="#6B7280" font-size="11">
+    ← menor especificidad   Las capas se apilan de abajo a arriba   mayor especificidad →
+  </text>
+
+  <!-- ============================= -->
+  <!-- LAYER BASE (bottom)           -->
+  <!-- ============================= -->
+  <g transform="translate(28, 78)">
+    <rect width="804" height="80" rx="8" fill="#1C1917" stroke="#44403C" stroke-width="1.5"/>
+
+    <!-- Layer badge -->
+    <rect x="12" y="12" width="120" height="22" rx="4" fill="#44403C"/>
+    <text x="72" y="28" text-anchor="middle" fill="#D6D3D1" font-size="10" font-weight="700">@layer base</text>
+
+    <!-- Specificity badge -->
+    <rect x="144" y="12" width="140" height="22" rx="4" fill="#1C1917" stroke="#44403C" stroke-width="1"/>
+    <text x="214" y="28" text-anchor="middle" fill="#78716C" font-size="9">especificidad: baja</text>
+
+    <!-- Code snippet -->
+    <text x="12" y="54" fill="#9CA3AF" font-size="9" class="mono">@layer base &#123;</text>
+    <text x="28" y="68" fill="#78716C" font-size="9" class="mono">*, *::before, *::after &#123; box-sizing: border-box; &#125;</text>
+    <text x="12" y="68" dx="360" fill="#78716C" font-size="9" class="mono">/* reset, :focus-visible, html &#123; font-size &#125; */</text>
+
+    <!-- Label right -->
+    <text x="792" y="45" text-anchor="end" fill="#44403C" font-size="9">Estilos</text>
+    <text x="792" y="58" text-anchor="end" fill="#44403C" font-size="9">globales</text>
+
+    <!-- Arrow up to indicate stack bottom -->
+    <text x="792" y="76" text-anchor="end" fill="#44403C" font-size="9">↑ capa 1</text>
+  </g>
+
+  <!-- ============================= -->
+  <!-- LAYER COMPONENTS (middle)     -->
+  <!-- ============================= -->
+  <g transform="translate(28, 172)">
+    <rect width="804" height="120" rx="8" fill="#0F2027" stroke="#0C4A6E" stroke-width="1.5"/>
+
+    <!-- Layer badge -->
+    <rect x="12" y="12" width="160" height="22" rx="4" fill="#0C4A6E"/>
+    <text x="92" y="28" text-anchor="middle" fill="#BAE6FD" font-size="10" font-weight="700">@layer components</text>
+
+    <!-- Specificity badge -->
+    <rect x="184" y="12" width="160" height="22" rx="4" fill="#0F2027" stroke="#0C4A6E" stroke-width="1"/>
+    <text x="264" y="28" text-anchor="middle" fill="#38BDF8" font-size="9">especificidad: media</text>
+
+    <!-- apply badge -->
+    <rect x="560" y="12" width="232" height="22" rx="4" fill="#034F6F"/>
+    <text x="676" y="28" text-anchor="middle" fill="#7DD3FC" font-size="9" font-weight="600">✅ @apply se recomienda AQUÍ</text>
+
+    <!-- Code -->
+    <text x="12" y="54" fill="#38BDF8" font-size="9" class="mono">@layer components &#123;</text>
+
+    <text x="28" y="70" fill="#7DD3FC" font-size="9" class="mono">.btn-brand &#123;</text>
+    <text x="44" y="84" fill="#93C5FD" font-size="9" class="mono">@apply px-6 py-3 rounded-xl font-semibold bg-brand-500 text-white</text>
+    <text x="44" y="98" fill="#93C5FD" font-size="9" class="mono">       hover:bg-brand-600 focus:ring-2 transition-colors;</text>
+    <text x="28" y="112" fill="#7DD3FC" font-size="9" class="mono">&#125;</text>
+
+    <text x="12" y="112" dx="240" fill="#38BDF8" font-size="9" class="mono">&#125;</text>
+
+    <!-- Label -->
+    <text x="792" y="72" text-anchor="end" fill="#0C4A6E" font-size="9">Clases</text>
+    <text x="792" y="85" text-anchor="end" fill="#0C4A6E" font-size="9">reutilizables</text>
+    <text x="792" y="108" text-anchor="end" fill="#0C4A6E" font-size="9">↑ capa 2</text>
+  </g>
+
+  <!-- ============================= -->
+  <!-- LAYER UTILITIES (top)         -->
+  <!-- ============================= -->
+  <g transform="translate(28, 306)">
+    <rect width="804" height="120" rx="8" fill="#1A0533" stroke="#6B21A8" stroke-width="1.5"/>
+
+    <!-- Layer badge -->
+    <rect x="12" y="12" width="150" height="22" rx="4" fill="#581C87"/>
+    <text x="87" y="28" text-anchor="middle" fill="#E9D5FF" font-size="10" font-weight="700">@layer utilities</text>
+
+    <!-- Specificity badge -->
+    <rect x="174" y="12" width="170" height="22" rx="4" fill="#1A0533" stroke="#581C87" stroke-width="1"/>
+    <text x="259" y="28" text-anchor="middle" fill="#A855F7" font-size="9">especificidad: alta (gana a components)</text>
+
+    <!-- warning badge -->
+    <rect x="560" y="12" width="232" height="22" rx="4" fill="#3B0764"/>
+    <text x="676" y="28" text-anchor="middle" fill="#C084FC" font-size="9" font-weight="600">⚠️ @apply evitar aquí — usa propiedades CSS</text>
+
+    <!-- Code -->
+    <text x="12" y="54" fill="#A855F7" font-size="9" class="mono">@layer utilities &#123;</text>
+
+    <text x="28" y="70" fill="#C084FC" font-size="9" class="mono">.text-gradient-brand &#123;</text>
+    <text x="44" y="84" fill="#DDD6FE" font-size="9" class="mono">background-image: linear-gradient(135deg, #d946ef, #f97316);</text>
+    <text x="44" y="98" fill="#DDD6FE" font-size="9" class="mono">background-clip: text; color: transparent;</text>
+    <text x="28" y="112" fill="#C084FC" font-size="9" class="mono">&#125;</text>
+
+    <text x="12" y="112" dx="240" fill="#A855F7" font-size="9" class="mono">&#125;</text>
+
+    <!-- Label -->
+    <text x="792" y="72" text-anchor="end" fill="#4B2080" font-size="9">Utilidades</text>
+    <text x="792" y="85" text-anchor="end" fill="#4B2080" font-size="9">custom</text>
+    <text x="792" y="108" text-anchor="end" fill="#4B2080" font-size="9">↑ capa 3</text>
+  </g>
+
+  <!-- ============================= -->
+  <!-- BOTTOM NOTE                   -->
+  <!-- ============================= -->
+  <g transform="translate(28, 440)">
+    <rect width="804" height="30" rx="6" fill="#111827" stroke="#374151" stroke-width="1"/>
+    <text x="404" y="20" text-anchor="middle" fill="#9CA3AF" font-size="10">
+      Regla práctica: Si el HTML lo controlas tú → pon las clases directamente. Solo usa @apply para librerías o clases muy repetidas.
+    </text>
+  </g>
+
+</svg>
