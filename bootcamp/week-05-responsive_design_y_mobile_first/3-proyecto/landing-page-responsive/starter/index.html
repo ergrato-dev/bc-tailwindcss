@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<!--
+  Proyecto Semana 5: Landing Page Responsive
+  Implementa todos los TODO usando SOLO clases TailwindCSS
+  Verifica en: 375px (mobile), 768px (tablet), 1280px (desktop)
+-->
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page Responsive — Semana 5</title>
+  </head>
+  <body class="bg-white font-sans text-gray-900 antialiased">
+
+    <!-- ========================================== -->
+    <!-- NAVBAR                                     -->
+    <!-- ========================================== -->
+    <!-- TODO: sticky top-0 z-50 border-b border-gray-100  -->
+    <!-- TODO: bg-white/80 backdrop-blur-md          -->
+    <input type="checkbox" id="nav-toggle" class="peer sr-only" />
+    <header class="???">
+
+      <!-- TODO: nav container con max-w-7xl + flex + justify-between -->
+      <nav class="???  px-4 sm:px-6 py-4">
+
+        <!-- Logo -->
+        <!-- TODO: text-xl font-black text-gray-900 -->
+        <a href="/" class="???">Acme</a>
+
+        <!-- Nav links — TODO: hidden md:flex gap-8 -->
+        <ul class="???">
+          <li><a href="#features" class="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Características</a></li>
+          <li><a href="#testimonial" class="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Testimonios</a></li>
+          <li><a href="#pricing" class="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Precios</a></li>
+        </ul>
+
+        <!-- CTA desktop — TODO: hidden md:flex items-center gap-3 -->
+        <div class="???">
+          <a href="#" class="text-sm font-medium text-gray-600 hover:text-gray-900">Ingresar</a>
+          <!-- TODO: rounded-lg bg-sky-500 px-4 py-2 text-sm font-semibold text-white hover:bg-sky-600 transition-colors -->
+          <a href="#" class="???">Prueba gratis</a>
+        </div>
+
+        <!-- Hamburger — TODO: block md:hidden -->
+        <label for="nav-toggle" class="???  cursor-pointer rounded-lg p-2 text-gray-600 hover:bg-gray-100 transition-colors" aria-label="Toggle menú">
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </label>
+      </nav>
+
+      <!-- Mobile menu — TODO: hidden peer-checked:block border-t border-gray-100 md:hidden -->
+      <div class="???">
+        <ul class="space-y-1 px-4 py-3">
+          <li><a href="#features" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50">Características</a></li>
+          <li><a href="#testimonial" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50">Testimonios</a></li>
+          <li><a href="#pricing" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50">Precios</a></li>
+        </ul>
+        <div class="border-t border-gray-100 px-4 py-3">
+          <a href="#" class="block w-full rounded-lg bg-sky-500 py-2.5 text-center text-sm font-semibold text-white">Prueba gratis</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ========================================== -->
+    <!-- HERO                                       -->
+    <!-- ========================================== -->
+    <!-- TODO: contenedor con py-16 md:py-24 lg:py-32 -->
+    <!-- TODO: flex flex-col md:flex-row items-center gap-12 -->
+    <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8  ???">
+
+      <!-- Texto hero -->
+      <!-- TODO: w-full md:w-1/2 text-center md:text-left -->
+      <div class="???">
+        <span class="inline-block rounded-full bg-sky-100 px-3 py-1 text-xs font-semibold text-sky-700">
+          Nuevo — v2.0 disponible
+        </span>
+        <!-- TODO: text-3xl sm:text-5xl lg:text-7xl font-black leading-tight mt-4 -->
+        <h1 class="???">
+          Diseña más rápido.<br/>Lanza más lejos.
+        </h1>
+        <!-- TODO: mt-6 text-lg text-gray-600 max-w-md mx-auto md:mx-0 -->
+        <p class="???">
+          La plataforma que te permite construir productos digitales increíbles sin fricciones.
+        </p>
+        <!-- TODO: mt-8 flex flex-col sm:flex-row gap-3 justify-center md:justify-start -->
+        <div class="???">
+          <a href="#" class="rounded-lg bg-sky-500 px-6 py-3 text-center font-semibold text-white hover:bg-sky-600 transition-colors">
+            Comenzar gratis
+          </a>
+          <a href="#" class="rounded-lg border border-gray-200 px-6 py-3 text-center font-semibold text-gray-700 hover:bg-gray-50 transition-colors">
+            Ver demo →
+          </a>
+        </div>
+      </div>
+
+      <!-- Imagen hero -->
+      <!-- TODO: w-full md:w-1/2 -->
+      <div class="???">
+        <!-- TODO: aspect-video w-full rounded-2xl overflow-hidden -->
+        <div class="???  bg-gradient-to-br from-sky-400 via-blue-500 to-violet-600 shadow-2xl shadow-sky-500/20"></div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- FEATURES                                   -->
+    <!-- ========================================== -->
+    <section id="features" class="bg-gray-50 py-16 md:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <!-- TODO: text-center mb-12 -->
+        <div class="???">
+          <!-- TODO: text-3xl md:text-4xl font-black -->
+          <h2 class="???">Todo lo que necesitas</h2>
+          <!-- TODO: mt-4 text-lg text-gray-600 max-w-2xl mx-auto -->
+          <p class="???">Herramientas poderosas diseñadas para equipos modernos.</p>
+        </div>
+
+        <!-- TODO: grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 -->
+        <div class="???">
+
+          <!-- Feature card — repite el patrón para los 6 features -->
+          <!-- TODO: rounded-2xl bg-white p-6 shadow-sm hover:shadow-md transition-shadow -->
+          <div class="???">
+            <div class="h-12 w-12 rounded-xl bg-sky-100 flex items-center justify-center text-2xl mb-4">⚡</div>
+            <!-- TODO: font-bold text-gray-900 text-lg -->
+            <h3 class="???">Ultra rápido</h3>
+            <!-- TODO: mt-2 text-gray-600 text-sm leading-relaxed -->
+            <p class="???">Velocidades de carga que sorprenden a tus usuarios desde el primer segundo.</p>
+          </div>
+
+          <div class="rounded-2xl bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
+            <div class="h-12 w-12 rounded-xl bg-emerald-100 flex items-center justify-center text-2xl mb-4">🔒</div>
+            <h3 class="font-bold text-gray-900 text-lg">Seguro</h3>
+            <p class="mt-2 text-gray-600 text-sm leading-relaxed">Cifrado de extremo a extremo en todas tus operaciones.</p>
+          </div>
+
+          <div class="rounded-2xl bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
+            <div class="h-12 w-12 rounded-xl bg-violet-100 flex items-center justify-center text-2xl mb-4">📊</div>
+            <h3 class="font-bold text-gray-900 text-lg">Analytics</h3>
+            <p class="mt-2 text-gray-600 text-sm leading-relaxed">Métricas en tiempo real para decisiones basadas en datos.</p>
+          </div>
+
+          <div class="rounded-2xl bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
+            <div class="h-12 w-12 rounded-xl bg-amber-100 flex items-center justify-center text-2xl mb-4">🎯</div>
+            <h3 class="font-bold text-gray-900 text-lg">Enfocado</h3>
+            <p class="mt-2 text-gray-600 text-sm leading-relaxed">Interfaz limpia diseñada para maximizar tu productividad.</p>
+          </div>
+
+          <div class="rounded-2xl bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
+            <div class="h-12 w-12 rounded-xl bg-rose-100 flex items-center justify-center text-2xl mb-4">💡</div>
+            <h3 class="font-bold text-gray-900 text-lg">Inteligente</h3>
+            <p class="mt-2 text-gray-600 text-sm leading-relaxed">IA integrada que aprende de tus patrones de trabajo.</p>
+          </div>
+
+          <div class="rounded-2xl bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
+            <div class="h-12 w-12 rounded-xl bg-teal-100 flex items-center justify-center text-2xl mb-4">🚀</div>
+            <h3 class="font-bold text-gray-900 text-lg">Escalable</h3>
+            <p class="mt-2 text-gray-600 text-sm leading-relaxed">Crece desde un usuario hasta millones sin cambiar stack.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TESTIMONIAL                                -->
+    <!-- ========================================== -->
+    <section id="testimonial" class="py-16 md:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <!-- TODO: max-w-2xl mx-auto text-center -->
+        <blockquote class="???">
+          <p class="text-xl md:text-2xl font-medium text-gray-900 leading-relaxed">
+            "Acme redujo nuestro tiempo de lanzamiento en un 60%. El equipo no puede imaginar trabajar sin él."
+          </p>
+          <footer class="mt-6 flex items-center justify-center gap-3">
+            <div class="h-10 w-10 rounded-full bg-sky-300 overflow-hidden"></div>
+            <div class="text-left">
+              <p class="text-sm font-semibold text-gray-900">María Pérez</p>
+              <p class="text-xs text-gray-500">CTO en TechStartup</p>
+            </div>
+          </footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- FOOTER                                     -->
+    <!-- ========================================== -->
+    <!-- TODO: border-t border-gray-100 bg-white py-12 md:py-16 -->
+    <footer class="???">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <!-- TODO: grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10 -->
+        <div class="???">
+
+          <!-- Brand column -->
+          <div>
+            <p class="text-xl font-black text-gray-900">Acme</p>
+            <p class="mt-2 text-sm text-gray-500 leading-relaxed">
+              La plataforma para equipos que quieren construir sin límites.
+            </p>
+          </div>
+
+          <!-- Links column 1 -->
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-wider text-gray-400">Producto</p>
+            <ul class="mt-4 space-y-2">
+              <li><a href="#" class="text-sm text-gray-600 hover:text-gray-900 transition-colors">Características</a></li>
+              <li><a href="#" class="text-sm text-gray-600 hover:text-gray-900 transition-colors">Precios</a></li>
+              <li><a href="#" class="text-sm text-gray-600 hover:text-gray-900 transition-colors">Changelog</a></li>
+              <li><a href="#" class="text-sm text-gray-600 hover:text-gray-900 transition-colors">Docs</a></li>
+            </ul>
+          </div>
+
+          <!-- Links column 2 -->
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-wider text-gray-400">Empresa</p>
+            <ul class="mt-4 space-y-2">
+              <li><a href="#" class="text-sm text-gray-600 hover:text-gray-900 transition-colors">Nosotros</a></li>
+              <li><a href="#" class="text-sm text-gray-600 hover:text-gray-900 transition-colors">Blog</a></li>
+              <li><a href="#" class="text-sm text-gray-600 hover:text-gray-900 transition-colors">Prensa</a></li>
+            </ul>
+          </div>
+
+          <!-- Links column 3 -->
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-wider text-gray-400">Legal</p>
+            <ul class="mt-4 space-y-2">
+              <li><a href="#" class="text-sm text-gray-600 hover:text-gray-900 transition-colors">Privacidad</a></li>
+              <li><a href="#" class="text-sm text-gray-600 hover:text-gray-900 transition-colors">Términos</a></li>
+              <li><a href="#" class="text-sm text-gray-600 hover:text-gray-900 transition-colors">Cookies</a></li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Copyright -->
+        <!-- TODO: border-t border-gray-100 pt-6 text-center text-sm text-gray-400 -->
+        <div class="???">
+          © 2025 Acme, Inc. Todos los derechos reservados.
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

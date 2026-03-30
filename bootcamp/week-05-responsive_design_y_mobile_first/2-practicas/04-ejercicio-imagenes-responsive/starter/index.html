@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 04 — Imágenes Responsive</title>
+  </head>
+  <body class="min-h-screen bg-gray-50 font-sans p-4 sm:p-8">
+    <h1 class="mb-8 text-2xl font-bold text-gray-900">Imágenes Responsive</h1>
+
+
+    <!-- ============================================ -->
+    <!-- BLOQUE 1: Imagen hero responsive             -->
+    <!-- ============================================ -->
+    <!-- Descomenta las siguientes líneas:            -->
+
+    <!-- <section class="mb-12 flex flex-col md:flex-row gap-8 items-center bg-white rounded-2xl p-6 shadow-sm">  -->
+    <!--   <div class="w-full md:w-1/2">                                                                           -->
+    <!--     <h2 class="text-2xl font-bold">Imagen Hero</h2>                                                     -->
+    <!--     <p class="mt-2 text-gray-600">Full-width en mobile, mitad en desktop. object-cover mantiene proporciones.</p> -->
+    <!--   </div>                                                                                                   -->
+    <!--   Usa un div de color para simular imagen                                                                 -->
+    <!--   <div class="w-full md:w-1/2 aspect-video rounded-xl overflow-hidden">                                  -->
+    <!--     <div class="w-full h-full bg-gradient-to-br from-sky-400 to-violet-500 object-cover"></div>          -->
+    <!--   </div>                                                                                                   -->
+    <!-- </section>                                                                                                 -->
+
+
+    <!-- ============================================ -->
+    <!-- BLOQUE 2: Galería grid responsive            -->
+    <!-- ============================================ -->
+    <!-- Descomenta:                                  -->
+
+    <!-- <section class="mb-12">                                                                                    -->
+    <!--   <h2 class="mb-4 text-lg font-semibold text-gray-700">Galería 1→2→3 columnas</h2>                      -->
+    <!--   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">                                     -->
+    <!--     <div class="aspect-square overflow-hidden rounded-xl bg-sky-300"></div>                              -->
+    <!--     <div class="aspect-square overflow-hidden rounded-xl bg-violet-300"></div>                           -->
+    <!--     <div class="aspect-square overflow-hidden rounded-xl bg-emerald-300"></div>                          -->
+    <!--     <div class="aspect-square overflow-hidden rounded-xl bg-amber-300"></div>                            -->
+    <!--     <div class="aspect-square overflow-hidden rounded-xl bg-rose-300"></div>                             -->
+    <!--     <div class="aspect-square overflow-hidden rounded-xl bg-teal-300"></div>                             -->
+    <!--   </div>                                                                                                   -->
+    <!-- </section>                                                                                                 -->
+
+
+    <!-- ============================================ -->
+    <!-- BLOQUE 3: Cards con imagen object-cover      -->
+    <!-- ============================================ -->
+    <!-- Descomenta:                                  -->
+
+    <!-- <section class="mb-12">                                                                                    -->
+    <!--   <h2 class="mb-4 text-lg font-semibold text-gray-700">Cards con imagen — altura consistente</h2>       -->
+    <!--   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">                                     -->
+    <!--     <article class="overflow-hidden rounded-2xl bg-white shadow-sm">                                     -->
+    <!--       Altura fija de imagen — object-cover recorta sin deformar                                          -->
+    <!--       <div class="h-40 sm:h-48 overflow-hidden">                                                        -->
+    <!--         <div class="h-full w-full bg-gradient-to-br from-sky-400 to-blue-600"></div>                    -->
+    <!--       </div>                                                                                              -->
+    <!--       <div class="p-4">                                                                                   -->
+    <!--         <h3 class="font-semibold">Artículo 1</h3>                                                        -->
+    <!--         <p class="mt-1 text-sm text-gray-500 line-clamp-2">Contenido del artículo con texto de ejemplo.</p> -->
+    <!--       </div>                                                                                              -->
+    <!--     </article>                                                                                            -->
+    <!--     <article class="overflow-hidden rounded-2xl bg-white shadow-sm">                                     -->
+    <!--       <div class="h-40 sm:h-48 overflow-hidden">                                                        -->
+    <!--         <div class="h-full w-full bg-gradient-to-br from-violet-400 to-purple-600"></div>               -->
+    <!--       </div>                                                                                              -->
+    <!--       <div class="p-4">                                                                                   -->
+    <!--         <h3 class="font-semibold">Artículo 2</h3>                                                        -->
+    <!--         <p class="mt-1 text-sm text-gray-500 line-clamp-2">Otro artículo con descripción breve.</p>     -->
+    <!--       </div>                                                                                              -->
+    <!--     </article>                                                                                            -->
+    <!--     <article class="overflow-hidden rounded-2xl bg-white shadow-sm sm:col-span-2 lg:col-span-1">        -->
+    <!--       <div class="h-40 sm:h-48 overflow-hidden">                                                        -->
+    <!--         <div class="h-full w-full bg-gradient-to-br from-emerald-400 to-teal-600"></div>                -->
+    <!--       </div>                                                                                              -->
+    <!--       <div class="p-4">                                                                                   -->
+    <!--         <h3 class="font-semibold">Artículo 3</h3>                                                        -->
+    <!--         <p class="mt-1 text-sm text-gray-500 line-clamp-2">Un tercer artículo con más contenido.</p>    -->
+    <!--       </div>                                                                                              -->
+    <!--     </article>                                                                                            -->
+    <!--   </div>                                                                                                  -->
+    <!-- </section>                                                                                                 -->
+
+
+    <!-- ============================================ -->
+    <!-- BLOQUE 4: Avatares escalables                -->
+    <!-- ============================================ -->
+    <!-- Descomenta:                                  -->
+
+    <!-- <section class="mb-12 rounded-2xl bg-white p-6 shadow-sm">                                               -->
+    <!--   <h2 class="mb-4 text-lg font-semibold text-gray-700">Avatares y media escalables</h2>                 -->
+    <!--   <div class="flex items-center gap-4">                                                                   -->
+    <!--     Tamaño base en mobile, más grande en desktop                                                         -->
+    <!--     <div class="h-10 w-10 sm:h-12 sm:w-12 md:h-16 md:w-16 rounded-full overflow-hidden shrink-0">       -->
+    <!--       <div class="h-full w-full bg-sky-400"></div>                                                       -->
+    <!--     </div>                                                                                               -->
+    <!--     <div class="min-w-0">                                                                                 -->
+    <!--       <p class="font-semibold text-gray-900 text-sm sm:text-base truncate">Ana García Rodríguez</p>     -->
+    <!--       <p class="text-xs sm:text-sm text-gray-500">Diseñadora Senior · Madrid</p>                        -->
+    <!--     </div>                                                                                               -->
+    <!--   </div>                                                                                                  -->
+    <!-- </section>                                                                                                 -->
+
+  </body>
+</html>

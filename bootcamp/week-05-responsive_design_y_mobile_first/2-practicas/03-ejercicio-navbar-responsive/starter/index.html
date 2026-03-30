@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 03 — Navbar Responsive</title>
+  </head>
+  <body class="font-sans text-gray-900">
+
+    <!-- Contenido de relleno para probar scroll -->
+    <div class="h-8 bg-sky-500 text-center text-sm text-white flex items-center justify-center">
+      Barra de anuncio — redimensiona para ver el navbar responsive
+    </div>
+
+
+    <!-- ============================================ -->
+    <!-- BLOQUE 1: Navbar base                        -->
+    <!-- ============================================ -->
+    <!-- Descomenta las siguientes líneas:            -->
+
+    <!-- <header class="border-b border-gray-100 bg-white">                                                        -->
+    <!--   <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 py-4">                    -->
+    <!--                                                                                                            -->
+    <!--     Logo                                                                                                   -->
+    <!--     <a href="/" class="text-xl font-black text-gray-900">Brand</a>                                       -->
+    <!--                                                                                                            -->
+    <!--     Links — ocultos en mobile, visibles en md+                                                            -->
+    <!--     <ul class="hidden md:flex items-center gap-8">                                                        -->
+    <!--       <li><a href="#" class="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Producto</a></li> -->
+    <!--       <li><a href="#" class="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Precios</a></li> -->
+    <!--       <li><a href="#" class="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Blog</a></li>    -->
+    <!--       <li><a href="#" class="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Empresa</a></li> -->
+    <!--     </ul>                                                                                                  -->
+    <!--                                                                                                            -->
+    <!--     CTA oculto en mobile                                                                                  -->
+    <!--     <div class="hidden md:flex items-center gap-3">                                                       -->
+    <!--       <a href="#" class="text-sm font-medium text-gray-600 hover:text-gray-900">Ingresar</a>             -->
+    <!--       <a href="#" class="rounded-lg bg-sky-500 px-4 py-2 text-sm font-semibold text-white hover:bg-sky-600 transition-colors">Prueba gratis</a> -->
+    <!--     </div>                                                                                                 -->
+    <!--                                                                                                            -->
+    <!--   </nav>                                                                                                   -->
+    <!-- </header>                                                                                                  -->
+
+
+    <!-- ============================================ -->
+    <!-- BLOQUE 2: Hamburger button                   -->
+    <!-- ============================================ -->
+    <!-- Reemplaza la etiqueta </header> del bloque 1 -->
+    <!-- con este contenido DENTRO del <header>:      -->
+    <!-- (descomenta solo si ya tienes el bloque 1)   -->
+
+    <!-- Añade dentro del <nav> antes del cierre </nav>:                                                         -->
+    <!-- <button type="button" class="block md:hidden rounded-lg p-2 text-gray-600                               -->
+    <!--   hover:bg-gray-100 transition-colors" aria-label="Abrir menú">                                         -->
+    <!--   <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">                           -->
+    <!--     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"                               -->
+    <!--       d="M4 6h16M4 12h16M4 18h16"/>                                                                      -->
+    <!--   </svg>                                                                                                  -->
+    <!-- </button>                                                                                                 -->
+
+
+    <!-- ============================================ -->
+    <!-- BLOQUE 3: Checkbox hack — menú mobile        -->
+    <!-- ============================================ -->
+    <!-- Este bloque reemplaza todo el <header> previo -->
+    <!-- con la versión completa usando peer            -->
+
+    <!-- <input type="checkbox" id="nav-toggle" class="peer sr-only" />                                            -->
+    <!-- <header class="border-b border-gray-100 bg-white">                                                        -->
+    <!--   <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 py-4">                    -->
+    <!--     <a href="/" class="text-xl font-black">Brand</a>                                                     -->
+    <!--     <ul class="hidden md:flex items-center gap-8">                                                        -->
+    <!--       <li><a href="#" class="text-sm font-medium text-gray-600 hover:text-gray-900">Producto</a></li>    -->
+    <!--       <li><a href="#" class="text-sm font-medium text-gray-600 hover:text-gray-900">Precios</a></li>     -->
+    <!--       <li><a href="#" class="text-sm font-medium text-gray-600 hover:text-gray-900">Blog</a></li>        -->
+    <!--     </ul>                                                                                                  -->
+    <!--     <a href="#" class="hidden md:inline-flex rounded-lg bg-sky-500 px-4 py-2 text-sm font-semibold text-white hover:bg-sky-600">Prueba gratis</a> -->
+    <!--     <label for="nav-toggle" class="block md:hidden cursor-pointer rounded-lg p-2 text-gray-600 hover:bg-gray-100" aria-label="Toggle menú"> -->
+    <!--       <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">                        -->
+    <!--         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/> -->
+    <!--       </svg>                                                                                               -->
+    <!--     </label>                                                                                              -->
+    <!--   </nav>                                                                                                   -->
+    <!--   Mobile menu — se muestra con peer-checked                                                              -->
+    <!--   <div class="hidden peer-checked:block border-t border-gray-100 md:hidden">                            -->
+    <!--     <ul class="space-y-1 px-4 py-3">                                                                     -->
+    <!--       <li><a href="#" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50">Producto</a></li> -->
+    <!--       <li><a href="#" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50">Precios</a></li>   -->
+    <!--       <li><a href="#" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50">Blog</a></li>      -->
+    <!--     </ul>                                                                                                  -->
+    <!--     <div class="border-t border-gray-100 px-4 py-3">                                                     -->
+    <!--       <a href="#" class="block w-full rounded-lg bg-sky-500 py-2.5 text-center text-sm font-semibold text-white">Prueba gratis</a> -->
+    <!--     </div>                                                                                                 -->
+    <!--   </div>                                                                                                   -->
+    <!-- </header>                                                                                                  -->
+
+
+    <!-- ============================================ -->
+    <!-- BLOQUE 4: Sticky con backdrop blur           -->
+    <!-- ============================================ -->
+    <!-- Modifica la clase del <header> del bloque 3  -->
+    <!-- añadiendo estas clases al <header>:          -->
+    <!-- sticky top-0 z-50 bg-white/80 backdrop-blur-md -->
+    <!-- Y elimina la clase bg-white original          -->
+
+    <!-- Página de relleno para probar scroll -->
+    <main class="mx-auto max-w-7xl px-4 py-20 space-y-32">
+      <section class="h-screen flex items-center justify-center text-center">
+        <div>
+          <h1 class="text-4xl font-black">Sección Principal</h1>
+          <p class="mt-4 text-gray-500">Haz scroll para ver el navbar sticky</p>
+        </div>
+      </section>
+      <section class="h-screen flex items-center justify-center bg-gray-50 rounded-2xl">
+        <p class="text-gray-400">Segunda sección</p>
+      </section>
+    </main>
+
+  </body>
+</html>

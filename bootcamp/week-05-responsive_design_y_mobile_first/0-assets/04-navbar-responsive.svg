@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420">
+  <rect width="800" height="420" fill="#0f172a"/>
+
+  <text x="400" y="36" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="#f1f5f9" text-anchor="middle">Navegación Responsive</text>
+  <text x="400" y="56" font-family="system-ui, sans-serif" font-size="13" fill="#64748b" text-anchor="middle">Navbar que se transforma entre mobile y desktop</text>
+
+  <!-- ─── MOBILE NAVBAR ─── -->
+  <text x="40" y="86" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#94a3b8">Mobile (< 768px)</text>
+  <rect x="40" y="94" width="280" height="52" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <!-- logo -->
+  <text x="60" y="125" font-family="system-ui, sans-serif" font-size="16" font-weight="900" fill="#f1f5f9">Brand</text>
+  <!-- hamburger -->
+  <rect x="280" y="110" width="20" height="2.5" rx="1.5" fill="#94a3b8"/>
+  <rect x="280" y="118" width="20" height="2.5" rx="1.5" fill="#94a3b8"/>
+  <rect x="280" y="126" width="20" height="2.5" rx="1.5" fill="#94a3b8"/>
+  <!-- nav hidden indicator -->
+  <text x="180" y="122" font-family="monospace" font-size="11" fill="#ef4444" text-anchor="middle">links: hidden</text>
+
+  <!-- Mobile expanded menu -->
+  <text x="40" y="170" font-family="system-ui, sans-serif" font-size="11" fill="#64748b">Menú expandido (peer-checked:block)</text>
+  <rect x="40" y="180" width="280" height="130" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <rect x="40" y="180" width="280" height="52" rx="8" fill="#1e2a3a" stroke="#38bdf8" stroke-width="0"/>
+  <text x="60" y="212" font-family="system-ui, sans-serif" font-size="16" font-weight="900" fill="#f1f5f9">Brand</text>
+  <!-- X icon -->
+  <line x1="285" y1="197" x2="303" y2="215" stroke="#94a3b8" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="303" y1="197" x2="285" y2="215" stroke="#94a3b8" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- menu items -->
+  <line x1="40" y1="232" x2="320" y2="232" stroke="#1e3a5f" stroke-width="1"/>
+  <text x="60" y="255" font-family="system-ui, sans-serif" font-size="13" fill="#cbd5e1">Producto</text>
+  <text x="60" y="278" font-family="system-ui, sans-serif" font-size="13" fill="#cbd5e1">Precios</text>
+  <rect x="50" y="292" width="260" height="28" rx="8" fill="#0284c7"/>
+  <text x="180" y="311" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="white" text-anchor="middle">Prueba gratis</text>
+
+  <!-- ─── DESKTOP NAVBAR ─── -->
+  <text x="360" y="86" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#94a3b8">Desktop (≥ 768px)</text>
+  <rect x="360" y="94" width="400" height="52" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <!-- logo -->
+  <text x="380" y="125" font-family="system-ui, sans-serif" font-size="16" font-weight="900" fill="#f1f5f9">Brand</text>
+  <!-- nav links -->
+  <text x="490" y="125" font-family="system-ui, sans-serif" font-size="12" fill="#94a3b8">Producto</text>
+  <text x="560" y="125" font-family="system-ui, sans-serif" font-size="12" fill="#94a3b8">Precios</text>
+  <text x="624" y="125" font-family="system-ui, sans-serif" font-size="12" fill="#94a3b8">Blog</text>
+  <!-- CTA -->
+  <rect x="672" y="108" width="76" height="30" rx="6" fill="#0284c7"/>
+  <text x="710" y="128" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="white" text-anchor="middle">Prueba gratis</text>
+  <!-- hidden burger indicator -->
+  <text x="490" y="165" font-family="monospace" font-size="11" fill="#10b981" text-anchor="middle">md:flex items-center gap-8</text>
+  <text x="690" y="165" font-family="monospace" font-size="10" fill="#ef4444" text-anchor="middle">burger: hidden</text>
+
+  <!-- ─── Annotations ─── -->
+  <rect x="40" y="340" width="720" height="64" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="60" y="362" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#94a3b8">Checkbox Hack — estado sin JavaScript</text>
+  <rect x="60" y="372" width="680" height="22" rx="5" fill="#0f172a"/>
+  <text x="76" y="387" font-family="monospace" font-size="11" fill="#64748b">&lt;input type="checkbox" id="nav-toggle" class="</text>
+  <text x="421" y="387" font-family="monospace" font-size="11" fill="#7dd3fc">peer sr-only</text>
+  <text x="496" y="387" font-family="monospace" font-size="11" fill="#64748b">" /&gt; ·</text>
+  <text x="530" y="387" font-family="monospace" font-size="11" fill="#a78bfa">peer-checked:block</text>
+  <text x="651" y="387" font-family="monospace" font-size="11" fill="#64748b">en el menú</text>
+</svg>
