@@ -1,0 +1,167 @@
+<svg width="900" height="520" viewBox="0 0 900 520" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif">
+  <!-- Background -->
+  <rect width="900" height="520" fill="#030712" rx="16"/>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" fill="#f9fafb" font-size="18" font-weight="700">Cards y Variantes — Product, Blog, User y Stat Cards</text>
+
+  <!-- =============================== -->
+  <!-- PRODUCT CARD (top-left)         -->
+  <!-- =============================== -->
+  <text x="122" y="70" text-anchor="middle" fill="#38bdf8" font-size="10" font-weight="600" letter-spacing="1">PRODUCT CARD</text>
+
+  <rect x="22" y="80" width="200" height="196" rx="12" fill="#1f2937"/>
+  <!-- Image area -->
+  <rect x="22" y="80" width="200" height="100" rx="12" fill="#374151" clip-path="url(#clip-product)"/>
+  <defs>
+    <clipPath id="clip-product"><rect x="22" y="80" width="200" height="100" rx="12"/></clipPath>
+    <clipPath id="clip-blog"><rect x="250" y="80" width="200" height="100" rx="12"/></clipPath>
+  </defs>
+  <!-- Image placeholder gradient -->
+  <rect x="22" y="80" width="200" height="100" fill="#374151"/>
+  <text x="122" y="135" text-anchor="middle" fill="#6b7280" font-size="10">[ imagen ]</text>
+  <!-- group-hover tag -->
+  <rect x="82" y="106" width="80" height="20" rx="5" fill="#0c1a2e" stroke="#1e3a5f" stroke-width="1"/>
+  <text x="122" y="119" text-anchor="middle" fill="#38bdf8" font-size="8" font-family="monospace">group-hover:scale-110</text>
+  <!-- Card content -->
+  <text x="38" y="200" fill="#38bdf8" font-size="9" font-weight="600">ELECTRONICS</text>
+  <rect x="38" y="206" width="140" height="12" rx="2" fill="#374151"/>
+  <text x="38" y="213" fill="#f9fafb" font-size="9" font-weight="600">Product Title truncate</text>
+  <rect x="38" y="222" width="165" height="8" rx="2" fill="#374151" opacity="0.7"/>
+  <rect x="38" y="233" width="110" height="8" rx="2" fill="#374151" opacity="0.7"/>
+  <text x="38" y="256" fill="#f9fafb" font-size="11" font-weight="700">$149</text>
+  <text x="80" y="256" fill="#6b7280" font-size="9" text-decoration="line-through">$199</text>
+  <rect x="158" y="246" width="50" height="18" rx="5" fill="#0ea5e9"/>
+  <text x="183" y="258" text-anchor="middle" fill="#fff" font-size="8" font-weight="600">Añadir</text>
+
+  <!-- Annotation -->
+  <line x1="122" x2="122" y1="276" y2="296" stroke="#374151" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="122" y="306" text-anchor="middle" fill="#6b7280" font-size="8">overflow-hidden en contenedor</text>
+  <text x="122" y="318" text-anchor="middle" fill="#6b7280" font-size="8">truncate en título</text>
+  <text x="122" y="330" text-anchor="middle" fill="#6b7280" font-size="8">line-clamp-2 en descripción</text>
+
+  <!-- =============================== -->
+  <!-- BLOG CARD (top-right top area)  -->
+  <!-- =============================== -->
+  <text x="350" y="70" text-anchor="middle" fill="#a78bfa" font-size="10" font-weight="600" letter-spacing="1">BLOG CARD</text>
+
+  <rect x="250" y="80" width="200" height="210" rx="12" fill="#1f2937"/>
+  <!-- Image placeholder -->
+  <rect x="250" y="80" width="200" height="90" fill="#374151"/>
+  <text x="350" y="130" text-anchor="middle" fill="#6b7280" font-size="10">[ imagen ]</text>
+  <!-- group-hover tag -->
+  <rect x="310" y="106" width="80" height="20" rx="5" fill="#0c1220" stroke="#2d1b69" stroke-width="1"/>
+  <text x="350" y="119" text-anchor="middle" fill="#a78bfa" font-size="8" font-family="monospace">group-hover:scale-105</text>
+  <!-- Content -->
+  <rect x="266" y="182" width="80" height="14" rx="7" fill="#2d1b69"/>
+  <text x="306" y="192" text-anchor="middle" fill="#a78bfa" font-size="8" font-weight="600">AI &amp; Tech</text>
+  <rect x="266" y="202" width="168" height="10" rx="2" fill="#374151"/>
+  <rect x="266" y="215" width="120" height="10" rx="2" fill="#374151"/>
+  <!-- group-hover:text-sky-400 annotation -->
+  <text x="350" y="238" text-anchor="middle" fill="#38bdf8" font-size="8" font-family="monospace">group-hover:text-sky-400</text>
+  <!-- line-clamp-3 area -->
+  <rect x="266" y="244" width="168" height="8" rx="2" fill="#374151" opacity="0.6"/>
+  <rect x="266" y="255" width="140" height="8" rx="2" fill="#374151" opacity="0.6"/>
+  <rect x="266" y="266" width="100" height="8" rx="2" fill="#374151" opacity="0.6"/>
+  <text x="350" y="286" text-anchor="middle" fill="#6b7280" font-size="8">flex-1 → empuja el autor al fondo</text>
+
+  <!-- =============================== -->
+  <!-- USER CARD (bottom-left)         -->
+  <!-- =============================== -->
+  <text x="122" y="350" text-anchor="middle" fill="#6ee7b7" font-size="10" font-weight="600" letter-spacing="1">USER CARD</text>
+
+  <rect x="22" y="360" width="200" height="140" rx="12" fill="#1f2937"/>
+  <!-- Avatar circle -->
+  <circle cx="122" cy="400" r="28" fill="#374151" stroke="#374151" stroke-width="4"/>
+  <circle cx="122" cy="400" r="28" fill="none" stroke="#4b5563" stroke-width="4"/>
+  <text x="122" y="405" text-anchor="middle" fill="#9ca3af" font-size="11" font-weight="700">AG</text>
+  <!-- Online dot -->
+  <circle cx="142" cy="420" r="5" fill="#10b981" stroke="#1f2937" stroke-width="2"/>
+  <!-- ring annotation -->
+  <circle cx="122" cy="400" r="35" fill="none" stroke="#38bdf8" stroke-width="1" stroke-dasharray="3,3" opacity="0.6"/>
+  <text x="177" y="398" fill="#38bdf8" font-size="7" font-family="monospace">group-hover:</text>
+  <text x="177" y="408" fill="#38bdf8" font-size="7" font-family="monospace">ring-sky-500</text>
+  <!-- Name + role -->
+  <text x="122" y="442" text-anchor="middle" fill="#f9fafb" font-size="10" font-weight="700">Ana García</text>
+  <text x="122" y="455" text-anchor="middle" fill="#6b7280" font-size="9">Product Designer</text>
+  <!-- Stats grid -->
+  <rect x="38" y="462" width="168" height="30" rx="6" fill="#111827"/>
+  <text x="80" y="474" text-anchor="middle" fill="#f9fafb" font-size="8" font-weight="700">128</text>
+  <text x="80" y="484" text-anchor="middle" fill="#6b7280" font-size="7">Posts</text>
+  <line x1="112" x2="112" y1="466" y2="488" stroke="#374151" stroke-width="1"/>
+  <text x="122" y="474" text-anchor="middle" fill="#f9fafb" font-size="8" font-weight="700">8.4k</text>
+  <text x="122" y="484" text-anchor="middle" fill="#6b7280" font-size="7">Siguen</text>
+  <line x1="148" x2="148" y1="466" y2="488" stroke="#374151" stroke-width="1"/>
+  <text x="163" y="474" text-anchor="middle" fill="#f9fafb" font-size="8" font-weight="700">312</text>
+  <text x="163" y="484" text-anchor="middle" fill="#6b7280" font-size="7">Sigue</text>
+
+  <!-- =============================== -->
+  <!-- STAT CARDS (bottom-right)       -->
+  <!-- =============================== -->
+  <text x="600" y="350" text-anchor="middle" fill="#fbbf24" font-size="10" font-weight="600" letter-spacing="1">STAT CARDS</text>
+
+  <!-- Stat 1: emerald -->
+  <rect x="468" y="360" width="140" height="80" rx="10" fill="#1f2937"/>
+  <text x="488" y="382" fill="#9ca3af" font-size="8">Ingresos</text>
+  <rect x="568" y="370" width="24" height="24" rx="6" fill="#052e16"/>
+  <text x="580" y="386" text-anchor="middle" fill="#10b981" font-size="10">$</text>
+  <text x="488" y="410" fill="#f9fafb" font-size="18" font-weight="800">$24k</text>
+  <text x="488" y="428" fill="#10b981" font-size="9" font-weight="600">▲ +12.5%</text>
+  <text x="538" y="428" fill="#6b7280" font-size="8">vs anterior</text>
+
+  <!-- Stat 2: sky -->
+  <rect x="626" y="360" width="140" height="80" rx="10" fill="#1f2937"/>
+  <text x="646" y="382" fill="#9ca3af" font-size="8">Usuarios activos</text>
+  <rect x="726" y="370" width="24" height="24" rx="6" fill="#0c2340"/>
+  <text x="738" y="386" text-anchor="middle" fill="#38bdf8" font-size="10">⟳</text>
+  <text x="646" y="410" fill="#f9fafb" font-size="18" font-weight="800">10.4k</text>
+  <text x="646" y="428" fill="#10b981" font-size="9" font-weight="600">▲ +8.1%</text>
+  <text x="690" y="428" fill="#6b7280" font-size="8">semana</text>
+
+  <!-- Stat 3: red (negative) -->
+  <rect x="468" y="454" width="140" height="58" rx="10" fill="#1f2937"/>
+  <text x="488" y="474" fill="#9ca3af" font-size="8">Abandono</text>
+  <rect x="568" y="463" width="24" height="24" rx="6" fill="#200707"/>
+  <text x="580" y="479" text-anchor="middle" fill="#f87171" font-size="10">%</text>
+  <text x="488" y="498" fill="#f9fafb" font-size="16" font-weight="800">3.2%</text>
+  <text x="538" y="498" fill="#f87171" font-size="9" font-weight="600">▼ +0.8%</text>
+
+  <!-- Stat 4: amber -->
+  <rect x="626" y="454" width="140" height="58" rx="10" fill="#1f2937"/>
+  <text x="646" y="474" fill="#9ca3af" font-size="8">Tareas</text>
+  <rect x="726" y="463" width="24" height="24" rx="6" fill="#1c1200"/>
+  <text x="738" y="479" text-anchor="middle" fill="#fbbf24" font-size="10">✓</text>
+  <text x="646" y="498" fill="#f9fafb" font-size="16" font-weight="800">18</text>
+  <text x="682" y="498" fill="#fbbf24" font-size="9">— sin cambio</text>
+
+  <!-- =============================== -->
+  <!-- CENTER: KEY CONCEPT PANELS      -->
+  <!-- =============================== -->
+  <rect x="468" y="80" width="406" height="250" rx="12" fill="#0c1220" stroke="#1e3a5f" stroke-width="1.5"/>
+  <text x="671" y="106" text-anchor="middle" fill="#38bdf8" font-size="12" font-weight="700">Técnicas clave de Cards</text>
+
+  <!-- group pattern -->
+  <text x="488" y="134" fill="#f9fafb" font-size="10" font-weight="600">1. group + group-hover</text>
+  <rect x="488" y="142" width="366" height="36" rx="6" fill="#030712"/>
+  <text x="498" y="156" fill="#6ee7b7" font-size="9" font-family="monospace">&lt;article class="group overflow-hidden"&gt;</text>
+  <text x="498" y="170" fill="#9ca3af" font-size="9" font-family="monospace">  &lt;img class="group-hover:scale-110 transition-transform duration-500"&gt;</text>
+
+  <!-- overflow-hidden explanation -->
+  <text x="488" y="202" fill="#f9fafb" font-size="10" font-weight="600">2. overflow-hidden en contenedor de imagen</text>
+  <rect x="488" y="212" width="366" height="18" rx="4" fill="#030712"/>
+  <text x="498" y="224" fill="#fcd34d" font-size="9" font-family="monospace">Sin overflow-hidden → la imagen se sale del card al hacer hover</text>
+
+  <!-- line-clamp -->
+  <text x="488" y="252" fill="#f9fafb" font-size="10" font-weight="600">3. line-clamp vs truncate</text>
+  <rect x="488" y="260" width="180" height="56" rx="6" fill="#030712"/>
+  <text x="498" y="274" fill="#a78bfa" font-size="9" font-family="monospace">line-clamp-2</text>
+  <text x="498" y="286" fill="#6b7280" font-size="8">Recorta en n líneas</text>
+  <text x="498" y="298" fill="#6b7280" font-size="8">Para descripciones/excerpts</text>
+  <text x="498" y="310" fill="#6b7280" font-size="8">con "..." al final</text>
+
+  <rect x="680" y="260" width="174" height="56" rx="6" fill="#030712"/>
+  <text x="690" y="274" fill="#38bdf8" font-size="9" font-family="monospace">truncate</text>
+  <text x="690" y="286" fill="#6b7280" font-size="8">Recorta en 1 línea</text>
+  <text x="690" y="298" fill="#6b7280" font-size="8">Para títulos con overflow</text>
+  <text x="690" y="310" fill="#6b7280" font-size="8">white-space: nowrap</text>
+</svg>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 02 — Sistema de Botones</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-gray-950 p-8 font-sans">
+
+  <h1 class="mb-2 text-2xl font-bold text-white">Ejercicio 02: Sistema de Botones</h1>
+  <p class="mb-10 text-sm text-gray-400">Descomenta cada bloque para construir el sistema completo de botones.</p>
+
+
+  <!-- ============================================ -->
+  <!-- BLOQUE 1: Las 5 variantes                   -->
+  <!-- ============================================ -->
+  <!-- Descomenta las siguientes líneas:            -->
+
+  <!-- <section class="mb-16">                                                                                                                                                                                -->
+  <!--   <h2 class="mb-6 text-lg font-semibold text-gray-300">Bloque 1: Las 5 variantes de botón</h2>                                                                                                      -->
+  <!--   <div class="flex flex-wrap items-center gap-4 rounded-2xl bg-gray-900 p-8">                                                                                                                         -->
+  <!--     <!-- PRIMARY: acción principal --> -->
+  <!--     <button class="rounded-lg bg-sky-500 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-sky-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-950 active:bg-sky-600 disabled:opacity-50 disabled:pointer-events-none">-->
+  <!--       Primary                                                                                                                                                                                          -->
+  <!--     </button>                                                                                                                                                                                          -->
+  <!--     <!-- SECONDARY: acción secundaria --> -->
+  <!--     <button class="rounded-lg bg-gray-700 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-gray-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-500 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-950 active:bg-gray-800">-->
+  <!--       Secondary                                                                                                                                                                                        -->
+  <!--     </button>                                                                                                                                                                                          -->
+  <!--     <!-- OUTLINE: acción con borde --> -->
+  <!--     <button class="rounded-lg border border-gray-600 px-5 py-2.5 text-sm font-semibold text-gray-300 transition-colors hover:border-gray-400 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-500 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-950 active:bg-gray-800">-->
+  <!--       Outline                                                                                                                                                                                          -->
+  <!--     </button>                                                                                                                                                                                          -->
+  <!--     <!-- GHOST: mínimo énfasis --> -->
+  <!--     <button class="rounded-lg px-5 py-2.5 text-sm font-semibold text-gray-400 transition-colors hover:bg-gray-800 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-500 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-950 active:bg-gray-900">-->
+  <!--       Ghost                                                                                                                                                                                            -->
+  <!--     </button>                                                                                                                                                                                          -->
+  <!--     <!-- DESTRUCTIVE: acción peligrosa --> -->
+  <!--     <button class="rounded-lg bg-red-600 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-red-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-950 active:bg-red-700">-->
+  <!--       Destructive                                                                                                                                                                                      -->
+  <!--     </button>                                                                                                                                                                                          -->
+  <!--   </div>                                                                                                                                                                                               -->
+  <!-- </section>                                                                                                                                                                                             -->
+
+
+  <!-- ============================================ -->
+  <!-- BLOQUE 2: Tamaños sm / base / lg + disabled  -->
+  <!-- ============================================ -->
+  <!-- Descomenta las siguientes líneas:            -->
+
+  <!-- <section class="mb-16">                                                                                                                                                                                -->
+  <!--   <h2 class="mb-6 text-lg font-semibold text-gray-300">Bloque 2: Tamaños — sm / base / lg + estado disabled</h2>                                                                                    -->
+  <!--   <div class="space-y-6 rounded-2xl bg-gray-900 p-8">                                                                                                                                                 -->
+  <!--     <!-- Row: Primary en 3 tamaños --> -->
+  <!--     <div>                                                                                                                                                                                              -->
+  <!--       <p class="mb-3 text-xs text-gray-500">Primary — sm / base / lg</p>                                                                                                                              -->
+  <!--       <div class="flex flex-wrap items-center gap-4">                                                                                                                                                  -->
+  <!--         <button class="rounded-md bg-sky-500 px-3 py-1.5 text-xs font-semibold text-white hover:bg-sky-400 transition-colors">SM</button>                                                            -->
+  <!--         <button class="rounded-lg bg-sky-500 px-5 py-2.5 text-sm font-semibold text-white hover:bg-sky-400 transition-colors">Base</button>                                                          -->
+  <!--         <button class="rounded-xl bg-sky-500 px-7 py-3.5 text-base font-semibold text-white hover:bg-sky-400 transition-colors">LG</button>                                                          -->
+  <!--       </div>                                                                                                                                                                                           -->
+  <!--     </div>                                                                                                                                                                                             -->
+  <!--     <!-- Row: Outline en 3 tamaños --> -->
+  <!--     <div>                                                                                                                                                                                              -->
+  <!--       <p class="mb-3 text-xs text-gray-500">Outline — sm / base / lg</p>                                                                                                                              -->
+  <!--       <div class="flex flex-wrap items-center gap-4">                                                                                                                                                  -->
+  <!--         <button class="rounded-md border border-gray-600 px-3 py-1.5 text-xs font-semibold text-gray-300 hover:border-gray-400 hover:text-white transition-colors">SM</button>                       -->
+  <!--         <button class="rounded-lg border border-gray-600 px-5 py-2.5 text-sm font-semibold text-gray-300 hover:border-gray-400 hover:text-white transition-colors">Base</button>                     -->
+  <!--         <button class="rounded-xl border border-gray-600 px-7 py-3.5 text-base font-semibold text-gray-300 hover:border-gray-400 hover:text-white transition-colors">LG</button>                     -->
+  <!--       </div>                                                                                                                                                                                           -->
+  <!--     </div>                                                                                                                                                                                             -->
+  <!--     <!-- Row: Estado disabled --> -->
+  <!--     <div>                                                                                                                                                                                              -->
+  <!--       <p class="mb-3 text-xs text-gray-500">Estado disabled — opacity-50 + pointer-events-none</p>                                                                                                   -->
+  <!--       <div class="flex flex-wrap items-center gap-4">                                                                                                                                                  -->
+  <!--         <button disabled class="rounded-lg bg-sky-500 px-5 py-2.5 text-sm font-semibold text-white opacity-50 pointer-events-none">Primary disabled</button>                                         -->
+  <!--         <button disabled class="rounded-lg border border-gray-600 px-5 py-2.5 text-sm font-semibold text-gray-300 opacity-50 pointer-events-none">Outline disabled</button>                          -->
+  <!--         <button disabled class="rounded-lg bg-red-600 px-5 py-2.5 text-sm font-semibold text-white opacity-50 pointer-events-none">Destructive disabled</button>                                     -->
+  <!--       </div>                                                                                                                                                                                           -->
+  <!--     </div>                                                                                                                                                                                             -->
+  <!--   </div>                                                                                                                                                                                               -->
+  <!-- </section>                                                                                                                                                                                             -->
+
+
+  <!-- ============================================ -->
+  <!-- BLOQUE 3: Botones con iconos + loading       -->
+  <!-- ============================================ -->
+  <!-- Descomenta las siguientes líneas:            -->
+
+  <!-- <section class="mb-16">                                                                                                                                                                                -->
+  <!--   <h2 class="mb-6 text-lg font-semibold text-gray-300">Bloque 3: Botones con iconos y estado loading</h2>                                                                                           -->
+  <!--   <div class="flex flex-wrap items-center gap-4 rounded-2xl bg-gray-900 p-8">                                                                                                                         -->
+  <!--     <!-- Icono izquierda --> -->
+  <!--     <button class="inline-flex items-center gap-2 rounded-lg bg-sky-500 px-5 py-2.5 text-sm font-semibold text-white hover:bg-sky-400 transition-colors">                                           -->
+  <!--       <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/></svg>-->
+  <!--       Subir archivo                                                                                                                                                                                    -->
+  <!--     </button>                                                                                                                                                                                          -->
+  <!--     <!-- Icono derecha --> -->
+  <!--     <button class="inline-flex items-center gap-2 rounded-lg border border-gray-600 px-5 py-2.5 text-sm font-semibold text-gray-300 hover:border-gray-400 hover:text-white transition-colors">      -->
+  <!--       Ver más                                                                                                                                                                                          -->
+  <!--       <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>                    -->
+  <!--     </button>                                                                                                                                                                                          -->
+  <!--     <!-- Icon-only con aria-label --> -->
+  <!--     <button class="rounded-lg p-2.5 text-gray-400 hover:bg-gray-800 hover:text-white transition-colors" aria-label="Eliminar elemento">                                                              -->
+  <!--       <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>-->
+  <!--     </button>                                                                                                                                                                                          -->
+  <!--     <!-- Loading con animate-spin --> -->
+  <!--     <button disabled class="inline-flex items-center gap-2 rounded-lg bg-sky-500 px-5 py-2.5 text-sm font-semibold text-white opacity-75 pointer-events-none">                                       -->
+  <!--       <svg class="h-4 w-4 animate-spin" fill="none" viewBox="0 0 24 24">                                                                                                                             -->
+  <!--         <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/>                                                                                                   -->
+  <!--         <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/>                                                                                              -->
+  <!--       </svg>                                                                                                                                                                                           -->
+  <!--       Guardando...                                                                                                                                                                                     -->
+  <!--     </button>                                                                                                                                                                                          -->
+  <!--   </div>                                                                                                                                                                                               -->
+  <!-- </section>                                                                                                                                                                                             -->
+
+
+  <!-- ============================================ -->
+  <!-- BLOQUE 4: Button Group y pills               -->
+  <!-- ============================================ -->
+  <!-- Descomenta las siguientes líneas:            -->
+
+  <!-- <section class="mb-16">                                                                                                                                                                                -->
+  <!--   <h2 class="mb-6 text-lg font-semibold text-gray-300">Bloque 4: Button Group y botones pill</h2>                                                                                                   -->
+  <!--   <div class="space-y-6 rounded-2xl bg-gray-900 p-8">                                                                                                                                                 -->
+  <!--     <div>                                                                                                                                                                                              -->
+  <!--       <p class="mb-3 text-xs text-gray-500">Button Group (toggle período)</p>                                                                                                                         -->
+  <!--       <div class="inline-flex overflow-hidden rounded-lg border border-gray-700">                                                                                                                      -->
+  <!--         <button class="px-4 py-2 text-sm text-gray-400 hover:bg-gray-800 hover:text-white transition-colors border-r border-gray-700">Día</button>                                                  -->
+  <!--         <button class="bg-sky-600 px-4 py-2 text-sm font-semibold text-white">Semana</button>                                                                                                         -->
+  <!--         <button class="border-l border-gray-700 px-4 py-2 text-sm text-gray-400 hover:bg-gray-800 hover:text-white transition-colors">Mes</button>                                                  -->
+  <!--         <button class="border-l border-gray-700 px-4 py-2 text-sm text-gray-400 hover:bg-gray-800 hover:text-white transition-colors">Año</button>                                                  -->
+  <!--       </div>                                                                                                                                                                                           -->
+  <!--     </div>                                                                                                                                                                                             -->
+  <!--     <div>                                                                                                                                                                                              -->
+  <!--       <p class="mb-3 text-xs text-gray-500">Pill buttons (fully rounded)</p>                                                                                                                          -->
+  <!--       <div class="flex flex-wrap gap-3">                                                                                                                                                               -->
+  <!--         <button class="rounded-full bg-sky-500 px-5 py-2 text-sm font-semibold text-white hover:bg-sky-400 transition-colors">Primary Pill</button>                                                  -->
+  <!--         <button class="rounded-full border border-gray-600 px-5 py-2 text-sm font-semibold text-gray-300 hover:border-gray-400 hover:text-white transition-colors">Outline Pill</button>            -->
+  <!--         <button class="rounded-full bg-emerald-500/15 px-5 py-2 text-sm font-semibold text-emerald-400 hover:bg-emerald-500/25 transition-colors">Success Pill</button>                             -->
+  <!--         <button class="rounded-full bg-red-500/15 px-5 py-2 text-sm font-semibold text-red-400 hover:bg-red-500/25 transition-colors">Danger Pill</button>                                          -->
+  <!--       </div>                                                                                                                                                                                           -->
+  <!--     </div>                                                                                                                                                                                             -->
+  <!--   </div>                                                                                                                                                                                               -->
+  <!-- </section>                                                                                                                                                                                             -->
+
+
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+<svg width="900" height="500" viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif">
+  <!-- Background -->
+  <rect width="900" height="500" fill="#030712" rx="16"/>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" fill="#f9fafb" font-size="18" font-weight="700">Badges, Pills y Tags — Colores Semánticos y Variantes</text>
+
+  <!-- =============================== -->
+  <!-- SECTION 1: 5 SEMANTIC COLORS    -->
+  <!-- =============================== -->
+  <text x="450" y="72" text-anchor="middle" fill="#9ca3af" font-size="11" font-weight="600" letter-spacing="1">LOS 5 COLORES SEMÁNTICOS — fórmula: bg-COLOR-500/15 text-COLOR-400</text>
+
+  <!-- SUCCESS: emerald -->
+  <rect x="46" y="88" width="140" height="80" rx="10" fill="#052e16" stroke="#14532d" stroke-width="1.5"/>
+  <text x="116" y="111" text-anchor="middle" fill="#6ee7b7" font-size="11" font-weight="700">SUCCESS</text>
+  <rect x="62" y="122" width="108" height="22" rx="11" fill="#10b98126"/>
+  <text x="116" y="137" text-anchor="middle" fill="#6ee7b7" font-size="10" font-weight="600">● Publicado</text>
+  <text x="116" y="158" text-anchor="middle" fill="#14532d" font-size="8" font-family="monospace">emerald</text>
+
+  <!-- ERROR: red -->
+  <rect x="206" y="88" width="140" height="80" rx="10" fill="#200707" stroke="#7f1d1d" stroke-width="1.5"/>
+  <text x="276" y="111" text-anchor="middle" fill="#fca5a5" font-size="11" font-weight="700">ERROR</text>
+  <rect x="222" y="122" width="108" height="22" rx="11" fill="#ef444426"/>
+  <text x="276" y="137" text-anchor="middle" fill="#fca5a5" font-size="10" font-weight="600">● Error crítico</text>
+  <text x="276" y="158" text-anchor="middle" fill="#7f1d1d" font-size="8" font-family="monospace">red</text>
+
+  <!-- WARNING: amber -->
+  <rect x="366" y="88" width="140" height="80" rx="10" fill="#1c1200" stroke="#78350f" stroke-width="1.5"/>
+  <text x="436" y="111" text-anchor="middle" fill="#fde68a" font-size="11" font-weight="700">WARNING</text>
+  <rect x="382" y="122" width="108" height="22" rx="11" fill="#f59e0b26"/>
+  <text x="436" y="137" text-anchor="middle" fill="#fde68a" font-size="10" font-weight="600">● Pendiente</text>
+  <text x="436" y="158" text-anchor="middle" fill="#78350f" font-size="8" font-family="monospace">amber</text>
+
+  <!-- INFO: sky -->
+  <rect x="526" y="88" width="140" height="80" rx="10" fill="#0c1a2e" stroke="#0c4a6e" stroke-width="1.5"/>
+  <text x="596" y="111" text-anchor="middle" fill="#7dd3fc" font-size="11" font-weight="700">INFO</text>
+  <rect x="542" y="122" width="108" height="22" rx="11" fill="#0ea5e926"/>
+  <text x="596" y="137" text-anchor="middle" fill="#7dd3fc" font-size="10" font-weight="600">● En revisión</text>
+  <text x="596" y="158" text-anchor="middle" fill="#0c4a6e" font-size="8" font-family="monospace">sky</text>
+
+  <!-- NEUTRAL: gray -->
+  <rect x="686" y="88" width="140" height="80" rx="10" fill="#111827" stroke="#374151" stroke-width="1.5"/>
+  <text x="756" y="111" text-anchor="middle" fill="#d1d5db" font-size="11" font-weight="700">NEUTRAL</text>
+  <rect x="702" y="122" width="108" height="22" rx="11" fill="#6b728026"/>
+  <text x="756" y="137" text-anchor="middle" fill="#d1d5db" font-size="10" font-weight="600">● Archivado</text>
+  <text x="756" y="158" text-anchor="middle" fill="#374151" font-size="8" font-family="monospace">gray</text>
+
+  <!-- =============================== -->
+  <!-- SECTION 2: SHAPES               -->
+  <!-- =============================== -->
+  <text x="450" y="196" text-anchor="middle" fill="#9ca3af" font-size="11" font-weight="600" letter-spacing="1">FORMAS — pill / badge / tag</text>
+
+  <!-- Pill: rounded-full -->
+  <rect x="46" y="210" width="220" height="100" rx="10" fill="#111827" stroke="#1f2937" stroke-width="1"/>
+  <text x="156" y="232" text-anchor="middle" fill="#6b7280" font-size="9">Pill — rounded-full</text>
+  <rect x="72" y="244" width="168" height="26" rx="13" fill="#0ea5e926"/>
+  <text x="156" y="261" text-anchor="middle" fill="#7dd3fc" font-size="10" font-weight="600">En revisión</text>
+  <text x="156" y="302" text-anchor="middle" fill="#374151" font-size="8" font-family="monospace">rounded-full px-3 py-1</text>
+
+  <!-- Badge: rounded-md -->
+  <rect x="290" y="210" width="220" height="100" rx="10" fill="#111827" stroke="#1f2937" stroke-width="1"/>
+  <text x="400" y="232" text-anchor="middle" fill="#6b7280" font-size="9">Badge rect — rounded-md</text>
+  <rect x="355" y="244" width="90" height="26" rx="5" fill="#0ea5e926"/>
+  <text x="400" y="261" text-anchor="middle" fill="#7dd3fc" font-size="10" font-weight="700">BETA</text>
+  <text x="400" y="302" text-anchor="middle" fill="#374151" font-size="8" font-family="monospace">rounded-md px-2 py-0.5</text>
+
+  <!-- Tag: border -->
+  <rect x="534" y="210" width="220" height="100" rx="10" fill="#111827" stroke="#1f2937" stroke-width="1"/>
+  <text x="644" y="232" text-anchor="middle" fill="#6b7280" font-size="9">Tag — border + rounded-lg</text>
+  <rect x="590" y="244" width="108" height="26" rx="6" fill="#1f2937" stroke="#374151" stroke-width="1.5"/>
+  <text x="644" y="261" text-anchor="middle" fill="#d1d5db" font-size="10">TailwindCSS</text>
+  <text x="644" y="302" text-anchor="middle" fill="#374151" font-size="8" font-family="monospace">border border-gray-700 rounded-lg</text>
+
+  <!-- =============================== -->
+  <!-- SECTION 3: REMOVABLE + NUMERIC  -->
+  <!-- =============================== -->
+  <text x="450" y="338" text-anchor="middle" fill="#9ca3af" font-size="11" font-weight="600" letter-spacing="1">PILLS REMOVIBLES + BADGE NUMÉRICO ABSOLUTE</text>
+
+  <!-- Removable pill -->
+  <rect x="46" y="354" width="380" height="120" rx="10" fill="#111827" stroke="#1f2937" stroke-width="1"/>
+  <text x="236" y="376" text-anchor="middle" fill="#6b7280" font-size="9">Pill removible — botón × con aria-label</text>
+  <!-- Pill with × -->
+  <rect x="80" y="390" width="100" height="26" rx="13" fill="#0ea5e926"/>
+  <text x="118" y="407" fill="#7dd3fc" font-size="10" font-weight="600">React</text>
+  <circle cx="168" cy="403" r="8" fill="#7dd3fc22"/>
+  <line x1="164" x2="172" y1="399" y2="407" stroke="#7dd3fc" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="172" x2="164" y1="399" y2="407" stroke="#7dd3fc" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Arrow to code -->
+  <text x="236" y="440" text-anchor="middle" fill="#374151" font-size="8" font-family="monospace">&lt;button aria-label="Eliminar filtro React"&gt;</text>
+  <text x="236" y="452" text-anchor="middle" fill="#374151" font-size="8" font-family="monospace">  &lt;svg class="h-2.5 w-2.5"&gt; ✕ &lt;/svg&gt;</text>
+  <text x="236" y="466" text-anchor="middle" fill="#374151" font-size="8">(hover:bg-COLOR-500/30)</text>
+
+  <!-- Notification badge -->
+  <rect x="446" y="354" width="408" height="120" rx="10" fill="#111827" stroke="#1f2937" stroke-width="1"/>
+  <text x="650" y="376" text-anchor="middle" fill="#6b7280" font-size="9">Badge numérico — absolute sobre icono (relative)</text>
+
+  <!-- Icon button with badge -->
+  <rect x="510" y="393" width="48" height="48" rx="8" fill="#1f2937"/>
+  <!-- Bell icon simplified -->
+  <path d="M534 404 Q528 404 526 412 Q524 418 522 421 L546 421 Q544 418 542 412 Q540 404 534 404Z" fill="none" stroke="#9ca3af" stroke-width="1.5"/>
+  <line x1="534" x2="534" y1="400" y2="404" stroke="#9ca3af" stroke-width="1.5"/>
+  <path d="M530 421 Q530 425 534 425 Q538 425 538 421" fill="none" stroke="#9ca3af" stroke-width="1.5"/>
+  <!-- Badge 3 -->
+  <circle cx="546" cy="396" r="8" fill="#ef4444"/>
+  <text x="546" y="400" text-anchor="middle" fill="#fff" font-size="8" font-weight="700">3</text>
+
+  <!-- Icon button with 99+ badge -->
+  <rect x="590" y="393" width="48" height="48" rx="8" fill="#1f2937"/>
+  <!-- Chat icon simplified -->
+  <rect x="598" y="401" width="32" height="24" rx="4" fill="none" stroke="#9ca3af" stroke-width="1.5"/>
+  <line x1="606" x2="614" y1="410" y2="410" stroke="#9ca3af" stroke-width="1.5"/>
+  <line x1="606" x2="618" y1="416" y2="416" stroke="#9ca3af" stroke-width="1.5"/>
+  <!-- Badge 99+ -->
+  <rect x="614" y="388" width="28" height="14" rx="7" fill="#ef4444"/>
+  <text x="628" y="399" text-anchor="middle" fill="#fff" font-size="7" font-weight="700">99+</text>
+
+  <!-- Icon with dot -->
+  <rect x="670" y="393" width="48" height="48" rx="8" fill="#1f2937"/>
+  <!-- Star icon simplified -->
+  <text x="694" y="423" text-anchor="middle" fill="#9ca3af" font-size="18">☆</text>
+  <!-- Sky dot -->
+  <circle cx="706" cy="397" r="4" fill="#38bdf8"/>
+
+  <!-- Avatar with online dot -->
+  <circle cx="766" cy="417" r="20" fill="#1d4ed8"/>
+  <text x="766" y="422" text-anchor="middle" fill="#fff" font-size="10" font-weight="700">AB</text>
+  <circle cx="780" cy="431" r="6" fill="#10b981" stroke="#111827" stroke-width="2"/>
+
+  <!-- Labels -->
+  <text x="534" y="452" text-anchor="middle" fill="#6b7280" font-size="8">1–9</text>
+  <text x="614" y="452" text-anchor="middle" fill="#6b7280" font-size="8">99+</text>
+  <text x="694" y="452" text-anchor="middle" fill="#6b7280" font-size="8">punto</text>
+  <text x="766" y="452" text-anchor="middle" fill="#6b7280" font-size="8">online</text>
+
+  <text x="650" y="468" text-anchor="middle" fill="#4b5563" font-size="8" font-family="monospace">absolute right-1 top-1 — el padre necesita class="relative"</text>
+</svg>

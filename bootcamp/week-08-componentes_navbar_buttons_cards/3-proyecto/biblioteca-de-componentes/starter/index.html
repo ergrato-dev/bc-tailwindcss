@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Biblioteca de Componentes UI — Semana 08</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-gray-950 font-sans text-white">
+
+  <!-- ============================================ -->
+  <!-- NAVBAR                                       -->
+  <!-- TODO: Implementar navbar sticky responsive   -->
+  <!-- Pistas:                                      -->
+  <!--   - sticky top-0 z-50 para que quede fijo    -->
+  <!--   - backdrop-blur-sm bg-gray-950/95           -->
+  <!--   - Logo + links desktop (hidden md:flex)    -->
+  <!--   - Hamburger mobile con peer (md:hidden)    -->
+  <!-- ============================================ -->
+  <header class="???">
+    <nav class="???">
+      <!-- TODO: Logo -->
+      <!-- TODO: Links desktop (hidden en mobile) -->
+      <!-- TODO: Hamburger + menú mobile con peer -->
+    </nav>
+  </header>
+
+
+  <main class="mx-auto max-w-7xl px-6 py-16 space-y-24">
+
+    <!-- ============================================ -->
+    <!-- SECCIÓN INTRO                               -->
+    <!-- TODO: Título de la librería + descripción  -->
+    <!-- Pistas:                                     -->
+    <!--   - Título grande: text-5xl font-extrabold  -->
+    <!--   - Subtítulo: text-lg text-gray-400        -->
+    <!--   - Badge "v1.0" junto al título             -->
+    <!--   - Botones CTA: uno primary, uno outline   -->
+    <!-- ============================================ -->
+    <section class="text-center">
+      <!-- TODO: Implementar sección hero -->
+    </section>
+
+
+    <!-- ============================================ -->
+    <!-- SECCIÓN BOTONES                             -->
+    <!-- TODO: Showcase del sistema completo         -->
+    <!-- Pistas:                                     -->
+    <!--   - Título de sección con h2                -->
+    <!--   - Panel bg-gray-900 rounded-2xl           -->
+    <!--   - Las 5 variantes en una fila             -->
+    <!--   - Los 3 tamaños                           -->
+    <!--   - Botones con iconos + loading            -->
+    <!--   - Al menos 1 button group                 -->
+    <!-- ============================================ -->
+    <section>
+      <h2 class="mb-8 text-2xl font-bold text-white">Buttons</h2>
+      <!-- TODO: Implementar las 5 variantes de botón -->
+      <!-- TODO: Implementar 3 tamaños (sm / base / lg) -->
+      <!-- TODO: Implementar botón con icono y loading -->
+      <!-- TODO: Implementar button group -->
+      <div class="rounded-2xl border border-gray-800 bg-gray-900 p-8">
+        <p class="text-sm text-gray-500">[ Implementa aquí el showcase de botones ]</p>
+      </div>
+    </section>
+
+
+    <!-- ============================================ -->
+    <!-- SECCIÓN CARDS                               -->
+    <!-- TODO: Grid de cards con group-hover         -->
+    <!-- Pistas:                                     -->
+    <!--   - grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 -->
+    <!--   - Mínimo 6 cards en total                 -->
+    <!--   - group + group-hover:scale en imágenes   -->
+    <!--   - line-clamp-2 en descripciones           -->
+    <!--   - truncate en títulos largos              -->
+    <!--   - Mezclar product cards y blog cards      -->
+    <!-- ============================================ -->
+    <section>
+      <h2 class="mb-8 text-2xl font-bold text-white">Cards</h2>
+      <!-- TODO: Implementar grid de cards -->
+      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- TODO: Al menos 4 product/blog cards con group-hover -->
+        <!-- TODO: Al menos 2 user o stat cards -->
+        <div
+          class="flex h-48 items-center justify-center rounded-2xl border border-dashed border-gray-700 bg-gray-900 text-sm text-gray-500">
+          Card 1
+        </div>
+        <div
+          class="flex h-48 items-center justify-center rounded-2xl border border-dashed border-gray-700 bg-gray-900 text-sm text-gray-500">
+          Card 2
+        </div>
+        <div
+          class="flex h-48 items-center justify-center rounded-2xl border border-dashed border-gray-700 bg-gray-900 text-sm text-gray-500">
+          Card 3
+        </div>
+        <div
+          class="flex h-48 items-center justify-center rounded-2xl border border-dashed border-gray-700 bg-gray-900 text-sm text-gray-500">
+          Card 4
+        </div>
+        <div
+          class="flex h-48 items-center justify-center rounded-2xl border border-dashed border-gray-700 bg-gray-900 text-sm text-gray-500">
+          Card 5
+        </div>
+        <div
+          class="flex h-48 items-center justify-center rounded-2xl border border-dashed border-gray-700 bg-gray-900 text-sm text-gray-500">
+          Card 6
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================ -->
+    <!-- SECCIÓN BADGES                              -->
+    <!-- TODO: Paleta completa + pills + badge numérico -->
+    <!-- Pistas:                                     -->
+    <!--   - Los 5 colores: emerald/red/amber/sky/gray -->
+    <!--   - Fórmula: bg-COLOR-500/15 text-COLOR-400 -->
+    <!--   - Pills removibles con botón ×            -->
+    <!--   - Tags de categoría con border            -->
+    <!--   - Badge numérico sobre icono (absolute)   -->
+    <!-- ============================================ -->
+    <section>
+      <h2 class="mb-8 text-2xl font-bold text-white">Badges & Tags</h2>
+      <!-- TODO: Los 5 badges semánticos -->
+      <div class="mb-6 flex flex-wrap gap-3">
+        <!-- Implementa aquí los 5 colores semánticos -->
+      </div>
+      <!-- TODO: Pills removibles -->
+      <!-- TODO: Tags de categoría -->
+      <!-- TODO: Badge numérico sobre icono -->
+      <div class="rounded-2xl border border-gray-800 bg-gray-900 p-8">
+        <p class="text-sm text-gray-500">[ Implementa aquí la paleta de badges y tags ]</p>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ============================================ -->
+  <!-- FOOTER                                       -->
+  <!-- TODO: Footer simple con copyright            -->
+  <!-- ============================================ -->
+  <footer class="mt-24 border-t border-gray-800 py-8 text-center text-xs text-gray-600">
+    <!-- TODO: añadir copyright y links -->
+    Bootcamp TailwindCSS — Semana 08
+  </footer>
+
+</body>
+
+</html>

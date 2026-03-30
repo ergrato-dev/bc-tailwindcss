@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 01 — Navbar Responsive</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-gray-950 font-sans">
+
+  <div class="p-8">
+    <h1 class="mb-2 text-2xl font-bold text-white">Ejercicio 01: Navbar Responsive</h1>
+    <p class="mb-10 text-sm text-gray-400">Descomenta cada bloque para ver el resultado. Cambia el ancho del navegador
+      para ver el comportamiento responsive.</p>
+  </div>
+
+
+  <!-- ============================================ -->
+  <!-- BLOQUE 1: Navbar básico con Flex             -->
+  <!-- ============================================ -->
+  <!-- Descomenta las siguientes líneas:            -->
+
+  <!-- <div class="mb-16 px-8">                                                                                                                                    -->
+  <!--   <p class="mb-3 text-sm font-semibold text-gray-400">Bloque 1: Navbar básico — flex justify-between</p>                                                    -->
+  <!--   <header class="rounded-xl border border-gray-800 bg-gray-900">                                                                                            -->
+  <!--     <nav class="flex items-center justify-between px-6 py-4">                                                                                               -->
+  <!--       <!-- Logo --> -->
+  <!--       <a href="#" class="flex items-center gap-2 text-xl font-bold text-white">                                                                             -->
+  <!--         <span class="text-sky-400">⊞</span> MyBrand                                                                                                        -->
+  <!--       </a>                                                                                                                                                   -->
+  <!--       <!-- Nav links --> -->
+  <!--       <ul class="flex items-center gap-6">                                                                                                                  -->
+  <!--         <li><a href="#" class="text-sm text-gray-400 transition-colors hover:text-white">Features</a></li>                                                 -->
+  <!--         <li><a href="#" class="text-sm text-gray-400 transition-colors hover:text-white">Pricing</a></li>                                                  -->
+  <!--         <li><a href="#" class="text-sm text-gray-400 transition-colors hover:text-white">About</a></li>                                                    -->
+  <!--         <li><a href="#" class="text-sm text-gray-400 transition-colors hover:text-white">Blog</a></li>                                                     -->
+  <!--       </ul>                                                                                                                                                  -->
+  <!--       <!-- CTA button --> -->
+  <!--       <a href="#" class="rounded-lg bg-sky-500 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-sky-400">                            -->
+  <!--         Get started                                                                                                                                          -->
+  <!--       </a>                                                                                                                                                   -->
+  <!--     </nav>                                                                                                                                                   -->
+  <!--   </header>                                                                                                                                                  -->
+  <!-- </div>                                                                                                                                                       -->
+
+
+  <!-- ============================================ -->
+  <!-- BLOQUE 2: Links con estado activo            -->
+  <!-- ============================================ -->
+  <!-- Descomenta las siguientes líneas:            -->
+
+  <!-- <div class="mb-16 px-8">                                                                                                                                    -->
+  <!--   <p class="mb-3 text-sm font-semibold text-gray-400">Bloque 2: Link activo con aria-current y subrayado decorativo</p>                                   -->
+  <!--   <header class="rounded-xl border border-gray-800 bg-gray-900">                                                                                            -->
+  <!--     <nav class="flex items-center justify-between px-6 py-4">                                                                                               -->
+  <!--       <a href="#" class="text-xl font-bold text-white"><span class="text-sky-400">⊞</span> MyBrand</a>                                                     -->
+  <!--       <ul class="flex items-center gap-8">                                                                                                                  -->
+  <!--         <!-- Link activo: text-white + indicador underline sky --> -->
+  <!--         <li>                                                                                                                                                 -->
+  <!--           <a href="#" class="relative text-sm font-medium text-white" aria-current="page">                                                                 -->
+  <!--             <span class="relative after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-full after:rounded-full after:bg-sky-400">Home</span>   -->
+  <!--           </a>                                                                                                                                               -->
+  <!--         </li>                                                                                                                                                -->
+  <!--         <!-- Links inactivos --> -->
+  <!--         <li><a href="#" class="text-sm text-gray-400 transition-colors hover:text-white">Features</a></li>                                                 -->
+  <!--         <li><a href="#" class="text-sm text-gray-400 transition-colors hover:text-white">Pricing</a></li>                                                  -->
+  <!--         <li><a href="#" class="text-sm text-gray-400 transition-colors hover:text-white">Blog</a></li>                                                     -->
+  <!--       </ul>                                                                                                                                                  -->
+  <!--       <a href="#" class="rounded-lg bg-sky-500 px-4 py-2 text-sm font-semibold text-white hover:bg-sky-400 transition-colors">Get started</a>             -->
+  <!--     </nav>                                                                                                                                                   -->
+  <!--   </header>                                                                                                                                                  -->
+  <!-- </div>                                                                                                                                                       -->
+
+
+  <!-- ============================================ -->
+  <!-- BLOQUE 3: Hamburger con peer (sin JS)        -->
+  <!-- ============================================ -->
+  <!-- Descomenta las siguientes líneas:            -->
+
+  <!-- <div class="mb-16 px-8">                                                                                                                                    -->
+  <!--   <p class="mb-3 text-sm font-semibold text-gray-400">Bloque 3: Hamburger toggle con checkbox + peer (reduce la ventana para verlo)</p>                  -->
+  <!--   <header class="relative rounded-xl border border-gray-800 bg-gray-900 overflow-hidden">                                                                  -->
+  <!--     <nav class="px-6 py-4">                                                                                                                                 -->
+  <!--       <div class="flex items-center justify-between">                                                                                                       -->
+  <!--         <a href="#" class="text-xl font-bold text-white"><span class="text-sky-400">⊞</span> MyBrand</a>                                                   -->
+  <!--         <!-- Grupo hamburger: checkbox peer oculto + label (botón visual) --> -->
+  <!--         <div class="relative">                                                                                                                              -->
+  <!--           <!-- El checkbox está ANTES del menú en el DOM para que peer funcione --> -->
+  <!--           <input type="checkbox" id="nav-toggle-b3" class="peer hidden" />                                                                                 -->
+  <!--           <label for="nav-toggle-b3"                                                                                                                        -->
+  <!--                  class="flex cursor-pointer items-center justify-center rounded-lg p-2 text-gray-400 hover:bg-gray-800 hover:text-white transition-colors" -->
+  <!--                  aria-label="Abrir menú">                                                                                                                   -->
+  <!--             <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">                                                                    -->
+  <!--               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>                                         -->
+  <!--             </svg>                                                                                                                                           -->
+  <!--           </label>                                                                                                                                           -->
+  <!--           <!-- Menú desplegable: hidden por defecto → peer-checked:flex cuando checkbox está activo --> -->
+  <!--           <div class="absolute right-0 top-12 z-10 hidden w-48 flex-col gap-1 rounded-xl border border-gray-700 bg-gray-900 p-2 shadow-xl peer-checked:flex">-->
+  <!--             <a href="#" class="rounded-lg px-3 py-2 text-sm text-gray-400 hover:bg-gray-800 hover:text-white transition-colors">Home</a>                  -->
+  <!--             <a href="#" class="rounded-lg px-3 py-2 text-sm text-gray-400 hover:bg-gray-800 hover:text-white transition-colors">Features</a>              -->
+  <!--             <a href="#" class="rounded-lg px-3 py-2 text-sm text-gray-400 hover:bg-gray-800 hover:text-white transition-colors">Pricing</a>               -->
+  <!--             <a href="#" class="rounded-lg px-3 py-2 text-sm text-gray-400 hover:bg-gray-800 hover:text-white transition-colors">Blog</a>                  -->
+  <!--             <div class="mt-1 border-t border-gray-700 pt-1">                                                                                                -->
+  <!--               <a href="#" class="block rounded-lg bg-sky-500 px-3 py-2 text-center text-sm font-semibold text-white hover:bg-sky-400 transition-colors">  -->
+  <!--                 Get started                                                                                                                                  -->
+  <!--               </a>                                                                                                                                           -->
+  <!--             </div>                                                                                                                                           -->
+  <!--           </div>                                                                                                                                             -->
+  <!--         </div>                                                                                                                                               -->
+  <!--       </div>                                                                                                                                                 -->
+  <!--     </nav>                                                                                                                                                   -->
+  <!--   </header>                                                                                                                                                  -->
+  <!-- </div>                                                                                                                                                       -->
+
+
+  <!-- ============================================ -->
+  <!-- BLOQUE 4: Navbar completo responsive         -->
+  <!-- ============================================ -->
+  <!-- Descomenta las siguientes líneas:            -->
+
+  <!-- <div class="px-8">                                                                                                                                           -->
+  <!--   <p class="mb-3 text-sm font-semibold text-gray-400">Bloque 4: Navbar completo — desktop links + mobile hamburger + sticky + backdrop blur</p>           -->
+  <!--   <!-- En producción este header estaría fuera del div de página, directamente en el body --> -->
+  <!--   <header class="sticky top-0 z-50 border-b border-gray-800 bg-gray-950/95 backdrop-blur-sm rounded-xl">                                                  -->
+  <!--     <nav class="mx-auto max-w-7xl px-6 py-4">                                                                                                              -->
+  <!--       <div class="flex items-center justify-between">                                                                                                       -->
+  <!--         <!-- Logo --> -->
+  <!--         <a href="#" class="flex items-center gap-2 text-xl font-bold text-white">                                                                           -->
+  <!--           <span class="text-sky-400">⊞</span> MyBrand                                                                                                      -->
+  <!--         </a>                                                                                                                                                 -->
+  <!--         <!-- Links desktop: hidden en mobile, flex en md+ --> -->
+  <!--         <ul class="hidden items-center gap-8 md:flex">                                                                                                     -->
+  <!--           <li><a href="#" class="relative text-sm font-medium text-white after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-full after:bg-sky-400" aria-current="page">Home</a></li>-->
+  <!--           <li><a href="#" class="text-sm text-gray-400 transition-colors hover:text-white">Features</a></li>                                               -->
+  <!--           <li><a href="#" class="text-sm text-gray-400 transition-colors hover:text-white">Pricing</a></li>                                                -->
+  <!--           <li><a href="#" class="text-sm text-gray-400 transition-colors hover:text-white">Blog</a></li>                                                   -->
+  <!--         </ul>                                                                                                                                                -->
+  <!--         <!-- CTA desktop (hidden en mobile) --> -->
+  <!--         <a href="#" class="hidden rounded-lg bg-sky-500 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-sky-400 md:block">          -->
+  <!--           Get started                                                                                                                                        -->
+  <!--         </a>                                                                                                                                                 -->
+  <!--         <!-- Hamburger (visible solo en mobile: md:hidden) --> -->
+  <!--         <div class="relative md:hidden">                                                                                                                    -->
+  <!--           <input type="checkbox" id="nav-toggle-b4" class="peer hidden" />                                                                                 -->
+  <!--           <label for="nav-toggle-b4"                                                                                                                        -->
+  <!--                  class="flex cursor-pointer items-center justify-center rounded-lg p-2 text-gray-400 hover:bg-gray-800 hover:text-white transition-colors" -->
+  <!--                  aria-label="Abrir menú">                                                                                                                   -->
+  <!--             <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">                                                                    -->
+  <!--               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>                                         -->
+  <!--             </svg>                                                                                                                                           -->
+  <!--           </label>                                                                                                                                           -->
+  <!--           <div class="absolute right-0 top-12 z-10 hidden w-52 flex-col gap-1 rounded-xl border border-gray-800 bg-gray-900 p-3 shadow-2xl peer-checked:flex">-->
+  <!--             <a href="#" class="rounded-lg px-3 py-2 text-sm text-white bg-gray-800">Home</a>                                                               -->
+  <!--             <a href="#" class="rounded-lg px-3 py-2 text-sm text-gray-400 hover:bg-gray-800 hover:text-white transition-colors">Features</a>              -->
+  <!--             <a href="#" class="rounded-lg px-3 py-2 text-sm text-gray-400 hover:bg-gray-800 hover:text-white transition-colors">Pricing</a>               -->
+  <!--             <a href="#" class="rounded-lg px-3 py-2 text-sm text-gray-400 hover:bg-gray-800 hover:text-white transition-colors">Blog</a>                  -->
+  <!--             <div class="mt-2 border-t border-gray-800 pt-2">                                                                                                -->
+  <!--               <a href="#" class="block rounded-lg bg-sky-500 px-4 py-2.5 text-center text-sm font-semibold text-white hover:bg-sky-400 transition-colors">-->
+  <!--                 Get started →                                                                                                                                -->
+  <!--               </a>                                                                                                                                           -->
+  <!--             </div>                                                                                                                                           -->
+  <!--           </div>                                                                                                                                             -->
+  <!--         </div>                                                                                                                                               -->
+  <!--       </div>                                                                                                                                                 -->
+  <!--     </nav>                                                                                                                                                   -->
+  <!--   </header>                                                                                                                                                  -->
+  <!--   <!-- Contenido de página para ver el sticky en acción --> -->
+  <!--   <div class="mt-8 space-y-4">                                                                                                                              -->
+  <!--     <div class="h-40 rounded-2xl bg-gray-800/50 flex items-center justify-center text-gray-500 text-sm">Sección 1 — scroll para ver sticky navbar</div>   -->
+  <!--     <div class="h-40 rounded-2xl bg-gray-800/50 flex items-center justify-center text-gray-500 text-sm">Sección 2</div>                                   -->
+  <!--     <div class="h-40 rounded-2xl bg-gray-800/50 flex items-center justify-center text-gray-500 text-sm">Sección 3</div>                                   -->
+  <!--   </div>                                                                                                                                                     -->
+  <!-- </div>                                                                                                                                                       -->
+
+
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+<svg width="900" height="480" viewBox="0 0 900 480" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif">
+  <!-- Background -->
+  <rect width="900" height="480" fill="#030712" rx="16"/>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" fill="#f9fafb" font-size="18" font-weight="700">Navbar Responsive — Estructura, Toggle Mobile y Técnica peer</text>
+
+  <!-- =============================== -->
+  <!-- LEFT: DESKTOP NAVBAR            -->
+  <!-- =============================== -->
+  <text x="200" y="80" text-anchor="middle" fill="#38bdf8" font-size="11" font-weight="600" letter-spacing="1">DESKTOP (≥768px)</text>
+
+  <!-- Navbar container -->
+  <rect x="36" y="94" width="328" height="52" rx="10" fill="#111827" stroke="#1f2937" stroke-width="1.5"/>
+
+  <!-- Logo -->
+  <text x="58" y="125" fill="#38bdf8" font-size="13" font-weight="800">⊞</text>
+  <text x="74" y="125" fill="#f9fafb" font-size="13" font-weight="700">MyBrand</text>
+
+  <!-- Nav links -->
+  <text x="162" y="125" fill="#9ca3af" font-size="11">Home</text>
+  <line x1="162" x2="190" y1="129" y2="129" stroke="#38bdf8" stroke-width="2" stroke-linecap="round"/>
+  <text x="202" y="125" fill="#6b7280" font-size="11">Features</text>
+  <text x="268" y="125" fill="#6b7280" font-size="11">Pricing</text>
+
+  <!-- CTA Button -->
+  <rect x="316" y="112" width="36" height="18" rx="4" fill="#0ea5e9"/>
+  <text x="334" y="124" text-anchor="middle" fill="#fff" font-size="8" font-weight="600">Start</text>
+
+  <!-- Labels -->
+  <line x1="58" x2="58" y1="152" y2="170" stroke="#374151" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="58" y="182" text-anchor="middle" fill="#6b7280" font-size="9">Logo</text>
+  <line x1="220" x2="220" y1="152" y2="170" stroke="#374151" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="220" y="182" text-anchor="middle" fill="#6b7280" font-size="9">Nav links (flex gap-8)</text>
+  <line x1="334" x2="334" y1="152" y2="170" stroke="#374151" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="334" y="182" text-anchor="middle" fill="#6b7280" font-size="9">CTA (hidden md:block)</text>
+
+  <!-- Sticky + backdrop code note -->
+  <rect x="36" y="196" width="328" height="28" rx="6" fill="#0c1220" stroke="#1e3a5f" stroke-width="1"/>
+  <text x="200" y="214" text-anchor="middle" fill="#38bdf8" font-size="10" font-family="monospace">sticky top-0 z-50 backdrop-blur-sm bg-gray-950/95</text>
+
+  <!-- Active link with underline -->
+  <rect x="36" y="236" width="328" height="52" rx="10" fill="#111827" stroke="#1f2937" stroke-width="1.5"/>
+  <text x="58" y="267" fill="#38bdf8" font-size="13" font-weight="800">⊞</text>
+  <text x="74" y="267" fill="#f9fafb" font-size="13" font-weight="700">MyBrand</text>
+  <!-- Active link = white with underline -->
+  <text x="162" y="267" fill="#f9fafb" font-size="11" font-weight="600">Home</text>
+  <line x1="162" x2="190" y1="271" y2="271" stroke="#38bdf8" stroke-width="2" stroke-linecap="round"/>
+  <text x="202" y="267" fill="#6b7280" font-size="11">Features</text>
+  <text x="268" y="267" fill="#6b7280" font-size="11">Pricing</text>
+  <rect x="316" y="254" width="36" height="18" rx="4" fill="#0ea5e9"/>
+  <text x="334" y="266" text-anchor="middle" fill="#fff" font-size="8" font-weight="600">Start</text>
+
+  <text x="200" y="302" text-anchor="middle" fill="#6b7280" font-size="9">Active link: after:absolute after:-bottom-1 after:h-0.5 after:w-full after:bg-sky-400</text>
+
+
+  <!-- =============================== -->
+  <!-- RIGHT: MOBILE NAVBAR            -->
+  <!-- =============================== -->
+  <text x="700" y="80" text-anchor="middle" fill="#a78bfa" font-size="11" font-weight="600" letter-spacing="1">MOBILE (&lt;768px)</text>
+
+  <!-- Mobile navbar bar -->
+  <rect x="536" y="94" width="228" height="52" rx="10" fill="#111827" stroke="#1f2937" stroke-width="1.5"/>
+  <text x="558" y="125" fill="#38bdf8" font-size="13" font-weight="800">⊞</text>
+  <text x="574" y="125" fill="#f9fafb" font-size="13" font-weight="700">MyBrand</text>
+  <!-- Hamburger icon -->
+  <rect x="718" y="112" width="28" height="28" rx="6" fill="#1f2937"/>
+  <line x1="724" x2="740" y1="122" y2="122" stroke="#9ca3af" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="724" x2="740" y1="126" y2="126" stroke="#9ca3af" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="724" x2="740" y1="130" y2="130" stroke="#9ca3af" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Labels -->
+  <text x="650" y="162" text-anchor="middle" fill="#6b7280" font-size="9">md:hidden — solo visible en mobile</text>
+
+  <!-- Mobile menu open -->
+  <rect x="536" y="172" width="228" height="52" rx="10" fill="#111827" stroke="#1f2937" stroke-width="1.5"/>
+  <text x="558" y="203" fill="#38bdf8" font-size="13" font-weight="800">⊞</text>
+  <text x="574" y="203" fill="#f9fafb" font-size="13" font-weight="700">MyBrand</text>
+  <rect x="718" y="190" width="28" height="28" rx="6" fill="#0c4a6e"/>
+  <line x1="724" x2="740" y1="200" y2="208" stroke="#38bdf8" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="724" x2="740" y1="208" y2="200" stroke="#38bdf8" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Dropdown menu -->
+  <rect x="688" y="228" width="76" height="88" rx="8" fill="#111827" stroke="#374151" stroke-width="1"/>
+  <text x="726" y="248" text-anchor="middle" fill="#9ca3af" font-size="9">Home</text>
+  <line x1="700" x2="752" y1="253" y2="253" stroke="#1f2937" stroke-width="1"/>
+  <text x="726" y="269" text-anchor="middle" fill="#9ca3af" font-size="9">Features</text>
+  <line x1="700" x2="752" y1="274" y2="274" stroke="#1f2937" stroke-width="1"/>
+  <text x="726" y="285" text-anchor="middle" fill="#9ca3af" font-size="9">Pricing</text>
+  <line x1="700" x2="752" y1="290" y2="290" stroke="#1f2937" stroke-width="1"/>
+  <rect x="700" y="296" width="52" height="14" rx="4" fill="#0ea5e9"/>
+  <text x="726" y="306" text-anchor="middle" fill="#fff" font-size="8" font-weight="600">Get started</text>
+
+  <!-- =============================== -->
+  <!-- BOTTOM: PEER TECHNIQUE DIAGRAM  -->
+  <!-- =============================== -->
+  <text x="450" y="348" text-anchor="middle" fill="#f9fafb" font-size="13" font-weight="700">Técnica peer — toggle sin JavaScript</text>
+
+  <!-- Step 1: checkbox -->
+  <rect x="80" y="366" width="120" height="44" rx="8" fill="#0c1220" stroke="#1e3a5f" stroke-width="1.5"/>
+  <text x="140" y="383" text-anchor="middle" fill="#38bdf8" font-size="9" font-family="monospace">&lt;input type="checkbox"</text>
+  <text x="140" y="396" text-anchor="middle" fill="#38bdf8" font-size="9" font-family="monospace">  class="peer hidden"/&gt;</text>
+
+  <!-- Arrow 1 -->
+  <line x1="200" x2="240" y1="388" y2="388" stroke="#374151" stroke-width="1.5"/>
+  <polygon points="240,384 248,388 240,392" fill="#374151"/>
+
+  <!-- Step 2: label -->
+  <rect x="248" y="366" width="120" height="44" rx="8" fill="#0c1220" stroke="#374151" stroke-width="1.5"/>
+  <text x="308" y="383" text-anchor="middle" fill="#9ca3af" font-size="9" font-family="monospace">&lt;label for="toggle"&gt;</text>
+  <text x="308" y="396" text-anchor="middle" fill="#9ca3af" font-size="9" font-family="monospace">  ☰ (icono)</text>
+
+  <!-- Arrow 2 -->
+  <line x1="368" x2="408" y1="388" y2="388" stroke="#374151" stroke-width="1.5"/>
+  <polygon points="408,384 416,388 408,392" fill="#374151"/>
+
+  <!-- Step 3: sibling menu -->
+  <rect x="416" y="366" width="140" height="44" rx="8" fill="#0c1220" stroke="#374151" stroke-width="1.5"/>
+  <text x="486" y="380" text-anchor="middle" fill="#9ca3af" font-size="9" font-family="monospace">&lt;nav class="hidden</text>
+  <text x="486" y="393" text-anchor="middle" fill="#6ee7b7" font-size="9" font-family="monospace">  peer-checked:flex"&gt;</text>
+  <text x="486" y="406" text-anchor="middle" fill="#9ca3af" font-size="9" font-family="monospace">...links...</text>
+
+  <!-- Vertical arrow: checked state -->
+  <line x1="140" x2="140" y1="410" y2="438" stroke="#0ea5e9" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="160" y="432" fill="#38bdf8" font-size="9">:checked</text>
+  <line x1="308" x2="308" y1="410" y2="438" stroke="#374151" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="326" y="432" fill="#6b7280" font-size="9">click</text>
+
+  <!-- Result note -->
+  <rect x="576" y="366" width="224" height="44" rx="8" fill="#052e16" stroke="#14532d" stroke-width="1.5"/>
+  <text x="688" y="380" text-anchor="middle" fill="#86efac" font-size="10" font-weight="600">Cuando checkbox=checked</text>
+  <text x="688" y="396" text-anchor="middle" fill="#6ee7b7" font-size="9">peer-checked:flex activa el menú</text>
+  <text x="688" y="408" text-anchor="middle" fill="#4ade80" font-size="9">¡Sin una línea de JavaScript!</text>
+</svg>
