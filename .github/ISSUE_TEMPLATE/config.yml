@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Pregunta o duda
+    url: https://github.com/ergrato-dev/bc-tailwindcss/discussions
+    about: Para preguntas o dudas sobre el contenido, usa GitHub Discussions.
+  - name: 📖 Documentación TailwindCSS
+    url: https://tailwindcss.com/docs
+    about: Consulta la documentación oficial de TailwindCSS.
