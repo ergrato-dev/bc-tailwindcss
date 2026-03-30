@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 02 — Justify y Align</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-gray-950 p-8 font-sans">
+
+  <h1 class="mb-8 text-2xl font-bold text-white">Ejercicio 02: Justify y Align</h1>
+
+  <!-- ============================================ -->
+  <!-- BLOQUE 1: Variantes de justify-*             -->
+  <!-- ============================================ -->
+  <!-- Descomenta las siguientes líneas:            -->
+
+  <!-- <section class="mb-12">                                                                                                -->
+  <!--   <h2 class="mb-6 text-lg font-semibold text-gray-300">Bloque 1: Variantes de justify-*</h2>                        -->
+  <!--   <div class="flex flex-col gap-4">                                                                                   -->
+  <!--                                                                                                                       -->
+  <!--     <div>                                                                                                             -->
+  <!--       <p class="mb-1 text-xs font-mono text-sky-400">justify-start</p>                                               -->
+  <!--       <div class="flex justify-start gap-2 rounded-lg bg-gray-800 p-3">                                              -->
+  <!--         <div class="rounded bg-sky-500 px-4 py-2 text-sm text-white">A</div>                                         -->
+  <!--         <div class="rounded bg-sky-500 px-4 py-2 text-sm text-white">B</div>                                         -->
+  <!--         <div class="rounded bg-sky-500 px-4 py-2 text-sm text-white">C</div>                                         -->
+  <!--       </div>                                                                                                          -->
+  <!--     </div>                                                                                                            -->
+  <!--                                                                                                                       -->
+  <!--     <div>                                                                                                             -->
+  <!--       <p class="mb-1 text-xs font-mono text-violet-400">justify-center</p>                                           -->
+  <!--       <div class="flex justify-center gap-2 rounded-lg bg-gray-800 p-3">                                             -->
+  <!--         <div class="rounded bg-violet-500 px-4 py-2 text-sm text-white">A</div>                                      -->
+  <!--         <div class="rounded bg-violet-500 px-4 py-2 text-sm text-white">B</div>                                      -->
+  <!--         <div class="rounded bg-violet-500 px-4 py-2 text-sm text-white">C</div>                                      -->
+  <!--       </div>                                                                                                          -->
+  <!--     </div>                                                                                                            -->
+  <!--                                                                                                                       -->
+  <!--     <div>                                                                                                             -->
+  <!--       <p class="mb-1 text-xs font-mono text-emerald-400">justify-end</p>                                             -->
+  <!--       <div class="flex justify-end gap-2 rounded-lg bg-gray-800 p-3">                                                -->
+  <!--         <div class="rounded bg-emerald-500 px-4 py-2 text-sm text-white">A</div>                                     -->
+  <!--         <div class="rounded bg-emerald-500 px-4 py-2 text-sm text-white">B</div>                                     -->
+  <!--         <div class="rounded bg-emerald-500 px-4 py-2 text-sm text-white">C</div>                                     -->
+  <!--       </div>                                                                                                          -->
+  <!--     </div>                                                                                                            -->
+  <!--                                                                                                                       -->
+  <!--     <div>                                                                                                             -->
+  <!--       <p class="mb-1 text-xs font-mono text-amber-400">justify-between ⭐ Más usado</p>                              -->
+  <!--       <div class="flex justify-between gap-2 rounded-lg bg-gray-800 p-3">                                            -->
+  <!--         <div class="rounded bg-amber-500 px-4 py-2 text-sm text-white">Logo</div>                                    -->
+  <!--         <div class="flex gap-2">                                                                                      -->
+  <!--           <div class="rounded bg-amber-400 px-4 py-2 text-sm text-white">Nav</div>                                   -->
+  <!--           <div class="rounded bg-amber-400 px-4 py-2 text-sm text-white">CTA</div>                                   -->
+  <!--         </div>                                                                                                        -->
+  <!--       </div>                                                                                                          -->
+  <!--     </div>                                                                                                            -->
+  <!--                                                                                                                       -->
+  <!--     <div>                                                                                                             -->
+  <!--       <p class="mb-1 text-xs font-mono text-rose-400">justify-around</p>                                             -->
+  <!--       <div class="flex justify-around rounded-lg bg-gray-800 p-3">                                                   -->
+  <!--         <div class="rounded bg-rose-500 px-4 py-2 text-sm text-white">A</div>                                        -->
+  <!--         <div class="rounded bg-rose-500 px-4 py-2 text-sm text-white">B</div>                                        -->
+  <!--         <div class="rounded bg-rose-500 px-4 py-2 text-sm text-white">C</div>                                        -->
+  <!--       </div>                                                                                                          -->
+  <!--     </div>                                                                                                            -->
+  <!--                                                                                                                       -->
+  <!--     <div>                                                                                                             -->
+  <!--       <p class="mb-1 text-xs font-mono text-teal-400">justify-evenly</p>                                             -->
+  <!--       <div class="flex justify-evenly rounded-lg bg-gray-800 p-3">                                                   -->
+  <!--         <div class="rounded bg-teal-500 px-4 py-2 text-sm text-white">A</div>                                        -->
+  <!--         <div class="rounded bg-teal-500 px-4 py-2 text-sm text-white">B</div>                                        -->
+  <!--         <div class="rounded bg-teal-500 px-4 py-2 text-sm text-white">C</div>                                        -->
+  <!--       </div>                                                                                                          -->
+  <!--     </div>                                                                                                            -->
+  <!--                                                                                                                       -->
+  <!--   </div>                                                                                                              -->
+  <!-- </section>                                                                                                            -->
+
+
+  <!-- ============================================ -->
+  <!-- BLOQUE 2: Variantes de items-*               -->
+  <!-- ============================================ -->
+  <!-- Descomenta las siguientes líneas:            -->
+
+  <!-- <section class="mb-12">                                                                                                                   -->
+  <!--   <h2 class="mb-6 text-lg font-semibold text-gray-300">Bloque 2: Variantes de items-*</h2>                                              -->
+  <!--   <div class="flex flex-col gap-4">                                                                                                       -->
+  <!--                                                                                                                                           -->
+  <!--     <div>                                                                                                                                 -->
+  <!--       <p class="mb-1 text-xs font-mono text-sky-400">items-start</p>                                                                     -->
+  <!--       <div class="flex items-start gap-2 rounded-lg bg-gray-800 p-3" style="height:96px;">                                               -->
+  <!--         <div class="rounded bg-sky-500 px-4 py-2 text-sm text-white">Alto</div>                                                          -->
+  <!--         <div class="rounded bg-sky-400 px-4 py-4 text-sm text-white">Medio</div>                                                         -->
+  <!--         <div class="rounded bg-sky-300 px-4 py-1 text-sm text-sky-900">Bajo</div>                                                        -->
+  <!--       </div>                                                                                                                              -->
+  <!--     </div>                                                                                                                                -->
+  <!--                                                                                                                                           -->
+  <!--     <div>                                                                                                                                 -->
+  <!--       <p class="mb-1 text-xs font-mono text-violet-400">items-center ⭐ Más usado para alineación vertical</p>                           -->
+  <!--       <div class="flex items-center gap-2 rounded-lg bg-gray-800 p-3" style="height:96px;">                                              -->
+  <!--         <div class="rounded bg-violet-500 px-4 py-2 text-sm text-white">Alto</div>                                                       -->
+  <!--         <div class="rounded bg-violet-400 px-4 py-4 text-sm text-white">Medio</div>                                                      -->
+  <!--         <div class="rounded bg-violet-300 px-4 py-1 text-sm text-violet-900">Bajo</div>                                                  -->
+  <!--       </div>                                                                                                                              -->
+  <!--     </div>                                                                                                                                -->
+  <!--                                                                                                                                           -->
+  <!--     <div>                                                                                                                                 -->
+  <!--       <p class="mb-1 text-xs font-mono text-emerald-400">items-end</p>                                                                   -->
+  <!--       <div class="flex items-end gap-2 rounded-lg bg-gray-800 p-3" style="height:96px;">                                                 -->
+  <!--         <div class="rounded bg-emerald-500 px-4 py-2 text-sm text-white">Alto</div>                                                      -->
+  <!--         <div class="rounded bg-emerald-400 px-4 py-4 text-sm text-white">Medio</div>                                                     -->
+  <!--         <div class="rounded bg-emerald-300 px-4 py-1 text-sm text-emerald-900">Bajo</div>                                                -->
+  <!--       </div>                                                                                                                              -->
+  <!--     </div>                                                                                                                                -->
+  <!--                                                                                                                                           -->
+  <!--     <div>                                                                                                                                 -->
+  <!--       <p class="mb-1 text-xs font-mono text-amber-400">items-stretch (por defecto)</p>                                                   -->
+  <!--       <div class="flex items-stretch gap-2 rounded-lg bg-gray-800 p-3" style="height:96px;">                                             -->
+  <!--         <div class="rounded bg-amber-500 px-4 text-sm text-white flex items-center">A</div>                                              -->
+  <!--         <div class="rounded bg-amber-400 px-4 text-sm text-white flex items-center">B</div>                                              -->
+  <!--         <div class="rounded bg-amber-300 px-4 text-sm text-amber-900 flex items-center">C</div>                                          -->
+  <!--       </div>                                                                                                                              -->
+  <!--     </div>                                                                                                                                -->
+  <!--                                                                                                                                           -->
+  <!--     <div>                                                                                                                                 -->
+  <!--       <p class="mb-1 text-xs font-mono text-rose-400">items-baseline (alinea por la base del texto)</p>                                  -->
+  <!--       <div class="flex items-baseline gap-4 rounded-lg bg-gray-800 px-4 py-3">                                                           -->
+  <!--         <span class="text-4xl font-bold text-rose-400">$99</span>                                                                        -->
+  <!--         <span class="text-xl text-rose-300">/usuario</span>                                                                              -->
+  <!--         <span class="text-sm text-rose-200">/mes</span>                                                                                  -->
+  <!--       </div>                                                                                                                              -->
+  <!--     </div>                                                                                                                                -->
+  <!--                                                                                                                                           -->
+  <!--   </div>                                                                                                                                  -->
+  <!-- </section>                                                                                                                                -->
+
+
+  <!-- ============================================ -->
+  <!-- BLOQUE 3: Centrado perfecto                  -->
+  <!-- ============================================ -->
+  <!-- Descomenta las siguientes líneas:            -->
+
+  <!-- <section class="mb-12">                                                                                                                            -->
+  <!--   <h2 class="mb-4 text-lg font-semibold text-gray-300">Bloque 3: Centrado perfecto</h2>                                                           -->
+  <!--   <div class="flex h-80 items-center justify-center rounded-xl bg-gray-800">                                                                       -->
+  <!--     <div class="w-full max-w-sm rounded-2xl bg-gray-900 p-8 shadow-2xl">                                                                           -->
+  <!--       <h2 class="text-xl font-bold text-white">Iniciar sesión</h2>                                                                                 -->
+  <!--       <p class="mt-1 text-sm text-gray-400">Bienvenido de vuelta</p>                                                                               -->
+  <!--       <div class="mt-6 flex flex-col gap-3">                                                                                                       -->
+  <!--         <input class="rounded-lg bg-gray-800 px-4 py-3 text-sm text-white placeholder-gray-500 outline-none ring-1 ring-gray-700 focus:ring-sky-500" placeholder="Email" />  -->
+  <!--         <input class="rounded-lg bg-gray-800 px-4 py-3 text-sm text-white placeholder-gray-500 outline-none ring-1 ring-gray-700 focus:ring-sky-500" type="password" placeholder="Contraseña" />  -->
+  <!--         <button class="rounded-lg bg-sky-500 py-3 text-sm font-semibold text-white hover:bg-sky-600 transition-colors">Entrar</button>              -->
+  <!--       </div>                                                                                                                                        -->
+  <!--     </div>                                                                                                                                          -->
+  <!--   </div>                                                                                                                                            -->
+  <!-- </section>                                                                                                                                          -->
+
+
+  <!-- ============================================ -->
+  <!-- BLOQUE 4: self-* — alineación individual     -->
+  <!-- ============================================ -->
+  <!-- Descomenta las siguientes líneas:            -->
+
+  <!-- <section class="mb-12">                                                                                                                        -->
+  <!--   <h2 class="mb-4 text-lg font-semibold text-gray-300">Bloque 4: self-* — cada ítem se alinea independientemente</h2>                        -->
+  <!--   <div class="flex items-start gap-3 rounded-xl bg-gray-800 p-4" style="height:160px;">                                                       -->
+  <!--                                                                                                                                               -->
+  <!--     <div class="rounded bg-gray-600 px-4 py-3 text-sm text-gray-300">                                                                        -->
+  <!--       Normal<br/>(sigue items-start)                                                                                                          -->
+  <!--     </div>                                                                                                                                     -->
+  <!--                                                                                                                                               -->
+  <!--     <div class="self-center rounded bg-sky-500 px-4 py-3 text-sm text-white">                                                                -->
+  <!--       self-center                                                                                                                             -->
+  <!--     </div>                                                                                                                                     -->
+  <!--                                                                                                                                               -->
+  <!--     <div class="self-end rounded bg-violet-500 px-4 py-3 text-sm text-white">                                                               -->
+  <!--       self-end                                                                                                                                -->
+  <!--     </div>                                                                                                                                     -->
+  <!--                                                                                                                                               -->
+  <!--     <div class="self-stretch rounded bg-emerald-500 px-4 text-sm text-white flex items-center">                                             -->
+  <!--       self-stretch<br/>(ocupa toda la altura)                                                                                                 -->
+  <!--     </div>                                                                                                                                     -->
+  <!--                                                                                                                                               -->
+  <!--   </div>                                                                                                                                       -->
+  <!-- </section>                                                                                                                                     -->
+
+</body>
+
+</html>

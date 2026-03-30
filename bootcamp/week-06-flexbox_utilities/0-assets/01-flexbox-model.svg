@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" font-family="Inter, Roboto, system-ui, sans-serif">
+
+  <!-- Background -->
+  <rect width="800" height="480" fill="#030712"/>
+
+  <!-- Title -->
+  <text x="400" y="42" text-anchor="middle" font-size="18" font-weight="700" fill="#F9FAFB">Modelo Flexbox</text>
+  <text x="400" y="64" text-anchor="middle" font-size="12" fill="#6B7280">contenedor · eje principal · eje cruzado</text>
+
+  <!-- FLEX CONTAINER -->
+  <rect x="40" y="90" width="720" height="260" rx="12" fill="#111827" stroke="#374151" stroke-width="2"/>
+  <text x="60" y="115" font-size="11" fill="#6B7280">Contenedor Flex</text>
+  <text x="60" y="131" font-size="10" fill="#4B5563" font-family="monospace">display: flex</text>
+
+  <!-- Main Axis Arrow -->
+  <defs>
+    <marker id="arrow-right" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#38BDF8"/>
+    </marker>
+    <marker id="arrow-down" markerWidth="7" markerHeight="10" refX="3.5" refY="9" orient="auto">
+      <polygon points="0 0, 7 0, 3.5 10" fill="#A78BFA"/>
+    </marker>
+  </defs>
+
+  <!-- Main axis line -->
+  <line x1="80" y1="310" x2="700" y2="310" stroke="#38BDF8" stroke-width="1.5" marker-end="url(#arrow-right)" stroke-dasharray="6 3"/>
+  <text x="390" y="328" text-anchor="middle" font-size="11" fill="#38BDF8">Eje principal (flex-row) — justify-content actúa aquí</text>
+
+  <!-- Cross axis line -->
+  <line x1="730" y1="140" x2="730" y2="300" stroke="#A78BFA" stroke-width="1.5" marker-end="url(#arrow-down)" stroke-dasharray="6 3"/>
+  <text x="744" y="220" font-size="10" fill="#A78BFA" writing-mode="vertical-lr" transform="rotate(90, 744, 220)">Eje cruzado — align-items actúa aquí</text>
+
+  <!-- FLEX ITEMS -->
+  <!-- Item 1 -->
+  <rect x="80" y="148" width="140" height="140" rx="8" fill="#1E3A5F" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="150" y="210" text-anchor="middle" font-size="13" font-weight="600" fill="#38BDF8">Ítem 1</text>
+  <text x="150" y="228" text-anchor="middle" font-size="10" fill="#93C5FD">flex items apply</text>
+  <rect x="100" y="255" width="100" height="14" rx="3" fill="#1D4ED8" opacity="0.5"/>
+  <text x="150" y="265" text-anchor="middle" font-size="9" fill="#BAE6FD">grow / shrink / self-*</text>
+
+  <!-- Item 2 (shorter height to show items-stretch) -->
+  <rect x="240" y="148" width="140" height="100" rx="8" fill="#2D1B69" stroke="#A78BFA" stroke-width="1.5"/>
+  <text x="310" y="195" text-anchor="middle" font-size="13" font-weight="600" fill="#A78BFA">Ítem 2</text>
+  <text x="310" y="213" text-anchor="middle" font-size="10" fill="#C4B5FD">height: auto</text>
+
+  <!-- Item 3 -->
+  <rect x="400" y="148" width="140" height="120" rx="8" fill="#14532D" stroke="#34D399" stroke-width="1.5"/>
+  <text x="470" y="200" text-anchor="middle" font-size="13" font-weight="600" fill="#34D399">Ítem 3</text>
+  <text x="470" y="218" text-anchor="middle" font-size="10" fill="#6EE7B7">height: auto</text>
+
+  <!-- Item 4 -->
+  <rect x="560" y="148" width="100" height="140" rx="8" fill="#431407" stroke="#FB923C" stroke-width="1.5"/>
+  <text x="610" y="215" text-anchor="middle" font-size="13" font-weight="600" fill="#FB923C">Ítem 4</text>
+  <text x="610" y="233" text-anchor="middle" font-size="10" fill="#FDBA74">flex-none</text>
+
+  <!-- Gap indicator -->
+  <line x1="220" y1="200" x2="240" y2="200" stroke="#FCD34D" stroke-width="2"/>
+  <line x1="220" y1="195" x2="220" y2="205" stroke="#FCD34D" stroke-width="2"/>
+  <line x1="240" y1="195" x2="240" y2="205" stroke="#FCD34D" stroke-width="2"/>
+  <text x="230" y="190" text-anchor="middle" font-size="9" fill="#FCD34D">gap</text>
+
+  <line x1="380" y1="200" x2="400" y2="200" stroke="#FCD34D" stroke-width="2"/>
+  <line x1="380" y1="195" x2="380" y2="205" stroke="#FCD34D" stroke-width="2"/>
+  <line x1="400" y1="195" x2="400" y2="205" stroke="#FCD34D" stroke-width="2"/>
+
+  <line x1="540" y1="200" x2="560" y2="200" stroke="#FCD34D" stroke-width="2"/>
+  <line x1="540" y1="195" x2="540" y2="205" stroke="#FCD34D" stroke-width="2"/>
+  <line x1="560" y1="195" x2="560" y2="205" stroke="#FCD34D" stroke-width="2"/>
+
+  <!-- LEGEND -->
+  <rect x="40" y="375" width="720" height="90" rx="10" fill="#0F172A" stroke="#1E293B" stroke-width="1"/>
+
+  <rect x="60" y="395" width="12" height="12" rx="2" fill="#1E3A5F" stroke="#38BDF8" stroke-width="1"/>
+  <text x="78" y="405" font-size="11" fill="#94A3B8">Ítem flex = hijo directo del contenedor</text>
+
+  <rect x="280" y="395" width="12" height="12" rx="2" fill="#38BDF8" opacity="0.2"/>
+  <line x1="280" y1="420" x2="330" y2="420" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="340" y="424" font-size="11" fill="#38BDF8">justify-* (eje principal)</text>
+
+  <rect x="540" y="395" width="12" height="12" rx="2" fill="#A78BFA" opacity="0.2"/>
+  <line x1="540" y1="420" x2="590" y2="420" stroke="#A78BFA" stroke-width="1.5"/>
+  <text x="600" y="424" font-size="11" fill="#A78BFA">items-* (eje cruzado)</text>
+
+  <text x="60" y="446" font-size="10" fill="#4B5563">Las propiedades del CONTENEDOR: flex, flex-row/col, justify-*, items-*, gap, flex-wrap</text>
+  <text x="60" y="460" font-size="10" fill="#4B5563">Las propiedades del ÍTEM: self-*, grow, shrink, flex-1, flex-none, order-*</text>
+
+</svg>

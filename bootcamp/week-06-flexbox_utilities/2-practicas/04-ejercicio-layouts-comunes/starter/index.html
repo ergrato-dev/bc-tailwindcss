@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 04 — Layouts Comunes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-gray-950 font-sans">
+
+
+  <!-- ============================================ -->
+  <!-- BLOQUE 1: Navbar con justify-between         -->
+  <!-- ============================================ -->
+  <!-- Descomenta las siguientes líneas:            -->
+
+  <!-- <header class="sticky top-0 z-50 border-b border-gray-800 bg-gray-900/80 backdrop-blur-sm">                                                              -->
+  <!--   <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">                                                                            -->
+  <!--                                                                                                                                                           -->
+  <!--     <!-- Logo: flex-none, siempre a la izquierda --> -->
+  <!--     <a href="/" class="flex items-center gap-2 text-white">                                                                                               -->
+  <!--       <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-sky-500 font-bold text-sm">A</div>                                              -->
+  <!--       <span class="font-bold text-lg">AppName</span>                                                                                                      -->
+  <!--     </a>                                                                                                                                                   -->
+  <!--                                                                                                                                                           -->
+  <!--     <!-- Links: ocultos en mobile, visible en desktop --> -->
+  <!--     <ul class="hidden items-center gap-6 md:flex">                                                                                                        -->
+  <!--       <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Producto</a></li>                                                  -->
+  <!--       <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Precios</a></li>                                                   -->
+  <!--       <li><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Docs</a></li>                                                      -->
+  <!--     </ul>                                                                                                                                                  -->
+  <!--                                                                                                                                                           -->
+  <!--     <!-- CTA: siempre a la derecha --> -->
+  <!--     <div class="flex items-center gap-3">                                                                                                                 -->
+  <!--       <a href="#" class="hidden text-sm text-gray-400 hover:text-white transition-colors md:block">Iniciar sesión</a>                                     -->
+  <!--       <a href="#" class="rounded-lg bg-sky-500 px-4 py-2 text-sm font-semibold text-white hover:bg-sky-600 transition-colors">Empezar gratis</a>         -->
+  <!--     </div>                                                                                                                                                 -->
+  <!--                                                                                                                                                           -->
+  <!--   </nav>                                                                                                                                                   -->
+  <!-- </header>                                                                                                                                                  -->
+
+
+  <!-- ============================================ -->
+  <!-- BLOQUE 2: Hero section centrada              -->
+  <!-- ============================================ -->
+  <!-- Descomenta las siguientes líneas:            -->
+
+  <!-- <section class="flex min-h-[560px] flex-col items-center justify-center px-6 py-24 text-center">                                                         -->
+  <!--   <span class="mb-6 inline-flex items-center gap-2 rounded-full border border-sky-500/30 bg-sky-500/10 px-4 py-1.5 text-sm font-medium text-sky-400">  -->
+  <!--     <span class="h-1.5 w-1.5 rounded-full bg-sky-400"></span>                                                                                            -->
+  <!--     Nueva versión disponible                                                                                                                              -->
+  <!--   </span>                                                                                                                                                  -->
+  <!--   <h1 class="max-w-3xl text-4xl font-black leading-tight text-white md:text-6xl">                                                                        -->
+  <!--     Construye interfaces<br/>                                                                                                                              -->
+  <!--     <span class="text-sky-400">más rápido</span> que nunca                                                                                               -->
+  <!--   </h1>                                                                                                                                                    -->
+  <!--   <p class="mt-6 max-w-xl text-lg leading-relaxed text-gray-400">                                                                                        -->
+  <!--     Plataforma de diseño UI para equipos que necesitan velocidad sin sacrificar calidad.                                                                   -->
+  <!--   </p>                                                                                                                                                     -->
+  <!--   <div class="mt-10 flex flex-col items-center gap-4 sm:flex-row">                                                                                       -->
+  <!--     <a href="#" class="w-full rounded-xl bg-sky-500 px-8 py-3.5 text-sm font-semibold text-white hover:bg-sky-600 transition-colors sm:w-auto">          -->
+  <!--       Empezar gratis                                                                                                                                       -->
+  <!--     </a>                                                                                                                                                   -->
+  <!--     <a href="#" class="flex items-center gap-2 text-sm font-medium text-gray-300 hover:text-white transition-colors">                                    -->
+  <!--       Ver demo                                                                                                                                             -->
+  <!--       <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">                                                                        -->
+  <!--         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />                                                        -->
+  <!--       </svg>                                                                                                                                               -->
+  <!--     </a>                                                                                                                                                   -->
+  <!--   </div>                                                                                                                                                   -->
+  <!-- </section>                                                                                                                                                 -->
+
+
+  <!-- ============================================ -->
+  <!-- BLOQUE 3: Tarjeta de producto horizontal     -->
+  <!-- ============================================ -->
+  <!-- Descomenta las siguientes líneas:            -->
+
+  <!-- <section class="mx-auto max-w-2xl px-6 py-12">                                                                                                           -->
+  <!--   <h2 class="mb-6 text-lg font-semibold text-gray-300">Tarjeta horizontal (flex items-start)</h2>                                                       -->
+  <!--   <div class="flex items-start gap-6 rounded-2xl border border-gray-800 bg-gray-900 p-6">                                                               -->
+  <!--                                                                                                                                                           -->
+  <!--     <!-- Imagen: shrink-0 para que no se deforme --> -->
+  <!--     <div class="flex-none h-24 w-24 shrink-0 overflow-hidden rounded-xl bg-gradient-to-br from-sky-500 to-violet-600 flex items-center justify-center"> -->
+  <!--       <span class="text-4xl">⚡</span>                                                                                                                    -->
+  <!--     </div>                                                                                                                                                 -->
+  <!--                                                                                                                                                           -->
+  <!--     <!-- Contenido: flex-1 para ocupar el resto --> -->
+  <!--     <div class="flex flex-1 flex-col gap-2">                                                                                                              -->
+  <!--       <div class="flex items-start justify-between">                                                                                                      -->
+  <!--         <div>                                                                                                                                              -->
+  <!--           <h3 class="font-bold text-white">Plan Pro</h3>                                                                                                  -->
+  <!--           <p class="text-sm text-gray-400">Acceso completo a todas las funcionalidades</p>                                                                -->
+  <!--         </div>                                                                                                                                             -->
+  <!--         <span class="flex-none rounded-full bg-emerald-500/10 px-2.5 py-0.5 text-xs font-medium text-emerald-400">Popular</span>                        -->
+  <!--       </div>                                                                                                                                               -->
+  <!--       <div class="flex items-baseline gap-1 mt-2">                                                                                                        -->
+  <!--         <span class="text-2xl font-black text-white">$29</span>                                                                                           -->
+  <!--         <span class="text-sm text-gray-400">/mes</span>                                                                                                   -->
+  <!--       </div>                                                                                                                                               -->
+  <!--       <button class="mt-2 rounded-lg bg-sky-500 px-4 py-2 text-sm font-semibold text-white hover:bg-sky-600 transition-colors self-start">              -->
+  <!--         Elegir plan                                                                                                                                        -->
+  <!--       </button>                                                                                                                                            -->
+  <!--     </div>                                                                                                                                                 -->
+  <!--                                                                                                                                                           -->
+  <!--   </div>                                                                                                                                                  -->
+  <!-- </section>                                                                                                                                                 -->
+
+
+  <!-- ============================================ -->
+  <!-- BLOQUE 4: Footer multi-columna               -->
+  <!-- ============================================ -->
+  <!-- Descomenta las siguientes líneas:            -->
+
+  <!-- <footer class="border-t border-gray-800 bg-gray-900">                                                                                    -->
+  <!--   <div class="mx-auto max-w-7xl px-6 py-12">                                                                                            -->
+  <!--     <div class="flex flex-col gap-10 md:flex-row">                                                                                       -->
+  <!--                                                                                                                                           -->
+  <!--       <!-- Columna de marca --> -->
+  <!--       <div class="flex-none md:w-56">                                                                                                    -->
+  <!--         <div class="flex items-center gap-2">                                                                                            -->
+  <!--           <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-sky-500 font-bold text-sm text-white">A</div>               -->
+  <!--           <span class="font-bold text-white">AppName</span>                                                                               -->
+  <!--         </div>                                                                                                                            -->
+  <!--         <p class="mt-4 text-sm leading-relaxed text-gray-400">                                                                           -->
+  <!--           Herramienta de diseño UI para desarrolladores modernos.                                                                         -->
+  <!--         </p>                                                                                                                              -->
+  <!--       </div>                                                                                                                              -->
+  <!--                                                                                                                                           -->
+  <!--       <!-- Columnas de links (flex-1 dividido equitativamente) --> -->
+  <!--       <div class="flex flex-1 flex-col gap-8 sm:flex-row">                                                                               -->
+  <!--         <div class="flex-1">                                                                                                              -->
+  <!--           <h4 class="text-xs font-semibold uppercase tracking-wider text-gray-400">Producto</h4>                                         -->
+  <!--           <ul class="mt-4 flex flex-col gap-2.5">                                                                                        -->
+  <!--             <li><a href="#" class="text-sm text-gray-500 hover:text-white transition-colors">Características</a></li>                    -->
+  <!--             <li><a href="#" class="text-sm text-gray-500 hover:text-white transition-colors">Precios</a></li>                             -->
+  <!--             <li><a href="#" class="text-sm text-gray-500 hover:text-white transition-colors">Integraciones</a></li>                      -->
+  <!--           </ul>                                                                                                                           -->
+  <!--         </div>                                                                                                                            -->
+  <!--         <div class="flex-1">                                                                                                              -->
+  <!--           <h4 class="text-xs font-semibold uppercase tracking-wider text-gray-400">Empresa</h4>                                          -->
+  <!--           <ul class="mt-4 flex flex-col gap-2.5">                                                                                        -->
+  <!--             <li><a href="#" class="text-sm text-gray-500 hover:text-white transition-colors">Sobre nosotros</a></li>                     -->
+  <!--             <li><a href="#" class="text-sm text-gray-500 hover:text-white transition-colors">Blog</a></li>                               -->
+  <!--             <li><a href="#" class="text-sm text-gray-500 hover:text-white transition-colors">Empleo</a></li>                             -->
+  <!--           </ul>                                                                                                                           -->
+  <!--         </div>                                                                                                                            -->
+  <!--         <div class="flex-1">                                                                                                              -->
+  <!--           <h4 class="text-xs font-semibold uppercase tracking-wider text-gray-400">Legal</h4>                                            -->
+  <!--           <ul class="mt-4 flex flex-col gap-2.5">                                                                                        -->
+  <!--             <li><a href="#" class="text-sm text-gray-500 hover:text-white transition-colors">Privacidad</a></li>                         -->
+  <!--             <li><a href="#" class="text-sm text-gray-500 hover:text-white transition-colors">Términos</a></li>                           -->
+  <!--           </ul>                                                                                                                           -->
+  <!--         </div>                                                                                                                            -->
+  <!--       </div>                                                                                                                              -->
+  <!--                                                                                                                                           -->
+  <!--     </div>                                                                                                                                -->
+  <!--   </div>                                                                                                                                  -->
+  <!--   <div class="border-t border-gray-800">                                                                                                  -->
+  <!--     <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">                                                          -->
+  <!--       <p class="text-xs text-gray-500">© 2026 AppName. Todos los derechos reservados.</p>                                                -->
+  <!--       <div class="flex gap-4">                                                                                                            -->
+  <!--         <a href="#" class="text-xs text-gray-500 hover:text-white transition-colors">Twitter</a>                                         -->
+  <!--         <a href="#" class="text-xs text-gray-500 hover:text-white transition-colors">GitHub</a>                                          -->
+  <!--       </div>                                                                                                                              -->
+  <!--     </div>                                                                                                                                -->
+  <!--   </div>                                                                                                                                  -->
+  <!-- </footer>                                                                                                                                  -->
+
+</body>
+
+</html>

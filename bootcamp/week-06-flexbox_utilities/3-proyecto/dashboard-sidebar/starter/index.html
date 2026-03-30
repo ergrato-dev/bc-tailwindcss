@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard — Semana 6</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<!--
+    PROYECTO SEMANA 6: Dashboard con Sidebar
+    ==========================================
+    Construye el layout usando ÚNICAMENTE Flexbox de TailwindCSS.
+    Prohibido: position:absolute/fixed para el layout, float, grid.
+
+    ESTRUCTURA ESPERADA:
+    ┌──────────────────────────────────────────────┐
+    │  SIDEBAR (flex-none w-64)  │  MAIN (flex-1)  │
+    │  ─────────────────────────│─────────────────  │
+    │  Logo                      │  Header          │
+    │  Nav links (flex-col)      │  Stats (wrap)    │
+    │                            │  Task list       │
+    │  User profile              │                  │
+    └──────────────────────────────────────────────┘
+  -->
+
+<body class="bg-gray-950 font-sans text-white">
+
+  <!-- ==========================================
+         LAYOUT PRINCIPAL
+         TODO: Aplica "flex h-screen overflow-hidden"
+               a este div para crear el contenedor base
+         ========================================== -->
+  <div class="???">
+
+
+    <!-- ==========================================
+           SIDEBAR
+           TODO:
+           - Clases de tamaño: flex-none w-64
+           - Oculto en mobile: hidden
+           - Visible en desktop: md:flex
+           - Dirección: flex-col
+           - Estilo: bg-gray-900 border-r border-gray-800
+           ========================================== -->
+    <aside class="???">
+
+      <!-- Logo del sidebar -->
+      <!-- TODO: Implementar área del logo con:
+             - flex items-center gap-3
+             - padding: px-6 py-5
+             - border-b border-gray-800
+             - Contenido: icono sky-500 + nombre de la app
+        -->
+      <div class="???">
+        <!-- TODO: Div de icono: h-8 w-8 rounded-lg bg-sky-500 flex items-center justify-center -->
+        <!-- TODO: Span con el nombre de la app: font-bold text-white -->
+      </div>
+
+      <!-- Navegación principal -->
+      <!-- TODO: nav con flex-1 overflow-y-auto p-4 -->
+      <nav class="???">
+        <!-- TODO: Sección de label: "Principal" -->
+        <!-- TODO: ul con flex flex-col gap-1 -->
+        <!-- TODO: 4 ítems de nav, cada uno es un <a> con:
+               - flex items-center gap-3
+               - rounded-lg px-3 py-2
+               - text-sm text-gray-400
+               - hover:bg-gray-800 hover:text-white transition-colors
+               El primer ítem (activo) tiene: bg-sky-500/10 text-sky-400
+               Cada ítem tiene un SVG de icono + texto del link
+          -->
+      </nav>
+
+      <!-- Perfil de usuario (abajo del sidebar) -->
+      <!-- TODO: div con flex-none border-t border-gray-800 p-4 -->
+      <!-- TODO: Implementar el patrón avatar + nombre + email:
+             - flex items-center gap-3
+             - img: shrink-0 h-8 w-8 rounded-full
+             - div: min-w-0 flex-1
+             - p con truncate para nombre
+             - p con truncate para email
+        -->
+      <div class="???">
+      </div>
+
+    </aside>
+
+
+    <!-- ==========================================
+           ÁREA PRINCIPAL
+           TODO:
+           - flex-1 para ocupar el espacio restante
+           - flex flex-col para apilar header y contenido
+           - overflow-hidden para scroll interno
+           ========================================== -->
+    <main class="???">
+
+      <!-- ==========================================
+             HEADER del área principal
+             TODO:
+             - flex items-center justify-between
+             - flex-none (no crece)
+             - border-b border-gray-800 bg-gray-950
+             - padding: px-8 py-4
+             ========================================== -->
+      <header class="???">
+
+        <!-- Título de la página (izquierda) -->
+        <!-- TODO: div con título h1 + subtítulo p -->
+
+        <!-- Acciones (derecha) -->
+        <!-- TODO: div con flex items-center gap-3
+               Botón secundario: border border-gray-700 rounded-lg px-4 py-2 text-sm text-gray-300
+               Botón primario: bg-sky-500 rounded-lg px-4 py-2 text-sm font-semibold text-white
+          -->
+
+      </header>
+
+
+      <!-- ==========================================
+             ÁREA DE CONTENIDO CON SCROLL
+             TODO: flex-1 overflow-auto bg-gray-950 p-8
+             ========================================== -->
+      <div class="???">
+
+
+        <!-- ==========================================
+               SECCIÓN DE ESTADÍSTICAS
+               TODO: Implementar 4 tarjetas de stats
+               - Contenedor: flex flex-wrap gap-4 mb-8
+               - Cada tarjeta:
+                 · basis-40 flex-1 (para grow y wrap)
+                 · rounded-xl border border-gray-800 bg-gray-900 p-5
+                 · Contenido con flex items-start justify-between + flex flex-col
+               ========================================== -->
+        <section class="mb-8">
+          <h2 class="mb-4 text-sm font-semibold uppercase tracking-wider text-gray-500">Resumen</h2>
+
+          <!-- TODO: div contenedor con flex flex-wrap gap-4 -->
+          <div class="???">
+
+            <!-- TODO: Tarjeta 1 — Total Tareas -->
+            <!-- TODO: Tarjeta 2 — En Progreso -->
+            <!-- TODO: Tarjeta 3 — Completadas -->
+            <!-- TODO: Tarjeta 4 — Vencidas -->
+
+          </div>
+        </section>
+
+
+        <!-- ==========================================
+               LISTA DE TAREAS RECIENTES
+               TODO: Lista con 4 ítems usando el patrón:
+               flex items-center gap-3 para cada ítem
+               ========================================== -->
+        <section>
+          <div class="mb-4 flex items-center justify-between">
+            <h2 class="text-sm font-semibold uppercase tracking-wider text-gray-500">Tareas recientes</h2>
+            <a href="#" class="text-sm font-medium text-sky-400 hover:text-sky-300 transition-colors">Ver todas</a>
+          </div>
+
+          <!-- TODO: ul con flex flex-col divide-y divide-gray-800 rounded-xl border border-gray-800 bg-gray-900 -->
+          <ul class="???">
+
+            <!-- TODO: li 1 — Tarea completada
+                   Patrón: flex items-center gap-4 px-6 py-4
+                   - Icono de check: shrink-0 h-8 w-8 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-400
+                   - Texto: flex-1 min-w-0 → p.truncate + p.truncate.text-xs.text-gray-500
+                   - Badge "Completada": flex-none rounded-full bg-emerald-500/10 px-2.5 py-0.5 text-xs text-emerald-400
+                   - Botón acción: flex-none (icono de 3 puntos)
+              -->
+
+            <!-- TODO: li 2 — Tarea en progreso (usa badge sky-400) -->
+            <!-- TODO: li 3 — Tarea pendiente (usa badge amber-400) -->
+            <!-- TODO: li 4 — Tarea vencida (usa badge rose-400) -->
+
+          </ul>
+        </section>
+
+      </div>
+      <!-- /contenido -->
+
+    </main>
+
+  </div>
+  <!-- /layout principal -->
+
+
+  <!-- ==========================================
+         BONUS: Botón hamburger para mobile
+         (visible solo cuando sidebar está oculto)
+         TODO: botón fixed bottom-4 left-4 z-50 md:hidden
+               con bg-sky-500 rounded-full p-3 shadow-lg
+               Icono de menú hamburger SVG
+         ========================================== -->
+
+</body>
+
+</html>
