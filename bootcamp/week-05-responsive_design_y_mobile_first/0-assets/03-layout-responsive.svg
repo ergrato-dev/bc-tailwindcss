@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420">
-  <rect width="800" height="420" fill="#0f172a"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 420" width="100%">
+  <rect width="840" height="420" fill="#0f172a"/>
 
   <text x="400" y="36" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="#f1f5f9" text-anchor="middle">Layout Responsive — Transformaciones Clave</text>
 
