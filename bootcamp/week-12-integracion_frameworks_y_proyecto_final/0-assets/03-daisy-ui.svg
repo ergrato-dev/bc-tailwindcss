@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 500" width="860" height="500" font-family="Inter, system-ui, sans-serif">
+
+  <!-- Background -->
+  <rect width="860" height="500" fill="#030712"/>
+
+  <!-- Title bar -->
+  <rect width="860" height="52" fill="#111827"/>
+  <text x="30" y="32" font-size="14" font-weight="700" fill="#F9FAFB" letter-spacing="0.5">daisyUI — Plugin de componentes para Tailwind</text>
+  <text x="30" y="46" font-size="10" fill="#6B7280">Sistema de temas con data-theme · Componentes semánticos · Variables CSS</text>
+
+  <!-- ===== TOP ROW: 4 Theme swatches ===== -->
+  <text x="30" y="76" font-size="11" font-weight="600" fill="#6B7280" letter-spacing="1">TEMAS — data-theme</text>
+
+  <!-- Theme: light -->
+  <rect x="20" y="84" width="190" height="80" rx="10" fill="#FFFFFF"/>
+  <text x="36" y="103" font-size="10" fill="#1f2937" font-weight="600">Light</text>
+  <text x="36" y="116" font-size="9" fill="#6B7280" font-family="'Courier New', monospace">data-theme="light"</text>
+  <rect x="36" y="124" width="30" height="16" rx="4" fill="#570df8"/>
+  <rect x="72" y="124" width="30" height="16" rx="4" fill="#f000b8"/>
+  <rect x="108" y="124" width="30" height="16" rx="4" fill="#37cdbe"/>
+  <rect x="144" y="124" width="30" height="16" rx="4" fill="#3d4451"/>
+  <text x="36" y="155" font-size="8" fill="#9CA3AF">--primary · --secondary · --accent · --neutral</text>
+
+  <!-- Theme: dark -->
+  <rect x="220" y="84" width="190" height="80" rx="10" fill="#1d232a"/>
+  <text x="236" y="103" font-size="10" fill="#a6adbb" font-weight="600">Dark</text>
+  <text x="236" y="116" font-size="9" fill="#4B5563" font-family="'Courier New', monospace">data-theme="dark"</text>
+  <rect x="236" y="124" width="30" height="16" rx="4" fill="#661AE6"/>
+  <rect x="272" y="124" width="30" height="16" rx="4" fill="#D926AA"/>
+  <rect x="308" y="124" width="30" height="16" rx="4" fill="#1FB2A5"/>
+  <rect x="344" y="124" width="30" height="16" rx="4" fill="#2a323c"/>
+  <text x="236" y="155" font-size="8" fill="#4B5563">--primary · --secondary · --accent · --neutral</text>
+
+  <!-- Theme: cupcake -->
+  <rect x="420" y="84" width="190" height="80" rx="10" fill="#faf7f5"/>
+  <text x="436" y="103" font-size="10" fill="#291334" font-weight="600">Cupcake</text>
+  <text x="436" y="116" font-size="9" fill="#9CA3AF" font-family="'Courier New', monospace">data-theme="cupcake"</text>
+  <rect x="436" y="124" width="30" height="16" rx="4" fill="#65c3c8"/>
+  <rect x="472" y="124" width="30" height="16" rx="4" fill="#ef9fbc"/>
+  <rect x="508" y="124" width="30" height="16" rx="4" fill="#eeaf3a"/>
+  <rect x="544" y="124" width="30" height="16" rx="4" fill="#291334"/>
+  <text x="436" y="155" font-size="8" fill="#9CA3AF">--primary · --secondary · --accent · --neutral</text>
+
+  <!-- Theme: business -->
+  <rect x="620" y="84" width="220" height="80" rx="10" fill="#1b1d1e"/>
+  <text x="636" y="103" font-size="10" fill="#e7e4e4" font-weight="600">Business</text>
+  <text x="636" y="116" font-size="9" fill="#4B5563" font-family="'Courier New', monospace">data-theme="business"</text>
+  <rect x="636" y="124" width="30" height="16" rx="4" fill="#1c4f82"/>
+  <rect x="672" y="124" width="30" height="16" rx="4" fill="#7b92b2"/>
+  <rect x="708" y="124" width="30" height="16" rx="4" fill="#67cba0"/>
+  <rect x="744" y="124" width="30" height="16" rx="4" fill="#e7decc"/>
+  <text x="636" y="155" font-size="8" fill="#4B5563">--primary · --secondary · --accent · --neutral</text>
+
+  <!-- ===== ROW 2: Components comparison ===== -->
+  <!-- Panel BTN -->
+  <rect x="20" y="180" width="260" height="195" rx="10" fill="#111827" stroke="#1F2937" stroke-width="1"/>
+  <text x="36" y="203" font-size="11" font-weight="600" fill="#9CA3AF" letter-spacing="1">Botones</text>
+
+  <!-- daisyUI side -->
+  <text x="36" y="222" font-size="9.5" fill="#38BDF8" font-family="'Courier New', monospace">class="btn"</text>
+  <rect x="36" y="230" width="55" height="20" rx="5" fill="#570df8"/>
+  <text x="40" y="244" font-size="9.5" fill="white" font-weight="600">btn</text>
+
+  <text x="36" y="265" font-size="9.5" fill="#38BDF8" font-family="'Courier New', monospace">btn btn-primary</text>
+  <rect x="36" y="272" width="80" height="20" rx="5" fill="#570df8"/>
+  <text x="46" y="286" font-size="9.5" fill="white" font-weight="600">Primary</text>
+
+  <text x="36" y="308" font-size="9.5" fill="#38BDF8" font-family="'Courier New', monospace">btn btn-outline btn-sm</text>
+  <rect x="36" y="316" width="80" height="18" rx="5" fill="transparent" stroke="#570df8" stroke-width="1.5"/>
+  <text x="46" y="329" font-size="9" fill="#570df8" font-weight="600">Outline sm</text>
+
+  <text x="36" y="354" font-size="9.5" fill="#38BDF8" font-family="'Courier New', monospace">btn btn-error</text>
+  <rect x="36" y="362" width="70" height="20" rx="5" fill="#ff5861"/>
+  <text x="46" y="376" font-size="9.5" fill="white" font-weight="600">Error</text>
+
+  <!-- Panel CARD anatomy -->
+  <rect x="300" y="180" width="260" height="195" rx="10" fill="#111827" stroke="#1F2937" stroke-width="1"/>
+  <text x="316" y="203" font-size="11" font-weight="600" fill="#9CA3AF" letter-spacing="1">Anatomía de Card</text>
+
+  <!-- Card visual -->
+  <rect x="316" y="214" width="225" height="148" rx="8" fill="#1b1d1e"/>
+  <!-- card-image area -->
+  <rect x="316" y="214" width="225" height="52" rx="8" fill="#374151"/>
+  <text x="380" y="244" font-size="9" fill="#9CA3AF">card-image</text>
+  <!-- card-body -->
+  <rect x="316" y="266" width="225" height="96" rx="0" fill="#1b1d1e"/>
+  <!-- round bottom corners -->
+  <rect x="316" y="346" width="225" height="16" rx="0" fill="#1b1d1e"/>
+  <rect x="316" y="350" width="225" height="12" rx="8" fill="#1b1d1e"/>
+
+  <text x="326" y="282" font-size="10" fill="#e7e4e4" font-weight="600">card-title</text>
+  <text x="326" y="296" font-size="8.5" fill="#9CA3AF">Descripción del proyecto...</text>
+  <rect x="326" y="310" width="60" height="12" rx="3" fill="#1c4f82"/>
+  <text x="329" y="320" font-size="8" fill="white">badge-info</text>
+  <!-- card-actions -->
+  <rect x="326" y="336" width="50" height="16" rx="4" fill="#1c4f82"/>
+  <text x="334" y="348" font-size="8" fill="white" font-weight="600">Ver</text>
+  <rect x="382" y="336" width="50" height="16" rx="4" fill="transparent" stroke="#9CA3AF" stroke-width="1"/>
+  <text x="392" y="348" font-size="8" fill="#9CA3AF">GitHub</text>
+
+  <!-- labels -->
+  <text x="330" y="374" font-size="8" fill="#4B5563">card → card-body → card-title + card-actions</text>
+
+  <!-- Panel: CSS Variables Flow -->
+  <rect x="580" y="180" width="260" height="195" rx="10" fill="#111827" stroke="#1F2937" stroke-width="1"/>
+  <text x="596" y="203" font-size="11" font-weight="600" fill="#9CA3AF" letter-spacing="1">Flujo de variables CSS</text>
+
+  <!-- data-theme box -->
+  <rect x="596" y="214" width="226" height="28" rx="6" fill="#1F2937"/>
+  <text x="608" y="232" font-size="10" fill="#38BDF8" font-family="'Courier New', monospace">[data-theme="dark"]</text>
+
+  <!-- Arrow down -->
+  <line x1="709" y1="242" x2="709" y2="260" stroke="#374151" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Variables box -->
+  <rect x="596" y="260" width="226" height="60" rx="6" fill="#0F172A"/>
+  <text x="608" y="276" font-size="9.5" fill="#818CF8" font-family="'Courier New', monospace">--p: 262 59% 49%;</text>
+  <text x="608" y="290" font-size="9.5" fill="#818CF8" font-family="'Courier New', monospace">--b1: 220 18% 20%;</text>
+  <text x="608" y="304" font-size="9.5" fill="#818CF8" font-family="'Courier New', monospace">--bc: 220 14% 71%;</text>
+
+  <!-- Arrow down -->
+  <line x1="709" y1="320" x2="709" y2="338" stroke="#374151" stroke-width="1.5"/>
+
+  <!-- Component box -->
+  <rect x="596" y="338" width="226" height="28" rx="6" fill="#1F2937"/>
+  <text x="608" y="356" font-size="9.5" fill="#34D399" font-family="'Courier New', monospace">.btn-primary → hsl(var(--p))</text>
+
+  <!-- Note -->
+  <text x="596" y="380" font-size="9" fill="#6B7280">Un solo atributo cambia todos los colores</text>
+  <text x="596" y="368" font-size="9" fill="#6B7280">del tema de manera automática.</text>
+
+  <!-- ===== BOTTOM STRIP: install + components ===== -->
+  <rect x="20" y="395" width="820" height="82" rx="10" fill="#111827" stroke="#1F2937" stroke-width="1"/>
+  <text x="36" y="418" font-size="10" font-weight="600" fill="#38BDF8">Instalación:</text>
+  <text x="110" y="418" font-size="10" fill="#F9FAFB" font-family="'Courier New', monospace">pnpm add -D daisyui</text>
+  <text x="300" y="418" font-size="10" fill="#6B7280" font-family="'Courier New', monospace">→ tailwind.config.js:</text>
+  <text x="438" y="418" font-size="10" fill="#34D399" font-family="'Courier New', monospace">plugins: [require('daisyui')]</text>
+
+  <text x="36" y="436" font-size="10" font-weight="600" fill="#38BDF8">Componentes clave:</text>
+  <text x="152" y="436" font-size="10" fill="#F9FAFB" font-family="'Courier New', monospace">btn · card · badge · input · select · textarea ·</text>
+  <text x="152" y="450" font-size="10" fill="#F9FAFB" font-family="'Courier New', monospace">navbar · modal · table · alert · toast · drawer</text>
+
+  <text x="36" y="468" font-size="9" fill="#6B7280" font-family="'Courier New', monospace">// CDN: &lt;link href="https://cdn.jsdelivr.net/npm/daisyui@4/dist/full.min.css" ... /&gt;</text>
+
+  <!-- Footer label -->
+  <text x="30" y="494" font-size="9" fill="#374151">Semana 12 · Bootcamp TailwindCSS Zero to Hero</text>
+  <text x="700" y="494" font-size="9" fill="#374151">daisyui.com</text>
+
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrow" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#374151"/>
+    </marker>
+  </defs>
+
+</svg>

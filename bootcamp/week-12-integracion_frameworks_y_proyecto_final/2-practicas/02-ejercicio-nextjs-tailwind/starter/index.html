@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<!--
+  Script anti-flash: corre ANTES de renderizar cualquier contenido.
+  Equivale al script que pondríamos en app/layout.jsx de Next.js.
+-->
+<script>
+  if (localStorage.theme === 'dark' ||
+    (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark')
+  }
+</script>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 02 — Next.js + Tailwind (Simulado)</title>
+  <!--
+    En Next.js real: app/globals.css contiene @import "tailwindcss"
+    importado en app/layout.jsx. Aquí usamos el CDN para el mismo efecto.
+  -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          // En Next.js real: next/font expone esto como CSS variable
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <!--
+    En Next.js real importarías la fuente con:
+      import { Inter } from 'next/font/google'
+    Aquí la cargamos con <link> para simular el mismo resultado.
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+
+<!--
+  app/layout.jsx — Root Layout de Next.js App Router.
+
+  En Next.js real:
+    <html lang="es" suppressHydrationWarning className={inter.variable}>
+      <body className="min-h-screen bg-white dark:bg-gray-950 ...">
+        {children}
+      </body>
+    </html>
+-->
+
+<body class="min-h-screen font-sans bg-white dark:bg-gray-950
+             text-gray-900 dark:text-gray-100
+             transition-colors duration-300">
+
+
+  <!-- ================================================ -->
+  <!-- BLOQUE 1: Root Layout structure                  -->
+  <!-- Descomenta el siguiente bloque para empezar.     -->
+  <!-- ================================================ -->
+
+  <!--
+  <header class="border-b border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+
+      <!- - Logo / Brand - ->
+      <a href="#" class="text-xl font-bold text-gray-900 dark:text-white">
+        <span class="text-sky-500">dev</span>.portfolio
+      </a>
+
+      <!- - El ThemeToggle sería un Client Component - ->
+      <button
+        id="theme-toggle"
+        aria-label="Cambiar modo de color"
+        class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800
+               transition-colors duration-200
+               outline-none focus-visible:ring-2 focus-visible:ring-sky-500">
+        <span class="dark:hidden">🌙</span>
+        <span class="hidden dark:inline">☀️</span>
+      </button>
+    </div>
+  </header>
+
+  <script>
+    // Este script equivale a un Client Component con 'use client'
+    // En Next.js sería: components/ThemeToggle.jsx
+    document.getElementById('theme-toggle').addEventListener('click', function() {
+      const isDark = document.documentElement.classList.toggle('dark')
+      localStorage.setItem('theme', isDark ? 'dark' : 'light')
+    })
+  </script>
+  -->
+
+
+  <!-- ================================================ -->
+  <!-- BLOQUE 2: Server Component (página estática)     -->
+  <!-- Descomenta el siguiente bloque.                  -->
+  <!-- ================================================ -->
+
+  <!--
+  <!- - app/page.jsx — Server Component (sin 'use client') - ->
+  <!- - Renderiza en el servidor: puede usar Tailwind, pero NO hooks - ->
+  <main>
+
+    <!- - Hero section - ->
+    <section class="flex flex-col items-center justify-center min-h-[80vh]
+                    px-4 text-center">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full
+                  text-xs font-medium
+                  bg-sky-50 dark:bg-sky-950 text-sky-700 dark:text-sky-300
+                  border border-sky-200 dark:border-sky-800 mb-8">
+        <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+        Disponible para proyectos
+      </div>
+
+      <h1 class="text-5xl md:text-7xl font-bold tracking-tight
+                  text-gray-900 dark:text-white mb-6">
+        Hola, soy
+        <span class="text-sky-500"> tu nombre</span>
+      </h1>
+
+      <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-10 max-w-2xl">
+        Frontend Developer · Next.js · TailwindCSS
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="#proyectos"
+           class="px-8 py-3 bg-sky-500 hover:bg-sky-600 text-white font-semibold rounded-xl
+                  transition-colors duration-200
+                  outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2">
+          Ver proyectos
+        </a>
+        <a href="#contacto"
+           class="px-8 py-3 border border-gray-200 dark:border-gray-700
+                  text-gray-700 dark:text-gray-300
+                  hover:bg-gray-50 dark:hover:bg-gray-900 font-semibold rounded-xl
+                  transition-colors duration-200
+                  outline-none focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:ring-offset-2">
+          Contactar
+        </a>
+      </div>
+    </section>
+
+    <!- - Skills grid — puede ser Server Component (sin interactividad) - ->
+    <section id="skills" class="max-w-6xl mx-auto px-4 py-20">
+      <h2 class="text-3xl font-bold text-gray-900 dark:text-white text-center mb-12">
+        Tecnologías
+      </h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
+        <div class="flex flex-col items-center gap-2 p-4 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+          <span class="text-2xl">⚛️</span>
+          <span class="text-sm font-medium text-gray-700 dark:text-gray-300">React</span>
+        </div>
+        <div class="flex flex-col items-center gap-2 p-4 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+          <span class="text-2xl">▲</span>
+          <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Next.js</span>
+        </div>
+        <div class="flex flex-col items-center gap-2 p-4 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+          <span class="text-2xl">🌊</span>
+          <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Tailwind</span>
+        </div>
+        <div class="flex flex-col items-center gap-2 p-4 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+          <span class="text-2xl">🟦</span>
+          <span class="text-sm font-medium text-gray-700 dark:text-gray-300">TypeScript</span>
+        </div>
+        <div class="flex flex-col items-center gap-2 p-4 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+          <span class="text-2xl">🐙</span>
+          <span class="text-sm font-medium text-gray-700 dark:text-gray-300">GitHub</span>
+        </div>
+        <div class="flex flex-col items-center gap-2 p-4 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+          <span class="text-2xl">▲</span>
+          <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Vercel</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  -->
+
+
+  <!-- ================================================ -->
+  <!-- BLOQUE 3: Client Component con cn()              -->
+  <!-- Descomenta el siguiente bloque.                  -->
+  <!-- ================================================ -->
+
+  <!--
+  <section class="max-w-6xl mx-auto px-4 py-20 border-t border-gray-200 dark:border-gray-800">
+    <h2 class="text-3xl font-bold text-gray-900 dark:text-white text-center mb-4">
+      Proyectos
+    </h2>
+    <p class="text-gray-500 dark:text-gray-400 text-center mb-12 text-sm">
+      Haz click en los filtros — equivale a un Client Component con cn() para clases condicionales
+    </p>
+
+    <!- - Filtros: Client Component — necesita JS (stato activo) - ->
+    <div class="flex flex-wrap justify-center gap-2 mb-10" id="filters-container">
+      <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium transition-colors duration-200
+                     bg-sky-500 text-white" data-filter="all">
+        Todos
+      </button>
+      <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium transition-colors duration-200
+                     bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400
+                     hover:bg-gray-200 dark:hover:bg-gray-700" data-filter="react">
+        React
+      </button>
+      <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium transition-colors duration-200
+                     bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400
+                     hover:bg-gray-200 dark:hover:bg-gray-700" data-filter="nextjs">
+        Next.js
+      </button>
+      <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium transition-colors duration-200
+                     bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400
+                     hover:bg-gray-200 dark:hover:bg-gray-700" data-filter="html">
+        HTML/CSS
+      </button>
+    </div>
+
+    <!- - Grid de proyectos - ->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <article class="group rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900" data-tech="react">
+        <div class="h-40 bg-gradient-to-br from-sky-400 to-sky-600 relative overflow-hidden">
+          <div class="absolute inset-0 flex items-center justify-center">
+            <span class="text-white text-4xl font-bold opacity-40">⚛️</span>
+          </div>
+        </div>
+        <div class="p-5">
+          <div class="flex items-start justify-between mb-2">
+            <h3 class="font-semibold text-gray-900 dark:text-white">Portfolio v2</h3>
+            <span class="text-xs px-2 py-0.5 rounded-full bg-sky-100 dark:bg-sky-950 text-sky-700 dark:text-sky-300 font-medium">React</span>
+          </div>
+          <p class="text-sm text-gray-500 dark:text-gray-400 line-clamp-2">Portfolio personal con React, Vite y Tailwind v4.</p>
+        </div>
+      </article>
+
+      <article class="group rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900" data-tech="nextjs">
+        <div class="h-40 bg-gradient-to-br from-gray-700 to-gray-900 relative overflow-hidden">
+          <div class="absolute inset-0 flex items-center justify-center">
+            <span class="text-white text-4xl font-bold opacity-40">▲</span>
+          </div>
+        </div>
+        <div class="p-5">
+          <div class="flex items-start justify-between mb-2">
+            <h3 class="font-semibold text-gray-900 dark:text-white">Blog Técnico</h3>
+            <span class="text-xs px-2 py-0.5 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 font-medium">Next.js</span>
+          </div>
+          <p class="text-sm text-gray-500 dark:text-gray-400 line-clamp-2">Blog con Next.js App Router, MDX y Tailwind Typography.</p>
+        </div>
+      </article>
+
+      <article class="group rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900" data-tech="html">
+        <div class="h-40 bg-gradient-to-br from-orange-400 to-red-500 relative overflow-hidden">
+          <div class="absolute inset-0 flex items-center justify-center">
+            <span class="text-white text-4xl font-bold opacity-40">🌊</span>
+          </div>
+        </div>
+        <div class="p-5">
+          <div class="flex items-start justify-between mb-2">
+            <h3 class="font-semibold text-gray-900 dark:text-white">Landing Page</h3>
+            <span class="text-xs px-2 py-0.5 rounded-full bg-orange-100 dark:bg-orange-950 text-orange-700 dark:text-orange-300 font-medium">HTML</span>
+          </div>
+          <p class="text-sm text-gray-500 dark:text-gray-400 line-clamp-2">Landing page para producto SaaS con Tailwind v4.</p>
+        </div>
+      </article>
+    </div>
+
+    <script>
+      // Client Component logic — en Next.js sería un componente con 'use client'
+      const filterBtns = document.querySelectorAll('.filter-btn')
+      const projects = document.querySelectorAll('article[data-tech]')
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const filter = btn.dataset.filter
+
+          // Simula cn() para el estado activo
+          filterBtns.forEach(b => {
+            const isActive = b === btn
+            b.className = b.className
+              .replace('bg-sky-500 text-white', '')
+              .replace('bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700', '')
+              .trim()
+            if (isActive) {
+              b.classList.add('bg-sky-500', 'text-white')
+            } else {
+              b.classList.add('bg-gray-100', 'dark:bg-gray-800', 'text-gray-600', 'dark:text-gray-400',
+                              'hover:bg-gray-200', 'dark:hover:bg-gray-700')
+            }
+          })
+
+          projects.forEach(p => {
+            const show = filter === 'all' || p.dataset.tech === filter
+            p.style.display = show ? '' : 'none'
+          })
+        })
+      })
+    </script>
+  </section>
+  -->
+
+
+  <!-- ================================================ -->
+  <!-- BLOQUE 4: Script anti-flash + fuentes            -->
+  <!-- Nota: el script anti-flash ya está al inicio     -->
+  <!-- de este archivo (antes de <html>).               -->
+  <!-- Descomenta este bloque para ver la demostración. -->
+  <!-- ================================================ -->
+
+  <!--
+  <section class="max-w-4xl mx-auto px-4 py-20 border-t border-gray-200 dark:border-gray-800">
+    <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+      BLOQUE 4 — Script anti-flash y fuentes
+    </h2>
+    <p class="text-gray-500 dark:text-gray-400 text-sm mb-8">
+      Observa que al recargar la página <strong>no hay flash de modo claro</strong> porque el script
+      anti-flash al inicio del archivo aplica la clase <code class="font-mono">dark</code> antes de pintar cualquier contenido.
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-6">
+        <h3 class="font-semibold text-gray-900 dark:text-white mb-3">Script anti-flash</h3>
+        <pre class="text-xs text-sky-600 dark:text-sky-400 overflow-x-auto leading-relaxed"><code>// Al INICIO del archivo, antes de &lt;html&gt;
+if (localStorage.theme === 'dark' ||
+    (!('theme' in localStorage) &&
+     window.matchMedia(
+       '(prefers-color-scheme: dark)'
+     ).matches)) {
+  document.documentElement
+    .classList.add('dark')
+}</code></pre>
+      </div>
+
+      <div class="rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-6">
+        <h3 class="font-semibold text-gray-900 dark:text-white mb-3">En Next.js: dangerouslySetInnerHTML</h3>
+        <pre class="text-xs text-sky-600 dark:text-sky-400 overflow-x-auto leading-relaxed"><code>// app/layout.jsx
+&lt;head&gt;
+  &lt;script
+    dangerouslySetInnerHTML={{
+      __html: `
+        // mismo script anti-flash aquí
+      `,
+    }}
+  /&gt;
+&lt;/head&gt;</code></pre>
+      </div>
+    </div>
+
+    <div class="mt-6 p-4 rounded-xl bg-amber-50 dark:bg-amber-950 border border-amber-200 dark:border-amber-800">
+      <p class="text-sm text-amber-800 dark:text-amber-200">
+        <strong>📌 Por qué suppressHydrationWarning:</strong> React avisa cuando el HTML del servidor
+        difiere del cliente. Como el script modifica <code class="font-mono">&lt;html class="dark"&gt;</code>
+        antes de la hidratación, React detectaría una diferencia. El atributo suprime ese warning específico.
+      </p>
+    </div>
+  </section>
+  -->
+
+
+  <!-- Footer siempre visible -->
+  <footer class="border-t border-gray-200 dark:border-gray-800 mt-20">
+    <div class="max-w-7xl mx-auto px-4 py-8 text-center">
+      <p class="text-sm text-gray-400">
+        Ejercicio 02 — Simulación de Next.js App Router con Tailwind
+      </p>
+    </div>
+  </footer>
+
+</body>
+
+</html>

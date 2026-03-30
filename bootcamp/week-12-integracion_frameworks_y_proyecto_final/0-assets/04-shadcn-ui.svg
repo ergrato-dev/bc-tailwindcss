@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 500" width="860" height="500" font-family="Inter, system-ui, sans-serif">
+
+  <!-- Background -->
+  <rect width="860" height="500" fill="#030712"/>
+
+  <!-- Title bar -->
+  <rect width="860" height="52" fill="#111827"/>
+  <text x="30" y="32" font-size="14" font-weight="700" fill="#F9FAFB" letter-spacing="0.5">shadcn/ui — Componentes que son tuyos</text>
+  <text x="30" y="46" font-size="10" fill="#6B7280">Filosofía copy-to-project · CSS variables · cva pattern · Radix UI bajo el capó</text>
+
+  <!-- ===== PANEL 1: Traditional vs shadcn ===== -->
+  <rect x="20" y="72" width="260" height="230" rx="10" fill="#111827" stroke="#1F2937" stroke-width="1"/>
+  <text x="36" y="95" font-size="11" font-weight="600" fill="#9CA3AF" letter-spacing="1">Biblioteca tradicional vs shadcn</text>
+
+  <!-- Traditional -->
+  <rect x="36" y="105" width="108" height="180" rx="8" fill="#0F172A" stroke="#374151" stroke-width="1"/>
+  <text x="54" y="123" font-size="9.5" fill="#F87171" font-weight="600">Tradicional</text>
+  <text x="44" y="138" font-size="8.5" fill="#6B7280" font-family="'Courier New', monospace">pnpm add lib</text>
+  <text x="44" y="152" font-size="8" fill="#4B5563">↓ instala en</text>
+  <text x="44" y="164" font-size="8" fill="#4B5563">node_modules/</text>
+  <text x="44" y="178" font-size="8" fill="#4B5563">código cerrado</text>
+  <text x="44" y="192" font-size="8" fill="#4B5563">no editable</text>
+  <!-- locked icon -->
+  <rect x="64" y="208" width="18" height="14" rx="3" fill="#374151"/>
+  <rect x="68" y="198" width="10" height="14" rx="5" fill="none" stroke="#374151" stroke-width="2"/>
+  <text x="44" y="244" font-size="8.5" fill="#F87171">❌ Sin control</text>
+  <text x="44" y="256" font-size="8.5" fill="#F87171">❌ Difícil custom</text>
+  <text x="44" y="268" font-size="8.5" fill="#F87171">❌ Bundle grande</text>
+
+  <!-- shadcn -->
+  <rect x="154" y="105" width="108" height="180" rx="8" fill="#0F172A" stroke="#38BDF8" stroke-width="1"/>
+  <text x="172" y="123" font-size="9.5" fill="#34D399" font-weight="600">shadcn/ui</text>
+  <text x="162" y="138" font-size="8.5" fill="#6B7280" font-family="'Courier New', monospace">npx shadcn add</text>
+  <text x="162" y="152" font-size="8" fill="#38BDF8">↓ copia en</text>
+  <text x="162" y="164" font-size="8" fill="#38BDF8">components/ui/</text>
+  <text x="162" y="178" font-size="8" fill="#38BDF8">código abierto</text>
+  <text x="162" y="192" font-size="8" fill="#38BDF8">totalmente editable</text>
+  <!-- open icon -->
+  <rect x="182" y="208" width="18" height="14" rx="3" fill="#1d4ed8"/>
+  <rect x="186" y="200" width="10" height="14" rx="5" fill="none" stroke="#38BDF8" stroke-width="2" opacity="0.5"/>
+  <text x="162" y="244" font-size="8.5" fill="#34D399">✅ Control total</text>
+  <text x="162" y="256" font-size="8.5" fill="#34D399">✅ 100% custom</text>
+  <text x="162" y="268" font-size="8.5" fill="#34D399">✅ Solo lo que usas</text>
+
+  <!-- ===== PANEL 2: CSS Variables flow ===== -->
+  <rect x="300" y="72" width="270" height="230" rx="10" fill="#111827" stroke="#1F2937" stroke-width="1"/>
+  <text x="316" y="95" font-size="11" font-weight="600" fill="#9CA3AF" letter-spacing="1">CSS Variables — Sistema de tema</text>
+
+  <!-- :root -->
+  <rect x="316" y="105" width="235" height="78" rx="6" fill="#0F172A"/>
+  <text x="328" y="122" font-size="9.5" fill="#818CF8" font-family="'Courier New', monospace">:root {</text>
+  <text x="340" y="136" font-size="9.5" fill="#38BDF8" font-family="'Courier New', monospace">--background:</text>
+  <text x="418" y="136" font-size="9.5" fill="#34D399" font-family="'Courier New', monospace">0 0% 100%;</text>
+  <text x="340" y="150" font-size="9.5" fill="#38BDF8" font-family="'Courier New', monospace">--foreground:</text>
+  <text x="418" y="150" font-size="9.5" fill="#34D399" font-family="'Courier New', monospace">222 84% 5%;</text>
+  <text x="340" y="164" font-size="9.5" fill="#38BDF8" font-family="'Courier New', monospace">--primary:</text>
+  <text x="402" y="164" font-size="9.5" fill="#34D399" font-family="'Courier New', monospace">222 47% 11%;</text>
+  <text x="328" y="178" font-size="9.5" fill="#818CF8" font-family="'Courier New', monospace">}</text>
+
+  <!-- .dark -->
+  <rect x="316" y="190" width="235" height="66" rx="6" fill="#0F172A"/>
+  <text x="328" y="207" font-size="9.5" fill="#818CF8" font-family="'Courier New', monospace">.dark {</text>
+  <text x="340" y="221" font-size="9.5" fill="#38BDF8" font-family="'Courier New', monospace">--background:</text>
+  <text x="418" y="221" font-size="9.5" fill="#34D399" font-family="'Courier New', monospace">222 84% 5%;</text>
+  <text x="340" y="235" font-size="9.5" fill="#38BDF8" font-family="'Courier New', monospace">--foreground:</text>
+  <text x="418" y="235" font-size="9.5" fill="#34D399" font-family="'Courier New', monospace">210 40% 98%;</text>
+  <text x="328" y="249" font-size="9.5" fill="#818CF8" font-family="'Courier New', monospace">}</text>
+
+  <!-- Arrow + usage -->
+  <text x="316" y="277" font-size="9" fill="#6B7280">↓ El componente consume la variable:</text>
+  <rect x="316" y="284" width="235" height="18" rx="4" fill="#1F2937"/>
+  <text x="328" y="296" font-size="9.5" fill="#F9FAFB" font-family="'Courier New', monospace">bg-[hsl(var(--background))]</text>
+
+  <!-- ===== PANEL 3: CLI flow ===== -->
+  <rect x="590" y="72" width="250" height="230" rx="10" fill="#111827" stroke="#1F2937" stroke-width="1"/>
+  <text x="606" y="95" font-size="11" font-weight="600" fill="#9CA3AF" letter-spacing="1">Flujo CLI</text>
+
+  <!-- Steps -->
+  <!-- Step 1 -->
+  <circle cx="620" cy="118" r="10" fill="#1F2937" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="616" y="122" font-size="9" fill="#38BDF8" font-weight="700">1</text>
+  <rect x="636" y="108" width="188" height="18" rx="4" fill="#0F172A"/>
+  <text x="644" y="121" font-size="9.5" fill="#34D399" font-family="'Courier New', monospace">npx shadcn@latest init</text>
+
+  <line x1="620" y1="128" x2="620" y2="146" stroke="#374151" stroke-width="1.5"/>
+
+  <!-- Step 2 -->
+  <circle cx="620" cy="156" r="10" fill="#1F2937" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="616" y="160" font-size="9" fill="#38BDF8" font-weight="700">2</text>
+  <rect x="636" y="146" width="188" height="18" rx="4" fill="#0F172A"/>
+  <text x="644" y="159" font-size="9.5" fill="#34D399" font-family="'Courier New', monospace">npx shadcn add button</text>
+
+  <line x1="620" y1="166" x2="620" y2="184" stroke="#374151" stroke-width="1.5"/>
+
+  <!-- Step 3 -->
+  <circle cx="620" cy="194" r="10" fill="#1F2937" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="616" y="198" font-size="9" fill="#38BDF8" font-weight="700">3</text>
+  <rect x="636" y="184" width="188" height="18" rx="4" fill="#0F172A"/>
+  <text x="644" y="197" font-size="9.5" fill="#38BDF8" font-family="'Courier New', monospace">components/ui/button.tsx</text>
+
+  <line x1="620" y1="204" x2="620" y2="222" stroke="#374151" stroke-width="1.5"/>
+
+  <!-- Step 4 -->
+  <circle cx="620" cy="232" r="10" fill="#1F2937" stroke="#818CF8" stroke-width="1.5"/>
+  <text x="616" y="236" font-size="9" fill="#818CF8" font-weight="700">4</text>
+  <rect x="636" y="222" width="188" height="18" rx="4" fill="#0F172A"/>
+  <text x="644" y="235" font-size="9.5" fill="#818CF8" font-family="'Courier New', monospace">import { Button } from '@/ui'</text>
+
+  <!-- Step 5 -->
+  <rect x="606" y="256" width="218" height="18" rx="4" fill="#1F2937"/>
+  <text x="614" y="269" font-size="9.5" fill="#F9FAFB" font-family="'Courier New', monospace">&lt;Button variant="outline"&gt;...</text>
+  <text x="614" y="285" font-size="8.5" fill="#34D399">✅ Personaliza button.tsx como quieras</text>
+  <text x="614" y="298" font-size="8.5" fill="#34D399">✅ El código es parte de tu proyecto</text>
+
+  <!-- ===== BOTTOM STRIP: Stack ===== -->
+  <rect x="20" y="320" width="820" height="150" rx="10" fill="#111827" stroke="#1F2937" stroke-width="1"/>
+  <text x="36" y="343" font-size="11" font-weight="600" fill="#9CA3AF" letter-spacing="1">Stack de shadcn/ui</text>
+
+  <!-- Layer 1: Radix UI -->
+  <rect x="36" y="354" width="760" height="38" rx="8" fill="#1F2937"/>
+  <text x="52" y="370" font-size="11" font-weight="700" fill="#38BDF8">Radix UI Primitives</text>
+  <text x="52" y="384" font-size="9" fill="#9CA3AF">Accesibilidad (ARIA) · Focus management · Keyboard navigation · Sem estilos</text>
+
+  <!-- Layer 2: Tailwind -->
+  <rect x="36" y="400" width="760" height="32" rx="8" fill="#1F2937"/>
+  <text x="52" y="414" font-size="11" font-weight="700" fill="#818CF8">TailwindCSS + cva (class-variance-authority)</text>
+  <text x="52" y="426" font-size="9" fill="#9CA3AF">Utilidades responsive · CSS variables · Variantes tipadas con TypeScript</text>
+
+  <!-- Layer 3: result -->
+  <rect x="36" y="440" width="760" height="22" rx="8" fill="#0F172A" stroke="#38BDF8" stroke-width="1"/>
+  <text x="340" y="455" font-size="11" font-weight="700" fill="#34D399" text-anchor="middle">= shadcn/ui — Componentes accesibles, personalizables y tuyos</text>
+  <!-- center adjusting -->
+  <text x="430" y="455" font-size="11" font-weight="700" fill="#34D399">=</text>
+
+  <!-- Footer label -->
+  <text x="30" y="494" font-size="9" fill="#374151">Semana 12 · Bootcamp TailwindCSS Zero to Hero</text>
+  <text x="700" y="494" font-size="9" fill="#374151">ui.shadcn.com</text>
+
+</svg>

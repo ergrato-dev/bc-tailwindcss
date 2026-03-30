@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 01 — React + Tailwind</title>
+  <!--
+    Usamos React via CDN con Babel para poder escribir JSX en el browser.
+    En un proyecto real usarías: pnpm create vite -- --template react
+    Los conceptos de className, clsx y variantes aplican igual.
+  -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    }
+  </script>
+</head>
+
+<body class="min-h-screen bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+  <div id="root"></div>
+
+  <script type="text/babel">
+
+    // ============================================
+    // Utilidades globales (siempre activas)
+    // ============================================
+
+    // Helper cn() simplificado (clsx sin dependencias externas)
+    // En un proyecto real: import { cn } from '@/lib/utils' con tailwind-merge
+    function cn(...classes) {
+      return classes.filter(Boolean).join(' ')
+    }
+
+    // ============================================
+    // BLOQUE 1: className en JSX
+    // Descomenta el siguiente componente para empezar.
+    // ============================================
+
+    /*
+    function Bloque1() {
+      return (
+        <section className="max-w-4xl mx-auto px-6 py-12 mb-8">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-2">
+            BLOQUE 1 — <code className="font-mono text-sky-600 dark:text-sky-400">className</code> en JSX
+          </h2>
+          <p className="text-gray-500 dark:text-gray-400 text-sm mb-8">
+            En JSX se usa <code className="font-mono">className</code> en lugar de <code className="font-mono">class</code>. Es el error más común al empezar con React y Tailwind.
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-6">
+
+            {/* ❌ Esto generaría un warning de React — NO hagas esto en JSX */}
+    <div className="bg-white dark:bg-gray-900 border border-red-200 dark:border-red-900 rounded-xl p-6">
+      <p className="text-xs font-semibold uppercase tracking-widest text-red-400 mb-4">
+        ❌ Incorrecto — class en JSX
+      </p>
+      {/* El código de abajo tiene class (HTML) en lugar de className (JSX) */}
+      <div class="flex items-center gap-3 bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
+        <span class="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center text-white text-sm font-bold">1</span>
+        <p class="text-sm text-gray-700 dark:text-gray-300">Este div usa <code>class</code> — genera warning en React</p>
+      </div>
+      <p className="mt-4 text-xs text-red-500 font-mono bg-red-50 dark:bg-red-950 rounded p-2">
+        Warning: Invalid DOM property `class`. Did you mean `className`?
+      </p>
+    </div>
+
+    {/* ✅ Esto es correcto en JSX */ }
+    <div className="bg-white dark:bg-gray-900 border border-green-200 dark:border-green-900 rounded-xl p-6">
+      <p className="text-xs font-semibold uppercase tracking-widest text-green-400 mb-4">
+        ✅ Correcto — className en JSX
+      </p>
+      <div className="flex items-center gap-3 bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
+        <span className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white text-sm font-bold">1</span>
+        <p className="text-sm text-gray-700 dark:text-gray-300">Este div usa <code>className</code> — correcto en JSX</p>
+      </div>
+      <p className="mt-4 text-xs text-green-600 dark:text-green-400 font-mono bg-green-50 dark:bg-green-950 rounded p-2">
+        Sin warnings — React contento ✓
+      </p>
+    </div>
+
+          </div >
+        </section >
+      )
+    }
+    */
+
+
+    // ============================================
+    // BLOQUE 2: Clases condicionales con cn()
+    // Descomenta el siguiente componente.
+    // ============================================
+
+    /*
+    function Bloque2() {
+      // useState para controlar el estado activo/inactivo
+      const [active, setActive] = React.useState(null)
+      const tabs = ['Inicio', 'Proyectos', 'Blog', 'Contacto']
+
+      return (
+        <section className="max-w-4xl mx-auto px-6 py-12 mb-8">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-2">
+            BLOQUE 2 — Clases condicionales con <code className="font-mono text-sky-600 dark:text-sky-400">cn()</code>
+          </h2>
+          <p className="text-gray-500 dark:text-gray-400 text-sm mb-8">
+            Haz click en cada tab para ver cómo cambian las clases según el estado.
+          </p>
+
+          <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl p-6">
+
+            {/* Nav tabs: el estilo cambia según si está activo o no */}
+    <div className="flex flex-wrap gap-2 mb-6">
+      {tabs.map(tab => (
+        <button
+          key={tab}
+          onClick={() => setActive(tab)}
+          className={cn(
+            // Clases base: siempre presentes
+            'px-4 py-2 rounded-lg font-medium text-sm transition-colors duration-200',
+            'outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2',
+            // Clases condicionales: dependen del estado
+            active === tab
+              ? 'bg-sky-500 text-white shadow-md'
+              : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700',
+          )}
+        >
+          {tab}
+        </button>
+      ))}
+    </div>
+
+    {/* Indicador de estado */ }
+    <div className="text-sm text-gray-500 dark:text-gray-400 font-mono bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
+      <span className="text-gray-400">Estado activo: </span>
+      <span className={cn(
+        'font-semibold',
+        active ? 'text-sky-500' : 'text-gray-400'
+      )}>
+        {active ?? 'ninguno'}
+      </span>
+      {active && (
+        <span className="ml-2 text-xs text-green-500">
+          → clases aplicadas: bg-sky-500 text-white shadow-md
+        </span>
+      )}
+    </div>
+
+          </div >
+        </section >
+      )
+    }
+    */
+
+
+    // ============================================
+    // BLOQUE 3: Componente Button con variantes
+    // Descomenta el siguiente componente.
+    // ============================================
+
+    /*
+    // Definición de variantes — SIEMPRE clases completas para el purging
+    const buttonVariants = {
+      primary:   'bg-sky-500 text-white hover:bg-sky-600 focus-visible:ring-sky-500',
+      secondary: 'bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700 focus-visible:ring-gray-400',
+      danger:    'bg-red-500 text-white hover:bg-red-600 focus-visible:ring-red-500',
+      ghost:     'text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 focus-visible:ring-gray-400',
+      outline:   'border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 focus-visible:ring-gray-400',
+    }
+
+    const buttonSizes = {
+      sm: 'px-3 py-1.5 text-sm',
+      md: 'px-4 py-2 text-base',
+      lg: 'px-6 py-3 text-lg',
+    }
+
+    // Componente Button reutilizable
+    function Button({ variant = 'primary', size = 'md', className, children, ...props }) {
+      return (
+        <button
+          className={cn(
+            // Clases base invariantes
+            'inline-flex items-center justify-center gap-2 font-medium rounded-lg',
+            'transition-colors duration-200',
+            'outline-none focus-visible:ring-2 focus-visible:ring-offset-2',
+            'disabled:opacity-50 disabled:cursor-not-allowed',
+            // Variante desde el mapa
+            buttonVariants[variant],
+            // Tamaño desde el mapa
+            buttonSizes[size],
+            // Override del consumidor
+            className,
+          )}
+          {...props}
+        >
+          {children}
+        </button>
+      )
+    }
+
+    function Bloque3() {
+      return (
+        <section className="max-w-4xl mx-auto px-6 py-12 mb-8">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-2">
+            BLOQUE 3 — Componente <code className="font-mono text-sky-600 dark:text-sky-400">Button</code> con variantes
+          </h2>
+          <p className="text-gray-500 dark:text-gray-400 text-sm mb-8">
+            El patrón más común: un componente que acepta <code className="font-mono">variant</code> y <code className="font-mono">size</code> para controlar sus clases.
+          </p>
+
+          <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl p-6 space-y-6">
+
+            {/* Todas las variantes */}
+    <div>
+      <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-3">Variantes</p>
+      <div className="flex flex-wrap gap-3">
+        <Button variant="primary">Primary</Button>
+        <Button variant="secondary">Secondary</Button>
+        <Button variant="danger">Danger</Button>
+        <Button variant="ghost">Ghost</Button>
+        <Button variant="outline">Outline</Button>
+      </div>
+    </div>
+
+    {/* Todos los tamaños */ }
+    <div>
+      <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-3">Tamaños</p>
+      <div className="flex flex-wrap items-center gap-3">
+        <Button size="sm">Small</Button>
+        <Button size="md">Medium</Button>
+        <Button size="lg">Large</Button>
+      </div>
+    </div>
+
+    {/* Override con className */ }
+    <div>
+      <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-3">
+        Override con className (tailwind-merge resolvería conflictos)
+      </p>
+      <div className="flex flex-wrap gap-3">
+        <Button className="rounded-full px-8">Rounded Full</Button>
+        <Button variant="secondary" className="w-48">Full Width</Button>
+        <Button variant="primary" disabled>Disabled</Button>
+      </div>
+    </div>
+
+          </div >
+        </section >
+      )
+    }
+    */
+
+
+    // ============================================
+    // BLOQUE 4: Dark mode con estado React
+    // Descomenta el siguiente componente.
+    // ============================================
+
+    /*
+    function useDarkMode() {
+      const [isDark, setIsDark] = React.useState(() => {
+        // Leer preferencia guardada o del sistema
+        const stored = localStorage.getItem('theme')
+        if (stored) return stored === 'dark'
+        return window.matchMedia('(prefers-color-scheme: dark)').matches
+      })
+
+      React.useEffect(() => {
+        document.documentElement.classList.toggle('dark', isDark)
+        localStorage.setItem('theme', isDark ? 'dark' : 'light')
+      }, [isDark])
+
+      return { isDark, toggle: () => setIsDark(d => !d) }
+    }
+
+    function Bloque4() {
+      const { isDark, toggle } = useDarkMode()
+
+      return (
+        <section className="max-w-4xl mx-auto px-6 py-12 mb-8">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-2">
+            BLOQUE 4 — Dark mode con <code className="font-mono text-sky-600 dark:text-sky-400">useState + useEffect</code>
+          </h2>
+          <p className="text-gray-500 dark:text-gray-400 text-sm mb-8">
+            Estado React sincronizado con <code className="font-mono">localStorage</code> y la clase <code className="font-mono">dark</code> del <code className="font-mono">&lt;html&gt;</code>.
+          </p>
+
+          <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl p-6">
+
+            <div className="flex items-center justify-between mb-6">
+              <span className="text-sm text-gray-500 dark:text-gray-400">
+                Modo actual: <strong className="text-gray-900 dark:text-white">{isDark ? 'Oscuro 🌙' : 'Claro ☀️'}</strong>
+              </span>
+              <button
+                onClick={toggle}
+                aria-label={isDark ? 'Activar modo claro' : 'Activar modo oscuro'}
+                className={cn(
+                  'flex items-center gap-2 px-4 py-2 rounded-lg font-medium text-sm',
+                  'transition-all duration-300',
+                  'outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2',
+                  isDark
+                    ? 'bg-amber-400 text-amber-900 hover:bg-amber-300'
+                    : 'bg-gray-800 text-white hover:bg-gray-700',
+                )}
+              >
+                {isDark ? '☀️ Modo claro' : '🌙 Modo oscuro'}
+              </button>
+            </div>
+
+            {/* Preview de componentes en el modo actual */}
+            <div className="grid sm:grid-cols-3 gap-4">
+              <div className="rounded-lg bg-gray-50 dark:bg-gray-800 p-4 border border-gray-200 dark:border-gray-700">
+                <p className="text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">Card de proyecto</p>
+                <p className="font-semibold text-gray-900 dark:text-white">Portfolio</p>
+                <span className="inline-block mt-2 text-xs px-2 py-0.5 rounded-full bg-sky-100 dark:bg-sky-900 text-sky-700 dark:text-sky-300">
+                  React + Tailwind
+                </span>
+              </div>
+              <div className="rounded-lg bg-gray-50 dark:bg-gray-800 p-4 border border-gray-200 dark:border-gray-700">
+                <p className="text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">Botones</p>
+                <div className="flex gap-2 mt-2">
+                  <button className="px-3 py-1 text-xs rounded bg-sky-500 text-white">Primary</button>
+                  <button className="px-3 py-1 text-xs rounded bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300">Secondary</button>
+                </div>
+              </div>
+              <div className="rounded-lg bg-gray-50 dark:bg-gray-800 p-4 border border-gray-200 dark:border-gray-700">
+                <p className="text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">Input</p>
+                <input
+                  type="text"
+                  placeholder="Email..."
+                  className="mt-2 w-full text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white outline-none focus:ring-1 focus:ring-sky-500"
+                />
+              </div>
+            </div>
+
+            <p className="mt-4 text-xs text-gray-400 font-mono">
+              Recarga la página → el modo se mantiene gracias a localStorage
+            </p>
+
+          </div >
+        </section >
+      )
+    }
+    */
+
+
+    // ============================================
+    // App principal — descomenta los bloques arriba
+    // y agrégalos aquí en orden
+    // ============================================
+
+    function App() {
+      return (
+        <div className="py-8">
+          <header className="max-w-4xl mx-auto px-6 mb-12">
+            <h1 className="text-4xl font-bold text-gray-900 dark:text-white">
+              Ejercicio 01 — React + Tailwind
+            </h1>
+            <p className="mt-2 text-gray-500 dark:text-gray-400">
+              Descomenta los bloques en el script para activar cada sección del ejercicio.
+            </p>
+          </header>
+
+          {/* Descomentar para activar cada bloque: */}
+          {/* <Bloque1 /> */}
+          {/* <Bloque2 /> */}
+          {/* <Bloque3 /> */}
+          {/* <Bloque4 /> */}
+        </div>
+      )
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById('root'))
+    root.render(<App />)
+
+  </script>
+</body>
+
+</html>
