@@ -3,11 +3,10 @@
 </p>
 
 <p align="center">
-  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License MIT"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-lightgrey.svg" alt="License CC BY-NC-SA 4.0"></a>
   <a href="#"><img src="https://img.shields.io/badge/weeks-12-yellow.svg" alt="12 Weeks"></a>
   <a href="#"><img src="https://img.shields.io/badge/hours-96-orange.svg" alt="96 Hours"></a>
   <a href="#"><img src="https://img.shields.io/badge/TailwindCSS-38BDF8?logo=tailwindcss&logoColor=white" alt="TailwindCSS"></a>
-  <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-Welcome-brightgreen?style=flat-square" alt="PRs Welcome"></a>
 </p>
 
 <p align="center">
@@ -190,33 +189,10 @@ Each week includes three types of evidence:
 
 ## 🤝 Contributing
 
-Contributions are welcome! This is an open-source educational project.
+This is an educational project managed by [ergrato-dev](https://github.com/ergrato-dev). If you find errors or want to suggest improvements, you can open an issue.
 
-### How to Contribute
-
-1. Read the [Contributing Guide](CONTRIBUTING.md)
-2. Review the [Code of Conduct](CODE_OF_CONDUCT.md)
-3. Fork the repository
-4. Create your branch (`git checkout -b feature/new-feature`)
-5. Commit with [Conventional Commits](https://www.conventionalcommits.org/) (`git commit -m 'feat: add new exercise'`)
-6. Push to the branch (`git push origin feature/new-feature`)
-7. Open a Pull Request
-
-### 📋 Areas for Contribution
-
-- ✨ Additional exercises
-- 📚 Documentation improvements
-- 🐛 Bug fixes
-- 🎨 Visual resources (SVG diagrams)
-- 🌐 Translations
-- 📹 Tutorial videos
-
----
-
-## 📞 Support
-
-- 💬 **Discussions**: [GitHub Discussions](https://github.com/ergrato-dev/bc-tailwindcss/discussions)
 - 🐛 **Issues**: [GitHub Issues](https://github.com/ergrato-dev/bc-tailwindcss/issues)
+- 💬 **Discussions**: [GitHub Discussions](https://github.com/ergrato-dev/bc-tailwindcss/discussions)
 
 ---
 
@@ -235,7 +211,9 @@ This repository is an **educational** resource created for learning purposes. By
 
 ## 📄 License
 
-This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
+This project is licensed under **CC BY-NC-SA 4.0** (Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International) — see the [LICENSE](LICENSE) file for details.
+
+You may share and adapt the material as long as you give credit, do not use it for commercial purposes, and distribute under the same license.
 
 ---
 
@@ -252,8 +230,6 @@ This project is licensed under the MIT License — see the [LICENSE](LICENSE) fi
 ## 📚 Additional Documentation
 
 - [🤖 Copilot Instructions](.github/copilot-instructions.md)
-- [🤝 Contributing Guide](CONTRIBUTING.md)
-- [📜 Code of Conduct](CODE_OF_CONDUCT.md)
 - [🔒 Security Policy](SECURITY.md)
 
 ---

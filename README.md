@@ -3,11 +3,10 @@
 </p>
 
 <p align="center">
-  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License MIT"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-lightgrey.svg" alt="License CC BY-NC-SA 4.0"></a>
   <a href="#"><img src="https://img.shields.io/badge/semanas-12-yellow.svg" alt="12 Semanas"></a>
   <a href="#"><img src="https://img.shields.io/badge/horas-96-orange.svg" alt="96 Horas"></a>
   <a href="#"><img src="https://img.shields.io/badge/TailwindCSS-38BDF8?logo=tailwindcss&logoColor=white" alt="TailwindCSS"></a>
-  <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-Welcome-brightgreen?style=flat-square" alt="PRs Welcome"></a>
 </p>
 
 <p align="center">
@@ -190,33 +189,10 @@ Cada semana incluye tres tipos de evidencias:
 
 ## 🤝 Contribuir
 
-¡Las contribuciones son bienvenidas! Este es un proyecto educativo de código abierto.
+Este es un proyecto educativo gestionado por [ergrato-dev](https://github.com/ergrato-dev). Si encuentras errores o quieres sugerir mejoras, puedes abrir un issue.
 
-### Cómo Contribuir
-
-1. Lee la [Guía de Contribución](CONTRIBUTING.md)
-2. Revisa el [Código de Conducta](CODE_OF_CONDUCT.md)
-3. Fork del repositorio
-4. Crea tu rama (`git checkout -b feature/nueva-funcionalidad`)
-5. Commit con [Conventional Commits](https://www.conventionalcommits.org/) (`git commit -m 'feat: add new exercise'`)
-6. Push a la rama (`git push origin feature/nueva-funcionalidad`)
-7. Abre un Pull Request
-
-### 📋 Áreas de Contribución
-
-- ✨ Ejercicios adicionales
-- 📚 Mejoras en documentación
-- 🐛 Corrección de errores
-- 🎨 Recursos visuales (diagramas SVG)
-- 🌐 Traducciones
-- 📹 Videos tutoriales
-
----
-
-## 📞 Soporte
-
-- 💬 **Discussions**: [GitHub Discussions](https://github.com/ergrato-dev/bc-tailwindcss/discussions)
 - 🐛 **Issues**: [GitHub Issues](https://github.com/ergrato-dev/bc-tailwindcss/issues)
+- 💬 **Discussions**: [GitHub Discussions](https://github.com/ergrato-dev/bc-tailwindcss/discussions)
 
 ---
 
@@ -235,7 +211,9 @@ Este repositorio es un recurso **educativo** creado con fines de aprendizaje. Al
 
 ## 📄 Licencia
 
-Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
+Este proyecto está bajo la licencia **CC BY-NC-SA 4.0** (Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International) — ver el archivo [LICENSE](LICENSE) para más detalles.
+
+Puedes compartir y adaptar el material siempre que des crédito, no lo uses con fines comerciales y distribuyas bajo la misma licencia.
 
 ---
 
@@ -252,8 +230,6 @@ Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) par
 ## 📚 Documentación Adicional
 
 - [🤖 Instrucciones de Copilot](.github/copilot-instructions.md)
-- [🤝 Guía de Contribución](CONTRIBUTING.md)
-- [📜 Código de Conducta](CODE_OF_CONDUCT.md)
 - [🔒 Política de Seguridad](SECURITY.md)
 
 ---
@@ -266,8 +242,7 @@ Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) par
 <p align="center">
   <a href="bootcamp/week-01-html_semantico_y_css_esencial">Comenzar Semana 1</a> •
   <a href="_docs">Ver Documentación</a> •
-  <a href="https://github.com/ergrato-dev/bc-tailwindcss/issues">Reportar Issue</a> •
-  <a href="CONTRIBUTING.md">Contribuir</a>
+  <a href="https://github.com/ergrato-dev/bc-tailwindcss/issues">Reportar Issue</a>
 </p>
 
 <p align="center">
